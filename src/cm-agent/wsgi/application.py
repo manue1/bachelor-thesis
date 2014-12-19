@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import json
-import logging
 
 from bottle import Bottle, response, request
 from core.agent import Agent as CMAgent
@@ -28,13 +27,15 @@ class Application:
         self.agent = CMAgent()
 
     def _route(self):
-        ###Welcome Screen
+        # Welcome Screen
         self._app.route('/', method="GET", callback=self._welcome)
 
-        ###Hypervisor methods
-        self._app.route('/hypervisors', method="GET", callback=self._hypervisor_list)
-        self._app.route('/hypervisors', method="POST", callback=self._hypervisor_select)
-        self._app.route('/hypervisors/<id>', method="GET", callback=self._hypervisor_show)
+        # Hypervisor methods
+        self._app.route('/hosts', method="GET", callback=self._hosts_list)
+
+        # ToDo: QoS methods
+        #self._app.route('/qoses', method="GET", callback=self._qoses_list)
+        #self._app.route('/qoses', method="POST", callback=self._qoses_set)
 
     def start(self):
         self._app.run(host=self._host, port=self._port)
@@ -44,36 +45,20 @@ class Application:
         response.status = 200
         return response
 
-    def _hypervisor_list(self):
+    def _hosts_list(self):
         """
-        List all OpenStack hypervisor
+        List all OpenStack hypervisors
         """
         self.agent = CMAgent()
 
         hypervisors = self.agent.list_hypervisors()
-        print "These are the hypervisors"
-        print hypervisors
 
         response.body = encode_dict_json(hypervisors)
-        print "This is the response body:"
+        print "Hypervisor list response"
         print response.body
         response.status = 200
         response.content_type = 'application/json'
         return response
-
-    def _hypervisor_select(self):
-        """
-        Select hypervisor to deploy Stack to
-        """
-        # TODO implement Select hypervisor method
-        pass
-
-    def _hypervisor_show(self):
-        """
-        Show details of a OpenStack hypervisor
-        """
-        # TODO implement Show hypervisor method
-        pass
 
 
 if __name__ == '__main__':
