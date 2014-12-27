@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\newcommand\opampfive[5]
+{
+\begin{circuitikz}
+\draw (0,0) node[op amp] (opamp) {};
+\draw (-2,-0.49) to[short, o-] (opamp.+) (-2.2,-0.49) node[anchor=east] {${u_{ep}}$};
+\draw (-2,0.49) to[short, o-] (opamp.-) (-2.2,0.49) node[anchor=east] {${u_{en}}$};
+\draw (-0.08,1.5) to[short, o-] (opamp.up) (-0.08,1.6) node[anchor=south] {${U_{S+}}$};
+\draw (-0.08,-1.5) to[short, o-] (opamp.down) (-0.08,-1.6) node[anchor=north] {${U_{S-}}$};
+\draw (1,0) to[short, -o] (2,0) -- (opamp.out) (2.1,0) node[anchor=west] {${#u_o}$};
+\end{circuitikz}
+}
+
+\opampfive{1}{2}{3}{4}{5}
+\end{document}

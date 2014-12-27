@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<project name="Implementation / Design Connectivity Manager" company="" manager="" phase="" project-start="20141201T000000Z" mrproject-version="2" calendar="1">
+  <properties/>
+  <phases/>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="Working" description="A default working day"/>
+      <day-type id="1" name="Nonworking" description="A default non working day"/>
+      <day-type id="2" name="Use base" description="Use day from base calendar"/>
+      <day-type id="3" name="Weekend-working" description=""/>
+    </day-types>
+    <calendar id="1" name="Default">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0900" end="1300"/>
+          <interval start="1400" end="1900"/>
+        </overridden-day-type>
+        <overridden-day-type id="3">
+          <interval start="1100" end="1600"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days>
+        <day date="20141227" type="day-type" id="1"/>
+      </days>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="Research on Neutron SDN controllers" note="" work="486000" start="20141201T000000Z" end="20141219T190000Z" work-start="20141201T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="2" name="Test S-O-T-A solutions" note="" work="324000" start="20141208T000000Z" end="20141219T190000Z" work-start="20141208T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20141208T000000Z"/>
+    </task>
+    <task id="3" name="Implementation CM Agent" note="" work="324000" start="20141215T000000Z" end="20141226T190000Z" work-start="20141215T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20141215T000000Z"/>
+    </task>
+    <task id="4" name="Implementation Connectivity Manager" note="" work="810000" start="20141222T000000Z" end="20150123T190000Z" work-start="20141222T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20141222T000000Z"/>
+    </task>
+    <task id="5" name="Writing thesis" note="" work="1134000" start="20141222T000000Z" end="20150206T190000Z" work-start="20141222T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20141222T000000Z"/>
+    </task>
+    <task id="6" name="Tests / Statistics / Conclusion" note="" work="259200" start="20150119T000000Z" end="20150128T190000Z" work-start="20150119T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20150119T000000Z"/>
+    </task>
+    <task id="7" name="Review" note="" work="324000" start="20150126T000000Z" end="20150206T190000Z" work-start="20150126T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20150126T000000Z"/>
+    </task>
+  </tasks>
+  <resource-groups/>
+  <resources/>
+  <allocations/>
+</project>

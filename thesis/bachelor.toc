@@ -1,0 +1,53 @@
+\select@language {english}
+\contentsline {chapter}{Abbildungsverzeichnis}{5}
+\contentsline {chapter}{Tabellenverzeichnis}{7}
+\contentsline {chapter}{Algorithmenverzeichnis}{9}
+\contentsline {chapter}{\numberline {1}Einf\"uhrung}{11}
+\contentsline {section}{\numberline {1.1}Motivation, Zielsetzung und Beitrag der Arbeit}{11}
+\contentsline {section}{\numberline {1.2}Aufbau und Kapitel\"ubersicht}{11}
+\contentsline {chapter}{\numberline {2}Stand der Technik}{21}
+\contentsline {section}{\numberline {2.1}Klassifizierung der Verfahren zur \dots }{21}
+\contentsline {section}{\numberline {2.2}Vergleich und Bewertung der Verfahren}{21}
+\contentsline {chapter}{\numberline {3}Grundlagen}{23}
+\contentsline {section}{\numberline {3.1}Text}{23}
+\contentsline {section}{\numberline {3.2}Text}{23}
+\contentsline {subsection}{\numberline {3.2.1}Text}{23}
+\contentsline {subsection}{\numberline {3.2.2}Text}{23}
+\contentsline {section}{\numberline {3.3}Text}{24}
+\contentsline {chapter}{\numberline {4}Umsetzung}{25}
+\contentsline {section}{\numberline {4.1}Text}{25}
+\contentsline {section}{\numberline {4.2}Text}{25}
+\contentsline {section}{\numberline {4.3}Text}{25}
+\contentsline {chapter}{\numberline {5}Systemarchitektur}{27}
+\contentsline {section}{\numberline {5.1}Hardware}{27}
+\contentsline {section}{\numberline {5.2}Software}{27}
+\contentsline {subsection}{\numberline {5.2.1}Verwendete Bibliotheken}{27}
+\contentsline {subsection}{\numberline {5.2.2}Klassendiagramm}{27}
+\contentsline {subsection}{\numberline {5.2.3}Anwenderschnittstelle}{27}
+\newpage 
+\contentsline {chapter}{\numberline {6}Experimentelle Validierung}{29}
+\contentsline {section}{\numberline {6.1}Systemparameter}{29}
+\contentsline {section}{\numberline {6.2}Ergebnisse zu Genauigkeit, Auf"-l\"osung und Wiederholrate}{29}
+\contentsline {chapter}{\numberline {7}Schlussbetrachtungen}{31}
+\contentsline {section}{\numberline {7.1}Ergebnisse der Arbeit}{31}
+\contentsline {section}{\numberline {7.2}Diskussion und Ausblick}{31}
+\contentsline {chapter}{\numberline {A}Mathematik}{33}
+\contentsline {section}{\numberline {A.1}Vektorrechnung}{33}
+\contentsline {subsection}{\numberline {A.1.1}Vektorprodukt}{33}
+\contentsline {subsection}{\numberline {A.1.2}Invertierung einer Matrix}{34}
+\contentsline {subsection}{\numberline {A.1.3}Geraden}{34}
+\contentsline {subsection}{\numberline {A.1.4}Ebenen}{34}
+\contentsline {subsection}{\numberline {A.1.5}Schnitt einer Geraden mit einer Ebene}{35}
+\contentsline {subsection}{\numberline {A.1.6}Rotationen}{35}
+\contentsline {subsection}{\numberline {A.1.7}Homogene Koordinaten}{36}
+\contentsline {section}{\numberline {A.2}Numerik}{38}
+\contentsline {subsection}{\numberline {A.2.1}Methode der kleinsten Quadrate}{38}
+\contentsline {subsection}{\numberline {A.2.2}Gau\IeC {\ss }-Elimination}{39}
+\contentsline {subsection}{\numberline {A.2.3}Cholesky-Verfahren}{40}
+\contentsline {chapter}{\numberline {B}Format der Parameterdateien}{41}
+\contentsline {chapter}{\numberline {C}Quelltextausz\"uge}{43}
+\contentsline {chapter}{\numberline {D}Datenbl\"atter}{49}
+\contentsline {chapter}{\numberline {E}Glossar}{51}
+\contentsline {chapter}{Literatur}{57}
+\contentsline {chapter}{Weiterf\"uhrende Literatur zu wissenschaftlichen Ausarbeitungen}{59}
+\contentsline {chapter}{Sachverzeichnis}{59}

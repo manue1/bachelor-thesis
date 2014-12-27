@@ -1,0 +1,54 @@
+\chapter{Format der Parameterdateien}\index{Parameter}
+\label{anhang_b}
+
+\textcolor{darkred}{Anmerkung: Ein Anhang zur Erklärung der zum System zugehörigen Parameterdateien hat sich als sinnvoll und hilfreich erwiesen, damit nach Abschied des Diplomanden auch uneingeweihte Personen ohne Quelltextsichtung das System zumindest für Demozwecke in Betrieb nehmen können.}
+
+\medskip
+
+
+Die Parameterdateien enthalten die Information über die Punktmuster, bzw. Plattenstapel, welche im Rahmen der Testfeldkalibrierung für Kamera und Projektor verwendet werden. Es sind dies: Anordnung und Anzahl der Punkte auf dem Testfeldmuster und Plattendicke und -anzahl.\\\\
+%\vspace{33pt}\\
+\textbf{Kamerakalibrierung}, Datei \verb$world_camera.txt$\vspace{11pt}\\
+\text{[}Anzahl der Punkte in einer Zeile, d.h. in x-Richtung, Zahlenformat: \emph{int}]\\
+\text{[}Anzahl der Punkte in einer Spalte, d.h. in y-Richtung, \emph{int}]\\
+\text{[}Anzahl der aufzulegenden Ebenen, \emph{int}]\\
+\text{[}Relative Position der Ebenen zueinander, in z-Richtung, \emph{double, negativ}]\\
+\text{[}$x_{w1}\ y_{w1}$, \emph{double, double, durch Leerzeichen getrennt}]\\
+:\\
+\text{[}$x_{wn}\ y_{wn}$]\\
+
+Der vierte Parameter, die relative Position der Ebenen zueinander, entspricht der Dicke einer Glasplatte. Die Anzahl der Punkte $n$ ist gleich dem Wert, den man durch Multiplikation der ersten drei Parameter erhält. Die x- und y-Koordinaten der einzelnen Punkte bezeichnen ihre Lage in der xy-Ebene des Weltkoordinatensystems. Die Einheit ist [mm]. Die Punkte sind zeilenweise sortiert einzugeben, beginnend mit dem ersten Punkt der obersten Zeile.\\
+
+\emph{Beispiel:}
+\begin{quote}
+11\\
+9\\
+5\\
+-10.0\\
+0.0 0.0\\
+5.0 0.0\\
+10.0 0.0\\
+15.0 0.0\\
+:\\
+0.0 5.0\\
+5.0 5.0\\
+10.0 5.0\\
+15.0 5.0\\
+:\\
+45.0 40.0\\
+50.0 40.0\\\\
+\end{quote}
+
+\textbf{Projektorkalibrierung}, Datei \verb$world_projector.txt$\vspace{11pt}\\
+\text{[}Anzahl der aufzulegenden Ebenen, \emph{int}]\\
+\text{[}Relative Position der Ebenen zueinander, in z-Richtung, \emph{double, negativ}]\\
+
+
+Der zweite Parameter, die relative Position der Ebenen zueinander, entspricht der Dicke einer Glasplatte.
+
+\emph{Beispiel:}
+\begin{quote}
+5\\
+-10.0\\
+\end{quote}
+

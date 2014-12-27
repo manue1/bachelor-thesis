@@ -1,0 +1,13 @@
+\beamer@endinputifotherversion {3.33pt}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Signal}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Operation}{9}{0}{1}
+\beamer@sectionintoc {2}{Signal Operation by Amplifier}{14}{0}{2}
+\beamer@subsectionintoc {2}{1}{Operational Amplifier}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{Simple Examples}{18}{0}{2}
+\beamer@subsectionintoc {2}{3}{General Rule}{26}{0}{2}
+\beamer@sectionintoc {3}{Applications}{35}{0}{3}
+\beamer@subsectionintoc {3}{1}{Single - Signal Operator}{35}{0}{3}
+\beamer@subsectionintoc {3}{2}{Multi - Signal Operator}{55}{0}{3}
+\beamer@sectionintoc {4}{Meaning of Operating Signal}{67}{0}{4}
+\beamer@subsectionintoc {4}{1}{Operating Signal and Modern Human Society}{67}{0}{4}

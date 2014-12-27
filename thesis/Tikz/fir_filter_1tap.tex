@@ -1,0 +1,85 @@
+% Library for block diagrams and signal flow graphs
+% Author: Matthias Hotz
+
+\documentclass{article}
+
+\usepackage{tikz}
+\usetikzlibrary{dsp,chains}
+
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\newcommand{\z}{\mathpzc{z}}
+
+\begin{document}
+
+\centering
+
+ FIR filter as block diagram
+\begin{tikzpicture}
+
+	% Place nodes using a matrix
+	\matrix[row sep=2.5mm, column sep=5mm]
+	{
+		%--------------------------------------------------------------------
+		\node[dspnodeopen,dsp/label=left]  (m00) {$x[n]$};    &
+		\node[coordinate]                  (m01) {};          &
+		\node[dspnodefull]                 (m02) {};          &
+		\node[dspsquare]                   (m03) {$\z^{-1}$}; &
+		\node[dspnodefull]                 (m04) {};          &
+		\node[dspsquare]                   (m05) {$\z^{-1}$}; &
+		\node[coordinate]                  (m06) {};          &
+		\node[coordinate]                  (m0X) {};          \\
+		%--------------------------------------------------------------------
+		\node[coordinate]                  (m10) {};          &
+		\node[coordinate]                  (m11) {};          &
+		\node[dspmixer, dsp/label=right]   (m12) {$a_0$};    &
+		\node[coordinate]                  (m13) {};          &
+		\node[dspmixer, dsp/label=right]   (m14) {$a_1$};    &
+		\node[coordinate]                  (m15) {};          &
+		\node[dspmixer, dsp/label=right]   (m16) {$a_2$};    &
+		\node[coordinate]                  (m17) {};          &
+		\node[coordinate]                  (m1X) {};          \\
+		%--------------------------------------------------------------------
+		\\
+		%--------------------------------------------------------------------
+		\node[coordinate]                  (m20) {};          &
+		\node[coordinate]                  (m21) {};          &
+		\node[coordinate]                  (m22) {};          &
+		\node[coordinate]                  (m23) {};          &
+		\node[dspadder]                    (m24) {};          &
+		\node[coordinate]                  (m25) {};          &
+		\node[dspadder]                    (m26) {};          &
+		\node[coordinate]                  (m27) {};          &
+		\node[dspnodeopen,dsp/label=right] (m2X) {$y[n]$};    \\
+		%--------------------------------------------------------------------
+	};
+
+	% Draw connections
+	
+	\begin{scope}[start chain]
+		\chainin (m00);
+		\chainin (m02) [join=by dspflow];
+		\chainin (m12) [join=by dspconn];
+		\chainin (m22) [join=by dspline];
+	\end{scope}
+
+	\foreach \i [evaluate = \i as \j using int(\i+1),
+	             evaluate = \i as \k using int(\i+2),] in {2,4}
+	{
+		\begin{scope}[start chain]
+			\chainin (m0\i);
+			\chainin (m0\j) [join=by dspconn];
+			\chainin (m0\k) [join=by dspline];
+			\chainin (m1\k) [join=by dspconn];
+			\chainin (m2\k) [join=by dspconn];
+		\end{scope}
+		\draw[dspconn] (m2\i) -- (m2\k);
+	}
+
+	\draw[dspflow] (m26) -- (m2X);
+
+\end{tikzpicture}
+
+\vspace{2em}
+
+
+\end{document}

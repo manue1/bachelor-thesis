@@ -1,0 +1,39 @@
+tgo, 12. Mai 2010
+-
+
+++++ Notwendige Dateien im Stammverzeichnis und ihre Bedeutung (Unterverzeichnisse 
+++++ Bilderxy sind komplett einzubinden):
+
+Diplomarbeit.tcp: TexnicCenter-Projektdatei
+Diplomarbeit.tps: TexnicCenter-Sitzungsdatei
+Diplomarbeit.pdf: Ausgabe-PDF-Datei
+Diplomarbeit.tex: TEX-Hauptdatei
+saeubern.bat: Löscht unnötige Dateien
+Titelblatt.tex: Kapitel-TEX-Datei
+Erlaeuterungen.tex: dito
+Einfuehrung.tex
+StandDerTechnik.tex
+Grundlagen.tex
+Umsetzung.tex
+Systemarchitektur.tex
+ExperimentelleValidierung.tex
+Schlussbetrachtungen.tex
+Ausblick.tex
+Anhang_Mathematik.tex: Anhang-TEX-Datei
+Anhang_FormatDerParameterdateien.tex: dito
+Anhang_Quelltexte.tex
+Anhang_Datenblaetter.tex
+Anhang_Glossar.tex
+Literatur.tex: Literatur (ohne BibTeX)
+bibliografie.bib: Literatur zu Latex, MikTeX usw.
+ka-style.bst: BibTeX-Style-Datei
+main.ist: Style-Datei zur Indexerstellung
+
+bugfixes.txt: Bugfixes
+liesmich.txt: diese Datei
+
+
+= insges. 26 Dateien zzgl. 5 Verzeichnisse
+
+
+

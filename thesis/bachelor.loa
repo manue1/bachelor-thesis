@@ -1,0 +1,2 @@
+\contentsline {algorithm}{\numberline {1}{\ignorespaces L\"oseLGSGau\IeC {\ss }($A, \textbf {b}$) $\rightarrow \bm {x}$}}{39}
+\contentsline {algorithm}{\numberline {2}{\ignorespaces L\"oseLGSCholesky($A, \textbf {b}$) $\rightarrow \bm {x}$}}{40}

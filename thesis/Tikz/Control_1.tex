@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usetikzlibrary{dsp,fit}
+
+\makeatletter
+\dspdeclareoperator{dspvoidshapeadder}{
+ % Coordinate offset for the plus
+ \pgfutil@tempdima=\radius
+ \pgfutil@tempdima=0.55\pgfutil@tempdima
+ \pgfusepathqstroke
+}
+\tikzset{
+vdspadder/.style={
+ shape=dspvoidshapeadder,
+ line cap=rect,
+ line join=rect,
+ line width=\dspblocklinewidth,
+ minimum size=\dspoperatordiameter,
+ label={185:$+$},
+ label={265:$-$}
+ },
+vadspadder/.style={
+ shape=dspvoidshapeadder,
+ line cap=rect,
+ line join=rect,
+ line width=\dspblocklinewidth,
+ minimum size=\dspoperatordiameter,
+ label=below right:$-$,
+ label=above right:$+$
+ }
+}
+\makeatother
+
+\begin{document}
+
+\begin{tikzpicture}
+% the nodes
+\matrix[row sep=10mm, column sep=10mm] 
+{
+ & \node[vdspadder] (g1) {}; 
+ & 
+ & \node[dspsquare] (g2) {$K_{\textrm{pr}}$}; 
+ & \node[dspfilter,text width=2cm] (g3) {Yaw Model}; \\
+ \node[dspnodeopen,label=above left:$r_{des}$] (g4) {};
+ & & & 
+ & \node[dspfilter,text width=2cm,text height=1.5em,text depth=2em] (g5) 
+ {Adaptation \\Law}; 
+ & \node[vadspadder] (g6) {}; \\
+ & \node[vdspadder] (g7) {}; 
+ & \node[dspsquare] (g8) {$K_{\textrm{pr}}$}; 
+ & \node[dspsquare] (g9) {$K$}; 
+ & \node[dspfilter,text width=2cm] (g10) {Yaw Plant}; \\
+};
+
+% the connections
+\draw (g4) -- +(-20pt,0);
+\draw[dspconn] (g4) -- (g5);
+
+\draw[dspconn] (g4) |- (g1);
+\draw[dspconn] (g1) -- (g2);
+\draw[dspconn] (g2) -- node[above] {$\delta_{\textrm{mod}}$} (g3);
+\draw[dspconn] (g3) -| node[dspnodeopen,label=above left:$r_{\textrm{mod}}$,pos=0.25] (aux1) {} (g6);
+\draw[dspconn] (g6) -- node[auto,swap] {$e$} (g5);
+\draw[dspconn] (aux1) -- +(0,-30pt) -| (g1);
+
+\draw[dspconn] (g4) |- (g7);
+\draw[dspconn] (g7) -- (g8);
+\draw[dspconn] (g8) -- (g9);
+\draw[dspconn] (g9) -- node[below,pos=0.25] {$\delta$} (g10);
+\draw[dspconn] (g10) -| node[dspnodeopen,label=above left:$r$,pos=0.25] (aux2) {} (g6);
+
+\draw[dspconn] (aux2) |- (g5.-20);
+\draw[dspconn] (aux2) |- +(0,-30pt) -| (g7);
+
+\draw (g5.200) -| (g9);
+\draw[dspconn] (g9.south) -- +(0,-10pt);
+
+% the fitting dashed nodes
+\coordinate (aux3) at ([yshift=-20pt]aux1);
+\node[draw,inner xsep=10pt,inner ysep=20pt,dashed,fit=(g1) (aux3),label=above:{Closed-Loop Yaw Model}] {};
+
+\node[draw,inner xsep=20pt,inner ysep=12pt,dashed,fit=(g8) (g9),label=above:{Yaw Rate Controller}] {};
+\end{tikzpicture}
+
+\end{document}

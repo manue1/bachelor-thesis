@@ -1,0 +1,332 @@
+\chapter{Einführung}
+\label{chapter_einfuehrung}
+
+
+
+\section{Motivation, Zielsetzung und Beitrag der Arbeit}
+\label{section_motivation}
+
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+
+\section{Aufbau und Kapitelübersicht}
+
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+\clearpage
+
+\color{darkred}\index{Aufzählungspunkte}\index{itemize}\index{enumerate}\index{description}
+Es folgen die ersten Formatierungen: Aufzählungspunkte, als  \textbackslash itemize als  \textbackslash enumerate und als  \textbackslash description.
+\color{black}
+
+Übersicht über Zweitakt-Spülverfahren:
+
+\begin{itemize}
+\item Querstromspülung mit Nasenkolben
+\item Umkehrspülung
+\item Dreistromspülung
+\item Drehschiebersteuerung
+\item Membransteuerung
+\end{itemize}
+
+\medskip
+
+Aufzählung der gängigen Zweitakt-Spülverfahren:
+
+\begin{enumerate}
+\item Querstromspülung mit Nasenkolben
+\item Umkehrspülung
+\item Dreistromspülung
+\item Drehschiebersteuerung
+\end{enumerate}
+
+\medskip
+
+\color{darkred}\index{Minipage}\index{Absatz zusammenhalten}
+Die nachfolgenden Punkte sind zusammengehalten über eine minipage, vergleichbar dem \glqq Absatz zusammenhalten\grqq\ in WORD, um einen Seitenumbruch zwischen den Punkten zu vermeiden (die eigentlich hierfür vorgesehenen Formatierungen \textbackslash samepage oder \textbackslash nopagebreak funktionieren nicht zuverlässig). Diese Art der Formatierung sollte erst ganz am Ende der Dokumenterstellung verwendet werden. Vgl. hierzu auch den Befehl \textbackslash mbox  für einzelne Wörter, die nicht getrennt werden sollen (zu verwenden bei falschen Trennungen).
+\color{black}
+
+\medskip
+
+\begin{minipage}{\textwidth}
+Vor- und Nachteile der gängigen Zweitakt-Spülverfahren:
+
+\begin{description}
+\item[Querstromspülung mit Nasenkolben] Einfache Bauform, hohes Kolbengewicht, große Spülverluste.
+\item[Umkehrspülung] Höhere Verdichtung, geringere Spülverluste, geringerer Kraftstoffverbrauch, geringere Neigung zur Selbstzündung.
+\item[Dreistromspülung] Verbesserte Spülung durch stabilere Strömung. Das Kraftstoff-Luft-Gemisch durchströmt zuerst den Kolben, wobei der Kolbenbolzen zusätzlich geschmiert wird.
+\item[Drehschiebersteuerung] Verbesserte Kurbelkammerfüllung, geringere Spülverluste, ca. 10\,\% Kraftstoffeinsparung.
+\item[Membransteuerung] Verbesserte Füllung und Motorleistung über einen weiteren Drehzahlbereich, weniger Spülverluste, geringerer Kraftstoffverbrauch.
+\end{description}
+\end{minipage}
+
+\medskip
+\color{darkred}\index{Leerzeichen}
+Anmerkung: im obigen Text wurde der Ausdruck \glqq 10\,\%\grqq\ mittels \verb$10\,\%$ formuliert. Es wurde also zwischen 10 und \% ein halbes, geschütztes Leerzeichen eingefügt. Diese Art der Formatierung ist auch generell zwischen Zahl und Einheit zu verwenden: 220\,km, 5\,VDC \dots
+\color{black}
+
+
+
+\begin{minipage}{\textwidth}\index{Textformatierung}
+\textcolor{darkred}{Es folgen die wichtigsten Textformatierungen:} 
+
+
+\medskip
+
+\verb$\emph{}:$ \emph{Lorem ipsum dolor sit amet, consectetur adipisici elit.}\\
+\verb$\textbf{}:$ \textbf{Lorem ipsum dolor sit amet, consectetur adipisici elit.}\\
+\verb$\textsc{}:$ \textsc{Lorem ipsum dolor sit amet, consectetur adipisici elit.}\\
+\verb&\verb$$:& \verb$Lorem ipsum dolor sit amet, consectetur adipisici elit.$\\
+\verb$\large{}:$ \large{Lorem ipsum dolor sit amet, consectetur adipisici elit.}\\
+\verb$\Large{}:$ \Large{Lorem ipsum dolor sit amet, consectetur adipisici elit.}\\
+\verb$\LARGE{}:$ \LARGE{Lorem ipsum dolor sit amet, consectetur adipisici}\\
+\verb$\huge{}:$ \huge{Lorem ipsum dolor sit amet \dots}\\
+\verb$\Huge{}:$ \Huge{Lorem ipsum dolor sit amet \dots}\\
+\end{minipage}
+
+\normalsize{ }
+
+\color{darkred}
+Mit folgendem Befehl wird wieder auf normale Formatierung umgeschaltet:
+\color{black}
+
+\medskip
+
+\verb$\normalsize{}$
+
+\medskip
+
+\color{darkred}\index{Newpage}\index{Seitenumbruch}
+Es folgt ein manueller Seitenumbruch mittels \textbackslash newpage. Auch diese Art der Formatierung ist erst ganz am Ende der Dokumentenerstellung zu verwenden, wenn gesichert ist, dass sich der Text nicht mehr verändert.
+\color{black}
+
+\newpage
+
+
+\index{Sonderzeichen}\index{Symbole}\index{Symboltabelle}
+\textcolor{darkred}{
+Untenstehend sind häufig benötigte Sonderzeichen aufgeführt, der Latex-Quelltext zur Tabelle kann darüber hinaus auch für eigene Tabellen als Vorlage dienen:
+}
+
+
+
+\begin{table}[H]
+\centering{
+\begin{tabular}{|l|l|l|}\hline
+Zeichen             &  Latex-Quelltext      & Anmerkung\\ \hline
+Leerzeichen         & \verb$~$              & nach Möglichkeit zu vermeiden\dots\\ \hline
+-                   & \verb$-$              & kurzer Bindestrich (O-Beine)\\ \hline
+--                  & \verb$--$             & langer Bindestrich, Gedankenstrich (10--18 Uhr)\\ \hline
+---                 & \verb$---$            & langer engl. Gedankenstrich\\ \hline
+\glqq Text\grqq\    & \verb$\glqq ...\grqq$ & deutsche Anführungszeichen\\ \hline
+\glq Text\grq\      & \verb$\glq ...\grq$   & deutsche, einfache Hochkommata\\ \hline
+%\dq Text\dq\        & \verb$\dq Text \dq$   & amerikanische Anführungszeichen\\ \hline
+\o{}                & \verb$\o{}$           & Durchmesser\\ \hline
+\$                  & \verb&\$&             & Dollarzeichen\\ \hline
+\%                  & \verb$\%$             & Prozentzeichen\\ \hline
+\&                  & \verb$\&$             & Ampersand \\ \hline
+\#                  & \verb$\#$             & Doppelkreuz\\ \hline
+\{                  & \verb$\{$             & rechts offene geschweifte Klammer\\ \hline
+\}                  & \verb$\}$             & links offene geschweifte Klammer\\ \hline
+\_                  & \verb$\_$             & Unterstrich\\ \hline
+\S                  & \verb$\S$             & Paragraph\\ \hline
+\copyright          & \verb$\copyright$     & Copyright\\ \hline
+\pounds             & \verb$\pounds$        & Englische Pfund\\ \hline
+%\textdegree         & \verb$23\textdegree$  & Gradzeichen\\ \hline
+%\textcelsius        & \verb$23\textcelsius$ & Gradzeichen Celsius\\ \hline
+%\textmu             & \verb$\textmu$        & Nicht-kursives $\mu$, für Einheiten (\textmu m)\\ \hline
+\dots               & \verb$\dots$          & Fortsetzungspunkte\\ \hline
+$\cdots$            & \verb&$\cdots$&       & Fortsetzungspunkte, zentriert\\ \hline
+$\times$            & \verb&$\times$&       & Multiplikationskreuz\\ \hline
+$\backslash$        & \verb&$\backslash$&   & Backslash, kursiv (Mathemodus)\\ \hline
+\textbackslash      & \verb$\textbackslash$ & Backslash\\ \hline
+$\leftarrow$        & \verb&$\leftarrow$&   & \\ \hline
+$\rightarrow$       & \verb&$\rightarrow$&  & \\ \hline
+$\uparrow$          & \verb&$\uparrow$&     & \\ \hline
+$\downarrow$        & \verb&$\downarrow$&   & \\ \hline
+$\Leftarrow$        & \verb&$\Leftarrow$&   & \\ \hline
+$\Rightarrow$       & \verb&$\Rightarrow$&  & \\ \hline
+$\Uparrow$          & \verb&$\Uparrow$&     & \\ \hline
+$\Downarrow$        & \verb&$\Downarrow$&   & \\ \hline
+$\hookleftarrow$    & \verb&$\hookleftarrow$& & Deutet eine Zeilenumbruchsfortsetzung an \\ \hline
+$\pm$               & \verb&$\pm$&          & \\ \hline
+$\mp$               & \verb&$\mp$&          & \\ \hline
+\end{tabular}
+}
+\caption{Auf\/listung häufig benötigter Latex-Sonderzeichen.}
+\label{latexsonderzeichen}
+\end{table}
+
+
+
+\clearpage
+\index{Tabellen}
+\textcolor{darkred}{
+Es folgt eine etwas aufwändigere Tabelle, um die Leistungsfähigkeit und Flexibilität von Latex zu zeigen. Die Tabelle entstammt dem Buch Embedded Robotics (Elektor-Verlag) und wurde von Alexander Bierbaum zur Verfügung gestellt. Die Schrift in der Tabelle ist in Größe \textbackslash footnotesize formatiert (Alternativen für kleine Schriften: \textbackslash tiny, \textbackslash scriptsize, \textbackslash footnotesize, \textbackslash normalsize).}
+
+
+
+
+\begin{table}[H]
+\centering
+\footnotesize % alternativ \tiny \scriptsize \footnotesize \normalsize \large ...
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|p{16.25em}|}\hline
+\bf RS & \bf R/$\overline{W}$ & \bf D7 & \bf D6 & \bf D5 & \bf D4 & \bf D3   &
+\bf D2 & \bf D1   & \bf D0 & \bf Beschreibung              \\  \hline
+0  &          0 &  0 &  0 &  0 &  0 &  0   &    0 &    0 &  1 & Anzeige löschen       \\ \cline{1-11}
+0  &          0 &  0 &  0 &  0 &  0 &  0   &    0 &    1 &  * & Cursor Home (Position 1)  \\ \cline{1-11}
+0  &          0 &  0 &  0 &  0 &  0 &  0   &    1 &  I/D &  S & Cursor Bewegungsrichtung  \\ \cline{1-11}
+0  &          0 &  0 &  0 &  0 &  0 &  1   &    D &    C &  B & Display/Cursor (un)sichtbar  \\ %%@
+\cline{1-11}
+0  &          0 &  0 &  0 &  0 &  1 &  S/C &  R/L &    * &  * & Cursor/Display bewegen      \\ %%@
+\cline{1-11}
+0  &          0 &  0 &  0 &  1 & DL &  N   &    F &    * &  * & LCD+Interface Konfiguration \\ %%@
+\cline{5-11}
+0  &          0 &  0 &  1 &  \multicolumn{6}{c|}{AC}       & Setze CG RAM Adresse  (Zeichenmaske)\\ %%@
+\cline{4-11}
+0  &          0 &  1 &  \multicolumn{7}{c|}{AC}              & Setze DD RAM Adresse (Cursorposition)    %%@
+\\ \cline{4-11}
+0  &          1 & BF &  \multicolumn{7}{c|}{AC}              & Status auslesen \\   \cline{3-11}
+1  &          0 & \multicolumn{8}{c|}{Daten}              & Daten an Cursorposition oder in CG RAM
+                                                       schreiben \\ \cline{3-11}
+1  &          1 & \multicolumn{8}{c|}{Daten}              & Daten an Cursorposition oder von CG RAM
+                                                       lesen \\ \hline
+\end{tabular}
+\caption{Übersicht der HD44780 Befehle, (*) bedeutet: Bit nicht verwendet.}
+\label{hd44780befehle}
+\end{table}
+
+
+\textcolor{darkred}{Es folgt eine weitere Tabelle, dieses Mal allerdings effizienter in MS WORD erstellt, als .pdf exportiert und in Adobe Acrobat zugeschnitten. Zu weiteren Tricks (Font, Größe) vgl. das zugehörige WORD-Dokument mitsamt zugehörigem Font im Unterverzeichnis \textbackslash BilderKap1 (beachte auch die Verwendung der Umgebung \textbackslash table, damit in der Bildunterschrift \glqq Tabelle\grqq, statt \glqq Abbildung\grqq\ steht).}
+
+\begin{table}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{BilderKap1/Word-Tabelle-01.pdf}
+\caption{Beispiel für eine MS-Word-Tabelle (kein Unterschied erkennbar).}
+\label{bspmswordtabelle}
+\end{center}
+\end{table}
+
+\textcolor{darkred}{Anzumerken ist noch, dass diese Tabelle felsenfest verankert wurde mit der Option [H] unter gleichzeitiger Verwendung des Packages float. Diese Maßnahme ist nur bei sehr vielen, ungeplant wandernden Bildern oder ganz am Ende der Dokumentenerstellung sinnvoll, da sie sonst zu sehr in den Satz von Latex eingreift und unschöne Lücken entstehen lässt.}
+
+
+\clearpage
+
+\textcolor{darkred}{Die nachfolgenden exemplarischen Vektorgrafiken wurden ebenfalls mit MS Word bzw. (fast gleichbedeutend) mit MS Visio erstellt und über pdf-Export und Zuschnitt mittels Adobe Acrobat (Beschneidungswerkzeug) im Latex-Dokument eingebettet.}
+
+\textcolor{darkred}{Diese Art der Erstellung von Zeichnungsobjekten eröffnet auch die Möglichkeit, Zeichnungen, Charts, CADs, UML-Diagramme o.ä. mit jedwegem Programm zu erstellen, welches eine Druckoption bietet. Der Export geschieht dann über den Druckertreiber \glqq Adobe PDF\grqq\ (Vorsicht, dieser wird nur bei Vollinstallation des kommerziellen Adobe Acrobat-Studios installiert).}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.99\textwidth]
+{BilderKap1/Zeichenbeispiel-01.pdf}
+\caption{Beispiel für eine Vektorgrafik (Fonts: DCR10, ISOCTEURItalic), Bildquelle: [Hoischen 88].}
+\label{bspvektorgrafik}
+\end{figure}
+
+\textcolor{darkred}{Im zugehörigen Word-Dokument finden sich noch weitere Zeichnungen und Erklärungen, wie diese erstellt wurden. Weiterhin sind dort auch die zugehörigen Fonts abgelegt, welche für die Beispiele in das Verzeichnis \textbackslash windows\textbackslash fonts kopiert werden müssen.}
+
+\index{Vektorgrafik}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.99\textwidth]
+{BilderKap1/Zeichenbeispiel-02.pdf}
+\caption{Beispiel für eine Vektorgrafik (Font: Times New Roman).}
+\label{bspvektorgrafik2}
+\end{figure}
+
+
+\clearpage
+\index{Fonts}\index{Schrifteneinbettung}
+\textcolor{darkred}{Beim Umgang mit .pdf-Dateien ist stets besonders darauf zu achten, dass die verwendeten Fonts eingebettet werden. Einstellbar ist dies im Adobe Acrobat über Bearbeiten / Grundeinstellungen / \dots . Eine Kontrolle erfolgt über Datei / Dokumenteigenschaften / Schriften oder über Erweitert / Preflight / Liste mit Text ohne eingebettete Schriften.}
+
+\textcolor{darkred}{Verwenden Sie eine Version $\geq$ 6.0; gerade bei der Schrifteneinbettung gab es bei früheren Versionen öfters Schwierigkeiten.}
+
+
+
+\medskip
+
+
+%http://www.fnal.gov/docs/products/gnuplot/tutorial/
+%http://gnuplot.sourceforge.net/docs/tutorial.pdf
+
+\index{Gnuplot}
+\begin {figure}[H]
+\centering
+\input{BilderKap1/gnuplot-01.tex}
+\caption{Beispiel für eine Gnuplot-Kurve.}
+\end {figure}
+
+
+
+\begin {figure}[H]
+\centering
+\input{BilderKap1/gnuplot-02.tex}
+\caption{Beispiel für einen Messwert-Plot mit Gnuplot.}
+\end {figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.90\textwidth]
+{BilderKap1/gnuplot-03.pdf}
+\caption{Beispiel für einen 3D-Plot mit Gnuplot (Ausgabe im Postscript-Format, dann Konvertierung nach pdf mittels Ghostscript).}
+\label{bspgnuplot}
+\end{figure}
+
+
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+
+\clearpage
+
+
+
+
+\textcolor{darkred}{Einschub: Kommentare im Latex-Quelltext sind auf zwei Arten möglich:}
+
+\textcolor{darkred}{1.) Umwandlung einer Zeile bzw. eines zusammenhängenden Absatzes zum Kommentar: Durch ein vorangestelltes \%.}
+
+\textcolor{darkred}{2.) Umwandlung eines längeren Blocks zum Kommentar: Mittels Klammerung:}
+
+\verb$\usepackage{verbatim}$\\
+\verb$\begin{comment}$\\
+\verb$    Dies ist ein Kommentar$\\
+\verb$\end{comment}$\\
+
+
+\textcolor{darkred}{Einschub: der Befehl \textbackslash verb\$\dots\$ ermöglicht die Eingabe eines Textes zwischen den Dollarzeichen, der nicht von Latex interpretiert wird. Somit stellt der Befehl die einfachste Art dar, Text mit vielen Sonderzeichen einzugeben. Typischerweise sind dies Quelltextzeilen, Dateinamen, Verzeichnisnamen, Programmaufrufe mit Parametern und URLs. Ausgegeben wird der Text in der Schriftart Courier New.}
+\medskip
+
+\textcolor{darkred}{Beispiel, ein Compiler-Aufruf:}\\
+\verb$sdcc -I c:\sdcc\include -L c:\sdcc\lib\large simpletest.c --model-large$
+
+
+
+
+\medskip
+\textcolor{darkred}{Beispiel, mit angedeuteten Leerzeichen, einstellbar via \textbackslash verb*\$\dots\$:}\\
+\verb*$sdcc -I c:\sdcc\include -L c:\sdcc\lib\large simpletest.c --model-large$
+
+
+
+
+\medskip
+\medskip
+\medskip
+
+\textcolor{darkred}{***}
+
+\medskip
+
+\textcolor{darkred}{Zu Formelsatz und Algorithmen: vgl. Anhang A: Mathematik.}
+
+
+
+%

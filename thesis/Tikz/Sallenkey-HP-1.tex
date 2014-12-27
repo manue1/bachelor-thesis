@@ -1,0 +1,45 @@
+\documentclass{article}
+
+\usepackage[european]{circuitikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{circuitikz} 
+\draw
+(2,0.78) 	--  (4,0.78) 
+(0,-2) 		node[anchor=east] {x} 	to[short, o-] (3.3,-2)
+(0,-4) 		node[anchor=east] {y} 	to[short, o-] (3.3,-4)
+(1.01,0) 	to[short,-*]  (1.01,-4)
+(3.01,0) 	to[short,-*]  (3.01,-2)
+(4,-0.75) 	--  (4,-1.25)
+(4,-2.75) 	--  (4,-3.25)
+(2,-0.75) 	--  (2,-1)   to[short,-*]  (4,-1)
+					to[short, -o] (5,-1) node[anchor=west] {f} 
+(4,-4.5) -- (4,-5) node[ground] {}
+;
+\draw
+(2,0) node[pmos] (mos) {}
+(mos.base) node[anchor=west] {$MP_1$}
+(mos.gate) node[anchor=east] {}
+(mos.drain) node[anchor=south] {}
+(mos.source) node[anchor=north] {};
+\draw
+(4,0) node[pmos] (mos) {}
+(mos.base) node[anchor=west] {$MP_2$}
+(mos.gate) node[anchor=east] {}
+(mos.drain) node[anchor=south] {}
+(mos.source) node[anchor=north] {};
+\draw
+(4,-2) node[nmos] (mos) {}
+(mos.base) node[anchor=west] {$MN_2$}
+(mos.gate) node[anchor=east] {}
+(mos.drain) node[anchor=south] {}
+(mos.source) node[anchor=north] {};
+\draw
+(4,-4) node[nmos] (mos) {}
+(mos.base) node[anchor=west] {$MN_1$}
+(mos.gate) node[anchor=east] {}
+(mos.drain) node[anchor=south] {}
+(mos.source) node[anchor=north] {};
+\end{circuitikz}
+\end{document}
+

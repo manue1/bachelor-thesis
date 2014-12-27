@@ -1,0 +1,32 @@
+BUGFIXES UND NEUERUNGEN
+
+
+
+2010-05-12
+
++ Anpassung der Quellenformatierung, wieder eckige Klammern, mit natbib
++ Umstellung auf neue Versionen: MikTex 2.8, TexnicCenter Stable Release Candidate 1.0 ...
+
+
+
+2009-08-06
+
++ Eidesstattl Erklärung raus, in unverfänglichere Form umformuliert
++ (geplant: Vorlage unter GNU)
+
+
+2009-02-19
+
+
++ Seitennummerierung der Verzeichnisse
++ Package natbib raus
++ PDF-Konformität der Beispiele auf V1.4, statt auf V1.6
++ Tests mit neuestem MikTex unter Windows
++ Schrifteneinbettung: Probleme (pixelige Type3-Fonts) mit Package \usepackage{textcomp}, \usepackage{mathcomp} -> raus
++ Schrifteneinbettung, Probleme mit \usepackage[T1]{fontenc} -> raus
+
+
+
+Anmerkung: \usepackage[T1]{fontenc} funktioniert nicht mit dem sv-mono-Style zusammen.
+
+

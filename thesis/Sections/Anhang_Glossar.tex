@@ -1,0 +1,119 @@
+\chapter{Glossar}\index{Glossar}
+\label{anhang_e}
+
+
+
+\textcolor{darkred}{Anmerkung: Das vorliegende Glossar wurde ohne die Zuhilfenahme der speziellen Glossarumgebungen von Latex erstellt, um eine etwas freiere Formatierung nutzen zu können.}
+\medskip
+
+
+
+\interlinepenalty=10000 % keine Schusterjungen, keine Hurenkinder
+
+
+
+\begin{description}
+
+\item[\bf{2,5D-Datensatz}] $\rightarrow$Tiefenbild.
+
+\item[\bf{3D-Modell, 3D-Modellerfassung (optische)}] Der Begriff des 3D-Modells wird in der vorliegenden Arbeit für wasserdichte Oberflächenmodelle verwendet. Dies dient zur Abgrenzung gegenüber 3D-Volumenmodellen und $\rightarrow$Tiefenbildern. Der Begriff der Optischen 3D-Modellerfassung umschließt hier neben der eigentlichen Sensordatenauswertung auch die $\rightarrow$3D-Registrierung und die Schritte der Nachbearbeitung wie Glätten und Ausdünnen der Daten und Stiching-Operationen.
+
+\item[\bf{3D-Registrierung}] Vgl. Abschnitte 2.4, 4.3 und $\rightarrow$Registrierung.
+
+\item[\bf{Aktive Musterprojektion}] Der Begriff der Aktiven Musterprojektion kennzeichnet Musterprojektionsverfahren, welche einen kalibrierten Musterprojektor voraussetzen. Vgl. entsprechend auch $\rightarrow$Passive Musterprojektion.
+
+\item[\bf{Aktive Optische Verfahren}] Der Terminus Aktive Optische Verfahren kennzeichnet 3D-Datenerfassungsverfahren, welche eine zusätzliche Lichtquelle voraussetzen. Dies ist auch bei dem Verfahren der durch $\rightarrow$Passive Musterprojektion ergänzten Stereopsis der Fall, dennoch wurde in der Darstellung zur Klassifizierung dieses Verfahren naheliegenderweise als Sonderfall hinter der Standard-Stereopsis aufgeführt (Abbildung 2.1).
+
+\item[\bf{Apertur, numerische}] Die numerische Apertur NA eines optischen Elementes, beispielsweise eines Objektivs, ist ein Maß für seine Lichtstärke bzw. sein Auf"-lösungsvermögen. Die NA ist proportional zum Öffnungswinkel: $NA = n \cdot \sin \frac{\alpha }{2}$, mit $n$: Brechzahl. Oft wird statt der NA auch der Begriff der Blendenzahl $F$ verwendet, hier besteht ein umgekehrt proportionaler Zusammenhang.
+
+\item[\bf{A priori-Szenenwissen}] Liegen vor Beginn der 3D-Erfassung bereits Informationen zur Geometrie des zu erfassenden Objektes im Erfassungssystem vor, so spricht man von a priori-Szenenwissen. Dies kann beispielsweise die Kenntnis der maximalen Objektausdehnung in $z$-Richtung sein, hilfreich zur Beschränkung des Suchraumes bei der Korrespondenzfindung. Ein weiteres Beispiel ist die Kenntnis der Anordnung der Profillinien auf der Objektoberfläche beim Lichtschnittverfahren; sie ermöglicht eine einfache und schnelle $\rightarrow$Vernetzung der $\rightarrow$Tiefenbilder.
+
+\item[\bf{Bildaufnehmer}] Der allgemeine Begriff des Bildaufnehmers steht in der vorliegenden Arbeit für zweidimensionale optische Sensoren bzw. Matrixkameras mit CCD- oder CMOS-Sensor.
+
+\item[\bf{Direkte Lineare Transformation, DLT}] $\rightarrow$Abschnitt 3.2.3.
+
+\item[\bf{Disparität}] Bei dem Ansatz des $\rightarrow$Stereosehens versteht man unter der Disparität den durch den Abstand der beiden Bildaufnehmer zueinander entstehenden Versatz der Abbildungen eines Objektpunktes. Dieser Versatz ist abhängig von der Entfernung des Objektes und entsprechend kann hieraus auf die Entfernung rückgerechnet werden.
+
+\item[\bf{Epipolargeometrie, Epipolarlinie, Epipol}] $\rightarrow$Abschnitt 3.2.5.
+
+\item[\bf{Extrinsische Parameter}] Hiermit sind Position und Orientierung eines $\rightarrow$Bildaufnehmers im vorgegebenen Weltkoordinatensystem bezeichnet. Sie sind gemeinsam mit den $\rightarrow$intrinsischen Parametern aus der Kalibrierung erhältlich (vgl. Abschnitte 3.2 und 3.3.1).
+
+\item[\bf{Fringe Pattern, Fringe Projection}] Der englische Begriff Fringe Pattern bzw. Fringe Projection (Fringe: dtsch. Rand, Saum) entspricht dem deutschen Begriff des Streifenmusters bzw. der Streifen-, Binär- oder Graycode-Projektion (vgl. Abschnitt 2.2.2).
+
+\item[\bf{Geodäsie}] (Griech.: geo: Erde, dasei: teilen). Nach der klassischen Definition von F. R. Helmert ist die Geodäsie die \glqq Wissenschaft von der Ausmessung und Abbildung der Erdoberfläche.\grqq\ Ein wichtiges Messprinzip der Geodäsie ist die $\rightarrow$ Triangulation.
+
+\item[\bf{Homographie}] Eine Homographie bedeutet die lineare Abbildung bzw. projektive Transformation einer Ebene im dreidimensionalen Raum auf eine andere Ebene in Form einer 3$\times$3-Transformationsmatrix. Eine gängige Anwendung ist die Entzerrung projizierter Bilder. Hier wird die $\rightarrow$Rektifikation durch eine Homographie hergestellt.
+
+\item[\bf{\emph{hsv}-Farbraum, \emph{hsv}-Modell}] Vgl. Rot-Grün-Blau-Farbraum, hier stellen die drei Werte nicht die drei Grundfarben dar, sondern stehen für \emph{hue} (Farbwert), \emph{saturation} (Sättigung) und \emph{value} (Helligkeit). Die Umwandlung zwischen \emph{rgb} und \emph{hsv} ist möglich, allerdings nicht immer eindeutig (vgl. Abschnitt 2.2.4).
+
+\item[\bf{Intraoral}] Im Mundraum.
+
+\item[\bf{Intrinsische Parameter}] Hiermit sind Kenngrößen wie Brennweite $f$ des Objektivs, Pixelgröße des Bildaufnehmers in $x$ und $y$, Bildursprung (Position des Bildursprungs relativ zum Kamerakoordinatensystem) und Objektivverzeichnungen eines Bildaufnehmers mit zugehöriger Optik bezeichnet. Zusammen mit den $\rightarrow$extrinsischen Parametern sind sie erhältlich aus der Kalibrierung (vgl. Abschnitte 3.2 und 3.3.1).
+
+\item[\bf{Kondensor, Kondensorlinse}] Ein Kondensor ist ein optisches System aus einer oder mehreren Sammellinsen oder Spiegelflächen zwischen Lichtquelle und abzubildendem Objekt (Dia beim Projektor, Objektträger beim Mikroskop). Der Kondensor lenkt das Licht, welches das Objekt durchsetzt, in das abbildende Objektiv. Kondensorlinsen sind oft asphärisch ausgeformt, um eine möglichst kurze Brennweite und damit eine möglichst kleine Bauform des Gerätes zu ermöglichen.
+
+\item[\bf{Korrespondenzproblem, Korrespondenzanalyse}] Vgl. Abschnitt 2.2.1.
+
+\item[\bf{Lichtschnitt}] $\rightarrow$Linienlaser.
+
+\item[\bf{Linienlaser}] Er stellt einen um eine Zylinder- bzw. Powell-Linse erweiterten Punktlaser dar. Der Laserstrahl wird hierdurch fächerförmig aufgeweitet und kann somit auf einer Projektionsfläche als gut erkennbare Laserlinie abgebildet werden. Anwendung findet der Linienlaser häufig in triangulationsbasierenden Laserscannern, das Verfahren wird dann als Lichtschnittverfahren bezeichnet.  Das Verfahren ist bis auf die einfachere Korrespondenzauf"-lösung identisch mit der zeitlich codierten Musterprojektion (Binäre M., Graycode-M., vgl. 2.2.1), dennoch wird im Sprachgebrauch unterschieden. Diese Verfahren werden meist als \emph{auf strukturiertem Licht basierend} bezeichnet.
+
+
+\item[\bf{Matching}] Wird der Begriff des Matchings wie in der vorliegenden Arbeit auf Oberflächendatensätze ($\rightarrow$Tiefenbilder) angewandt, so kennzeichnet er die Bestimmung der Transformation, um die Datensätze in ein gemeinsames Koordinatensystem zu überführen. Er ist gleichbedeutend mit dem Begriff der $\rightarrow$3D-Registrierung.
+
+\item[\bf{Merging}] Der Begriff des Merging wird in der vorliegenden Arbeit für den Vorgang der Eingliederung eines bereits registrierten, vorvernetzten  $\rightarrow$2,5D-Datensatzes in einen bestehenden 3D-Datensatz auf dem Weg zur Erstellung eines geschlossenen $\rightarrow$3D-Modells verwendet. Hierzu ist zumindest teilweise eine Neuvernetzung erforderlich (zur Vorgehensweise und zu Problemen hierbei vgl. beispielsweise [Völzow 03]).
+
+\item[\bf{Meshing}] $\rightarrow$Vernetzung.
+
+\item[\bf{One-Shot-Verfahren}] Der Begriff kennzeichnet musterprojektionsbasierte Verfahren zur optischen 3D-Datenakquisition, bei welchen ein einziges aufgenommenes Bild ausreicht, um ein $\rightarrow$Tiefenbild zu erstellen. Der Begriff wurde von Marc Proesmans geprägt [Proesmans 96a].
+
+\item[\bf{Passive Musterprojektion}]  Im Gegensatz zu dem Verfahren der $\rightarrow$Aktiven Musterprojektion kommen hier zwei oder mehr kalibrierte Kameras, ergänzt durch einen Musterprojektor, zum Einsatz ($\rightarrow$Stereopsis). Dieser ist nicht kalibriert, sondern dient nur dazu, die Szene zu aktivieren bzw. der Szene neue Merkmale zuzuordnen, um dieserart die Korrespondenzfindung zu erleichtern.
+
+\item[\bf{Phasenschiebeverfahren, Phase Shifting}] Vgl. Abschnitt 2.2.3
+
+\item[\bf{Punktwolke}] Mit dem Begriff der Punktwolke wird in der vorliegenden Arbeit allgemein ein nicht $\rightarrow$vernetzter $\rightarrow$2,5D-Datensatz oder 3D-Datensatz bezeichnet. Äquivalent ist im Englischen der Begriff \emph{Point Cloud} bzw. -- spezifisch im unorganisierten Fall -- \emph{Scattered Point Data}.
+
+\item[\bf{Region Growing, Regionenwachstum}] Das Region Growing-Verfahren ist ein regionenbasiertes Segmentierungsverfahren. Bei diesem Verfahren wachsen homogene Regionen ausgehend von vorgegebenen Saatpunkten. Zu einer dieserart entstehenden Region werden angrenzende Bildpunkte hinzugenommen, solange ein vorgegebenes Homogenitätskriterium erfüllt ist (typisches Kriterium: Schwellwert für die Grauwertdifferenz).
+
+\item[\bf{Registrierung}] Der Begriff der Registrierung wird in der vorliegenden Arbeit als Kurzform für $\rightarrow$3D-Registrierung verwendet. Dies dient der Abgrenzung gegenüber der anders lautenden Definition der Registrierung in der (medizinischen) Bildverarbeitung. Hier wird der Begriff für die Zuordnung von 2D-Bildinformationen zueinander gebraucht (monomodal: Bsp. radiologische Daten, multimodal: Bsp. radiologische Daten zu Ultraschalldaten).
+
+\item[\bf{Rektifikation}] Unter Rektifikation versteht man den Vorgang, die Bildebenen zweier Kameras, die in der Realität nicht in der gleichen Ebene liegen, sondern verschoben und/oder gegeneinander rotiert sind, auf eine gemeinsame virtuelle Bildebene abzubilden, in welcher dann die jeweiligen  Epipolarlinien kollinear zueinander und zu den Basisvektoren verlaufen.
+Ein Vorteil, der hieraus entsteht, ist die Möglichkeit der Anwendung einfacherer und schnellerer Korrelationsverfahren. Die Rektifikation wird durch eine $\rightarrow$Homographie hergestellt (vgl. auch [Trucco 98,7.3.7]).
+
+\item[\bf{Running Sum}] $\rightarrow$Sum Table
+
+\item[\bf{Schärfentiefe}] Mit Schärfentiefe wird die Ausdehnung des scharf abgebildeten Bereiches entlang der optischen Achse eines optischen Systems bezeichnet (auch: Abbildungstiefe, umgangssprachlich oft auch: $\rightarrow$Tiefenschärfe). Zur rechnerischen Bestimmung wird für den Zerstreuungskreis auf dem $\rightarrow$Bildaufnehmer ein maximaler Durchmesser vorgegeben (vgl. auch [Schröder 77]).
+
+\item[\bf{Splatting}] Ein Problem bei der Visualisierung von 3D-Oberflächendaten ist die Notwendigkeit der zeitaufwändigen $\rightarrow$Vernetzung. Neue Verfahren zur Visualisierung von 3D-Daten setzen keine Nachbarschaftsbeziehungen zwischen den Punkten voraus, sondern dehnen im Moment des Renderings bzw. der Anzeige der Daten durch Projektion auf eine Fläche (Bildschirm) einzelne den Punkten zugewiesene Elementfunktionen so weit aus, dass sich der visuelle Eindruck einer geschlossenen Fläche ergibt. Man unterscheidet hierbei Surface Splatting und Volume Splatting (vgl. auch QSplat, [Rusinkiewicz 00]).
+
+\item[\bf{Stereopsis, Stereosehen}] Unter dem Begriff Stereopsis versteht man den Vorgang der visuellen Wahrnehmung der Tiefe oder Entfernung von Objekten. Der Begriff leitet sich ab aus den griechischen Worten \emph{Stereo} für räumlich und \emph{Opsis} für Sehen oder Sicht. Die Tiefeninformation wird hierbei gewonnen aus dem entfernungsabhängigen Versatz der Bildinformationen zwischen den zwei Augen oder Bildaufnehmern.
+
+\item[\bf{Sum Table}] Der Begriff Sum Table bezeichnet die Ablage einer fortlaufend gebildeten Summe (Running Sum) in einer n-dimensionalen Tabelle. Bsp. (1D):
+$S_{\sum {x_k } }  = [\sum\limits_1 {x_k ,} \sum\limits_2 {x_k ,} ...,\sum\limits_n {x_k }]$. Teilsumme $\sum\limits_{k = l}^m {x_k }$ kann hiermit nun schnell gebildet werden. Für den zweidimensionalen Fall vgl. Abschnitt 3.4.2: Optimierte ZNCC.
+
+\item[\bf{Tiefenbild}] Mit dem Begriff Tiefenbild wird eine Darstellungsform für Höheninformationen bezeichnet, welche in einem Grauwertbild mit den Bildpunktkoordinaten $x,y$ diesen auch einen $z$-Wert in Form ihres Grauwertes zuordnet. Die Darstellungsform kann leicht umgewandelt werden in eine $\rightarrow$3D-Punktwolke, deren Punkte alle eindeutig in die $xy$-Ebene projizierbar sind (man spricht dann von 2,5D-Datensatz). Ein Tiefenbild kann somit kein geschlossenes $\rightarrow$3D-Modell darstellen, sondern nur eine Sicht auf ein Objekt vermitteln. Seltener auch: Tiefenkarte.
+
+\item[\bf{Tiefenschärfe}] $\rightarrow$Schärfentiefe.
+
+\item[\bf{Transluzenz}] Die Transluzenz bezeichnet die Eigenschaft eines Objektes, teilweise lichtdurchlässig zu sein. In Abgrenzung zur Transparenz kann man Transluzenz als Lichtdurchlässigkeit beschreiben und Transparenz als Bilddurchlässigkeit.
+
+\item[\bf{Triangulation}] Der Begriff der Triangulation wird in der vorliegenden Arbeit zweifach verwendet. Zum einen bezeichnet er den Vorgang der Vernetzung einer $\rightarrow$Punktwolke zu einem Dreiecksnetz (Bsp.: Delaunay-Triangulation, Abschnitt 4.5.1), zum anderen die Berechnung der Tiefe auf Basis von Dreiecksbeziehungen bei der optischen 3D-Datenerfassung (vgl. Abbildung E.1 und Abschnitt 3.2.4).
+%
+\begin{figure}[H]
+\centering
+   \includegraphics[scale=0.55]{BilderAnhangE/Triangulation2d.jpg}
+   \caption{Triangulation (Bildquelle: [Wikipedia 07]).}
+   \label{AnhangE_Triangulation}
+\end{figure}
+%
+\glqq (\dots) Von zwei verschiedenen Stationen an den Positionen $\bf{s_1}$ und $\bf{s_2}$ wird der zu bestimmende Zielpunkt $\bf{P}$ angepeilt. Dabei erhält man die beiden Winkel $\alpha$ und $\beta$ mit der Genauigkeit $\Delta \alpha$ und $\Delta \beta$. Unter Kenntnis der Basislänge $b$ kann man dann die Koordinaten von $\bf{P}$ relativ zum Koordinatenursprung bestimmen.\grqq\ (Zitat aus: [Wikipedia 06]). Ein bekanntes optisches Winkelmessgerät der $\rightarrow$Geodäsie ist der Theodolit.
+%
+\item[\bf{Vernetzung}] Mit dem Begriff der Vernetzung wird die Erstellung einer Oberfläche aus einer Punktwolke durch Einfügen von Kanten zwischen den Punkten bezeichnet. Im allgemeinen Fall entstehen hieraus $n$-Ecke, im speziellen Fall Dreiecke ($\rightarrow$Triangulation).
+%
+\item[\bf{Weltkoordinatensystem}] Der Begriff Weltkoordinatensystem ist in der vorliegenden Arbeit anders belegt als in der klassischen Geodäsie: Gemeint ist ein dreidimensionales kartesisches Koordinatensystem, in welchem die Daten in der Einheit [Meter] bzw. [Millimeter] eingetragen sind,
+welches aber nicht in Bezug steht zu geographischen Landeskoordinaten.
+\end{description}
+\interlinepenalty=100
+
+
+

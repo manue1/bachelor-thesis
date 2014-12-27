@@ -1,0 +1,491 @@
+\chapter{Mathematik}\index{Mathematik}
+
+
+
+
+\medskip
+
+\textcolor{darkred}{Anmerkungen: Der nachfolgende Text ist der Quelle [Azad 07] entnommen und soll exemplarisch die Verwendung des Formelsatzes von Latex aufzeigen. Nicht alle Gleichungen sind nummeriert, man beachte hier die Unterscheidung zwischen} \verb%$...$% \textcolor{darkred}{bzw. } \verb%$$...$$% \textcolor{darkred}{und} \verb$\begin{equation}$, \verb$\end{equation}$ \textcolor{darkred}{bzw. auch die Verwendung von} \verb$\nonumber$.
+
+\textcolor{darkred}{Bei komplexen Formeln hat sich die Verwendung des freien, schlanken Formeleditors \mbox{TEXAIDE} bewährt. In diesem Editor kann eine Gleichung rasch mit der Maus zusammengeklickt und dann über die Zwischenablage in den Latex-Editor übernommen werden. Das Tool ist erhältlich unter der URL: } \url{http://www.dessci.com/en/products/texaide}.
+
+\textcolor{darkred}{Unter Einbindung des Paketes amstext kann in Gleichungen normalformatierter (nicht kursiver) Text eingefügt werden mittels: }\verb$\text{}$.
+
+
+\vspace{1cm}
+
+\section{Vektorrechnung}
+\subsection{Vektorprodukt}
+Seien $\bm{a}, \bm{b} \in \mathbb{R}^3$ und linear unabhängig, so ist das \emph{Vektorprodukt} (oder auch \emph{Kreuzprodukt}) $\bm{a} \times \bm{b}$ definiert als der Vektor mit den folgenden Eigenschaften:
+
+\begin{itemize}
+\item $\bm{a} \times \bm{b}$ steht senkrecht auf $\bm{a}$ und $\bm{b}$
+\item $\bm{a}, \bm{b}$, $\bm{a} \times \bm{b}$ bilden in dieser Folge ein Rechtssystem
+\item $|\bm{a} \times \bm{b}| = |\bm{a}|\ |\bm{b}|\ \sin\omega(\bm{a}, \bm{b})$ \\
+\end{itemize}
+Es kann wie folgt berechnet werden:
+\begin{equation}
+\bm{a} \times \bm{b} =
+\left(
+\begin{array}{*{3}{c}}
+a_2\ b_3 & - & a_3\ b_2 \\
+a_3\ b_1 & - & a_1\ b_3 \\
+a_1\ b_2 & - & a_2\ b_1 \\
+\end{array}
+\right)
+%\nonumber
+\end{equation}
+
+\subsection{Invertierung einer Matrix}
+\label{anhang_b_matrix_inversion}
+Die Inverse einer $3\times3$-Matrix muss nicht mit einem Eliminationsverfahren berechnet werden, sondern kann direkt aufgestellt werden. Gegeben sei die reguläre Matrix:
+
+\begin{equation}
+A =
+\left(
+\begin{array}{ccc}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}\\
+\end{array}
+\right)
+\end{equation}
+
+Die inverse Matrix $A^{-1}$ berechnet sich dann zu:
+{\small
+\begin{eqnarray}
+\det{A} &:=& \frac{1}{-a_{13}a_{22}a_{31} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33} + a_{11}a_{22}a_{33}}\nonumber\\
+A^{-1}&:=&\det{A}\cdot
+\left(
+\begin{array}{ccc}
+-a_{23}a_{32} + a_{22}a_{33}\ \ & a_{13}a_{32} - a_{12}a_{33}\ \ & -a_{13}a_{22} + a_{12}a_{23}\\
+a_{23}a_{31} - a_{21}a_{33}\ \ & -a_{13}a_{31} + a_{11}a_{33}\ \ & a_{13}a_{21} - a_{11}a_{23}\\
+-a_{22}a_{31} + a_{21}a_{32}\ \ & a_{12}a_{31} - a_{11}a_{32}\ \ & -a_{12}a_{21} + a_{11}a_{22}\\
+\end{array}
+\right)%\nonumber
+\end{eqnarray}
+}
+
+\subsection{Geraden}
+Eine Gerade $g$ wird im $\mathbb{R}^3$ durch folgende Gleichung beschrieben:
+$$
+g : \bm{x} = \bm{a} + r\cdot\bm{u} \nonumber
+$$
+mit $r \in \mathbb{R}$ und $\bm{x}, \bm{a} \in \mathbb{R}^3$ und $\bm{u} \in \mathbb{R}^3\backslash\{\bm{0}\}$. Die Gerade wird eindeutig durch den Aufpunktsvektor und den Richtungsvektor beschrieben. $\bm{a}$ ist der Ortsvektor des Aufpunktes, ein beliebiger Punkt der Geraden. Die Richtung der Geraden wird durch den Richtungsvektor $\bm{u}$ vorgegeben. Für jedes beliebige $r$ bezeichnet $\bm{x}$ den Ortsvektor eines Punktes der Geraden.\\
+
+\subsection{Ebenen}
+Es werden drei verschiedene Darstellungsformen einer Ebene im $\mathbb{R}^3$ gegeben:\\
+\\
+\textbf{1. Parameterdarstellung}
+$$
+E : \bm{x} = \bm{a} + r\cdot\bm{u} + s\cdot\bm{v}
+$$
+mit $r, s \in \mathbb{R}$ und $\bm{x}, \bm{a} \in \mathbb{R}^3$ und $\bm{u}, \bm{v} \in \mathbb{R}^3\backslash\{\bm{0}\}$. Die Ebene wird eindeutig durch den Aufpunktsvektor und den beiden Richtungsvektoren beschrieben. $\bm{a}$ ist der Ortsvektor des Aufpunktes, ein beliebiger Punkt der Ebene. Die Lage der Ebene im Raum wird durch die beiden Richtungsvektoren $\bm{u}, \bm{v}$ vorgegeben. Für jedes beliebige Paar $(r, s)$ bezeichnet $\bm{x}$ den Ortsvektor eines Punktes der Ebene.\\
+\\
+\textbf{2. Normalenform}
+$$
+E : [\bm{x} - \bm{a}]\cdot\bm{n} = 0
+$$
+mit $\bm{x}, \bm{a} \in \mathbb{R}^3$ und $\bm{n} \in \mathbb{R}^3\backslash\{\bm{0}\}$. Die Ebene wird eindeutig durch den Aufpunktsvektor und den Normalenvektor beschrieben. $\bm{a}$ ist der Ortsvektor des Aufpunktes, ein beliebiger Punkt der Ebene. Die Lage der Ebene im Raum wird durch den Normalenvektor $\bm{n}$ vorgegeben. Jeder Punkt der Ebene erfüllt die Gleichung.\\
+\\
+\textbf{3. Koordinatendarstellung}
+$$
+E : n_1\cdot x_1 + n_2\cdot x_2 + n_3\cdot x_3 = c
+$$
+mit $n_1, n_2, n_3, x_1, x_2, x_3, c \in \mathbb{R}$, wobei nicht alle $n_i$ gleich Null sind. Man erhält die Koordinatendarstellung durch Ausmultiplizieren der Normalenform: die $n_i$ sind die Komponenten des Normalenvektors, c ist das Skalarprodukt von Aufpunktsvektor und Normalenvektor.\\
+
+\subsection{Schnitt einer Geraden mit einer Ebene}
+Gegeben seien eine Ebene $E$ in Normalenform und eine Gerade $g$:
+\begin{eqnarray}
+E : & [\bm{x} - \bm{p}_E]\cdot\bm{n} = 0 \nonumber\\
+g : & \bm{x} = \bm{p}_g + r\cdot\bm{u}\nonumber
+\end{eqnarray}
+Unter der Voraussetzung, dass $\bm{u}\ \bm{n} \neq 0$, d.h. die Gerade g verläuft nicht parallel zur Ebene E, lässt sich der Ortsvektor $\bm{s}$ des Schnittpunktes S wie folgt berechnen:
+
+\begin{equation}
+\bm{s} = \bm{p}_g - \bm{u}\ \frac{(\bm{p}_g - \bm{p}_E)\cdot\bm{n}}{\bm{u}\cdot\bm{n}}
+\end{equation}
+
+\subsection{Rotationen}
+\label{anhang_b_rotations}
+Eine Rotation kann sowohl im Zweidimensionalen als auch im Dreidimensionalen durch eine Matrixmultiplikation ausgedrückt werden. Gegeben sei ein Vektor $\bm{x}$. Wird er als Richtungsvektor interpretiert, so wird seine Richtung gedreht. Wird er dagegen als Ortsvektor interpretiert, so wird die Drehung des Punktes um den Ursprung des Koordinatensystems berechnet.\\
+\\
+Im $\mathbb{R}^2$ ist die Berechnung einer solchen Rotationsmatrix eindeutig, da nur eine Drehachse existiert. Gegeben sei ein Vektor $\bm{x}=(x,y)$ und ein Drehwinkel $\theta$. Die Drehung gegen den Uhrzeigersinn von $\bm{x}$ um den Winkel $\theta$ berechnet sich zu:
+\begin{eqnarray}
+\left(
+\begin{array}{c}
+x'\\
+y'\\
+\end{array}
+\right) =
+\left(
+\begin{array}{cc}
+\cos\theta\ & -\sin\theta\\
+\sin\theta\ & \cos\theta\\
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x\\
+y\\
+\end{array}
+\right)\nonumber
+\end{eqnarray}
+Im $\mathbb{R}^3$ existieren drei Basisrotationen, um die Achsen $x$, $y$ und $z$:
+\begin{eqnarray}
+R_x(\theta) &=& \left(
+\begin{array}{ccc}
+1\ & 0\ & 0\\
+0\ & \cos\theta\ & -\sin\theta\\
+0\ & \sin\theta\ & \cos\theta\\
+\end{array}
+\right)\nonumber\\
+R_y(\theta) &=& \left(
+\begin{array}{ccc}
+\cos\theta\ & 0\ & \sin\theta\\
+0\ & 1\ & 0\\
+-\sin\theta\ & 0\ & \cos\theta\\
+\end{array}
+\right)\nonumber\\
+R_z(\theta) &=& \left(
+\begin{array}{ccc}
+\cos\theta\ & -\sin\theta\ & 0\\
+\sin\theta\ & \cos\theta\ & 0\\
+0\ & 0\ & 1\\
+\end{array}
+\right)\nonumber
+\end{eqnarray}
+Aus diesen Rotationen kann nach Euler's Theorem mit drei Variablen jede beliebige Rotation im Raum zusammengesetzt werden. Hierzu existieren zwei verschiedene Konventionen für die Interpretation der Reihenfolge der Einzelrotationen. Für \emph{raumfeste} Drechachsen werden die Einzelrotationen von rechts nach links interpretiert, wie anhand des folgenden Beispiels zu sehen ist:
+\begin{eqnarray}
+R_{XYZ}(\alpha,\beta,\gamma) = R_Z(\gamma)\ R_Y(\beta)\ R_X(\alpha)
+\nonumber
+\end{eqnarray}
+Für \emph{mitgedrehte} Drechachsen werden die Einzelrotationen von links nach rechts interpretiert:
+\begin{eqnarray}
+R_{Z'Y'X'}(\gamma,\beta,\alpha) = R_Z(\gamma)\ R_Y(\beta)\ R_X(\alpha)
+\nonumber
+\end{eqnarray}
+Für eine detaillierte Erläuterung sei auf auf [Craig 03] verwiesen.
+
+
+\subsection{Homogene Koordinaten}
+\label{anhang_b_homogenous}
+Gegeben sei ein Punkt $\bm{p}\in\mathbb{R}^n$ mit $\bm{p} = (p_1,\ldots,p_n)$. Die homogenen Koordinaten dieses Punktes sind $(n+1)$-dimensional:
+\begin{eqnarray}
+\bm{x} = (x_1,\ldots,x_n, x_{n+1})\nonumber
+\end{eqnarray}
+Für sie muss gelten:
+\begin{eqnarray}
+p_k = \frac{x_k}{x_{k+1}}\ \text{für alle}\ k\in\{1,\ldots,n\}\nonumber
+\end{eqnarray}
+Dabei ist $h_{k+1}$ ein Skalierungsfaktor, der für die Anwendung von Rotationen und Translationen den Wert Eins besitzt. Wird dagegen eine Projektion durchgeführt, so gilt für das Ergebnis im Allgemeinen $h_{k+1}\neq1$. Ein Vorteil von homogenen Koordinaten ist die Möglichkeit, eine räumliche Transformation bestehend aus einer Rotation und Translation geschlossen in einer quadratischen Matrix ausdrücken zu können. Im $\mathbb{R}^2$ kann
+
+\begin{eqnarray}
+\left(
+\begin{array}{c}
+x'\\
+y'\\
+\end{array}
+\right) = R\cdot\bm{p}+\bm{t} =
+\left(
+\begin{array}{cc}
+r_{11}\ & r_{12}\\
+r_{21}\ & r_{22}\\
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x\\
+y\\
+\end{array}
+\right) +
+\left(
+\begin{array}{c}
+t_1\\
+t_2\\
+\end{array}
+\right)%\nonumber
+\end{eqnarray}
+
+ausgedrückt werden als:
+
+\begin{eqnarray}
+\left(
+\begin{array}{c}
+x'\\
+y'\\
+1\\
+\end{array}
+\right) =
+\left(
+\begin{array}{c|c}
+R\ & \ \bm{t}\\
+\hline
+\bm{0}\ & \ 1\\
+\end{array}
+\right)
+\cdot\bm{x} =
+\left(
+\begin{array}{cc|c}
+r_{11}\ & r_{12}\ & \ t_1\\
+r_{21}\ & r_{22}\ & \ t_2\\
+\hline
+0\ & 0\ & 1\\
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x\\
+y\\
+1\\
+\end{array}
+\right)%\nonumber
+\end{eqnarray}
+
+Analog kann im $\mathbb{R}^3$
+
+\begin{eqnarray}
+\left(
+\begin{array}{c}
+x'\\
+y'\\
+z'\\
+\end{array}
+\right) = R\cdot\bm{p}+\bm{t} =
+\left(
+\begin{array}{ccc}
+r_{11}\ & r_{12}\ & r_{13}\\
+r_{21}\ & r_{22}\ & r_{23}\\
+r_{31}\ & r_{32}\ & r_{33}\\
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x\\
+y\\
+z\\
+\end{array}
+\right) +
+\left(
+\begin{array}{c}
+t_1\\
+t_2\\
+t_3\\
+\end{array}
+\right)%\nonumber
+\end{eqnarray}
+
+ausgedrückt werden als:
+\begin{eqnarray}
+\left(
+\begin{array}{c}
+x'\\
+y'\\
+z'\\
+1\\
+\end{array}
+\right) =
+\left(
+\begin{array}{c|c}
+R\ & \ \bm{t}\\
+\hline
+\bm{0}\ & \ 1\\
+\end{array}
+\right)
+\cdot\bm{x} =
+\left(
+\begin{array}{ccc|c}
+r_{11}\ & r_{12}\ & r_{13}\ & \ t_1\\
+r_{21}\ & r_{22}\ & r_{23}\ & \ t_2\\
+r_{31}\ & r_{32}\ & r_{33}\ & \ t_3\\
+\hline
+0\ & 0\ & 0\ & 1\\
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x\\
+y\\
+z\\
+1\\
+\end{array}
+\right)%\nonumber
+\end{eqnarray}
+
+Mithilfe von homogenen Koordinaten können Geraden im $\mathbb{R}^2$ durch einen Vektor $\bm{l}\in\mathbb{R}^3$ dargestellt werden. Gegeben sei ein Punkt $\bm{p} = (x,y)$ mit homogenen Koordinaten $\bm{x} = (x,y,1)$. Dann definiert $\bm{l} = (l_1,l_2,l_3)$ eine Gerade $g$ wie folgt:
+\begin{eqnarray}
+g : \bm{l}\cdot\bm{x} = 0\nonumber
+\end{eqnarray}
+Dies ist eine kompakte Darstellung der Koordinatenform einer Geraden im Zweidimensionalen und kann umformuliert werden zu:
+\begin{eqnarray}
+g : \left(
+\begin{array}{c}
+l_1\\
+l_2\\
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x\\
+y\\
+\end{array}
+\right) + l_3 = 0
+\nonumber
+\end{eqnarray}
+Daraus wird ersichtlich, dass $(l_1,l_2)$ der Normalenvektor dieser Geraden ist. Sie kann wie folgt in Parameterdarstellung umgeformt werden:
+\begin{eqnarray}
+g : \bm{x} = \bm{a} + r\cdot
+\left(
+\begin{array}{c}
+-l_2\\
+l_1\\
+\end{array}
+\right)
+\nonumber
+\end{eqnarray}
+Dabei kann der Aufpunkt $\bm{a}$ berechnet werden zu:
+\begin{eqnarray}
+\bm{a} = \left\{
+\begin{array}{llll}
+(-\frac{l_3}{l_1},0) & \hspace{0.3cm} {\rm falls}\ l_1 \neq 0\\
+(0,-\frac{l_3}{l_2}) & \hspace{0.3cm} {\rm sonst}
+\end{array}
+\right.
+%\nonumber
+\end{eqnarray}
+
+\clearpage
+
+\section{Numerik}
+\subsection{Methode der kleinsten Quadrate}
+\label{methodederkleinstenquadrate}
+Gegeben sei ein überbestimmtes LGS der Form $A\bm{x} = \bm{b}$, mit $A \in \mathbb{R}^{(m,n)}$, $\bm{x} \in \mathbb{R}^m$ und $\bm{b} \in \mathbb{R}^n$, mit $m > n$. Ein solches LGS ist im Allgemeinen nicht lösbar. Es wird jedoch angenommen, dass A vollen Rang besitzt: $rang(A) = n = min\{n, m\}$. Mit der \emph{Methode der kleinsten Quadrate} nach Gauß lässt sich das vorliegende LGS bestmöglich lösen [Huckle 02].\\
+\\
+Das Verfahren minimiert den Abstand $A\bm{x} - \bm{b}$ bezüglich der euklidischen Norm
+\begin{equation}
+\min_{\bm{x}} |A\bm{x} - \bm{b}|. \nonumber
+\end{equation}
+Die Verwendung der euklidischen Norm führt zu einer Minimierungsaufgabe mit einer differenzierbaren Funktion. Um die anfallenden Rechnungen zu vereinfachen, geht man zu der quadrierten Funktion über und definiert
+\vspace{11pt} \\
+\begin{tabular}[m]{ll}
+$f(x_1,\ldots,x_n)$ & $= |A\bm{x} - \bm{b}|^2$ \nonumber \\
+%& $= (Ax - b)^T(Ax - b)$ \nonumber \\
+%& $= (x^TA^T - b^T)(Ax - b)$ \nonumber \\
+%& $= x^TA^TAx - x^TA^Tb - b^TAx + b^Tb$ \nonumber \\
+%& $= x^TA^TAx - x^TA^Tb - (b^TAx)^T + b^Tb$ \hspace{1cm} (da $b^TAx \in \mathbb{R}$)\nonumber \\
+%& $= x^TA^TAx - 2x^TA^Tb + b^Tb$ \nonumber \\
+& $= |(\sum\limits_{j=1}^na_{kj}x_j - b_k)_{k=1}^m|^2$ \nonumber \\
+& $= \sum\limits_{k=1}^m(\sum\limits_{j=1}^na_{kj}x_j - b_k)^2$. \nonumber \\
+\nonumber
+\end{tabular}
+\vspace{11pt} \\
+Diese Summe von quadratischen Termen nimmt ihr Minimum an, wenn alle Ableitungen gleich Null sind
+\vspace{11pt} \\
+\begin{tabular}[m]{ll}
+& $0 = \frac{df}{dx_i^*} = 2 \sum\limits_{k=1}^m (\sum\limits_{j=1}^na_{kj} x_j^* - b_k) a_{ki}$\ , \hspace{1cm} $i = 1,\ldots,n$ \\
+$\Leftrightarrow$ & $\sum\limits_{k=1}^m a_{ki} \sum\limits_{j=1}^n a_{kj} x_j^* = \sum\limits_{k=1}^m a_{ki} b_k$\ , \hspace{1cm} $i = 1,\ldots,n$.\\
+\end{tabular}
+\vspace{11pt} \\
+Mit der Matrixnotation dieser $n$ Gleichungen erhält man das Gleichungssystem
+\begin{equation}
+A^TA\bm{x}^* = A^T\bm{b}\ , \nonumber
+\end{equation}
+das wegen $rang(A^TA) = rang(A) = n$ eindeutig lösbar ist. Man bezeichnet $A^TA\bm{x}^* = A^T\bm{b}$ als die \emph{Normalgleichung} zu $A$ und $\bm{b}$. Der Lösungsvektor $\bm{x}^*$ des vorliegenden LGS minimiert den Abstand $|A\bm{x} - \bm{b}|$. Da $A^TA$ stets eine positiv definite Matrix ist, lässt sich $\bm{x}^*$ durch die Berechnung der unteren Dreiecksmatrix von $A^TA$ und Anwendung der Cholesky-Verfahren effizient berechnen.
+\clearpage
+
+\subsection{Gauß-Elimination}
+Gegeben sei ein LGS $A\bm{x} = \bm{b}$, mit $A \in \mathbb{R}^{(n, n)}$, $\bm{x} \in \mathbb{R}^n$ und $\bm{b} \in \mathbb{R}^n$. Weiterhin sei $A$ regulär. Eine Möglichkeit, den Lösungsvektor $\bm{x}$ zu bestimmen, besteht in der Anwendung der \emph{Gauß-Elimination}. Im Folgenden wird der Algorithmus mit einer Spalten-Pivotsuche in Pseudocode dargestellt. Sollen $A$ und $\bm{b}$ unverändert bleiben, so müssen die Werte kopiert werden. Vgl. auch [Huckle 02].\index{Algorithmus}
+\begin{algorithm}
+\caption{LöseLGSGauß($A, \textbf{b}$) $\rightarrow \bm{x}$}
+\label{gauss}
+\begin{algorithmic}
+{\small
+\FOR{$i := 0$ \textbf{to} $n-1$}
+  \STATE $max := 0, p := -1$
+  \STATE
+  \FOR {$j := i$ \textbf{to} $n-1$}
+    \IF {$(|a_{ji}|\ >\ max)$}
+      \STATE $max := |a_{ji}|, p := j$
+    \ENDIF
+  \ENDFOR
+  \STATE
+  \IF {$p = -1$}
+    \STATE STOP \COMMENT{Matrix $A$ ist nicht regulär}
+  \ENDIF
+  \STATE
+  \IF {$p \neq i$}
+    \STATE VertauscheZeilen(A, $i$, $p$)
+    \STATE $s := b_i, b_i := b_p, b_p := s$
+  \ENDIF
+  \STATE
+  \STATE $pivot := a_{ii}$
+  \STATE
+  \FOR {$j := i + 1$ \textbf{to} $n-1$}
+    \STATE $factor := a_{ji} / pivot$
+    \STATE $b_j := b_j - factor \cdot b_i$
+    \FOR {$k := i + 1$ \textbf{to} $n-1$}
+      \STATE $a_{jk} := a_{jk} - factor \cdot a_{ik}$
+    \ENDFOR
+  \ENDFOR
+\ENDFOR
+\STATE
+\FOR {$i := n-1$ \textbf{downto} $0$}
+  \STATE $sum := 0$
+  \FOR {$j := i + 1$ \textbf{to} $n-1$}
+    \STATE $sum := sum + a_{ij} \cdot x_j$
+  \ENDFOR
+  \STATE $x_i := (b_i - sum) / a_{ii}$
+\ENDFOR
+}
+\end{algorithmic}
+\end{algorithm}
+\clearpage
+
+\subsection{Cholesky-Verfahren}
+\label{anhang_b_cholesky}
+Gegeben sei ein LGS $A\bm{x} = \bm{b}$, mit $A \in \mathbb{R}^{(n, n)}$, $\bm{x} \in \mathbb{R}^n$ und $\bm{b} \in \mathbb{R}^n$. Weiterhin sei $A$ positiv definit. Dann lässt sich der Lösungsvektor $\bm{x}$ mit dem Cholesky-Verfahren mit etwa dem halben Aufwand einer Gauß-Elimination bestimmen. Im Folgenden wird der Algorithmus in Pseudocode dargestellt, wobei $L \in \mathbb{R}^{(n,n)}$. Nach Ablauf des Algorithmus gilt $A = LL^T$. $A$ und $\bm{b}$ bleiben unverändert. Vgl. auch [Huckle 02].
+\begin{algorithm}
+\caption{LöseLGSCholesky($A, \textbf{b}$) $\rightarrow \bm{x}$}
+\label{cholesky}
+\begin{algorithmic}
+{\small
+\IF {$a_{00} \leq 0$}
+    \STATE STOP \COMMENT{Matrix $A$ ist nicht positiv definit}
+\ENDIF
+\STATE
+\STATE $l_{00} := \sqrt{a_{00}}$
+\STATE
+\FOR{$i := 1$ \textbf{to} $n-1$}
+  \FOR {$j := 0$ \textbf{to} $i-1$}
+    \STATE $sum := a_{ij}$
+    \FOR {$k := 0$ \textbf{to} $j-1$}
+        \STATE $sum := sum - l_{ik} \cdot l_{jk}$
+    \ENDFOR
+    \STATE $l_{ij} := sum / l_{jj}$
+  \ENDFOR
+  \STATE
+  \STATE $sum_1 := a_{ii}, sum_2 := b_i$
+  \STATE
+  \FOR {$j := 0$ \textbf{to} $i-1$}
+    \STATE $sum_1 := sum_1 - l_{ij}^2, sum_2 := sum_2 - l_{ij} \cdot x_j$
+  \ENDFOR
+  \STATE
+  \IF {$sum \leq 0$}
+    \STATE STOP \COMMENT{Matrix $A$ ist nicht positiv definitiv}
+  \ENDIF
+  \STATE
+  \STATE $l_{ii} := \sqrt{sum_1}$
+  \STATE $x_{i} := sum_2 / l_{ii}$
+\ENDFOR
+\STATE
+\FOR {$i := n-1$ \textbf{downto} $0$}
+  \STATE $sum := x_i$
+  \FOR {$j := i+1$ \textbf{to} $n-1$}
+    \STATE $sum := sum - l_{ji} \cdot x_j$
+  \ENDFOR
+  \STATE $x_i := sum / l_{ii}$
+\ENDFOR
+}
+\end{algorithmic}
+\end{algorithm}
+

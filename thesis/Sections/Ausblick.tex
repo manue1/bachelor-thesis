@@ -1,0 +1,33 @@
+ \cleardoublepage
+\section{Ergebnisse und Ausblick}
+
+%Ergebnisse
+
+Im Rahmen dieser Diplomarbeit wurde ein Lichtschnittsensor auf Basis einer intelligenten Kamera entworfen und implementiert. 
+
+Nach dem Aufbau des Systems wurden mehrere Verfahren zur Detektion der subpixelgenauen Position der Laserlinie implementiert und validiert, um die für die gegebene Versuchsumgebung geeignetsten Verfahren zu ermitteln.
+
+Der auf dem Center-Of-Mass-Verfahren basierende Schwellwertalgorithmus (Thr) und der Gauß5 lieferten die besten Ergebnisse in Bezug auf die Genauigkeit: Bei der Untersuchung der Residuen der reproduzierten 3D-Punkte von einer Regressionsebene weist der Thr-Algorithmus mit einer Abweichung von maximal $0,234$\,mm die höchste Genauigkeit auf.
+
+Bei der Analyse der Varianz des geschätzten Maximums der Laserlinie weist der BR-Filter die geringste Varianz auf.
+Die gemessenen Varianzen sind jedoch allesamt sehr groß verglichen mit der theoretisch errechneten. Als Ursache hierfür ist ein deutlich sichtbares Speckle-Muster ausgemacht worden. 
+
+Die Lage der Laserebene wird mithilfe des Least-Squares-Verfahrens bestimmt. Zur schnellen und komfortablen Kalibrierung wurde im Rahmen dieser Arbeit ein treppenförmiger Kalibrierkörper erstellt. Somit kann das System vor Ort mit dem gewünschten Triangulationswinkel manuell angebracht werden und die exakte Lage der Ebene durch Aufnahme der auf den Kalibrierkörper projizierten Laserlinie bestimmt werden.
+
+Die Kamerakalibrierung wurde mit dem Kalibrierverfahren nach Zhang auf einem PC durchgeführt. Hierfür wird das Bild via TCP/IP auf den Rechner übertragen.
+
+% Ausblick
+
+Für die Verarbeitung und Auswertung der erzeugten Tiefenbilder ist angedacht, ein herkömmliches 2D-Bildverarbeitungs und -vermessungssystem zu verwenden. 
+
+Zwei Möglichkeiten stehen mit der gegebenen Hardware zu Verfügung: Entweder geschieht die Verarbeitung auf einem zusätzlichen PC. Hierfür kann das erzeugte Tiefenbild via TCP/IP übermittelt werden. Im Rahmen dieser Arbeit entstand eine Klasse, die den Empfang auf PC-Seite ermöglicht. In diesem Fall würde die Kamera als reiner 3D-Sensor agieren. Durch die Netzwerkanbindung ist es möglich, dass mehrere verteilte 3D-Sensoren Tiefenbilder produzieren, die alle auf einem Rechner ausgewertet werden können.
+
+Der langfristig wünschenswerte Zustand jedoch wird sicherlich die Verarbeitung und Vermessung des Bildes auf der Kamera sein, um somit unabhängig von herkömmlichen PCs zu arbeiten, und getroffene Entscheidungen direkt über SPS-Schnittstellen an die Fertigungsstraße zu geben.
+
+Die erzielte Geschwindigkeit des in dieser Arbeit implementierten Systems ist von der Bildaufnahmefrequenz der eingesetzten Kamera beschränkt.
+%Verglichen mit auf dem Markt erhältlichen Hochgeschwindigkeitslaserscannern die Detektionsraten von bis zu 35.000 Profilen pro Sekunde aufweisen ist das das Verfahren auf der eingesetzten intelligenten Kamera prinzipbedingt eher langsam, da die Aufnahmegeschwindigkeit durch die Aufnahmezeit der Kamera begrenzt ist. Eine sinnvolle Erweiterung wäre  Allerdings lässt es sich kostengünstig realisieren.
+Realistische Einsatzbereiche für ein solches System sind deswegen die Prototypgenerierung und stichprobenartige Qualitätskontrollen, bei der die Objektverschiebung relativ zum Sensor zum Beispiel auf einem Drehteller durchgeführt wird. Eine mögliche Erweiterung in Punkto Geschwindigkeitssteigerung wäre es, eine Kamera einzusetzen, die in der Lage ist, lediglich Teile des Bildaufnehmers auszulesen und zu übertragen.
+
+
+
+

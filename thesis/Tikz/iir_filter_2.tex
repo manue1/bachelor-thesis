@@ -1,0 +1,180 @@
+% Library for block diagrams and signal flow graphs
+% Author: Matthias Hotz
+
+\documentclass{article}
+
+\usepackage{tikz}
+\usetikzlibrary{dsp,chains}
+
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\newcommand{\z}{\mathpzc{z}}
+
+\begin{document}
+
+\centering
+
+Erste kanonische Struktur\vspace{0.5cm}
+
+\begin{tikzpicture}
+
+	% Place nodes using a matrix
+	\matrix[row sep=2.5mm, column sep=5mm]
+	{
+		%--------------------------------------------------------------------
+		\node[dspnodeopen,dsp/label=left]  (m00) {$x[n]$};    &
+		\node[coordinate]                  (m01) {};          &
+		\node[dspnodefull]                 (m02) {};          &
+		\node[dspmixer, dsp/label=above]   (m03) {$b_0$};     &
+		\node[dspadder]                 (m04) {};          &
+		\node[coordinate]                  (m05) {};          &
+		\node[dspnodefull]                 (m06) {};          &
+		\node[coordinate]              		 (m07) {};          &
+		\node[dspnodeopen,dsp/label=right] (m08) {$y[n]$};    \\
+		%--------------------------------------------------------------------
+		\node[coordinate]                  (m10) {};          &
+		\node[coordinate]                  (m11) {};          &
+		\node[dspsquare]                   (m12) {$\z^{-1}$}; &
+		\node[coordinate]                  (m13) {};          &
+		\node[coordinate]   							 (m14) {};    &
+		\node[coordinate]                  (m15) {};          &
+		\node[dspsquare]                   (m16) {$\z^{-1}$}; &
+		\node[coordinate]                  (m17) {};          &
+		\node[coordinate]                  (m18) {};          \\
+		%--------------------------------------------------------------------
+		\\
+		%--------------------------------------------------------------------
+		\node[coordinate]                  (m20) {};          &
+		\node[coordinate]                  (m21) {};          &
+		\node[dspnodefull]                 (m22) {};          &
+		\node[dspmixer, dsp/label=above]   (m23) {$b_1$};    &
+		\node[dspadder]                 (m24) {};          &
+		\node[dspmixer, dsp/label=above ]  (m25) {$-a_1$};          &	
+		\node[dspnodefull]                 (m26) {};          &
+		\node[coordinate]                  (m27) {};          &
+		\node[coordinate] 								 (m28) {};    \\
+		%--------------------------------------------------------------------
+		\node[coordinate]                  (m30) {};          &
+		\node[coordinate]                  (m31) {};          &
+		\node[dspsquare]                   (m32) {$\z^{-1}$}; &
+		\node[coordinate]                  (m33) {};          &
+		\node[coordinate]   							 (m34) {};    &
+		\node[coordinate]                  (m35) {};          &
+		\node[dspsquare]                   (m36) {$\z^{-1}$}; &
+		\node[coordinate]                  (m37) {};          &
+		\node[coordinate]                  (m38) {};          \\
+		%--------------------------------------------------------------------
+		\node[coordinate]                  (m40) {};          &
+		\node[coordinate]                  (m41) {};          &
+		\node[coordinate]                 (m42) {};          &
+		\node[dspmixer, dsp/label=above]   (m43) {$b_2$};    &
+		\node[dspadder]                    (m44) {};          &
+		\node[dspmixer, dsp/label=above ]  (m45) {$-a_2$};          &	
+		\node[coordinate]                 (m46) {};          &
+		\node[coordinate]                  (m47) {};          &
+		\node[coordinate] 								 (m48) {};    \\
+		%--------------------------------------------------------------------
+	};
+
+	% Draw connections
+	
+	\begin{scope}[start chain]
+		\chainin (m00);
+		\chainin (m02) [join=by dspflow];
+		\chainin (m03) [join=by dspflow];
+		\chainin (m04) [join=by dspflow];
+	\end{scope}
+	
+		\begin{scope}[start chain]
+		\chainin (m44);
+		\chainin (m24) [join=by dspflow];
+		\chainin (m04) [join=by dspflow];
+	\end{scope}
+	
+	%\draw[dspflow] (m03) -- (m04);
+	%
+	\begin{scope}[start chain]
+		\chainin (m04);
+		\chainin (m08) [join=by dspflow];
+	\end{scope}
+%%
+	\foreach \i [evaluate = \i as \j using int(\i+1),
+	             evaluate = \i as \k using int(\i+2),] in {0,4}
+	{
+		\begin{scope}[start chain]
+			\chainin (m0\i);
+			\chainin (m0\j) [join=by dspconn];
+			\chainin (m0\k) [join=by dspline];
+			\chainin (m1\k) [join=by dspconn];
+			\chainin (m2\k) [join=by dspconn];
+			\chainin (m3\k) [join=by dspconn];
+			\chainin (m4\k) [join=by dspconn];
+		\end{scope}
+		%\draw[dspconn] (m2\i) -- (m2\k);
+	}
+%
+\foreach \i [evaluate = \i as \j using int(\i-1)] in {2,4}
+		\draw[dspflow] (m\i2) -- (m\i3);
+\foreach \i [evaluate = \i as \j using int(\i-1)] in {2,4}
+		\draw[dspflow] (m\i3) -- (m\i4);
+\foreach \i [evaluate = \i as \j using int(\i-1)] in {2,4}
+		\draw[dspflow] (m\i6) -- (m\i5);
+\foreach \i [evaluate = \i as \j using int(\i-1)] in {2,4}
+		\draw[dspflow] (m\i5) -- (m\i4);
+
+\end{tikzpicture}
+
+\vspace{2em}
+
+Erste kanonische Struktur\vspace{0.5cm}
+
+% FIR filter as signal flow graph
+\begin{tikzpicture}
+
+	% Place nodes using a matrix
+	\matrix[row sep=15mm, column sep=15mm]
+	{
+		%--------------------------------------------------------------------
+		\node[dspnodeopen,dsp/label=left]  (m00) {$x[n]$};  &
+		\node[dspnodefull]                 (m01) {};        &
+		\node[dspadder]                    (m02) {};        &
+		\node[dspnodefull]                 (m03) {};        &
+		\node[dspnodeopen,dsp/label=right] (m04) {$y[n]$};  \\
+		%--------------------------------------------------------------------
+		\node[coordinate]                  (m10) {};        &
+		\node[dspnodefull]                 (m11) {};        &
+		\node[dspadder]                    (m12) {};        &
+		\node[dspnodefull]                 (m13) {};        &
+		\node[coordinate]                  (m14) {};        \\
+		%--------------------------------------------------------------------
+		\node[coordinate]      						 (m20) {};  &
+		\node[coordinate]                 (m21) {};        &
+		\node[dspadder]                 (m22) {};        &
+		\node[coordinate]                 (m23) {};        &
+		\node[coordinate]                  (m24) {};        \\
+		%--------------------------------------------------------------------
+	};
+
+	% Draw connections
+
+	\draw[dspflow] (m00) -- (m01);
+	\draw[dspflow] (m02) -- (m03);
+	\draw[dspflow] (m03) -- (m04);
+	
+	\foreach \i [evaluate = \i as \j using int(\i+1)] in {0,1}
+		\draw[dspflow] (m\i3) -- node[midway,right] {$\z^{-1}$} (m\j3);
+
+	\foreach \i [evaluate = \i as \j using int(\i-1)] in {0,1,...,2}
+		\draw[dspflow] (m\i1) -- node[midway,above] {$b_\i$} (m\i2);
+	
+	\foreach \i [evaluate = \i as \j using int(\i-1)] in {1,2}
+		\draw[dspflow] (m\i3) -- node[midway,above] {$-a_\i$} (m\i2);
+		
+	\foreach \i [evaluate = \i as \j using int(\i+1)] in {0,1}
+		\draw[dspflow] (m\i1) -- node[midway,right] {$\z^{-1}$} (m\j1);
+		
+	\foreach \i [evaluate = \i as \j using int(\i+1)] in {0,1}
+		\draw[dspflow] (m\j2) -- (m\i2);
+	%
+\end{tikzpicture}
+
+\end{document}

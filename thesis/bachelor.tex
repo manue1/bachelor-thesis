@@ -1,0 +1,294 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Vorlage für eine Diplomarbeit für den Fachbereich 
+% Mikrosystemtechnik/Mikroelektronik HTW Berlin
+% Prof. Dr. Peter Gregorius
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\documentclass
+[a4paper,english,twoside,openright,                    % Kap.beginn immer rechts! (fkt. nur bei report, nicht bei article)
+11pt                          % ersatzweise 12pt, wenn mehr Seiten entstehen sollen
+]
+{report}
+
+
+
+\usepackage[latin1]{inputenc} % Zeichensatz, ermöglicht die direkte Eingabe von Umlauten im Editor
+\usepackage[pdftex]{graphicx} % Einbindung von Grafiken (pdf, png, jpg)
+\usepackage{float}            % bietet Option [H] für bombenfestes Verankern
+\usepackage[english]{babel}   % Silbentrennung nach der neuen deutschen Rechtschreibung, z.B.: Sys-tem
+\usepackage{amstext}          % für Klartext via \text{} in Formeln
+\usepackage{amsfonts}         % für komplexere Formeln (Mengensymbole ...)
+\usepackage{amssymb}          % für komplexere Formeln (Mengensymbole ...)
+\usepackage{bm}               % bold math, für \bm{}
+\usepackage{enumerate}        % verbessert Aufzählungen
+\usepackage[bottom]{footmisc} % Fussnoten am Seitenende
+\usepackage{array}            % für Tabellen: bindet tabular-Umgebung ein
+\usepackage{algorithm}        % für Algorithmen
+\usepackage{algorithmic}      % für Algorithmen
+\usepackage{ntheorem}
+\usepackage{theorem}
+\usepackage{pdfpages}         % für die Einbindung kompletter pdf-*Seiten*
+\usepackage{parskip}          % zw. Absätzen: eine knappe Leerzeile statt hängender Einzüge
+%\usepackage[right]{eurosym}   % Eurosymbol
+\usepackage{xcolor}           % farbiger Text
+\usepackage[hyphens]{url}     % für \url{http://www}, Option hyp erlaubt auch Umbruch nach "-"
+\usepackage{makeidx}          % Package zur Indexerstellung
+\usepackage{multicol}         % zur Indexerstellung in zwei Spalten
+\usepackage[numbers, square]{natbib}   % Für \setlength{\bibsep}{3mm}; square macht eckige Klammern
+
+
+%\usepackage[cmex10]{amsmath}  % für erw. Formeloptionen, Option [] zur Vermeidung von Type3-Fonts
+%\usepackage{mathcomp}         %\tcmu \tcohm \tccelsius.. im Mathemodus, nichtkursiv; problematisch!
+%\usepackage{textcomp}         % für \textdegree , \textcelsius , macht aber manchmal auch Probleme!
+
+
+%\usepackage[plainpages=false, hypertexnames=false]{hyperref}
+                               % hyperref statt \url geht, verträgt sich allerdings nicht mit den 
+                               % eingefügten / veränderten Seitenzahlen ... (die stimmen dann nicht mehr)
+                                
+\definecolor{darkred}{rgb}{0.7,0.0,0.0}
+
+\sloppy                       % großzügiger Zeilenumbruch 
+                             % -> keine rechts rausragenden Zeilen mehr
+
+
+\renewcommand{\listofalgorithms}   % Text "Algoverzeichnis", statt "List of Algos"
+{
+\begingroup
+\listof{algorithm}{Algorithmenverzeichnis}
+\endgroup
+}
+
+
+
+\floatname{algorithm}{Algorithmus} % Text im Algo: Algorithmus statt algorithm
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Index-Erstellung
+%
+% Anmerkung: für die Indexerstellung muss auch die TeXnicCenter-IDE angepasst 
+% werden:
+% 1.) Projekt / Eigenschaften / verwendet MakeIndex [x] 
+% 2.) Ausgabe / Ausgabeprofil definieren
+%
+\makeindex % erstelle einen Index bzw. ein Sachverzeichnis)
+%
+% Wenn kein Index gewünscht ist: einfach \makeindex auskommentieren
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Literaturverzeichnis mit BibTeX
+%
+\bibliographystyle{ka-style} % Uni-KA-Style  
+\setlength{\bibsep}{3mm}                  % Abstände im Litverzeichnis
+%
+% Anmerkung: das Dokument enthält _zwei_ Literaturverzeichnisse
+% 1.) Ein auf Basis von bibliografie.bib mit BibTeX erstelltes Verzeichnis
+% 2.) Ein einfach getipptes Verzeichnis: Literatur.tex
+%
+% -> das nicht gewünschte einfach auskommentieren
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Größenanpassungen
+%
+\setlength{\unitlength}{1cm}
+\setlength{\oddsidemargin}{0.3cm}
+\setlength{\evensidemargin}{0.3cm}
+\setlength{\textwidth}{15.5cm}
+\setlength{\topmargin}{-1.2cm}
+\setlength{\textheight}{23cm}
+\columnsep 0.5cm
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Beispiel für die Anpassung des Satzspiegels und 
+% die Verwendung von Schnittmarken (momentan ausgeschaltet)
+% Im Beispiel: Anpassung des Drucks auf Taschenbuchformat 
+%
+% Obacht: für Tests hiermit (Probeausdrucke...): 
+% stets im Adobe Acrobat im Druckdialog die Seitenanpassung *abschalten*!
+% sonst stimmen die Maße nicht!
+% 
+%
+%\usepackage[total={90mm,144mm},centering]{geometry}
+%\geometry{papersize={120mm,190mm}} 
+%\usepackage[a4,cam,center]{crop}
+%\crop[]
+%
+% Schnittmarken und Satzspiegel - Ende
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Abkürzungsliste, Liste explizit vorgegebener Abk.
+%
+% Anmerkung: für Wörter mit Umlauten
+% muss das Paket \usepackage[T1]{fontenc} eingebunden werden --
+% in der vorliegenden Version funktionieren *keine* Umlaute!!
+% 
+\hyphenation{Samm-lung-en Samm-lung Stau-beck-en Vor-na-me-in-i-ti-al % Ver-st\"ar-ker-aus-gang 
+Nach-na-me Kurz-be-zeich-nung deutsch-spra-chige deutsch-sprachig Screen-shot Screen-shots schluss-end-lich Schluss-end-lich Make-In-dex Da-tei-name Da-tei-namen Ur-instinkt Ur-instinkte} 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+\pagestyle{empty}
+\include{Sections/Titelblatt}               % und eidesstattliche Erklärung
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\pagestyle{plain}
+\pagenumbering{arabic}
+\setcounter{page}{3}
+\tableofcontents
+\cleardoublepage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Anmerkung:
+%
+% Falls Style "article" gewünscht ist und
+% und dennoch die Kapitel auf der rechten Seite beginnen sollen,
+% dann ist nach jedem \include einzufügen:
+% \cleardoublepage
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\listoffigures
+\protect \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\cleardoublepage
+
+
+\listoftables
+\protect \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+\cleardoublepage
+
+
+\listofalgorithms
+\protect \addcontentsline{toc}{chapter}{Algorithmenverzeichnis}
+\cleardoublepage
+
+
+
+\include{Sections/Einfuehrung}
+\include{Sections/StandDerTechnik}
+\include{Sections/Grundlagen}
+\include{Sections/Umsetzung}
+\include{Sections/Systemarchitektur}
+
+
+
+
+\protect \addtocontents{toc}{\protect\newpage}  % Seitenumbruch im Inhaltsverzeichnis
+\cleardoublepage
+\include{Sections/ExperimentelleValidierung}
+\include{Sections/Schlussbetrachtungen}
+
+
+
+\begin{appendix}
+\include{Sections/Anhang_Mathematik}                 % A
+\include{Sections/Anhang_FormatDerParameterdateien}  % B
+\include{Sections/Anhang_Quelltexte}                 % C
+\include{Sections/Anhang_Datenblaetter}              % D
+\include{Sections/Anhang_Glossar}                    % E
+\end{appendix}
+
+
+
+% Erstes Literaturverzeichnis, ohne BibTeX
+
+\interlinepenalty=10000 % Literatureinträge: Absätze zusammenhalten
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Literatur}   
+\include{Sections/Literatur}
+
+
+
+% Zweites Literaturverzeichnis, mit BibTeX
+
+\renewcommand\bibname{Weiterführende Literatur zu wissenschaftlichen Ausarbeitungen}
+\nocite{*} % auch die nicht verwendeten bibtex-Einträge einblenden
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Weiterführende Literatur zu wissenschaftlichen Ausarbeitungen}
+\bibliography{bibliografie}
+\interlinepenalty=100
+
+
+
+% Sachverzeichnis einfügen
+
+\renewcommand\indexname{Sachverzeichnis}
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Sachverzeichnis}
+\linespread{0.99} % Abhilfe zu Schusterjungen .. im Index. Die Zahl ist entspr zu variieren
+\printindex                                 
+
+
+
+% Schmutzblatt (leere Seite am Ende)
+
+\newpage                                    
+\pagestyle{empty}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{BilderAllgemein/leer.jpg}
+\end{figure}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%

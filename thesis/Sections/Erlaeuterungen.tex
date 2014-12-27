@@ -1,0 +1,94 @@
+\color{darkred}
+
+
+\textbf{\Large{Erläuterungen zum Latex-Template}}
+
+
+\medskip
+\medskip
+\medskip
+
+\textbf{Zur Verwendung}\index{Verwendung}
+
+Das vorliegende Latex-Template sollte ursprünglich vorrangig den Studenten der Informatik und der Ingenieurswissenschaften der Universität Karlsruhe (TH) als Vorlage für die Erstellung von Studien- oder Diplomarbeiten dienen. Natürlich steht es aber auch jedem anderen Studenten oder Promovenden zur Verfügung, der Nutzen daraus ziehen kann.
+
+\medskip
+\medskip
+\medskip
+
+
+Das Dokument ist aufgebaut bzw. zu verwenden wie folgt:
+\index{Template!Verwendung}\index{Template!Aufbau}
+\begin{enumerate}\index{Deckblatt}
+\item Das Deckblatt, das Format des Gesamtdokumentes, das Format der Literaturquellen usw. entspricht dem Stil und den Auf"-lagen wie sie bei uns am Lehrstuhl festgelegt sind.
+\item Die Gliederung der Kapitel (Chapters) kann erfahrungsgemäß zu rund 50\,\% \dots 70\,\% übernommen werden, muss aber natürlich entsprechend angepasst und in Sections und Subsections verfeinert werden. Somit ist das Rahmenwerk festgelegt.
+\item Im Fülltext (lorem ipsum...) sind viele Beispiele zu fast allen relevanten Einbettungsobjekten eingefügt: Tabellen, Formeln, Vektorgrafiken (CAD, UML-Diagramme...), Pixelgrafiken (Fotos, Screenshots), Charts, Algorithmen, \dots
+\item Der erklärende Text zu den Einbettungsobjekten oder anderen Formatierungsmerkmalen ist in Kursivschrift formatiert.
+\item Wenn statt des verwendeten Report-Styles der sog. Article-Style verwendet werden soll, so sind die Chapters durch Sections, die Sections durch Subsections usw. zu ersetzen. Wenn gewünscht wird, die Kapitelanfänge auf rechter Seite beizubehalten, so ist weiterhin folgende Anpassung notwendig: In der Datei Diplomarbeit.tex ist nach jedem \verb$\include$ ein \verb$\cleardoublepage$ einzufügen.
+\end{enumerate}
+
+\medskip
+\medskip
+\medskip
+
+
+Es ergeben sich entsprechend zwei Nutzungsszenarien:\index{Nutzung}
+
+\begin{enumerate}
+\item Als Rahmenwerk. Hierfür können Deckblatt, Hauptdokument und Kapitel-Dateien genutzt und mit eigenem Inhalt gefüllt werden, der ursprüngliche Inhalt der Kapitel-Dateien wird einfach gelöscht bzw. überschrieben.
+\item Als Nachschlagewerk für bestimmte Formatierungen. Wenn zum Beispiel in der Diplomarbeit eine Grafik eingefügt werden soll, so kann der Anwender im .pdf des vorliegenden Dokumentes eine ähnliche Grafik suchen, den Kommentar (in Kursivschrift) hierzu studieren und den entsprechenden zu Grunde liegenden Latex-Quelltext vergleichen.
+
+\end{enumerate}
+
+\clearpage
+\color{darkred}
+
+
+
+\textbf{Lizenz}\index{Lizenz}\index{Template!Lizenz}
+
+Das Template darf angepasst, verändert, erweitert und auch kommerziell vertrieben werden. Die einzige Auf\/lage ist, dass die Quelle des Templates in den Literaturquellen genannt und im Text als Quelle referenziert wird. Hierzu ist dem Text ein kurzer Satz beizufügen, und am Ende ist die Quelle einzufügen:
+
+\begin{itemize}
+\item Einzufügende Textzeile (Fußnote):
+
+Der vorliegende Text ist auf Basis des Latex-Templates zu [1] erstellt.
+
+\item Einzufügende zugehörige Quelle:
+
+[1] T. \mbox{Gockel}. Form der wissenschaftlichen Ausarbeitung. Springer-Verlag, Heidelberg, 2008. Begleitende Materialien unter \url{http://www.formbuch.de}.
+
+\end{itemize}
+
+Weiterhin ist es sinnvoll, bei der Weitergabe des Templates die Latex-Quellen und die PDF-Datei nicht zu trennen.
+
+
+\medskip
+\medskip
+
+
+\textbf{Danksagung}\index{Danksagung}
+
+An Beispielen im Fülltext enthält der vorliegende Text Auszüge aus den Arbeiten der Kollegen Pedram Azad, Andreas Böttinger, Alexander Bierbaum und Joachim Schröder. Vielen Dank für die Bereitstellung dieser Auszüge.
+
+Karlsruhe, den \today
+
+Tilo Gockel
+
+
+\vspace{1cm}
+
+Kontakt:\\
+\verb$info@formbuch.de$\\
+
+Website:\\
+\url{http://www.formbuch.de}\\
+
+
+\vspace{2cm}
+
+Hinweis
+
+Die Informationen in diesem Dokument werden ohne Rücksicht auf einen eventuellen Patentschutz veröffentlicht. Die erwähnten Soft- und Hardware-Bezeichnungen können auch dann eingetragene Warenzeichen sein, wenn darauf nicht besonders hingewiesen wird. Sie gehören den jeweiligen Warenzeicheninhabern und unterliegen gesetzlichen Bestimmungen. Verwendet werden u.\,a. folgende geschützte Bezeichnungen: ActivePerl, Copernic Desktop Search, Google, Wikipedia, Microsoft Word, Office, Excel, Windows, Project, Adobe Acrobat, Adobe Reader, Adobe Photoshop, CorelDRAW, Corel PhotoPaint, Corel Paint Shop Pro, \mbox{TeXaide}.
+
+\color{black}
