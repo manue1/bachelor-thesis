@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <type>com.umlet.element.SequenceDiagram</type>
+    <coordinates>
+      <x>126</x>
+      <y>238</y>
+      <w>1253</w>
+      <h>497</h>
+    </coordinates>
+    <panel_attributes>title: Elastic Media Manager &lt;&gt; Connectivity Manager
+_EMM~id1_|_Deployer~id2_|_HeatClient~id3_|_TemplateManager~id4_|_ConnectivityManager Controller~id5_|_ConnectivityManager Agent~id6_
+
+id1-&gt;&gt;id2:deploy(topology)
+id2-&gt;&gt;id5:id5:getAvailabilityZone()
+id5-&gt;&gt;id6:id5,id6:GET RuntimeInformation
+id6-&gt;&gt;id6:id6:getHypervisorInformation()
+id6-&gt;&gt;id6:id6:getExistingQoSRules()
+id6-&gt;&gt;id5:id5,id6:return RuntimeInformation
+id5-&gt;&gt;id5:id5:selectHypervisor()
+id5-&gt;&gt;id2:id5:return AvailabiltyZone
+id2-&gt;&gt;id4:id4:getTemplate(AvailabilityZone)
+id4-&gt;&gt;id4:id4:setHypervisor(AvailabilityZone)
+id4-&gt;&gt;id2:id4:return Template
+id2-&gt;&gt;id3:id3:deploy(template)
+id3-&gt;&gt;id3:id3:createStack
+id3-&gt;&gt;id2:id3:return StackDetails
+id2-&gt;&gt;id5:id5:setQoS(StackDetails)
+id5-&gt;&gt;id5:id5:setQoSRules_For_UnitType()
+id5-&gt;&gt;id6:id5,id6:POST QoS(Unit, QoSRule)
+id6-&gt;&gt;id6:id6:deployQoS_To_ComputeNode()
+id6-&gt;&gt;id5:id5,id6:return QoSStatus
+id5-&gt;&gt;id2:id5:return QoSid
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>14</x>
+      <y>280</y>
+      <w>210</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+createTopology()</panel_attributes>
+    <additional_attributes>280.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>
