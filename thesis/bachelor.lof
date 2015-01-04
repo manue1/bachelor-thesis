@@ -1,10 +1,5 @@
 \select@language {english}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Beispiel f\"ur eine Vektorgrafik (Fonts: DCR10, ISOCTEURItalic), Bildquelle: [Hoischen 88].}}{16}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Beispiel f\"ur eine Vektorgrafik (Font: Times New Roman).}}{16}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Beispiel f\"ur eine Gnuplot-Kurve.}}{17}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Beispiel f\"ur einen Messwert-Plot mit Gnuplot.}}{17}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Beispiel f\"ur einen 3D-Plot mit Gnuplot (Ausgabe im Postscript-Format, dann Konvertierung nach pdf mittels Ghostscript).}}{18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -12,7 +7,3 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {E.1}{\ignorespaces Triangulation (Bildquelle: [Wikipedia 07]).}}{55}

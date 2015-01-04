@@ -3,60 +3,57 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: bachelor.aux
 The style file: ka-style.bst
 A level-1 auxiliary file: Sections/Titelblatt.aux
-A level-1 auxiliary file: Sections/Einfuehrung.aux
-A level-1 auxiliary file: Sections/StandDerTechnik.aux
-A level-1 auxiliary file: Sections/Grundlagen.aux
-A level-1 auxiliary file: Sections/Umsetzung.aux
-A level-1 auxiliary file: Sections/Systemarchitektur.aux
-A level-1 auxiliary file: Sections/ExperimentelleValidierung.aux
-A level-1 auxiliary file: Sections/Schlussbetrachtungen.aux
-A level-1 auxiliary file: Sections/Anhang_Mathematik.aux
-A level-1 auxiliary file: Sections/Anhang_FormatDerParameterdateien.aux
+A level-1 auxiliary file: Sections/Introduction.aux
+A level-1 auxiliary file: Sections/Fundamentals.aux
+A level-1 auxiliary file: Sections/Requirements.aux
+A level-1 auxiliary file: Sections/Design.aux
+A level-1 auxiliary file: Sections/Implementation.aux
+A level-1 auxiliary file: Sections/Evaluation.aux
+A level-1 auxiliary file: Sections/Conclusion.aux
 A level-1 auxiliary file: Sections/Anhang_Quelltexte.aux
-A level-1 auxiliary file: Sections/Anhang_Datenblaetter.aux
 A level-1 auxiliary file: Sections/Anhang_Glossar.aux
 A level-1 auxiliary file: Sections/Literatur.aux
-Database file #1: bibliografie.bib
-Warning--empty journal in din1505
-You've used 76 entries,
+I found no \citation commands---while reading file bachelor.aux
+I found no \bibdata command---while reading file bachelor.aux
+You've used 0 entries,
             2465 wiz_defined-function locations,
-            931 strings with 14247 characters,
-and the built_in function-call counts, 21644 in all, are:
-= -- 2277
-> -- 664
-< -- 3
-+ -- 206
-- -- 198
-* -- 1247
-:= -- 3593
-add.period$ -- 286
-call.type$ -- 76
-change.case$ -- 391
-chr.to.int$ -- 68
-cite$ -- 77
-duplicate$ -- 857
-empty$ -- 1791
-format.name$ -- 274
-if$ -- 4487
-int.to.chr$ -- 9
+            571 strings with 4544 characters,
+and the built_in function-call counts, 22 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 0
+:= -- 10
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 2
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 40
-newline$ -- 441
-num.names$ -- 228
-pop$ -- 585
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 479
+purify$ -- 0
 quote$ -- 0
-skip$ -- 774
+skip$ -- 2
 stack$ -- 0
-substring$ -- 610
-swap$ -- 143
-text.length$ -- 3
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 536
-warning$ -- 1
-while$ -- 159
-width$ -- 81
-write$ -- 1059
-(There was 1 warning)
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There were 2 error messages)
