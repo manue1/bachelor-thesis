@@ -9,7 +9,8 @@
 
 
 \documentclass
-[a4paper,english,twoside,openright,                    % Kap.beginn immer rechts! (fkt. nur bei report, nicht bei article)
+[a4paper,english,oneside,openright,                    % Kap.beginn immer rechts! (fkt. nur bei report, nicht bei article)
+%twoside statt oneside wenn beidseitig gedruckt wird
 11pt                          % ersatzweise 12pt, wenn mehr Seiten entstehen sollen
 ]
 {report}
@@ -31,6 +32,7 @@
 \usepackage{algorithmic}      % für Algorithmen
 \usepackage{ntheorem}
 \usepackage{theorem}
+\usepackage[acronym]{glossaries} % fuer Glossar mit Acronymen]
 \usepackage{pdfpages}         % für die Einbindung kompletter pdf-*Seiten*
 \usepackage{parskip}          % zw. Absätzen: eine knappe Leerzeile statt hängender Einzüge
 %\usepackage[right]{eurosym}   % Eurosymbol
@@ -59,7 +61,7 @@
 \renewcommand{\listofalgorithms}   % Text "Algoverzeichnis", statt "List of Algos"
 {
 \begingroup
-\listof{algorithm}{Algorithmenverzeichnis}
+\listof{algorithm}{List of Algorithms}
 \endgroup
 }
 
@@ -205,7 +207,7 @@ Nach-na-me Kurz-be-zeich-nung deutsch-spra-chige deutsch-sprachig Screen-shot Sc
 
 \include{Sections/Introduction}
 \include{Sections/Fundamentals}
-\include{Sections/Requirements}
+\include{Sections/S-O-T-A}
 \include{Sections/Design}
 \include{Sections/Implementation}
 \include{Sections/Evaluation}
@@ -219,8 +221,8 @@ Nach-na-me Kurz-be-zeich-nung deutsch-spra-chige deutsch-sprachig Screen-shot Sc
 
 
 \begin{appendix}
-\include{Sections/Anhang_Quelltexte}                 % C
-\include{Sections/Anhang_Glossar}                    % E
+\include{Sections/Appendix_Sourcecode}                 % C
+\include{Sections/Appendix_Glossar}                    % E
 \end{appendix}
 
 
@@ -230,7 +232,7 @@ Nach-na-me Kurz-be-zeich-nung deutsch-spra-chige deutsch-sprachig Screen-shot Sc
 \interlinepenalty=10000 % Literatureinträge: Absätze zusammenhalten
 \cleardoublepage
 \addcontentsline{toc}{chapter}{Literatur}   
-\include{Sections/Literatur}
+\include{Sections/Bibliography}
 
 
 
