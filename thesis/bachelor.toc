@@ -10,31 +10,36 @@
 \contentsline {section}{\numberline {1.5}Overview}{10}
 \contentsline {chapter}{\numberline {2}Fundamentals and Related Work}{12}
 \contentsline {section}{\numberline {2.1}Networking}{12}
-\contentsline {subsection}{\numberline {2.1.1}Traditional network architectures}{12}
+\contentsline {subsection}{\numberline {2.1.1}Fundamental network characteristics }{12}
 \contentsline {subsubsection}{IP based communication}{12}
 \contentsline {subsubsection}{Switches and routers}{12}
 \contentsline {subsubsection}{Quality of Service}{12}
 \contentsline {subsection}{\numberline {2.1.2}SDN architectures}{12}
-\contentsline {subsubsection}{Software-defined network concept}{13}
-\contentsline {subsubsection}{OpenVSwitch}{13}
-\contentsline {subsubsection}{OpenFlow}{13}
-\contentsline {section}{\numberline {2.2}Cloud computing infrastructure}{13}
-\contentsline {subsubsection}{OpenStack}{13}
-\contentsline {subsubsection}{Devstack}{13}
-\contentsline {subsubsection}{OpenStack Nova}{13}
-\contentsline {subsubsection}{OpenStack Heat}{13}
-\contentsline {subsubsection}{OpenStack Neutron}{13}
+\contentsline {subsubsection}{Software-defined network concept}{12}
+\contentsline {subsubsection}{SDN architecture}{13}
+\contentsline {subsubsection}{OpenFlow Controller}{13}
+\contentsline {subsubsection}{OpenFlow Switch}{13}
+\contentsline {subsubsection}{OpenFlow Software Switch}{13}
+\contentsline {section}{\numberline {2.2}Cloud computing infrastructures}{13}
+\contentsline {subsection}{\numberline {2.2.1}OpenStack}{13}
+\contentsline {subsection}{\numberline {2.2.2}Devstack}{13}
+\contentsline {subsection}{\numberline {2.2.3}OpenStack Nova}{13}
+\contentsline {subsection}{\numberline {2.2.4}OpenStack Heat}{13}
+\contentsline {subsection}{\numberline {2.2.5}OpenStack Neutron}{13}
 \contentsline {section}{\numberline {2.3}Conclusion}{13}
 \contentsline {chapter}{\numberline {3}State of the art}{14}
-\contentsline {section}{\numberline {3.1}OpenDaylight SDN controller}{14}
-\contentsline {section}{\numberline {3.2}Ryu SDN controller}{14}
-\contentsline {section}{\numberline {3.3}OpenStack Neutron - QoS Extension}{14}
+\contentsline {section}{\numberline {3.1}Requirements}{14}
+\contentsline {subsection}{\numberline {3.1.1}Functional requirements}{14}
+\contentsline {subsection}{\numberline {3.1.2}Non-functional requirements}{14}
+\contentsline {section}{\numberline {3.2}Existing S-O-T-A solutions}{14}
+\contentsline {subsection}{\numberline {3.2.1}OpenDaylight SDN controller}{14}
+\contentsline {subsection}{\numberline {3.2.2}Ryu SDN controller}{14}
+\contentsline {subsection}{\numberline {3.2.3}OpenStack Neutron - QoS Extension}{14}
 \contentsline {chapter}{\numberline {4}Design}{15}
-\contentsline {section}{\numberline {4.1}Requirements analysis}{15}
-\contentsline {section}{\numberline {4.2}Architecture overview}{15}
-\contentsline {section}{\numberline {4.3}Design of Connectivity Manager}{15}
-\contentsline {section}{\numberline {4.4}Design of Connectivity Manager Agent}{15}
-\contentsline {section}{\numberline {4.5}Conclusion}{15}
+\contentsline {section}{\numberline {4.1}Architecture overview}{15}
+\contentsline {section}{\numberline {4.2}Design of Connectivity Manager}{15}
+\contentsline {section}{\numberline {4.3}Design of Connectivity Manager Agent}{15}
+\contentsline {section}{\numberline {4.4}Conclusion}{15}
 \contentsline {chapter}{\numberline {5}Implementation}{16}
 \contentsline {section}{\numberline {5.1}Environment}{16}
 \contentsline {subsubsection}{Software development approach}{16}
