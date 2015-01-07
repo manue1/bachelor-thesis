@@ -1,22 +1,2 @@
 \chapter{List of source codes}
-\index{a2ps}\index{Pretty Printer}\index{Quelltexte}
-
-\textcolor{darkred}{Anmerkungen: Quelltextauszüge zu einer Implementierung sind im Anhang dann sinnvoll, wenn einige, spezielle Implementierungstechniken aufgezeigt werden sollen, die in der Darstellung als Algorithmus oder Pseudocode nicht deutlich werden. Keinesfalls soll der gesamte Quelltext angehängt werden und weiterhin soll auch in einer Vorbemerkung die Auswahl der Quelltextauszüge genau erklärt werden.}
-
-\textcolor{darkred}{Verwendet wird das freie Quelltext-Pretty-Printing-Tool a2ps.exe mit folgender Aufrufkonvention (vgl. \mbox{[a2ps 07, grep 07]):}}
-
-
-\verb$     a2ps.exe --pretty-print=cxx -i test.cpp -o test.ps -T3$
-
-\medskip
-\medskip
-
-\textcolor{darkred}{Die Quelltextdateien dürfen hierfür eine Zeilenlänge von 80 nicht überschreiten. Die störenden Kommentare im Header und Footer des entstandenen .ps-Files können mithilfe des freien Tools grep.exe automatisiert entfernt werden. Eine Batch-Datei für den gesamten Konvertierungsprozess inklusive Konvertierung in das pdf-Format hat beispielsweise folgenden Inhalt:}
-
-
-\verb$     a2ps --pretty-print=cxx -i %1 -o tmp -T3$\\
-\verb$     grep -v "Gedruckt von" tmp | grep -v ") footer" > %1.ps$\\
-\verb$     del tmp$\\
-\verb$     "c:\programme\adobe\acrobat 7.0\Acrobat\acrobat.exe" %1.ps$\\
-
 
