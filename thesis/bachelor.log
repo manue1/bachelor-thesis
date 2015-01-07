@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.5)  6 JAN 2015 23:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.5)  7 JAN 2015 23:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -706,21 +706,21 @@ Chapter 1.
 
 
 
-]) [10]
+] [10]) [11]
 \openout2 = `Sections/Fundamentals.aux'.
 
  (./Sections/Fundamentals.tex
 Chapter 2.
-) [11
+) [12
 
 
 
-] [12]
+] [13]
 \openout2 = `Sections/S-O-T-A.aux'.
 
  (./Sections/S-O-T-A.tex
 Chapter 3.
-) [13
+) [14
 
 
 
@@ -729,7 +729,7 @@ Chapter 3.
 
  (./Sections/Design.tex
 Chapter 4.
-) [14
+) [15
 
 
 
@@ -738,7 +738,7 @@ Chapter 4.
 
  (./Sections/Implementation.tex
 Chapter 5.
-) [15
+) [16
 
 
 
@@ -747,7 +747,7 @@ Chapter 5.
 
  (./Sections/Evaluation.tex
 Chapter 6.
-) [16
+) [17
 
 
 
@@ -756,7 +756,7 @@ Chapter 6.
 
  (./Sections/Conclusion.tex
 Chapter 7.
-) [17
+) [18
 
 
 
@@ -771,7 +771,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--21
 
  []
 
-) [18
+) [19
 
 
 
@@ -781,21 +781,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--21
 
  (./Sections/Appendix_Glossar.tex
 Appendix B.
-) [19
+) [20
 
 
 
 ]
 \openout2 = `Sections/Bibliography.aux'.
 
- (./Sections/Bibliography.tex) [20
+ (./Sections/Bibliography.tex) [21
 
 
 
 
 ]
 No file bachelor.ind.
-<BilderAllgemein/leer.jpg, id=73, 120.45pt x 120.45pt>
+<BilderAllgemein/leer.jpg, id=76, 120.45pt x 120.45pt>
 File: BilderAllgemein/leer.jpg Graphic file (type jpg)
 
 <use BilderAllgemein/leer.jpg>
@@ -804,7 +804,7 @@ Package pdftex.def Info: BilderAllgemein/leer.jpg used on input line 266.
 \tf@thm=\write8
 \openout8 = `bachelor.thm'.
 
- [21
+ [22
 
 
  <./BilderAllgemein/leer.jpg>]
@@ -828,10 +828,10 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive
 onts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt10.pfb>
-Output written on bachelor.pdf (21 pages, 123816 bytes).
+Output written on bachelor.pdf (22 pages, 125748 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

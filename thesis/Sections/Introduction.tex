@@ -21,8 +21,29 @@ SDN is a leading-edge approach where the network control is separated from the f
 
 \section{Objective}
 
+The primary objective of this work is the development of a network orchestrator which is able to apply Quality of Service to the network interfaces of Virtual Machines. These Virtual Machines are deployed with OpenStack Nova and connected to an OpenVSwitch, which uses OpenFlow. Another task of the Connectivity Manager is to select which OpenStack hypervisor new VMs should be running on, which takes different runtime parameters into account. The CM should be able to be applied in environments with scalable hypervisors and VMs.
+
 \section{Scope}
+The scope of this work includes a Connectivity Manager which will have a Connectivity Manager Agent running on the cloud controller within the OpenStack infrastructure, to provide access to the hypervisors of OpenStack Nova. These two components have to be implemented and integrated with the existing OpenVSwitches. As a reference for a cloud infrastructure, multimedia communications like the Nubomedia project will be used. The deployment of this cloud is then tested on different performance characteristics like network bandwidth, latency, CPU utilization and memory usage.
+
 In virtualized cloud infrastructure like OpenStack, the placement of Virtual Machines (VMs) on a particular compute node can be decided on by comparing different run-time parameters. The network connectivity between those VMs has to be prioritized and classified into different classes, depending on the service that are running on it.
 
 Currently there are a number of solutions for managing network connectivity between VMs. A comparison and their current limitations follows in the next section. The chosen approach is to extend the existing network control and management services with Quality of Service (QoS) capabilities. In support of the thesis the Connectivity Manager will be implemented and the differences in bandwidth usage will be shown in one use-case.
+
 \section{Overview}
+
+\textbf{Chapter 1} begins with the motivation for this thesis and gives a brief introduction into the objectives and the scope.
+
+\textbf{Chapter 2} gives an overview of traditional network concepts and a introduction to SDN and its components. Furthermore the different services that make up OpenStack will be described.
+
+\textbf{Chapter 3} conceptualizes the state-of-the-art solutions that are currently available and evaluates their implementation and limitations.
+
+\textbf{Chapter 4} contains an analysis of requirements and an architectural overview of the Connectivity Manager. Moreover design aspects are introduced and illustrated according to their requirements.
+
+\textbf{Chapter 5} examines the implementation of the Connectivity Manager and Agent.
+
+\textbf{Chapter 6} evaluates the network performance tests on the basis of a particular use-case.
+
+\textbf{Chapter 7} summarizes the results of this work and gives an overview on possible future work.
+
+
