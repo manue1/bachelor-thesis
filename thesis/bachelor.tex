@@ -32,6 +32,7 @@
 \usepackage{algorithmic}      % für Algorithmen
 \usepackage{ntheorem}
 \usepackage{theorem}
+\usepackage{caption}
 \usepackage[acronym]{glossaries} % fuer Glossar mit Acronymen]
 \usepackage{pdfpages}         % für die Einbindung kompletter pdf-*Seiten*
 \usepackage{parskip}          % zw. Absätzen: eine knappe Leerzeile statt hängender Einzüge
@@ -64,6 +65,10 @@
 \listof{algorithm}{List of Algorithms}
 \endgroup
 }
+
+% Include numbering for subsubsections
+\setcounter{secnumdepth}{4}
+%\setcounter{tocdepth}{3}
 
 
 
@@ -207,6 +212,7 @@ Nach-na-me Kurz-be-zeich-nung deutsch-spra-chige deutsch-sprachig Screen-shot Sc
 
 \include{Sections/Introduction}
 \include{Sections/Fundamentals}
+\include{Sections/Requirements}
 \include{Sections/S-O-T-A}
 \include{Sections/Design}
 \include{Sections/Implementation}
@@ -263,7 +269,7 @@ Nach-na-me Kurz-be-zeich-nung deutsch-spra-chige deutsch-sprachig Screen-shot Sc
 \pagestyle{empty}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{BilderAllgemein/leer.jpg}
+\includegraphics[width=0.9\textwidth]{images/general/leer.jpg}
 \end{figure}
 
 

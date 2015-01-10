@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.5)  7 JAN 2015 23:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.5)  10 JAN 2015 13:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -194,6 +194,23 @@ Package: ntheorem 2011/08/15 1.33
 \thm@topsep=\skip53
 \thm@topsepadd=\skip54
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/theorem.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen114
+\captionmargin@=\dimen115
+\captionwidth=\dimen116
+\caption@tempdima=\dimen117
+\caption@indent=\dimen118
+\caption@parindent=\dimen119
+\caption@hangindent=\dimen120
+)
+\c@ContinuedFloat=\count97
+Package caption Info: float package is loaded.
+)
 (/usr/share/texmf/tex/latex/glossaries/glossaries.sty
 Package: glossaries 2014/11/22 v4.12 (NLCT)
 
@@ -203,7 +220,7 @@ Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks42
 \XKV@tempa@toks=\toks43
-\XKV@depth=\count97
+\XKV@depth=\count98
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
 (/usr/share/texmf/tex/latex/glossaries/mfirstuc.sty
@@ -214,9 +231,9 @@ Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
-\et@xins=\count98
+\et@xins=\count99
 )
-\etb@tempcnta=\count99
+\etb@tempcnta=\count100
 )
 \@glsmfirst=\toks44
 \@glsmrest=\toks45
@@ -238,42 +255,42 @@ For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 LaTeX Info: Redefining \boldsymbol on input line 39.
-\pmbraise@=\dimen114
+\pmbraise@=\dimen121
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count100
+\inf@bad=\count101
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count101
-\leftroot@=\count102
+\uproot@=\count102
+\leftroot@=\count103
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count103
-\DOTSCASE@=\count104
+\classnum@=\count104
+\DOTSCASE@=\count105
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box28
 \strutbox@=\box29
-\big@size=\dimen115
+\big@size=\dimen122
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count105
-\c@MaxMatrixCols=\count106
+\macc@depth=\count106
+\c@MaxMatrixCols=\count107
 \dotsspace@=\muskip10
-\c@parentequation=\count107
-\dspbrk@lvl=\count108
+\c@parentequation=\count108
+\dspbrk@lvl=\count109
 \tag@help=\toks46
-\row@=\count109
-\column@=\count110
-\maxfields@=\count111
+\row@=\count110
+\column@=\count111
+\maxfields@=\count112
 \andhelp@=\toks47
-\eqnshift@=\dimen116
-\alignsep@=\dimen117
-\tagshift@=\dimen118
-\tagwidth@=\dimen119
-\totwidth@=\dimen120
-\lineht@=\dimen121
+\eqnshift@=\dimen123
+\alignsep@=\dimen124
+\tagshift@=\dimen125
+\tagwidth@=\dimen126
+\totwidth@=\dimen127
+\lineht@=\dimen128
 \@envbody=\toks48
 \multlinegap=\skip56
 \multlinetaggap=\skip57
@@ -283,7 +300,7 @@ LaTeX Info: Redefining \] on input line 2666.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/substr/substr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count112
+\c@su@anzahl=\count113
 )
 (/usr/share/texlive/texmf-dist/tex/latex/datatool/datatool-fp.sty
 Package: datatool-fp 2013/08/29 v2.17 (NLCT)
@@ -294,19 +311,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count113
+\actioncount=\count114
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count114
-\FP@xia=\count115
-\FP@xib=\count116
-\FP@xfa=\count117
-\FP@xfb=\count118
-\FP@rega=\count119
-\FP@regb=\count120
-\FP@regs=\count121
-\FP@times=\count122
+\FP@xs=\count115
+\FP@xia=\count116
+\FP@xib=\count117
+\FP@xfa=\count118
+\FP@xfb=\count119
+\FP@rega=\count120
+\FP@regb=\count121
+\FP@regs=\count122
+\FP@times=\count123
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -325,7 +342,7 @@ Package: fp-pas 1994/08/29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count123
+\FPseed=\count124
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -337,14 +354,14 @@ Package: fp-upn 1996/10/21
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks50
-\@dtl@tmpcount=\count124
+\@dtl@tmpcount=\count125
 \dtl@tmplength=\skip58
-\dtl@sortresult=\count125
-\@dtl@numgrpsepcount=\count126
-\@dtl@datatype=\count127
-\dtl@codeA=\count128
-\dtl@codeB=\count129
-\@dtl@foreach@level=\count130
+\dtl@sortresult=\count126
+\@dtl@numgrpsepcount=\count127
+\@dtl@datatype=\count128
+\dtl@codeA=\count129
+\dtl@codeB=\count130
+\@dtl@foreach@level=\count131
 )
 (/usr/share/texmf/tex/latex/glossaries/glossaries-compatible-307.sty
 Package: glossaries-compatible-307 2013/11/14 v4.0 (NLCT)
@@ -364,7 +381,7 @@ Package glossaries Warning: No language module detected for `english'.
 (glossaries)                Please check on CTAN for a bundle called
 (glossaries)                `glossaries-english' or similar.
 
-\gls@level=\count131
+\gls@level=\count132
 \@gls@tmpb=\toks51
 \gls@tmplen=\skip59
 \glskeylisttok=\toks52
@@ -387,16 +404,16 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTright=\skip62
 \LTpre=\skip63
 \LTpost=\skip64
-\LTchunksize=\count132
-\LTcapwidth=\dimen122
+\LTchunksize=\count133
+\LTcapwidth=\dimen129
 \LT@head=\box30
 \LT@firsthead=\box31
 \LT@foot=\box32
 \LT@lastfoot=\box33
-\LT@cols=\count133
-\LT@rows=\count134
-\c@LT@tables=\count135
-\c@LT@chunks=\count136
+\LT@cols=\count134
+\LT@rows=\count135
+\c@LT@tables=\count136
+\c@LT@chunks=\count137
 \LT@p@ftn=\toks56
 )
 \glsdescwidth=\skip65
@@ -407,21 +424,21 @@ Package: glossary-super 2013/11/14 v4.0 (NLCT)
 
 (/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count137
-\ST@wd=\dimen123
+\c@tracingst=\count138
+\ST@wd=\dimen130
 \ST@rightskip=\skip67
 \ST@leftskip=\skip68
 \ST@parfillskip=\skip69
-\ST@pageleft=\dimen124
-\ST@headht=\dimen125
-\ST@tailht=\dimen126
-\ST@pagesofar=\dimen127
-\ST@pboxht=\dimen128
-\ST@lineht=\dimen129
-\ST@stretchht=\dimen130
-\ST@prevht=\dimen131
-\ST@toadd=\dimen132
-\ST@dimen=\dimen133
+\ST@pageleft=\dimen131
+\ST@headht=\dimen132
+\ST@tailht=\dimen133
+\ST@pagesofar=\dimen134
+\ST@pboxht=\dimen135
+\ST@lineht=\dimen136
+\ST@stretchht=\dimen137
+\ST@prevht=\dimen138
+\ST@toadd=\dimen139
+\ST@dimen=\dimen140
 \ST@pbox=\box34
 ))
 (/usr/share/texmf/tex/latex/glossaries/glossary-tree.sty
@@ -433,15 +450,15 @@ Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count138
-\calc@Bcount=\count139
-\calc@Adimen=\dimen134
-\calc@Bdimen=\dimen135
+\calc@Acount=\count139
+\calc@Bcount=\count140
+\calc@Adimen=\dimen141
+\calc@Bdimen=\dimen142
 \calc@Askip=\skip71
 \calc@Bskip=\skip72
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count140
+\calc@Ccount=\count141
 \calc@Cskip=\skip73
 )
 (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
@@ -476,7 +493,7 @@ File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box35
 \AM@toc@title=\toks57
-\c@AM@survey=\count141
+\c@AM@survey=\count142
 \AM@templatesizebox=\box36
 )
 (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
@@ -491,18 +508,18 @@ Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
-\c@tracingmulticols=\count142
+\c@tracingmulticols=\count143
 \mult@box=\box37
-\multicol@leftmargin=\dimen136
-\c@unbalance=\count143
-\c@collectmore=\count144
-\doublecol@number=\count145
-\multicoltolerance=\count146
-\multicolpretolerance=\count147
-\full@width=\dimen137
-\page@free=\dimen138
-\premulticols=\dimen139
-\postmulticols=\dimen140
+\multicol@leftmargin=\dimen143
+\c@unbalance=\count144
+\c@collectmore=\count145
+\doublecol@number=\count146
+\multicoltolerance=\count147
+\multicolpretolerance=\count148
+\full@width=\dimen144
+\page@free=\dimen145
+\premulticols=\dimen146
+\postmulticols=\dimen147
 \multicolsep=\skip74
 \multicolbaselineskip=\skip75
 \partial@page=\box38
@@ -528,21 +545,21 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \@tempa=\box58
 \@tempa=\box59
 \@tempa=\box60
-\c@columnbadness=\count148
-\c@finalcolumnbadness=\count149
-\last@try=\dimen141
-\multicolovershoot=\dimen142
-\multicolundershoot=\dimen143
+\c@columnbadness=\count149
+\c@finalcolumnbadness=\count150
+\last@try=\dimen148
+\multicolovershoot=\dimen149
+\multicolundershoot=\dimen150
 \mult@nat@firstbox=\box61
 \colbreak@box=\box62
-\multicol@sort@counter=\count150
+\multicol@sort@counter=\count151
 )
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip76
 \bibsep=\skip77
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count151
+\c@NAT@ctr=\count152
 )
 \@indexfile=\write3
 \openout3 = `bachelor.idx'.
@@ -550,37 +567,38 @@ LaTeX Info: Redefining \cite on input line 694.
 
 Writing index file bachelor.idx
 (./bachelor.aux (./Sections/Titelblatt.aux) (./Sections/Introduction.aux)
-(./Sections/Fundamentals.aux) (./Sections/S-O-T-A.aux) (./Sections/Design.aux)
-(./Sections/Implementation.aux) (./Sections/Evaluation.aux)
-(./Sections/Conclusion.aux) (./Sections/Appendix_Sourcecode.aux)
-(./Sections/Appendix_Glossar.aux) (./Sections/Bibliography.aux))
+(./Sections/Fundamentals.aux) (./Sections/Requirements.aux)
+(./Sections/S-O-T-A.aux) (./Sections/Design.aux) (./Sections/Implementation.aux
+) (./Sections/Evaluation.aux) (./Sections/Conclusion.aux)
+(./Sections/Appendix_Sourcecode.aux) (./Sections/Appendix_Glossar.aux)
+(./Sections/Bibliography.aux))
 \openout1 = `bachelor.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count152
-\scratchdimen=\dimen144
+\scratchcounter=\count153
+\scratchdimen=\dimen151
 \scratchbox=\box63
-\nofMPsegments=\count153
-\nofMParguments=\count154
+\nofMPsegments=\count154
+\nofMParguments=\count155
 \everyMPshowfont=\toks58
-\MPscratchCnt=\count155
-\MPscratchDim=\dimen145
-\MPnumerator=\count156
-\makeMPintoPDFobject=\count157
+\MPscratchCnt=\count156
+\MPscratchDim=\dimen152
+\MPnumerator=\count157
+\makeMPintoPDFobject=\count158
 \everyMPtoPDFconversion=\toks59
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -626,6 +644,15 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
+)
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/dict/glossaries-dictionary-
 English.dict
 Dictionary: glossaries-dictionary, Language: English 
@@ -644,16 +671,16 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<BilderAllgemein/unilogo.png, id=1, 259.97125pt x 69.25874pt>
-File: BilderAllgemein/unilogo.png Graphic file (type png)
+<images/general/unilogo.png, id=1, 259.97125pt x 69.25874pt>
+File: images/general/unilogo.png Graphic file (type png)
 
-<use BilderAllgemein/unilogo.png>
-Package pdftex.def Info: BilderAllgemein/unilogo.png used on input line 6.
+<use images/general/unilogo.png>
+Package pdftex.def Info: images/general/unilogo.png used on input line 6.
 (pdftex.def)             Requested size: 184.9429pt x 49.2702pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./BilderAllgemein/unilogo.png>]
+ <./images/general/unilogo.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 63--66
 
  []
@@ -711,16 +738,47 @@ Chapter 1.
 
  (./Sections/Fundamentals.tex
 Chapter 2.
-[12
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 17.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
+ [12
 
 
 
-]) [13]
+]
+<images/fundamentals/switch_components.png, id=46, 399.4925pt x 234.8775pt>
+File: images/fundamentals/switch_components.png Graphic file (type png)
+
+<use images/fundamentals/switch_components.png>
+Package pdftex.def Info: images/fundamentals/switch_components.png used on inpu
+t line 36.
+(pdftex.def)             Requested size: 220.50885pt x 129.64534pt.
+ [13 <./images/fundamentals/switch_components.png>]
+<images/fundamentals/sdn_logical_architecture.png, id=53, 1251.67625pt x 823.07
+5pt>
+File: images/fundamentals/sdn_logical_architecture.png Graphic file (type png)
+ <use images/fundamentals/sdn_logical_architecture.png>
+Package pdftex.def Info: images/fundamentals/sdn_logical_architecture.png used 
+on input line 69.
+(pdftex.def)             Requested size: 308.71104pt x 202.99268pt.
+ [14 <./images/fundamentals/sdn_logical_architecture.png>]) [15]
+\openout2 = `Sections/Requirements.aux'.
+
+ (./Sections/Requirements.tex
+Chapter 3.
+) [16
+
+
+
+]
 \openout2 = `Sections/S-O-T-A.aux'.
 
  (./Sections/S-O-T-A.tex
-Chapter 3.
-) [14
+Chapter 4.
+) [17
 
 
 
@@ -728,8 +786,8 @@ Chapter 3.
 \openout2 = `Sections/Design.aux'.
 
  (./Sections/Design.tex
-Chapter 4.
-) [15
+Chapter 5.
+) [18
 
 
 
@@ -737,8 +795,8 @@ Chapter 4.
 \openout2 = `Sections/Implementation.aux'.
 
  (./Sections/Implementation.tex
-Chapter 5.
-) [16
+Chapter 6.
+) [19
 
 
 
@@ -746,8 +804,8 @@ Chapter 5.
 \openout2 = `Sections/Evaluation.aux'.
 
  (./Sections/Evaluation.tex
-Chapter 6.
-) [17
+Chapter 7.
+) [20
 
 
 
@@ -755,8 +813,8 @@ Chapter 6.
 \openout2 = `Sections/Conclusion.aux'.
 
  (./Sections/Conclusion.tex
-Chapter 7.
-) [18
+Chapter 8.
+) [21
 
 
 
@@ -766,7 +824,7 @@ Chapter 7.
 
  (./Sections/Appendix_Sourcecode.tex
 Appendix A.
-) [19
+) [22
 
 
 
@@ -776,57 +834,57 @@ Appendix A.
 
  (./Sections/Appendix_Glossar.tex
 Appendix B.
-) [20
+) [23
 
 
 
 ]
 \openout2 = `Sections/Bibliography.aux'.
 
- (./Sections/Bibliography.tex) [21
+ (./Sections/Bibliography.tex) [24
 
 
 
 
 ]
 No file bachelor.ind.
-<BilderAllgemein/leer.jpg, id=76, 120.45pt x 120.45pt>
-File: BilderAllgemein/leer.jpg Graphic file (type jpg)
+<images/general/leer.jpg, id=89, 120.45pt x 120.45pt>
+File: images/general/leer.jpg Graphic file (type jpg)
 
-<use BilderAllgemein/leer.jpg>
-Package pdftex.def Info: BilderAllgemein/leer.jpg used on input line 266.
+<use images/general/leer.jpg>
+Package pdftex.def Info: images/general/leer.jpg used on input line 272.
 (pdftex.def)             Requested size: 396.91324pt x 396.95319pt.
 \tf@thm=\write8
 \openout8 = `bachelor.thm'.
 
- [22
+ [25
 
 
- <./BilderAllgemein/leer.jpg>]
-(./bachelor.aux (./Sections/Titelblatt.aux) (./Sections/Introduction.aux)
-(./Sections/Fundamentals.aux) (./Sections/S-O-T-A.aux) (./Sections/Design.aux)
-(./Sections/Implementation.aux) (./Sections/Evaluation.aux)
-(./Sections/Conclusion.aux) (./Sections/Appendix_Sourcecode.aux)
-(./Sections/Appendix_Glossar.aux) (./Sections/Bibliography.aux)) ) 
+ <./images/general/leer.jpg>] (./bachelor.aux
+(./Sections/Titelblatt.aux) (./Sections/Introduction.aux)
+(./Sections/Fundamentals.aux) (./Sections/Requirements.aux)
+(./Sections/S-O-T-A.aux) (./Sections/Design.aux) (./Sections/Implementation.aux
+) (./Sections/Evaluation.aux) (./Sections/Conclusion.aux)
+(./Sections/Appendix_Sourcecode.aux) (./Sections/Appendix_Glossar.aux)
+(./Sections/Bibliography.aux)) ) 
 Here is how much of TeX's memory you used:
- 9552 strings out of 495028
- 137627 string characters out of 6181497
- 280782 words of memory out of 5000000
- 12396 multiletter control sequences out of 15000+600000
+ 10639 strings out of 495028
+ 157854 string characters out of 6181497
+ 300999 words of memory out of 5000000
+ 13462 multiletter control sequences out of 15000+600000
  13648 words of font info for 50 fonts, out of 8000000 for 9000
  30 hyphenation exceptions out of 8191
- 46i,12n,39p,1847b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmtt10.pfb>
-Output written on bachelor.pdf (22 pages, 121044 bytes).
+ 46i,12n,77p,1847b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on bachelor.pdf (25 pages, 194434 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 115 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
