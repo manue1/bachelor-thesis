@@ -1,8 +1,9 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Figure... "Classical" switch components\relax }}{13}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Figure... Software-Defined Network architecture\relax }}{14}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces "Classical" switch components\relax }}{13}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Software-Defined Network architecture\relax }}{14}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces OpenFlow Network Architecture\relax }}{15}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

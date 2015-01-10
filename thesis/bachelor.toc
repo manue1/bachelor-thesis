@@ -14,51 +14,52 @@
 \contentsline {subsubsection}{\numberline {2.1.1.1}Classical switches \& routers}{13}
 \contentsline {subsection}{\numberline {2.1.2}Software-Defined Networking concept}{14}
 \contentsline {subsection}{\numberline {2.1.3}SDN architecture}{14}
-\contentsline {subsection}{\numberline {2.1.4}OpenFlow Controller}{15}
-\contentsline {subsection}{\numberline {2.1.5}OpenFlow Switch}{15}
-\contentsline {subsection}{\numberline {2.1.6}OpenFlow Software Switch}{15}
-\contentsline {section}{\numberline {2.2}Cloud computing infrastructures}{15}
-\contentsline {subsection}{\numberline {2.2.1}OpenStack}{15}
-\contentsline {subsection}{\numberline {2.2.2}Devstack}{15}
-\contentsline {subsection}{\numberline {2.2.3}OpenStack Nova}{15}
-\contentsline {subsection}{\numberline {2.2.4}OpenStack Heat}{15}
-\contentsline {subsection}{\numberline {2.2.5}OpenStack Neutron}{15}
-\contentsline {section}{\numberline {2.3}Conclusion}{15}
-\contentsline {chapter}{\numberline {3}Requirements}{16}
-\contentsline {section}{\numberline {3.1}Functional requirements}{16}
-\contentsline {section}{\numberline {3.2}Non-functional requirements}{16}
-\contentsline {chapter}{\numberline {4}State of the art}{17}
-\contentsline {section}{\numberline {4.1}Requirements}{17}
-\contentsline {subsection}{\numberline {4.1.1}Functional requirements}{17}
-\contentsline {subsection}{\numberline {4.1.2}Non-functional requirements}{17}
-\contentsline {section}{\numberline {4.2}Existing S-O-T-A solutions}{17}
-\contentsline {subsection}{\numberline {4.2.1}OpenDaylight SDN controller}{17}
-\contentsline {subsection}{\numberline {4.2.2}Ryu SDN controller}{17}
-\contentsline {subsection}{\numberline {4.2.3}OpenStack Neutron - QoS Extension}{17}
-\contentsline {chapter}{\numberline {5}Design}{18}
-\contentsline {section}{\numberline {5.1}Architecture overview}{18}
-\contentsline {section}{\numberline {5.2}Design of Connectivity Manager}{18}
-\contentsline {section}{\numberline {5.3}Design of Connectivity Manager Agent}{18}
-\contentsline {section}{\numberline {5.4}Conclusion}{18}
-\contentsline {chapter}{\numberline {6}Implementation}{19}
-\contentsline {section}{\numberline {6.1}Environment}{19}
-\contentsline {subsubsection}{\numberline {6.1.0.1}Software development approach}{19}
-\contentsline {subsubsection}{\numberline {6.1.0.2}Project structure}{19}
-\contentsline {section}{\numberline {6.2}Connectivity Manager components and operations}{19}
-\contentsline {subsubsection}{\numberline {6.2.0.3}Selection of best-matching Hypervisor}{19}
-\contentsline {subsubsection}{\numberline {6.2.0.4}Enabling QoS for VM}{19}
-\contentsline {section}{\numberline {6.3}OpenStack Neutron configuration}{19}
-\contentsline {section}{\numberline {6.4}Conclusion}{19}
-\contentsline {chapter}{\numberline {7}Evaluation}{20}
-\contentsline {section}{\numberline {7.1}Feature analysis}{20}
-\contentsline {section}{\numberline {7.2}Nubomedia use-case}{20}
-\contentsline {section}{\numberline {7.3}Conclusion}{20}
-\contentsline {chapter}{\numberline {8}Conclusion}{21}
-\contentsline {section}{\numberline {8.1}Summary}{21}
-\contentsline {section}{\numberline {8.2}Problems encountered}{21}
-\contentsline {section}{\numberline {8.3}Future work}{21}
-\contentsline {chapter}{\numberline {A}List of source codes}{22}
+\contentsline {subsection}{\numberline {2.1.4}OpenFlow}{15}
+\contentsline {subsubsection}{\numberline {2.1.4.1}OpenFlow Controller}{15}
+\contentsline {subsubsection}{\numberline {2.1.4.2}OpenFlow Switch}{15}
+\contentsline {subsubsection}{\numberline {2.1.4.3}OpenFlow Software Switch}{15}
+\contentsline {section}{\numberline {2.2}Cloud computing infrastructures}{16}
+\contentsline {subsection}{\numberline {2.2.1}OpenStack}{16}
+\contentsline {subsection}{\numberline {2.2.2}Devstack}{16}
+\contentsline {subsection}{\numberline {2.2.3}OpenStack Nova}{16}
+\contentsline {subsection}{\numberline {2.2.4}OpenStack Heat}{16}
+\contentsline {subsection}{\numberline {2.2.5}OpenStack Neutron}{16}
+\contentsline {section}{\numberline {2.3}Conclusion}{16}
+\contentsline {chapter}{\numberline {3}Requirements}{17}
+\contentsline {section}{\numberline {3.1}Functional requirements}{17}
+\contentsline {section}{\numberline {3.2}Non-functional requirements}{17}
+\contentsline {chapter}{\numberline {4}State of the art}{18}
+\contentsline {section}{\numberline {4.1}Requirements}{18}
+\contentsline {subsection}{\numberline {4.1.1}Functional requirements}{18}
+\contentsline {subsection}{\numberline {4.1.2}Non-functional requirements}{18}
+\contentsline {section}{\numberline {4.2}Existing S-O-T-A solutions}{18}
+\contentsline {subsection}{\numberline {4.2.1}OpenDaylight SDN controller}{18}
+\contentsline {subsection}{\numberline {4.2.2}Ryu SDN controller}{18}
+\contentsline {subsection}{\numberline {4.2.3}OpenStack Neutron - QoS Extension}{18}
+\contentsline {chapter}{\numberline {5}Design}{19}
+\contentsline {section}{\numberline {5.1}Architecture overview}{19}
+\contentsline {section}{\numberline {5.2}Design of Connectivity Manager}{19}
+\contentsline {section}{\numberline {5.3}Design of Connectivity Manager Agent}{19}
+\contentsline {section}{\numberline {5.4}Conclusion}{19}
+\contentsline {chapter}{\numberline {6}Implementation}{20}
+\contentsline {section}{\numberline {6.1}Environment}{20}
+\contentsline {subsubsection}{\numberline {6.1.0.1}Software development approach}{20}
+\contentsline {subsubsection}{\numberline {6.1.0.2}Project structure}{20}
+\contentsline {section}{\numberline {6.2}Connectivity Manager components and operations}{20}
+\contentsline {subsubsection}{\numberline {6.2.0.3}Selection of best-matching Hypervisor}{20}
+\contentsline {subsubsection}{\numberline {6.2.0.4}Enabling QoS for VM}{20}
+\contentsline {section}{\numberline {6.3}OpenStack Neutron configuration}{20}
+\contentsline {section}{\numberline {6.4}Conclusion}{20}
+\contentsline {chapter}{\numberline {7}Evaluation}{21}
+\contentsline {section}{\numberline {7.1}Feature analysis}{21}
+\contentsline {section}{\numberline {7.2}Nubomedia use-case}{21}
+\contentsline {section}{\numberline {7.3}Conclusion}{21}
+\contentsline {chapter}{\numberline {8}Conclusion}{22}
+\contentsline {section}{\numberline {8.1}Summary}{22}
+\contentsline {section}{\numberline {8.2}Problems encountered}{22}
+\contentsline {section}{\numberline {8.3}Future work}{22}
+\contentsline {chapter}{\numberline {A}List of source codes}{23}
 \newpage 
-\contentsline {chapter}{\numberline {B}Glossar}{23}
-\contentsline {chapter}{Literatur}{24}
-\contentsline {chapter}{Sachverzeichnis}{25}
+\contentsline {chapter}{\numberline {B}Glossar}{24}
+\contentsline {chapter}{Literatur}{25}
+\contentsline {chapter}{Sachverzeichnis}{26}

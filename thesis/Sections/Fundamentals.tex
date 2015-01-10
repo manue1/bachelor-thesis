@@ -30,12 +30,12 @@ Packet forwarding (data plane) and routing decisions (control plane) in classica
 \item The elements in the \textbf{control plane} are based on general-purpose processors that provide services like routing and signaling protocols, including ARP, MAC Learning and forwarding tables.
 \end{enumerate}
 
-\begin{figure}[hp]
+\begin{figure}[H]
 \centering
 
 \includegraphics[width=0.5\textwidth]{images/fundamentals/switch_components}
 
-\caption{Figure... "Classical" switch components}
+\caption{"Classical" switch components}
 \end{figure}
 
 A switch consists of multiple ports for incoming and outgoing data. Internal forwarding tables classify the packets and forward them to one or many specific ports. It does so by collecting MAC addresses and storing their corresponding port in specific tables. Layer 2 switches also support the segregation into virtual LANs (VLAN), which enables the network operator to logically isolate networks that share a single switch.
@@ -56,27 +56,54 @@ The work of the Open Networking Foundation laid out the OpenFlow protocol as the
 SDN separates the architecture into three distinct layers that communicate with each other through different APIs. In figure .. this separation is shown.
 
 \begin{itemize}
-\item \textbf{Infrastructure Layer:} here all switching elements that are capable of the OpenFlow Protocol provide forwarding mechanisms on different Network Layers.
-\item \textbf{Control Layer:} 
-\item \textbf{Application Layer:} 
+\item \textbf{Infrastructure Layer:} here all physical and virtual devices (e.g. switches and routers) that are capable of the OpenFlow Protocol provide forwarding mechanisms on different Network Layers.
+\item \textbf{Control Layer:} represents the 'network intelligence' and collects global view of the network, by communicating with the switching elements through the so called Southbound API.
+\item \textbf{Application Layer:} consists of business applications that allow the network operator to extend the SDN controller on an abstracted level, without being tied to the actual details of the implementation of the infrastructure. This communication with the Control Layer
 
 
 \end{itemize}
 
-\begin{figure}[hp]
+\begin{figure}[H]
 \centering
 
-\includegraphics[width=0.7\textwidth]{images/fundamentals/sdn_logical_architecture}
+\includegraphics[width=0.5\textwidth]{images/fundamentals/sdn_logical_architecture.png}
 
-\caption{Figure... Software-Defined Network architecture}
+\caption{Software-Defined Network architecture}
 \end{figure}
 
+\subsection{OpenFlow}
 
-\subsection{OpenFlow Controller}
+% % https://www.opennetworking.org/sdn-resources/openflow % %
 
-\subsection{OpenFlow Switch}
+With OpenFlow the Open Networking Foundation defined the first standard communications interface between the SDN architecture's control and forwarding layers. It enables manipulation and direct access to the forwarding plane of physical as well as virtual (hypervisor-based) network devices such as switches and routers.
 
-\subsection{OpenFlow Software Switch}
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.6\textwidth]{images/fundamentals/openflow_architecture.png}
+
+\caption{OpenFlow Network Architecture}
+\end{figure}
+
+OpenFlow first of all stands for the communications protocol that is used by SDN controllers to fetch information and configure switches. Additionally it is a switch specification that defines its minimum capabilities in order to support OpenFlow.
+
+% % Vendor OF version usage: http://www.tomsitpro.com/articles/pica8-openflow-1.4-sdn-switches,1-1927.html % %
+
+Most of the OpenFlow-enabled switches and controllers currently still only support the OpenFlow version 1.0 (released in December 2009). The newest version at this date is 1.4, however this explanation of OpenFlow will be focussed on version 1.3 since that is the most recent specification which is supported by OpenVSwitch.
+
+% %http://sdnhub.org/tutorials/openflow-1-3/ % %
+The 
+
+Generally the switches are backwards-compatible down to version 1.0. In the following description the focus lies on the required features of all OpenFlow capable devices, however it has to be mentioned that there is also a set of optional features.
+
+\textbf{Flow Tables}
+
+
+\subsubsection{OpenFlow Controller}
+
+\subsubsection{OpenFlow Switch}
+
+\subsubsection{OpenFlow Software Switch}
 
 OpenVSwitch
 
