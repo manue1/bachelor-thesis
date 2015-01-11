@@ -138,7 +138,7 @@ There are three types of OpenFlow ports that must be supported by an OpenFlow sw
 
 \subsubsection{OpenFlow Tables}
 
-\textbf{Pipeline Processing}
+\textbf{\underline{Pipeline Processing}}
 
 The OpenFlow pipeline defines specifies how packets correspond with each of the flow tables. 
 
@@ -150,7 +150,8 @@ The OpenFlow pipeline defines specifies how packets correspond with each of the 
 
 As illustrated in the figure, each packet is matched against the flow entries starting at the first flow table, called flow table 0. The outcome of the match then decides if other of the sequentially numbered tables may be used. In the following sections the components of the Flow table, the matching procedures and different instructions will be described.
 
-\textbf{Flow Table}
+
+\textbf{\underline{Flow Table}}
 
 A flow table contains flow entries which consist of the following fields:
 
@@ -172,7 +173,8 @@ A flow table contains flow entries which consist of the following fields:
 
 Each flow table entry is uniquely identifiable by its match fields and priority. 
 
-\textbf{Packet Matching}
+
+\underline{\textbf{Packet Matching}}
 
 \begin{figure}[H]
 \centering
@@ -180,11 +182,97 @@ Each flow table entry is uniquely identifiable by its match fields and priority.
 \caption{Packet flow through an OpenFlow switch}
 \end{figure}
 
+On a packet's arrival at the Flow Table, the packet match fields are extracted and used for the table lookup. They include different packet header fields. Additionally matches can be made against the ingress port and metadata fields.
+If the values in the packet match fields equate  only the flow entry with the highest priority is selected. The associated counters are updated and the instruction set applied.
+
+When the instruction set associated with a matching flow entry does not specify a next table, the pipeline processing stops. Only then the packet is processed with it's action set and in most cases forwarded. as shown in Figure 2.6.
+However, if the lookup phase does not match any of the entries, a table-miss event occurs.
 
 
-\subsubsection{OpenFlow Channel}
+\underline{\textbf{Table-miss}}
 
-OpenVSwitch
+Each flow table must support a table-miss flow entry which specifies how to process packets that are unmatched by other flow entries. The instructions associated with this entry are very alike to any other flow entries, packets are either forwarded to other controllers, dropped or it is continued with the next flow table. In case the table-miss flow entry is non-existent unmatched packets are dropped by default. 
+
+
+\underline{\textbf{Group Tables}}
+
+A group table consists of group entries and it provides a way to direct the same set of actions as part of action buckets to multiple flows. A flow entry is pointed to a group and enables additional methods of forwarding (e.g. broadcast or multicast).
+
+
+\underline{\textbf{Meter Tables}}
+
+Meters are on a per-flow level and allow OpenFlow to implement various QoS operations, such as rate-limiting, but it can also be combined with per-port queues to implement more complex QoS like DiffServ.
+
+The main components of a meter entry in the meter table are:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline Meter Identifier & Meter Bands & Counters \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\begin{itemize}
+\item \textbf{meter identifier:} a 32 bit unsigned integer uniquely identifying the meter
+\item \textbf{meter bands:} each meter band specifies the rate of the band and the action that is triggered by exceeding the limit
+\item \textbf{counters:} is updated when packets are processed by the meter
+\end{itemize}
+
+The rate of packets assigned to a meter are measured and controlled. Meters are directly attached to flow entries, as opposed to queues that are attached to ports. A meter is able to have one or more meter bands, each of which specifies the rate and the way packets should be handled. If the current measured meter rate reached the rate-limit, the band applies an action. 
+
+A meter band is identified by its rate and consists of the following fields:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline Band Type & Rate & Counters & Type specific arguments \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\begin{itemize}
+\item \textbf{band type:} defines how the packets are processed
+\item \textbf{rate:} selects the meter band for the meter and defines the lowest rate at which the band can apply
+\item \textbf{counters:} is updated when packets are processed by the meter
+\item \textbf{type specific arguments:} some band have optional arguments
+\end{itemize}
+
+
+\underline{\textbf{Instructions}}
+
+Instructions are executed when a packet matches the flow entry. Their result is either a change to the packet, action set and/or pipeline processing. There are different instruction types and some of them are required for an OpenFlow-enabled switch whereas others are optional:
+
+\begin{itemize}
+\item \textbf{Meter \textit{meter\_id}:} direct packet to the specified meter. The packet may be discarded as the result of the metering.
+\item \textbf{Apply-Actions \textit{action(s)}:} Applies the specific action(s) instantly, without any change to the Action Set.
+\item \textbf{Clear-Actions:} Immediately clears all the actions in the action set.
+\item \textbf{Write-Actions \textit{action(s)}:} Merges the specified action(s) into the current action set.
+\item \textbf{Write-Metadata \textit{metadata / mask}:} Writes the masked metadata value into the metadata field.
+\item \textbf{Goto-Table \textit{next-table-id}:} Indicates the next table in the processing pipeline.
+\end{itemize}
+
+A maximum of one instruction of each type is associated with a flow entry and they are executed in the order as specified by the given list. Flow entries can also be rejected if the switch is not able to execute its instruction.
+
+
+\underline{\textbf{Action Set}}
+
+An action set is associated with each packet, which is empty by default. The action set can be modified using a \textit{Write-Action} or a \textit{Clear-Action} instruction. If there is no \textit{Goto-Table} instruction within the instruction set of a flow entry the pipeline processing is halted and the actions in the action set of the packet are executed.
+
+
+\underline{\textbf{Actions}}
+
+The following action types are available on OpenFlow-enabled switches:
+\begin{itemize}
+\item \textbf{Output:} A packet is forwarded to a specified OpenFlow port.
+\item \textbf{Set-Queue:} Sets the queue id for a packet. This id helps determining which queue attached to this port is used for scheduling and forwarding the packet when the packet is forwarded to a port using the output action. This forwarding behaviour allows to enable basic QoS support.
+\item \textbf{Group:} Process the packet through the specified group.
+\item \textbf{Push-Tag/Pop-Tag:} The ability to push/pop tags such as VLAN.
+\item \textbf{Set-Field:} Modifies the values of header fields in a packet.
+\item \textbf{Change-TTL:} Set the values of IPv4 TTL, IPv6 Hop Limit or MPLS TTL in a packet.
+\end{itemize} 
+
+
+\subsection{OpenVSwitch}
+
 
 \section{Cloud computing infrastructures}
 
