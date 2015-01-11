@@ -90,25 +90,99 @@ OpenFlow first of all stands for the communications protocol that is used by SDN
 % % Vendor OF version usage: http://www.tomsitpro.com/articles/pica8-openflow-1.4-sdn-switches,1-1927.html % %
 
 Most of the OpenFlow-enabled switches and controllers currently still only support the OpenFlow version 1.0 (released in December 2009). The newest version at this date is 1.4, however this explanation of OpenFlow will be focussed on version 1.3 since that is the most recent specification which is supported by OpenVSwitch.
-
 % %http://sdnhub.org/tutorials/openflow-1-3/ % %
---- write about differences 1.0 1.3
+The main features added since version 1.0 are among others support for VLANs, IPv6, tunnelling and per-flow traffic meters.
 
 Generally the switches are backwards-compatible down to version 1.0. In the following description the focus lies on the required features of all OpenFlow capable devices, however it has to be mentioned that there is also a set of optional features.
 
-\textbf{Flow Tables}
-
-\textbf{Match}
-
-\textbf{Action}
-
-\textbf{Flow statistics}
-
 \subsubsection{OpenFlow Controller}
 
-\subsubsection{OpenFlow Switch}
+The OpenFlow controller is separated from the switch and has two interfaces. The northbound interface is an API to the application layer for implementing applications that control the network. The southbound interface connects with the underlying switches using the OpenFlow protocol.
 
-\subsubsection{OpenFlow Software Switch}
+\subsubsection{OpenFlow Switch}
+% %PDF: OpenFlow spec 1.3 % %
+
+There are two varieties of OpenFlow-compliant switches:
+\begin{itemize}
+\item \textbf{OpenFlow-only:} in these switches all packets are processed by the OpenFlow pipeline and they have no legacy features.
+\item \textbf{OpenFloy-hybrid:} support OpenFlow and normal Ethernet switching (including traditional L2 Ethernet switching, VLAN isolation, L3 routing, ACL and QoS). Most of the commercial switches that are available on the market today are this type.
+\end{itemize}
+
+An OpenFlow switch includes one ore multiple flow tables and a group table, which have the function of carrying out packet lookups and forwarding. Another component is the OpenFlow channel to the external controller.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{images/fundamentals/openflow_switch_components.png}
+\caption{OpenFlow Switch components}
+\end{figure}
+
+Through the connection using the OpenFlow protocol, it is possible for the controller to add, update and delete flow entries in flow tables.  This action can be performed either reactively or proactively. Sets of flow entries are stored in each flow table and each flow entry consists of \textit{match fields}, \textit{counters}, and a set of \textit{instructions} used for matching packets. (see OF Tables section)
+
+The matching of flow entries begins at the first flow table, however it may continue to additional flow tables, and it uses the first matching entry from each table and performs the instruction that is linked with that specific entry. For packets without any matches a table-miss flow entry can be configured. Flow entries are usually forwarded to a physical port.
+
+The instructions can either include actions  or modify pipeline processing. Packet forwarding, packet modification and group table processing are the possible actions. With pipeline processing packets can be permitted to be sent to other tables for further processing and metadata can be exchanged between tables.
+
+Packets can also be directed to a group, which contains a set of actions for flooding and more complex forwarding semantics (e.g. multipath, fast reroute and link aggregation).
+
+\subsubsection{OpenFlow Ports}
+OpenFlow ports are the network interfaces used for passing packets between OpenFlow processing and the rest of the network.
+There are various types of ports that are supported by OpenFlow. This section will give a short overview about this port abstraction.
+Incoming OpenFlow packets enter the switch on an ingress port, are then processed by the OpenFlow pipeline and forwarded to an output port. (See OF Tables figure for processing).
+
+There are three types of OpenFlow ports that must be supported by an OpenFlow switch:
+\begin{itemize}
+\item \textbf{Physical ports:} are hardware interfaces on a switch.
+\item \textbf{Logical ports:} don't directly interact  with a hardware interface.
+\item \textbf{Reserved ports:} contain generic forwarding actions (e.g. sending to the controller, flooding or forwarding using traditional switch processing)
+\end{itemize}
+
+\subsubsection{OpenFlow Tables}
+
+\textbf{Pipeline Processing}
+
+The OpenFlow pipeline defines specifies how packets correspond with each of the flow tables. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{images/fundamentals/openflow_pipeline_processing.png}
+\caption{OpenFlow pipeline processing}
+\end{figure}
+
+As illustrated in the figure, each packet is matched against the flow entries starting at the first flow table, called flow table 0. The outcome of the match then decides if other of the sequentially numbered tables may be used. In the following sections the components of the Flow table, the matching procedures and different instructions will be described.
+
+\textbf{Flow Table}
+
+A flow table contains flow entries which consist of the following fields:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline Match Fields & Priority & Counters & Instructions & Timeouts & Cookie \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\begin{itemize}
+\item \textbf{match fields:} ingress port, packet headers and optionally metadata
+\item \textbf{priority:} set the priority of the flow entry
+\item \textbf{counters:} is updated for matching packets
+\item \textbf{instructions:} to alter the action set or pipeline processing
+\item \textbf{timeouts:} set maximum amount of time or idle time before expiration of the flow
+\item \textbf{cookie:} is a opaque data value chosen by the controller
+\end{itemize}
+
+Each flow table entry is uniquely identifiable by its match fields and priority. 
+
+\textbf{Packet Matching}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{images/fundamentals/openflow_packet_matching.png}
+\caption{Packet flow through an OpenFlow switch}
+\end{figure}
+
+
+
+\subsubsection{OpenFlow Channel}
 
 OpenVSwitch
 

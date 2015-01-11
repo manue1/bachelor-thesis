@@ -4,6 +4,9 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces "Classical" switch components\relax }}{13}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Software-Defined Network architecture\relax }}{14}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces OpenFlow Network Architecture\relax }}{15}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces OpenFlow Switch components\relax }}{16}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces OpenFlow pipeline processing\relax }}{17}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Packet flow through an OpenFlow switch\relax }}{18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
