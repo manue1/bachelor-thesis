@@ -7,6 +7,8 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces OpenFlow Switch components\relax }}{16}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces OpenFlow pipeline processing\relax }}{17}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Packet flow through an OpenFlow switch\relax }}{18}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces OpenFlow QoS as a meter\relax }}{19}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Architecture of Open vSwitch: divided into kernel-space and user-space\relax }}{21}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -276,31 +276,91 @@ The following action types are available on OpenFlow-enabled switches:
 \item \textbf{Change-TTL:} Set the values of IPv4 TTL, IPv6 Hop Limit or MPLS TTL in a packet.
 \end{itemize} 
 
-
-\subsection{OpenVSwitch}
+\subsection{Open vSwitch}
+% %http://git.openvswitch.org/cgi-bin/gitweb.cgi?p=openvswitch;a=blob_plain;f=FAQ;hb=HEAD % %
 
 \subsubsection{Concept \& Functionality}
-Kernel/User-space
+
+Open vSwitch (OVS) is open source software switch that is used in virtualized server environments. It is able to forward traffic traffic between Virtual Machines (VMs) and the physical network, as well as between different VMs on the same physical host. It can be controlled using OpenFlow and the OVSDB management protocol. It can run on any Linux-based virtualization platform i.e. KVM, VirtualBox, XEN, ESXi and is part of the mainline kernel as of Linux 3.3 but can run on kernel 2.6.32 and newer.
+
+% %https://github.com/openvswitch/ovs/blob/master/README.md % %
+OVS supports the following features:
+\begin{itemize}
+\item 802.1Q VLAN model
+\item Link Aggregation Control Protocol (LACP)
+\item GRE and VXLAN tunneling
+\item fine-grained QoS control
+\item OpenFlow
+\item per VM interface traffic policing
+\item High-performance forwarding using a Linux kernel module
+\end{itemize}
+
+The internals of OVS are as follows:
+% %https://events.linuxfoundation.org/sites/events/files/slides/OVS-LinuxCon%202013.pdf % %
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{images/fundamentals/openvswitch_architecture.png}
+\caption{Architecture of Open vSwitch: divided into kernelspace and userspace}
+\end{figure}
+
+ovs-vswitchd, a daemon that implements the switch, along with a companion Linux kernel module for flow-based switching.
+ovsdb-server, a lightweight database server that ovs-vswitchd queries to obtain its configuration.
+
+The daemon which implements the switch is \textit{ovs-vswitchd} and it is shipped with an additional Linux kernel module for flow-based switching that it communicates with using the netlink protocol. The configuration for the switch is queried from a lightweight database server named \textit{ovsdb-server}.
+
+It is also possible to run it completely in userspace, but it decreases the performance drastically.
 
 \subsubsection{OpenVSwitch Management}
 
+Multiple different configuration utilities exist for OVS, however only ovs-vsctl is explained in this section. It is used for querying and updating the configuration of the switch through interaction with the ovsdb-server.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{images/fundamentals/openvswitch_vsctl.png}
+\caption{Visualization of the interaction of the ovs-vsctl tool}
+\end{figure}
+
 \subsubsection{OVSDB}
+
+show all different databases
+
 
 \subsubsection{QoS}
 
+how it uses queues and port queues
+
 \subsubsection{GRE}
+
 
 \section{Cloud computing infrastructures}
 
 \subsection{OpenStack}
 
+General concept and components
+
+
 \subsection{Devstack}
+
+What it does and benefits
 
 \subsection{OpenStack Nova}
 
+Concept
+API
+
 \subsection{OpenStack Heat}
 
+Concept
+
+
 \subsection{OpenStack Neutron}
+
+
+ML2
+Mechanism drivers
+Neutron agent
+API
+
 
 
 \section{Conclusion}
