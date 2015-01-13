@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.5)  12 JAN 2015 15:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.5)  13 JAN 2015 20:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -814,12 +814,37 @@ File: images/fundamentals/openvswitch_architecture.png Graphic file (type png)
 Package pdftex.def Info: images/fundamentals/openvswitch_architecture.png used 
 on input line 302.
 (pdftex.def)             Requested size: 264.61331pt x 154.17908pt.
- [21 <./images/fundamentals/openvswitch_architecture.png>]) [22]
+ [21 <./images/fundamentals/openvswitch_architecture.png>]
+<images/fundamentals/openvswitch_vsctl.png, id=89, 517.935pt x 382.42876pt>
+File: images/fundamentals/openvswitch_vsctl.png Graphic file (type png)
+
+<use images/fundamentals/openvswitch_vsctl.png>
+Package pdftex.def Info: images/fundamentals/openvswitch_vsctl.png used on inpu
+t line 337.
+(pdftex.def)             Requested size: 264.61331pt x 195.39203pt.
+ [22 <./images/fundamentals/openvswitch_vsctl.png>]
+<images/fundamentals/openstack_conceptual_arch.png, id=93, 1017.8025pt x 927.46
+5pt>
+File: images/fundamentals/openstack_conceptual_arch.png Graphic file (type png)
+
+ <use images/fundamentals/openstack_conceptual_arch.png>
+Package pdftex.def Info: images/fundamentals/openstack_conceptual_arch.png used
+ on input line 377.
+(pdftex.def)             Requested size: 352.8155pt x 321.50418pt.
+ [23 <./images/fundamentals/openstack_conceptual_arch.png>]
+<images/fundamentals/openstack_nova.png, id=97, 712.6625pt x 695.59875pt>
+File: images/fundamentals/openstack_nova.png Graphic file (type png)
+
+<use images/fundamentals/openstack_nova.png>
+Package pdftex.def Info: images/fundamentals/openstack_nova.png used on input l
+ine 388.
+(pdftex.def)             Requested size: 220.50885pt x 215.23006pt.
+) [24 <./images/fundamentals/openstack_nova.png (PNG copy)>]
 \openout2 = `Sections/Requirements.aux'.
 
  (./Sections/Requirements.tex
 Chapter 3.
-) [23
+) [25
 
 
 
@@ -828,7 +853,7 @@ Chapter 3.
 
  (./Sections/S-O-T-A.tex
 Chapter 4.
-) [24
+) [26
 
 
 
@@ -837,7 +862,7 @@ Chapter 4.
 
  (./Sections/Design.tex
 Chapter 5.
-) [25
+) [27
 
 
 
@@ -846,7 +871,7 @@ Chapter 5.
 
  (./Sections/Implementation.tex
 Chapter 6.
-) [26
+) [28
 
 
 
@@ -855,7 +880,7 @@ Chapter 6.
 
  (./Sections/Evaluation.tex
 Chapter 7.
-) [27
+) [29
 
 
 
@@ -864,7 +889,7 @@ Chapter 7.
 
  (./Sections/Conclusion.tex
 Chapter 8.
-) [28
+) [30
 
 
 
@@ -874,7 +899,7 @@ Chapter 8.
 
  (./Sections/Appendix_Sourcecode.tex
 Appendix A.
-) [29
+) [31
 
 
 
@@ -884,21 +909,21 @@ Appendix A.
 
  (./Sections/Appendix_Glossar.tex
 Appendix B.
-) [30
+) [32
 
 
 
 ]
 \openout2 = `Sections/Bibliography.aux'.
 
- (./Sections/Bibliography.tex) [31
+ (./Sections/Bibliography.tex) [33
 
 
 
 
 ]
 No file bachelor.ind.
-<images/general/leer.jpg, id=122, 120.45pt x 120.45pt>
+<images/general/leer.jpg, id=131, 120.45pt x 120.45pt>
 File: images/general/leer.jpg Graphic file (type jpg)
 
 <use images/general/leer.jpg>
@@ -907,7 +932,7 @@ Package pdftex.def Info: images/general/leer.jpg used on input line 272.
 \tf@thm=\write8
 \openout8 = `bachelor.thm'.
 
- [32
+ [34
 
 
  <./images/general/leer.jpg>] (./bachelor.aux
@@ -918,10 +943,10 @@ Package pdftex.def Info: images/general/leer.jpg used on input line 272.
 (./Sections/Appendix_Sourcecode.aux) (./Sections/Appendix_Glossar.aux)
 (./Sections/Bibliography.aux)) ) 
 Here is how much of TeX's memory you used:
- 10674 strings out of 495028
- 159312 string characters out of 6181497
- 299999 words of memory out of 5000000
- 13489 multiletter control sequences out of 15000+600000
+ 10689 strings out of 495028
+ 159949 string characters out of 6181497
+ 300000 words of memory out of 5000000
+ 13501 multiletter control sequences out of 15000+600000
  14353 words of font info for 52 fonts, out of 8000000 for 9000
  30 hyphenation exceptions out of 8191
  46i,12n,77p,1847b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -933,10 +958,10 @@ mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on bachelor.pdf (32 pages, 397163 bytes).
+Output written on bachelor.pdf (34 pages, 815768 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
+ 163 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
