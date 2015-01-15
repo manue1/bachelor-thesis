@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.5)  13 JAN 2015 20:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.5)  15 JAN 2015 21:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -829,22 +829,23 @@ File: images/fundamentals/openstack_conceptual_arch.png Graphic file (type png)
 
  <use images/fundamentals/openstack_conceptual_arch.png>
 Package pdftex.def Info: images/fundamentals/openstack_conceptual_arch.png used
- on input line 377.
+ on input line 384.
 (pdftex.def)             Requested size: 352.8155pt x 321.50418pt.
- [23 <./images/fundamentals/openstack_conceptual_arch.png>]
+ [23]
 <images/fundamentals/openstack_nova.png, id=97, 712.6625pt x 695.59875pt>
 File: images/fundamentals/openstack_nova.png Graphic file (type png)
 
 <use images/fundamentals/openstack_nova.png>
 Package pdftex.def Info: images/fundamentals/openstack_nova.png used on input l
-ine 388.
+ine 395.
 (pdftex.def)             Requested size: 220.50885pt x 215.23006pt.
-) [24 <./images/fundamentals/openstack_nova.png (PNG copy)>]
+ [24 <./images/fundamentals/openstack_conceptual_arch.png>]) [25 <./images/fund
+amentals/openstack_nova.png (PNG copy)>]
 \openout2 = `Sections/Requirements.aux'.
 
  (./Sections/Requirements.tex
 Chapter 3.
-) [25
+) [26
 
 
 
@@ -853,7 +854,7 @@ Chapter 3.
 
  (./Sections/S-O-T-A.tex
 Chapter 4.
-) [26
+) [27
 
 
 
@@ -862,7 +863,7 @@ Chapter 4.
 
  (./Sections/Design.tex
 Chapter 5.
-) [27
+) [28
 
 
 
@@ -871,7 +872,7 @@ Chapter 5.
 
  (./Sections/Implementation.tex
 Chapter 6.
-) [28
+) [29
 
 
 
@@ -880,7 +881,7 @@ Chapter 6.
 
  (./Sections/Evaluation.tex
 Chapter 7.
-) [29
+) [30
 
 
 
@@ -889,7 +890,7 @@ Chapter 7.
 
  (./Sections/Conclusion.tex
 Chapter 8.
-) [30
+) [31
 
 
 
@@ -899,7 +900,7 @@ Chapter 8.
 
  (./Sections/Appendix_Sourcecode.tex
 Appendix A.
-) [31
+) [32
 
 
 
@@ -909,21 +910,21 @@ Appendix A.
 
  (./Sections/Appendix_Glossar.tex
 Appendix B.
-) [32
+) [33
 
 
 
 ]
 \openout2 = `Sections/Bibliography.aux'.
 
- (./Sections/Bibliography.tex) [33
+ (./Sections/Bibliography.tex) [34
 
 
 
 
 ]
 No file bachelor.ind.
-<images/general/leer.jpg, id=131, 120.45pt x 120.45pt>
+<images/general/leer.jpg, id=134, 120.45pt x 120.45pt>
 File: images/general/leer.jpg Graphic file (type jpg)
 
 <use images/general/leer.jpg>
@@ -932,7 +933,7 @@ Package pdftex.def Info: images/general/leer.jpg used on input line 272.
 \tf@thm=\write8
 \openout8 = `bachelor.thm'.
 
- [34
+ [35
 
 
  <./images/general/leer.jpg>] (./bachelor.aux
@@ -958,10 +959,10 @@ mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on bachelor.pdf (34 pages, 815768 bytes).
+Output written on bachelor.pdf (35 pages, 816932 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 166 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -354,8 +354,15 @@ The commands below are available for the basic OVS configuration that is needed 
 
 With Open vSwitch QoS can be configured for ports or the so-called virtual network interfaces that virtual machines get when they are connected to the internal bridge of the switch. The minimal and maximal rate-limits are defined in bytes and applied to a queue, which operates as an egress filter. The QoS port policies make use of the 'tc' implementation that is included in the Linux kernel.
 
-\subsubsection{GRE}
+% % http://linux.die.net/man/8/tc % %
+% % http://www.istudies.net/journal/sites/default/files/Extended%20Linux%20HTB%20Queuing%20Discipline%20Implementations.pdf % %
+Traffic control (tc) uses 'queueing discipline' (qdisc) for configuring the network interface. When a packet is sent, it is enqueued to the qdisc for the interface and shortly after the kernel is trying to get as many packets as it can from the qdisc, so they can be forwarded to the network adaptor driver. By default the 'pfifo\_fast' qdisc is set in the kernel, which is a pure First In, First out queue.
 
+In OVS a so-called classful qdisc is used for QoS: HTB. Hierarchy Token Bucket allows guaranteeing bandwidth to classes with the possibility to define upper limits to inter-class sharing. Classes can also be prioritized.
+
+\subsubsection{GRE}
+% % http://www.juniper.net/documentation/en_US/junos14.1/topics/concept/gre-tunnel-services.html % %
+Generic Routing Encapsulation (GRE) is used in OpenStack to tunnel the traffic between multiple nodes. It provides a private and secure path by encapsulating data packets.
 
 \section{Cloud computing infrastructures}
 % Call it Infrastructure-as-a-Service? %
@@ -381,7 +388,7 @@ The following graph shows the interaction between different OpenStack services t
 
 \subsection{OpenStack Compute (Nova)}
 
-Nova is used to host and manage cloud computing systems. It supports different hypervisors and the number of physical hosts running the compute services can be scaled horizontally with no requirement of particular hardware resources.
+Nova is used to host and manage cloud computing systems. It supports different hypervisors and the number of physical hosts running the compute services can be scaled horizontally with no requirement of particular hardware resources. Data center can be divided into so called tenants, which are isolated users with their own VMs, security groups and externally reachable IP addresses.
 
 \begin{figure}[H]
 \centering
@@ -398,22 +405,38 @@ Heat provides a template-based orchestration service for creating and managing c
 
 
 \subsection{OpenStack Neutron}
+% % PDF: Performance of Network Virtualization in CCI % %
+
+In the early versions of OpenStack, virtual networking was a sub-component of Nova called Nova-network. This service had it's limitations, because it was closely coupled with networking abstractions and there were no APIs available. With Neutron the implementation is decoupled from the network abstraction and it provides a flexible management interface to administrators and users.
+
 
 \subsubsection{Networking concepts}
-% % http://docs.openstack.org/training-guides/content/operator-network-node.html% %
+% % http://docs.openstack.org/training-guides/content/operator-network-node.html % %
+
+Neutron is responsible for defining network connectivity and addressing within OpenStack. In the main network abstraction the following components are defined. A network as a virtual layer 2 segment, a subnet as a layer 3 IP address space used within a network, a port as an interface to a network or subnet, a router that performs address translation and routing between subnets, a DHCP server responsible for IP adress distribution, a security group for filtering rules acting as a cloud firewall and Floating IPs to give VMs external network access.
+
+Neutron exposes an extensible set of APIs for creating and managing those. Neutron consists of the following elements:
+\begin{itemize}
+\item \textbf{neutron-server:} Provides the logic for SDN and does not contain any SDN functionality in itself. It provides a generic API for the network operations, is modular and extended with the following agents.
+\item \textit{L2 agent:} Plugin-specific agent that manages networking on a compute node. For more details, see ML2 section.
+\item \textbf{DHCP agent:} Provides DHCP services to tenant networks through dnsmasq instances.
+\item \textbf{L3 agent:} Provides L3/NAT forwarding to allow external network access for VMs (virtual routers).
+\item \textbf{Metadata agent:} Acts as a proxy to the metadata service of Nova
+\end{itemize}
+
+The different agents can interact with the neutron-server process through RPC and the OpenStack Networking API. In most use-cases the neutron-server and the different agents can run on the controller node or on a separate network controller node, however the plugin agent is running on each hypervisor.
+
+\textbf{Modular Layer 2}
+
+Mechanism drivers
 
 \textbf{Network types}
 
 \textbf{Namespaces}
 
-\textbf{Metadata}
-
 \textbf{OVS Bridges}
 
-ML2
-Mechanism drivers
-Neutron agent
-API
+Neutron workflow
 
 
 \section{Conclusion}

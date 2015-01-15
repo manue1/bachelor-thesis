@@ -10,8 +10,8 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces OpenFlow QoS as a meter\relax }}{19}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Architecture of Open vSwitch: divided into kernelspace and userspace\relax }}{21}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Visualization of the interaction of the ovs-vsctl tool\relax }}{22}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Interaction among OpenStack services\relax }}{23}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces OpenStack Compute service\relax }}{24}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Interaction among OpenStack services\relax }}{24}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces OpenStack Compute service\relax }}{25}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
