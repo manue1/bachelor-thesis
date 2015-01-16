@@ -12,6 +12,7 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Visualization of the interaction of the ovs-vsctl tool\relax }}{22}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Interaction among OpenStack services\relax }}{24}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces OpenStack Compute service\relax }}{25}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Neutron modular framework, including ML2 drivers\relax }}{26}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

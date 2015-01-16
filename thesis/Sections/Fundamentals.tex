@@ -426,17 +426,64 @@ Neutron exposes an extensible set of APIs for creating and managing those. Neutr
 
 The different agents can interact with the neutron-server process through RPC and the OpenStack Networking API. In most use-cases the neutron-server and the different agents can run on the controller node or on a separate network controller node, however the plugin agent is running on each hypervisor.
 
+
 \textbf{Modular Layer 2}
 
-Mechanism drivers
+The ML2 plugin is a framework that allows the simultaneous usage of multiple layer 2 networking technologies.
 
-\textbf{Network types}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{images/fundamentals/neutron_ml2.png}
+\caption{Neutron modular framework, including ML2 drivers}
+\end{figure}
 
-\textbf{Namespaces}
+The plugin interfaces with the type driver and the mechanism driver. The type driver defines the network types that can be declared when a new network is created and currently includes: local, flat, vlan, gre and vxlan. The mechanism driver specifies the mechanism for accessing these networks, i.e. Open vSwitch, Linux Bridge or other vendor-specific solutions. 
 
-\textbf{OVS Bridges}
 
-Neutron workflow
+
+\textbf{ML2: Open vSwitch}
+
+Open vSwitch is the ML2 mechanism driver that is set as default when installing using Devstack and is also the most commonly deployed agent.
+
+
+
+
+\textbf{Neutron workflow}
+
+The workflow for Neutron, from starting to booting VMs is as follows:
+\begin{enumerate}
+\item Start Neutron-Server
+\item Start Open vSwitch Agent
+\item Start L3-Agent
+\item Start DHCP-Agent
+\item Start Metadata-Agent
+\item Create Networks
+\item Create Routers
+\item Boot VMs
+\end{enumerate}
+
+
+\textbf{Neutron - Nova interaction}
+
+\begin{enumerate}
+\item Request: Create VM connected to network X (API)
+\item Create VM (RPC: Nova API to Nova conductor)
+\item Nova schedules VM
+\item Create VM (RPC: Nova conductor to Nova compute)
+\item Create Port (API: Nova compute to Neutron service)
+\item Create tap device
+\item Notify L2 agent (RPC)
+\item get\_device\_details (RPC: L2 agent to Neutron service)
+\item Configure local VLAN, OVS flows
+\item Send port\_up notification (RPC: L2 agent to Neutron service)
+\item Send port\_up notification (API: Neutron service to Nova)
+\item port\_up (RPC: Nova service to Nova compute)
+\item Nova compute boots VM
+
+\end{enumerate}
+
+
+\textbf{Distributed Virtual Routing}
 
 
 \section{Conclusion}

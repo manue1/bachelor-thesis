@@ -31,40 +31,40 @@
 \contentsline {subsection}{\numberline {2.2.3}OpenStack Orchestration (Heat)}{25}
 \contentsline {subsection}{\numberline {2.2.4}OpenStack Neutron}{25}
 \contentsline {subsubsection}{\numberline {2.2.4.1}Networking concepts}{25}
-\contentsline {section}{\numberline {2.3}Conclusion}{25}
-\contentsline {chapter}{\numberline {3}Requirements}{26}
-\contentsline {section}{\numberline {3.1}Functional requirements}{26}
-\contentsline {section}{\numberline {3.2}Non-functional requirements}{26}
-\contentsline {chapter}{\numberline {4}State of the art}{27}
-\contentsline {section}{\numberline {4.1}Overview}{27}
-\contentsline {section}{\numberline {4.2}OpenDaylight SDN controller}{27}
-\contentsline {section}{\numberline {4.3}Ryu SDN controller}{27}
-\contentsline {section}{\numberline {4.4}OpenStack Neutron - QoS Extension}{27}
-\contentsline {chapter}{\numberline {5}Design}{28}
-\contentsline {section}{\numberline {5.1}Architecture overview}{28}
-\contentsline {section}{\numberline {5.2}Design of Connectivity Manager}{28}
-\contentsline {section}{\numberline {5.3}Design of Connectivity Manager Agent}{28}
-\contentsline {section}{\numberline {5.4}Conclusion}{28}
-\contentsline {chapter}{\numberline {6}Implementation}{29}
-\contentsline {section}{\numberline {6.1}Environment}{29}
-\contentsline {subsubsection}{\numberline {6.1.0.2}Software development approach}{29}
-\contentsline {subsubsection}{\numberline {6.1.0.3}Project structure}{29}
-\contentsline {subsubsection}{\numberline {6.1.0.4}Devstack}{29}
-\contentsline {section}{\numberline {6.2}Connectivity Manager components and operations}{29}
-\contentsline {subsubsection}{\numberline {6.2.0.5}Selection of best-matching Hypervisor}{29}
-\contentsline {subsubsection}{\numberline {6.2.0.6}Enabling QoS for VM}{29}
-\contentsline {section}{\numberline {6.3}OpenStack Neutron configuration}{29}
-\contentsline {section}{\numberline {6.4}Conclusion}{29}
-\contentsline {chapter}{\numberline {7}Evaluation}{30}
-\contentsline {section}{\numberline {7.1}Feature analysis}{30}
-\contentsline {section}{\numberline {7.2}Nubomedia use-case}{30}
-\contentsline {section}{\numberline {7.3}Conclusion}{30}
-\contentsline {chapter}{\numberline {8}Conclusion}{31}
-\contentsline {section}{\numberline {8.1}Summary}{31}
-\contentsline {section}{\numberline {8.2}Problems encountered}{31}
-\contentsline {section}{\numberline {8.3}Future work}{31}
-\contentsline {chapter}{\numberline {A}List of source codes}{32}
+\contentsline {section}{\numberline {2.3}Conclusion}{27}
+\contentsline {chapter}{\numberline {3}Requirements}{28}
+\contentsline {section}{\numberline {3.1}Functional requirements}{28}
+\contentsline {section}{\numberline {3.2}Non-functional requirements}{28}
+\contentsline {chapter}{\numberline {4}State of the art}{29}
+\contentsline {section}{\numberline {4.1}Overview}{29}
+\contentsline {section}{\numberline {4.2}OpenDaylight SDN controller}{29}
+\contentsline {section}{\numberline {4.3}Ryu SDN controller}{29}
+\contentsline {section}{\numberline {4.4}OpenStack Neutron - QoS Extension}{29}
+\contentsline {chapter}{\numberline {5}Design}{30}
+\contentsline {section}{\numberline {5.1}Architecture overview}{30}
+\contentsline {section}{\numberline {5.2}Design of Connectivity Manager}{30}
+\contentsline {section}{\numberline {5.3}Design of Connectivity Manager Agent}{30}
+\contentsline {section}{\numberline {5.4}Conclusion}{30}
+\contentsline {chapter}{\numberline {6}Implementation}{31}
+\contentsline {section}{\numberline {6.1}Environment}{31}
+\contentsline {subsubsection}{\numberline {6.1.0.2}Software development approach}{31}
+\contentsline {subsubsection}{\numberline {6.1.0.3}Project structure}{31}
+\contentsline {subsubsection}{\numberline {6.1.0.4}Devstack}{31}
+\contentsline {section}{\numberline {6.2}Connectivity Manager components and operations}{31}
+\contentsline {subsubsection}{\numberline {6.2.0.5}Selection of best-matching Hypervisor}{31}
+\contentsline {subsubsection}{\numberline {6.2.0.6}Enabling QoS for VM}{31}
+\contentsline {section}{\numberline {6.3}OpenStack Neutron configuration}{31}
+\contentsline {section}{\numberline {6.4}Conclusion}{31}
+\contentsline {chapter}{\numberline {7}Evaluation}{32}
+\contentsline {section}{\numberline {7.1}Feature analysis}{32}
+\contentsline {section}{\numberline {7.2}Nubomedia use-case}{32}
+\contentsline {section}{\numberline {7.3}Conclusion}{32}
+\contentsline {chapter}{\numberline {8}Conclusion}{33}
+\contentsline {section}{\numberline {8.1}Summary}{33}
+\contentsline {section}{\numberline {8.2}Problems encountered}{33}
+\contentsline {section}{\numberline {8.3}Future work}{33}
+\contentsline {chapter}{\numberline {A}List of source codes}{34}
 \newpage 
-\contentsline {chapter}{\numberline {B}Glossar}{33}
-\contentsline {chapter}{Literatur}{34}
-\contentsline {chapter}{Sachverzeichnis}{35}
+\contentsline {chapter}{\numberline {B}Glossar}{35}
+\contentsline {chapter}{Literatur}{36}
+\contentsline {chapter}{Sachverzeichnis}{37}
