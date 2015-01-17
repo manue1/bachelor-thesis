@@ -328,6 +328,7 @@ Each Open vSwitch daemon has a database (OVSDB) that holds it's configuration. T
 \item \textbf{Manager}: OVSDB management connection
 \end{itemize}
 
+
 \subsubsection{OpenVSwitch Management}
 
 Multiple different configuration utilities exist for OVS, however only ovs-vsctl is explained in this section. It is used for querying and updating the configuration of the switch through interaction with the ovsdb-server.
@@ -350,6 +351,7 @@ The commands below are available for the basic OVS configuration that is needed 
 \item ovs-vsctl list \%table\%
 \end{itemize}
 
+
 \subsubsection{QoS}
 
 With Open vSwitch QoS can be configured for ports or the so-called virtual network interfaces that virtual machines get when they are connected to the internal bridge of the switch. The minimal and maximal rate-limits are defined in bytes and applied to a queue, which operates as an egress filter. The QoS port policies make use of the 'tc' implementation that is included in the Linux kernel.
@@ -360,12 +362,15 @@ Traffic control (tc) uses 'queueing discipline' (qdisc) for configuring the netw
 
 In OVS a so-called classful qdisc is used for QoS: HTB. Hierarchy Token Bucket allows guaranteeing bandwidth to classes with the possibility to define upper limits to inter-class sharing. Classes can also be prioritized.
 
+
 \subsubsection{GRE}
 % % http://www.juniper.net/documentation/en_US/junos14.1/topics/concept/gre-tunnel-services.html % %
 Generic Routing Encapsulation (GRE) is used in OpenStack to tunnel the traffic between multiple nodes. It provides a private and secure path by encapsulating data packets.
 
+
 \section{Cloud computing infrastructures}
 % Call it Infrastructure-as-a-Service? %
+
 
 \subsection{OpenStack}
 
@@ -399,6 +404,7 @@ Nova is used to host and manage cloud computing systems. It supports different h
 \textbf{API}
 ??
 
+
 \subsection{OpenStack Orchestration (Heat)}
 
 Heat provides a template-based orchestration service for creating and managing cloud resources. This means multiple OpenStack resource types (such as virtual machines, floating IP addresses, volumes, security groups and users) can be generated and also maintained with additional functionality like auto-scaling.
@@ -418,7 +424,7 @@ Neutron is responsible for defining network connectivity and addressing within O
 Neutron exposes an extensible set of APIs for creating and managing those. Neutron consists of the following elements:
 \begin{itemize}
 \item \textbf{neutron-server:} Provides the logic for SDN and does not contain any SDN functionality in itself. It provides a generic API for the network operations, is modular and extended with the following agents.
-\item \textit{L2 agent:} Plugin-specific agent that manages networking on a compute node. For more details, see ML2 section.
+\item \textbf{L2 agent:} Plugin-specific agent that manages networking on a compute node. For more details, see ML2 section.
 \item \textbf{DHCP agent:} Provides DHCP services to tenant networks through dnsmasq instances.
 \item \textbf{L3 agent:} Provides L3/NAT forwarding to allow external network access for VMs (virtual routers).
 \item \textbf{Metadata agent:} Acts as a proxy to the metadata service of Nova
@@ -427,7 +433,7 @@ Neutron exposes an extensible set of APIs for creating and managing those. Neutr
 The different agents can interact with the neutron-server process through RPC and the OpenStack Networking API. In most use-cases the neutron-server and the different agents can run on the controller node or on a separate network controller node, however the plugin agent is running on each hypervisor.
 
 
-\textbf{Modular Layer 2}
+\subsubsection{Modular Layer 2}
 
 The ML2 plugin is a framework that allows the simultaneous usage of multiple layer 2 networking technologies.
 
@@ -445,10 +451,20 @@ The plugin interfaces with the type driver and the mechanism driver. The type dr
 
 Open vSwitch is the ML2 mechanism driver that is set as default when installing using Devstack and is also the most commonly deployed agent.
 
+% % Recreate this graphic!! % %
+% % alternatively use neutron_gre_connection.png from http://docs.openstack.org/openstack-ops/content/network_troubleshooting.html % %
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{images/fundamentals/neutron_gre_connection_nodes.jpg}
+\caption{GRE tunneling between Controller Node and Compute Node}
+\end{figure}
+
+\subsubsection{Network distinction}
+
+Neutron is connected to different networks. For internet routable connections the external network is used. The management network is created by the network operator and is mapped to pre-existing networks within the datacenter, which is used to connect the different hosts. The tenants within OpenStack have their own isolated self provisioned private networks. Those can optionally be connected to other tenant or external networks. The abstraction of those tenant networks is possible through network namespaces. This allows overlapping IP addresses within the datacenter.
 
 
-
-\textbf{Neutron workflow}
+\subsubsection{Neutron workflow}
 
 The workflow for Neutron, from starting to booting VMs is as follows:
 \begin{enumerate}
@@ -482,8 +498,9 @@ The workflow for Neutron, from starting to booting VMs is as follows:
 
 \end{enumerate}
 
+\subsubsection{OpenStack Juno}
 
-\textbf{Distributed Virtual Routing}
-
+more stable
+DVR
 
 \section{Conclusion}

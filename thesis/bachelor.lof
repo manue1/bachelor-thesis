@@ -1,20 +1,24 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces "Classical" switch components\relax }}{13}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Software-Defined Network architecture\relax }}{14}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces OpenFlow Network Architecture\relax }}{15}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces OpenFlow Switch components\relax }}{16}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces OpenFlow pipeline processing\relax }}{17}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Packet flow through an OpenFlow switch\relax }}{18}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces OpenFlow QoS as a meter\relax }}{19}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Architecture of Open vSwitch: divided into kernelspace and userspace\relax }}{21}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Visualization of the interaction of the ovs-vsctl tool\relax }}{22}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Interaction among OpenStack services\relax }}{24}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces OpenStack Compute service\relax }}{25}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Neutron modular framework, including ML2 drivers\relax }}{26}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces "Classical" switch components\relax }}{13}{figure.caption.6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Software-Defined Network architecture\relax }}{14}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces OpenFlow Network Architecture\relax }}{15}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces OpenFlow Switch components\relax }}{16}{figure.caption.9}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces OpenFlow pipeline processing\relax }}{17}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Packet flow through an OpenFlow switch\relax }}{18}{figure.caption.11}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces OpenFlow QoS as a meter\relax }}{19}{figure.caption.12}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Architecture of Open vSwitch: divided into kernelspace and userspace\relax }}{21}{figure.caption.13}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Visualization of the interaction of the ovs-vsctl tool\relax }}{22}{figure.caption.14}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Interaction among OpenStack services\relax }}{24}{figure.caption.15}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces OpenStack Compute service\relax }}{25}{figure.caption.16}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Neutron modular framework, including ML2 drivers\relax }}{26}{figure.caption.17}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces GRE tunneling between Controller Node and Compute Node\relax }}{27}{figure.caption.18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of OpenDaylight Virtualization edition\relax }}{31}{figure.caption.19}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ryu architecture\relax }}{32}{figure.caption.20}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Neutron QoS Extension architecture\relax }}{32}{figure.caption.21}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
