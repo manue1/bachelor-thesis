@@ -55,19 +55,35 @@ A Neutron extension has been partially implemented for OpenStack IceHouse which 
 \section{Problem statement}
 
 %Show why previously mentioned projects fail for our requirements, analyse and compare them. Make table with features. Also state that they wouldn't include the VM placement feature. %
-This section lists the restrictions that have been discovered with the previously mentioned solutions which further strengthens the motivation for the implementation of the Connectivity Manager. A feature comparison and analysis is given.
+This section lists the restrictions that have been discovered with the previously mentioned solutions. 
 
-\textbf{Problems encountered ODL}
-The local testbed used for the integration of OpenStack Juno and OpenDaylight Helium consisted of 2 hosts, one running the OpenStack control node and OpenDaylight Controller and a OpenStack Compute Node on the second host. During the tests it was not possible to get the public network access for the Virtual Machines working. This and the fact that it ODL is very complex to debug and understand all underlying processes led us to the decision not to use OpenDaylight.
 
-\textbf{Problems encountered Ryu}
-The test of Ryu was unsuccessful due to a number of errors while stacking the test environment using Devstack. It was not possible to launch instances and test the QoS features. The lack of proper documentation for the interaction with OpenStack Neutron led us to look more into other SDN controllers for our particular use case. Currently
-Ryu doesn't support the Distributed Virtual Routing feature that has been introduced with OpenStack Juno.
+\textbf{Problems encountered with OpenDaylight:}
 
-\textbf{Problems encountered Neutron QoS Extension}
+The local testbed used for the integration of OpenStack Juno and OpenDaylight Helium consisted of 2 hosts, one running the OpenStack control node and OpenDaylight Controller and a OpenStack Compute Node on the second host. During the tests it was not possible to get the public network access for the Virtual Machines working, thus the L3 routing did not work. This and the fact that it ODL is very complex to debug and understand all underlying processes led us to the decision not to use OpenDaylight.
+
+
+\textbf{Problems encountered with Ryu:}
+
+The test of Ryu was unsuccessful due to a number of errors while stacking the test environment using Devstack. It was not possible to launch instances and test the QoS features. The lack of proper documentation for the interaction with OpenStack Neutron led us to look more into other SDN controllers for our particular use case. Currently Ryu doesn't support the Distributed Virtual Routing feature that has been introduced with OpenStack Juno.
+
+
+\textbf{Problems encountered with Neutron QoS Extension:}
+
 The implementation has not been finished and merged into Neutron, however the basic deployment of QoS seem to have been tested successfully. 
 
 At the moment it is not clear if the OpenStack community will keep working on this, according to the whiteboard it was deferred to Juno, but it's not included in the current release and no active development is stated in the code / documentation platforms of the OpenStack community.
 
 The patch consists of an extension to the Neutron API which allows setting QoS rules through the Neutron Python client, the actual Neutron extension with the QoS, QoS Driver in the OpenVSwitch agent and an addition to the Neutron Database that includes QoS.
 
+\section{Conclusion}
+
+The listed problems further strengthen the motivation for the implementation of the Connectivity Manager. A feature comparison and analysis is given.
+
+\begin{tabularx}{\textwidth}{ |X|X|X|X| }
+\hline Tool/Solution & QoS support & OF Controller & OpenStack (Juno) integration \\ 
+\hline Ryu & X & X & No (tests in Juno failed) \\ 
+\hline OpenDaylight & X & X & No (tests in Juno failed) \\ 
+\hline Neutron QoS extension & not fully implemented & No & No (IceHouse patch not ported to Juno) \\ 
+\hline 
+\end{tabularx}
