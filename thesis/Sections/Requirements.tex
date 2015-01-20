@@ -6,16 +6,28 @@ This section identifies the functional requirements of the Connectivity Manager,
 
 \subsection{SLA Enforcement}
 
+One of the key objectives of the Connectivity Manager is to grant different Service Level Agreements to the links between Virtual Machines. The agreement is set as Quality of Service with the minimal and maximum bandwidth rate set. Network performance problems can provide a negative experience for the end-user, as well as productivity and economic loss.
+
 \subsection{Optimal Virtual Machine Placement}
+
+The placement of Virtual Machines makes a difference in terms of connectivity and resource utilization. VMs that run on the same Compute Node have a better connectivity then ones that need to communicate over wire. The fact that the networking is virtualized besides the virtualized computing environment means that a more utilized Compute Node will also have less resources available for switching and routing. A part of the motivation for this requirement can be found in the Evaluation section.
+
+\subsection{Integration with Elastic Media Manager}
+
+??? Mention here ???
 
 \section{Non-functional requirements}
 
-\subsection{Performance}
+Non-functional requirements generally specify criteria to do with the operation of a system and not with it's behavior. Thus the Connectivity Manager should also fit the following characteristics.
+
+\subsection{Scalability}
+
+Today's data-centers can grow in a fast-pace, especially in connection with automated up-scaling of compute resources at a certain level of utilization. This is why the underlying virtualized network software needs to be scalable too.
 
 \subsection{Modularity}
 
-\subsection{Usability}
+Building modular software not only simplifies further development for a third-party, but also makes it easier to exchange certain parts of the software for improvements or maintenance. The separation into two different components with a defined API makes it more flexible.
 
 \subsection{Interoperability}
 
-\subsection{Security}
+In the case of the use of Open vSwitch, interoperability is given because it is made available for various architectures. The integration into the Linux Kernel and the use of standardized protocols such as OpenFlow are a significant factor.
