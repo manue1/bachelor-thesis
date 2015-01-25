@@ -16,10 +16,14 @@
 \contentsline {figure}{\numberline {2.13}{\ignorespaces GRE tunneling between Controller Node and Compute Node\relax }}{27}{figure.caption.18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of OpenDaylight Virtualization edition\relax }}{31}{figure.caption.19}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Ryu architecture\relax }}{32}{figure.caption.20}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Neutron QoS Extension architecture\relax }}{32}{figure.caption.21}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of OpenDaylight Virtualization edition\relax }}{32}{figure.caption.19}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ryu architecture\relax }}{33}{figure.caption.20}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Neutron QoS Extension architecture\relax }}{33}{figure.caption.21}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces High-level architecture of the Connectivity Manager\relax }}{35}{figure.caption.22}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Modular architecture of the Connectivity Manager\relax }}{36}{figure.caption.23}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Sequence diagram deployment\relax }}{36}{figure.caption.24}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Activity diagram: Get list of hosts\relax }}{38}{figure.caption.25}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

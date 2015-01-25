@@ -40,44 +40,45 @@
 \contentsline {section}{\numberline {3.1}Functional requirements}{29}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}SLA Enforcement}{29}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Optimal Virtual Machine Placement}{29}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Non-functional requirements}{29}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Performance}{29}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Modularity}{29}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Usability}{29}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Interoperability}{29}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Security}{29}{subsection.3.2.5}
-\contentsline {chapter}{\numberline {4}State of the art}{30}{chapter.4}
-\contentsline {section}{\numberline {4.1}Overview}{30}{section.4.1}
-\contentsline {section}{\numberline {4.2}OpenDaylight SDN controller}{30}{section.4.2}
-\contentsline {section}{\numberline {4.3}Ryu SDN controller}{31}{section.4.3}
-\contentsline {section}{\numberline {4.4}OpenStack Neutron - QoS Extension}{32}{section.4.4}
-\contentsline {section}{\numberline {4.5}Problem statement}{33}{section.4.5}
-\contentsline {section}{\numberline {4.6}Conclusion}{33}{section.4.6}
-\contentsline {chapter}{\numberline {5}Design}{34}{chapter.5}
-\contentsline {section}{\numberline {5.1}Architecture overview}{34}{section.5.1}
-\contentsline {section}{\numberline {5.2}Design of Connectivity Manager}{34}{section.5.2}
-\contentsline {section}{\numberline {5.3}Design of Connectivity Manager Agent}{34}{section.5.3}
-\contentsline {section}{\numberline {5.4}Conclusion}{34}{section.5.4}
-\contentsline {chapter}{\numberline {6}Implementation}{35}{chapter.6}
-\contentsline {section}{\numberline {6.1}Environment}{35}{section.6.1}
-\contentsline {subsubsection}{\numberline {6.1.0.1}Software development approach}{35}{subsubsection.6.1.0.1}
-\contentsline {subsubsection}{\numberline {6.1.0.2}Project structure}{35}{subsubsection.6.1.0.2}
-\contentsline {subsubsection}{\numberline {6.1.0.3}Devstack}{35}{subsubsection.6.1.0.3}
-\contentsline {section}{\numberline {6.2}Connectivity Manager components and operations}{35}{section.6.2}
-\contentsline {subsubsection}{\numberline {6.2.0.4}Selection of best-matching Hypervisor}{35}{subsubsection.6.2.0.4}
-\contentsline {subsubsection}{\numberline {6.2.0.5}Enabling QoS for VM}{35}{subsubsection.6.2.0.5}
-\contentsline {section}{\numberline {6.3}OpenStack Neutron configuration}{35}{section.6.3}
-\contentsline {section}{\numberline {6.4}Conclusion}{35}{section.6.4}
-\contentsline {chapter}{\numberline {7}Evaluation}{36}{chapter.7}
-\contentsline {section}{\numberline {7.1}Feature analysis}{36}{section.7.1}
-\contentsline {section}{\numberline {7.2}Connectivity Manager integration with NUBOMEDIA project}{36}{section.7.2}
-\contentsline {section}{\numberline {7.3}Conclusion}{36}{section.7.3}
-\contentsline {chapter}{\numberline {8}Conclusion}{37}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{37}{section.8.1}
-\contentsline {section}{\numberline {8.2}Problems encountered}{37}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future work}{37}{section.8.3}
-\contentsline {chapter}{\numberline {A}List of source codes}{38}{appendix.A}
+\contentsline {subsection}{\numberline {3.1.3}Integration with Elastic Media Manager}{29}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Non-functional requirements}{30}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Scalability}{30}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Modularity}{30}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Interoperability}{30}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}State of the art}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Overview}{31}{section.4.1}
+\contentsline {section}{\numberline {4.2}OpenDaylight SDN controller}{31}{section.4.2}
+\contentsline {section}{\numberline {4.3}Ryu SDN controller}{32}{section.4.3}
+\contentsline {section}{\numberline {4.4}OpenStack Neutron - QoS Extension}{33}{section.4.4}
+\contentsline {section}{\numberline {4.5}Problem statement}{34}{section.4.5}
+\contentsline {section}{\numberline {4.6}Conclusion}{34}{section.4.6}
+\contentsline {chapter}{\numberline {5}Design}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Architecture overview}{35}{section.5.1}
+\contentsline {section}{\numberline {5.2}Design of Connectivity Manager}{36}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Algorithm for Instance Placement}{36}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}API}{36}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Design of Connectivity Manager Agent}{38}{section.5.3}
+\contentsline {section}{\numberline {5.4}Conclusion}{39}{section.5.4}
+\contentsline {chapter}{\numberline {6}Implementation}{40}{chapter.6}
+\contentsline {section}{\numberline {6.1}Environment}{40}{section.6.1}
+\contentsline {subsubsection}{\numberline {6.1.0.1}Software development approach}{40}{subsubsection.6.1.0.1}
+\contentsline {subsubsection}{\numberline {6.1.0.2}Project structure}{40}{subsubsection.6.1.0.2}
+\contentsline {subsubsection}{\numberline {6.1.0.3}Devstack}{40}{subsubsection.6.1.0.3}
+\contentsline {section}{\numberline {6.2}Connectivity Manager components and operations}{40}{section.6.2}
+\contentsline {subsubsection}{\numberline {6.2.0.4}Selection of best-matching Hypervisor}{40}{subsubsection.6.2.0.4}
+\contentsline {subsubsection}{\numberline {6.2.0.5}Enabling QoS for VM}{40}{subsubsection.6.2.0.5}
+\contentsline {section}{\numberline {6.3}OpenStack Neutron configuration}{40}{section.6.3}
+\contentsline {section}{\numberline {6.4}Conclusion}{40}{section.6.4}
+\contentsline {chapter}{\numberline {7}Evaluation}{41}{chapter.7}
+\contentsline {section}{\numberline {7.1}Feature analysis}{41}{section.7.1}
+\contentsline {section}{\numberline {7.2}Connectivity Manager integration with NUBOMEDIA project}{41}{section.7.2}
+\contentsline {section}{\numberline {7.3}Conclusion}{41}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusion}{42}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{42}{section.8.1}
+\contentsline {section}{\numberline {8.2}Problems encountered}{42}{section.8.2}
+\contentsline {section}{\numberline {8.3}Future work}{42}{section.8.3}
+\contentsline {chapter}{\numberline {A}List of source codes}{43}{appendix.A}
 \newpage 
-\contentsline {chapter}{\numberline {B}Glossar}{39}{appendix.B}
-\contentsline {chapter}{Literatur}{40}{appendix.B}
-\contentsline {chapter}{Sachverzeichnis}{41}{appendix*.22}
+\contentsline {chapter}{\numberline {B}Glossar}{44}{appendix.B}
+\contentsline {chapter}{Literatur}{45}{appendix.B}
+\contentsline {chapter}{Sachverzeichnis}{46}{appendix*.26}
