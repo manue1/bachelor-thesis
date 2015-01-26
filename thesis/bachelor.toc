@@ -58,27 +58,27 @@
 \contentsline {subsection}{\numberline {5.2.1}Algorithm for Instance Placement}{36}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}API}{36}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}Design of Connectivity Manager Agent}{38}{section.5.3}
-\contentsline {section}{\numberline {5.4}Conclusion}{39}{section.5.4}
-\contentsline {chapter}{\numberline {6}Implementation}{40}{chapter.6}
-\contentsline {section}{\numberline {6.1}Environment}{40}{section.6.1}
-\contentsline {subsubsection}{\numberline {6.1.0.1}Software development approach}{40}{subsubsection.6.1.0.1}
-\contentsline {subsubsection}{\numberline {6.1.0.2}Project structure}{40}{subsubsection.6.1.0.2}
-\contentsline {subsubsection}{\numberline {6.1.0.3}Devstack}{40}{subsubsection.6.1.0.3}
-\contentsline {section}{\numberline {6.2}Connectivity Manager components and operations}{40}{section.6.2}
-\contentsline {subsubsection}{\numberline {6.2.0.4}Selection of best-matching Hypervisor}{40}{subsubsection.6.2.0.4}
-\contentsline {subsubsection}{\numberline {6.2.0.5}Enabling QoS for VM}{40}{subsubsection.6.2.0.5}
-\contentsline {section}{\numberline {6.3}OpenStack Neutron configuration}{40}{section.6.3}
-\contentsline {section}{\numberline {6.4}Conclusion}{40}{section.6.4}
-\contentsline {chapter}{\numberline {7}Evaluation}{41}{chapter.7}
-\contentsline {section}{\numberline {7.1}Feature analysis}{41}{section.7.1}
-\contentsline {section}{\numberline {7.2}Connectivity Manager integration with NUBOMEDIA project}{41}{section.7.2}
-\contentsline {section}{\numberline {7.3}Conclusion}{41}{section.7.3}
-\contentsline {chapter}{\numberline {8}Conclusion}{42}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{42}{section.8.1}
-\contentsline {section}{\numberline {8.2}Problems encountered}{42}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future work}{42}{section.8.3}
-\contentsline {chapter}{\numberline {A}List of source codes}{43}{appendix.A}
+\contentsline {section}{\numberline {5.4}Conclusion}{40}{section.5.4}
+\contentsline {chapter}{\numberline {6}Implementation}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}Environment}{41}{section.6.1}
+\contentsline {subsubsection}{\numberline {6.1.0.1}Software development approach}{41}{subsubsection.6.1.0.1}
+\contentsline {subsubsection}{\numberline {6.1.0.2}Project structure}{41}{subsubsection.6.1.0.2}
+\contentsline {subsubsection}{\numberline {6.1.0.3}Devstack}{41}{subsubsection.6.1.0.3}
+\contentsline {section}{\numberline {6.2}Connectivity Manager components and operations}{41}{section.6.2}
+\contentsline {subsubsection}{\numberline {6.2.0.4}Selection of best-matching Hypervisor}{41}{subsubsection.6.2.0.4}
+\contentsline {subsubsection}{\numberline {6.2.0.5}Enabling QoS for VM}{41}{subsubsection.6.2.0.5}
+\contentsline {section}{\numberline {6.3}OpenStack Neutron configuration}{41}{section.6.3}
+\contentsline {section}{\numberline {6.4}Conclusion}{41}{section.6.4}
+\contentsline {chapter}{\numberline {7}Evaluation}{42}{chapter.7}
+\contentsline {section}{\numberline {7.1}Feature analysis}{42}{section.7.1}
+\contentsline {section}{\numberline {7.2}Connectivity Manager integration with NUBOMEDIA project}{42}{section.7.2}
+\contentsline {section}{\numberline {7.3}Conclusion}{42}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusion}{43}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{43}{section.8.1}
+\contentsline {section}{\numberline {8.2}Problems encountered}{43}{section.8.2}
+\contentsline {section}{\numberline {8.3}Future work}{43}{section.8.3}
+\contentsline {chapter}{\numberline {A}List of source codes}{44}{appendix.A}
 \newpage 
-\contentsline {chapter}{\numberline {B}Glossar}{44}{appendix.B}
-\contentsline {chapter}{Literatur}{45}{appendix.B}
-\contentsline {chapter}{Sachverzeichnis}{46}{appendix*.26}
+\contentsline {chapter}{\numberline {B}Glossar}{45}{appendix.B}
+\contentsline {chapter}{Literatur}{46}{appendix.B}
+\contentsline {chapter}{Sachverzeichnis}{47}{appendix*.29}
