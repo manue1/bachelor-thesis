@@ -356,11 +356,19 @@ The commands below are available for the basic OVS configuration that is needed 
 
 With Open vSwitch QoS can be configured for ports or the so-called virtual network interfaces that virtual machines get when they are connected to the internal bridge of the switch. The minimal and maximal rate-limits are defined in bytes and applied to a queue, which operates as an egress filter. The QoS port policies make use of the 'tc' implementation that is included in the Linux kernel.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{images/fundamentals/openvswitch_qos-queues.png}
+\caption{QoS Queues attached to a Port in OVS}
+\end{figure}
+
+
 % % http://linux.die.net/man/8/tc % %
 % % http://www.istudies.net/journal/sites/default/files/Extended%20Linux%20HTB%20Queuing%20Discipline%20Implementations.pdf % %
-Traffic control (tc) uses 'queueing discipline' (qdisc) for configuring the network interface. When a packet is sent, it is enqueued to the qdisc for the interface and shortly after the kernel is trying to get as many packets as it can from the qdisc, so they can be forwarded to the network adaptor driver. By default the 'pfifo\_fast' qdisc is set in the kernel, which is a pure First In, First out queue.
+% %https://github.com/stanzgy/nova-network-qos/blob/master/nova-network-qos-intro.rst % %
+Traffic control (tc) uses 'queueing discipline' (qdisc) for configuring the network interface. They are the fundamental schedulers used under Linux. When a packet is sent, it is enqueued to the qdisc for the interface and shortly after the kernel is trying to get as many packets as it can from the qdisc, so they can be forwarded to the network adaptor driver. By default the 'pfifo\_fast' qdisc is set in the kernel, which is a pure 'First In, First out' queue.
 
-In OVS a so-called classful qdisc is used for QoS: HTB. Hierarchy Token Bucket allows guaranteeing bandwidth to classes with the possibility to define upper limits to inter-class sharing. Classes can also be prioritized.
+In OVS a classful qdisc named Hierarchy Token Bucket (HTB) is used for QoS. HTB allows guaranteeing bandwidth to classes with the possibility to define upper limits to inter-class sharing. Classes can also be prioritized.
 
 
 \subsubsection{GRE}
@@ -393,7 +401,7 @@ The following graph shows the interaction between different OpenStack services t
 
 \subsection{OpenStack Compute (Nova)}
 
-Nova is used to host and manage cloud computing systems. It supports different hypervisors and the number of physical hosts running the compute services can be scaled horizontally with no requirement of particular hardware resources. Data center can be divided into so called tenants, which are isolated users with their own VMs, security groups and externally reachable IP addresses.
+Nova is used to host and manage cloud computing systems. It supports different hypervisors and the number of physical hosts running the compute services can be scaled horizontally with no requirement of hardware resources from specific vendors. Hosts that provide Nova services are also called 'Compute Nodes'. Data center can be divided into so called tenants, which are isolated users with their own servers, security groups and externally reachable IP addresses (Floating IP addresses). 
 
 \begin{figure}[H]
 \centering
@@ -401,13 +409,23 @@ Nova is used to host and manage cloud computing systems. It supports different h
 \caption{OpenStack Compute service}
 \end{figure}
 
-\textbf{API}
-??
+% %https://kimizhang.wordpress.com/2013/08/26/openstack-zoning-regionavailability-zonehost-aggregate/ % %
+\textbf{Compute Node segregation}
+
+An OpenStack cloud can be logically and physically grouped on different levels:
+\begin{itemize}
+\item \textbf{Region:} A Region has its own full OpenStack deployment and can be physically at a different location. Regions share a set of Keystone and Horizon services to provide access control and the graphical management interface.
+\item \textbf{Availability Zone:} Inside of a Region, it is possible to logically group multiple compute nodes into Availability Zones. This zone can be specified when new servers or stacks (via Heat) are instantiated.
+\item \textbf{Host Aggregates:} Compute nodes can also be logically grouped into Host Aggregates by using meta-data to tag them. This feature can be used to separate nodes with certain hardware characteristics (e.g. with SSD drives) from others.
+\end{itemize}
+
+For zoning compute nodes availability zones will be used in the Connectivity Manager in order to achieve the best networking performance between individual servers.
 
 
 \subsection{OpenStack Orchestration (Heat)}
 
 Heat provides a template-based orchestration service for creating and managing cloud resources. This means multiple OpenStack resource types (such as virtual machines, floating IP addresses, volumes, security groups and users) can be generated and also maintained with additional functionality like auto-scaling.
+
 
 
 \subsection{OpenStack Neutron}
@@ -498,9 +516,5 @@ The workflow for Neutron, from starting to booting VMs is as follows:
 
 \end{enumerate}
 
-\subsubsection{OpenStack Juno}
-
-more stable
-DVR
 
 \section{Conclusion}
