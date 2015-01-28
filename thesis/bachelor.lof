@@ -24,12 +24,14 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces High-level architecture of the Connectivity Manager\relax }}{36}{figure.caption.23}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Minimized architecture of the Connectivity Manager and its integrations\relax }}{37}{figure.caption.24}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Workflow: Deployment of stack \& Assignment of QoS policies\relax }}{37}{figure.caption.25}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Deployment: Topology object from EMM\relax }}{38}{figure.caption.26}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Class diagram: Connectivity Manager Agent - Core package\relax }}{39}{figure.caption.27}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Activity diagram: Get list of hosts\relax }}{40}{figure.caption.28}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Activity diagram: Set QoS rates for all servers\relax }}{41}{figure.caption.29}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Activity diagram: Get OVS Port ID for server\relax }}{41}{figure.caption.30}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Activity diagram: Get QoS ID for OVS Port\relax }}{42}{figure.caption.31}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Class diagram: Metaclass (Interface) and implementation (Service) instantiated by Factory Agent\relax }}{38}{figure.caption.26}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Class diagram: Connectivity Manager service and its helper classes\relax }}{39}{figure.caption.27}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Deployment: Topology object from EMM\relax }}{39}{figure.caption.28}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Class diagram: Connectivity Manager Agent - Core package\relax }}{41}{figure.caption.29}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Activity diagram: Get list of hosts\relax }}{42}{figure.caption.30}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Activity diagram: Set QoS rates for all servers\relax }}{43}{figure.caption.31}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Activity diagram: Get OVS Port ID for server\relax }}{43}{figure.caption.32}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Activity diagram: Get QoS ID for OVS Port\relax }}{44}{figure.caption.33}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

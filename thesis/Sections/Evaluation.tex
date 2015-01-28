@@ -13,4 +13,41 @@ multimedia application. The main focus of the CM is related to management and co
 
 Nubomedia is an elastic Platform as a Service (PaaS) cloud for interactive social multimedia. Its architecture is based on media pipelines: chains of elements providing media capabilities such as encryption, transcoding, augmented reality or video content analysis. These chains allow building arbitrarily complex media processing for applications. As a unique feature, from the point of view of the pipelines, the NUBOMEDIA cloud infrastructure behaves as a single virtual super-computer encompassing all the available resources of the underlying physical network.
 
+
+% % from EMM % %
+
+
+Deployment
+The deployment phase starts when an administrator requests the instantiation of
+NUBOMEDIA. Inside the appropriate request, the administrator specifies what are the
+capabilities required for this instance of the platform. Based on the information
+received, the EMM needs to instantiate virtual resources on the Virtualized
+Infrastructure. For this step there are several ways of doing it:
+-Request directly OpenStack virtual networks and compute resources
+-Request to Heat the required resources creating a template
+For simplifying and making homogenous the whole process, we selected the second
+option. The EMM has to create a Heat template based on the required resources which
+are requested by the admin. Once the template is created, it is sent to Heat using its API.
+At the end of the deployment process, Heat sends back all the information related with
+the instantiated resources which the EMM can use for moving to the next phases.
+
+
+Runtime
+Once all the NUBOMEDIA components are deployed and started, it is needed to
+actively check which specific levels of SLAs are met. The EMM provides a runtime
+system which actively controls the situation of a group of NUBOMEDIA components,
+and based on some policies, which the administrator inserted, decides whether to scale
+in or out them.
+When the administrator requests the instantiation of a NUBOMEDIA platform, it puts
+also specific policies to specific elements. A policy is just a set of alarms and actions.
+There are two different ways of realizing such system via triggering mechanisms:
+- Actively: the EMM actively checks whether the conditions of the alarm are met.
+For doing it, it typically requests to the monitoring system last values of the
+metrics involved, and performs some basic operations for evaluating the status.
+- Passively: the EMM pushes the alarm into the monitoring system. When the
+conditions are met, the monitoring system triggers the alarm to the EMM.
+For NUBOMEDIA Release 3, it was decided to use the first approach. Once the EMM
+realizes that an alarm is in ACTIVE state, it has to trigger the execution of the action
+contained in the Policy. Typically this policy can involve the instantiation/removal of
+the NUBOMEDIA elements.
 \section{Conclusion}
