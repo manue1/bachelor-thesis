@@ -27,11 +27,16 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Class diagram: Metaclass (Interface) and implementation (Service) instantiated by Factory Agent\relax }}{38}{figure.caption.26}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Class diagram: Connectivity Manager service and its helper classes\relax }}{39}{figure.caption.27}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Deployment: Topology object from EMM\relax }}{39}{figure.caption.28}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Class diagram: Connectivity Manager Agent - Core package\relax }}{41}{figure.caption.29}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Activity diagram: Get list of hosts\relax }}{42}{figure.caption.30}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Activity diagram: Set QoS rates for all servers\relax }}{43}{figure.caption.31}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Activity diagram: Get OVS Port ID for server\relax }}{43}{figure.caption.32}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Activity diagram: Get QoS ID for OVS Port\relax }}{44}{figure.caption.33}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Check resource utilization of hosts\relax }}{40}{figure.caption.29}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Get total amount of required resources for topology\relax }}{40}{figure.caption.30}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Check if deployment is feasible within infrastructure resources and tenant quota\relax }}{41}{figure.caption.31}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Check if topology can be deployed on a single host\relax }}{42}{figure.caption.32}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Set the availability zone for each Unit\relax }}{43}{figure.caption.33}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Class diagram: Connectivity Manager Agent - Core package\relax }}{44}{figure.caption.34}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Activity diagram: Get list of hosts\relax }}{45}{figure.caption.35}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Activity diagram: Set QoS rates for all servers\relax }}{46}{figure.caption.36}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Activity diagram: Get OVS Port ID for server\relax }}{46}{figure.caption.37}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Activity diagram: Get QoS ID for OVS Port\relax }}{47}{figure.caption.38}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

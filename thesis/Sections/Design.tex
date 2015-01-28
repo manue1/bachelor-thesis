@@ -44,7 +44,7 @@ The sequence diagram below displays the work-flow that the CM passes during the 
 \caption{Workflow: Deployment of stack \& Assignment of QoS policies}
 \end{figure}
 
-As can be seen, the Connectivity Manager receives the Topology that contains a description of the configuration and specifications of the whole cloud. For the placement decision the CM to needs to get the information about the current state of the infrastructure. This exchange with the CM Agent occurs through the given API. Upon reception of that data, the placement algorithm sets the availability zone for each instance within the topology. The topology is then converted into a Heat template by the Template Manager. Once the template got deployed by the Heat Client a runtime agent starts. The purpose of the runtime agent is to continuously check the state of the stack. Once the stack has reached the 'DEPLOYED' state, the runtime agent requests the CM to set the QoS policies according to previously configured values. This configuration is subsequently transmitted to the CM Agent whose task is then to enable it on the according ports of the instances within the Open vSwitch.
+As visible in the above figure, the Connectivity Manager receives the Topology object that contains a description of the configuration and specifications of the whole cloud. For the placement decision the CM to needs to get the information about the current state of the infrastructure. This exchange with the CM Agent occurs through the given API. Upon reception of that data, the placement algorithm sets the availability zone for each instance within the topology. The topology is then converted into a Heat template by the Template Manager. Once the template got deployed by the Heat Client a runtime agent starts. The purpose of the runtime agent is to continuously check the state of the stack. Once the stack has reached the 'DEPLOYED' state, the runtime agent requests the CM to set the QoS policies according to previously configured values. This configuration is subsequently transmitted to the CM Agent whose task is then to enable it on the according ports of the instances within the Open vSwitch.
 
 
 \section{Design of Connectivity Manager}
@@ -97,9 +97,55 @@ Each tenant has a set of quotas which limit the resource usage within the OpenSt
 
 Considering the requirement to have optimal connectivity between individual instances, it is preferable to position them on the same compute node, given that its resources allow this.
 
-\textbf{Step 1: Check if Topology is within the limitations of the Quota.}
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.7\textwidth]{images/design/cm_get_host_utilization}
+
+\caption{Check resource utilization of hosts}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.7\textwidth]{images/design/cm_get_topology_requirements}
+
+\caption{Get total amount of required resources for topology}
+\end{figure}
+
+
+\textbf{Step 1: Check if Topology is within the limitations of the Quota and currently available resources on the overall hosts.}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.7\textwidth]{images/design/cm_feasibility_check}
+
+\caption{Check if deployment is feasible within infrastructure resources and tenant quota}
+\end{figure}
+
 
 \textbf{Step 2: Check whether the Topology can be deployed on a single host.}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.7\textwidth]{images/design/cm_single_host_check}
+
+\caption{Check if topology can be deployed on a single host}
+\end{figure}
+
+
+\textbf{Step 3: Set selected host as availability zone for each Unit.}
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.7\textwidth]{images/design/cm_set_az_topology}
+
+\caption{Set the availability zone for each Unit}
+\end{figure}
+
 
 %\textbf{Step 3: Check on which host the biggest proportion of the Topology can be deployed.} %
 
