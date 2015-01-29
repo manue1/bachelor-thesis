@@ -354,7 +354,7 @@ The commands below are available for the basic OVS configuration that is needed 
 
 \subsubsection{QoS}
 
-With Open vSwitch QoS can be configured for ports or the so-called virtual network interfaces that virtual machines get when they are connected to the internal bridge of the switch. The minimal and maximal rate-limits are defined in bytes and applied to a queue, which operates as an egress filter. The QoS port policies make use of the 'tc' implementation that is included in the Linux kernel.
+With Open vSwitch QoS can be configured for ports or the so-called virtual network interfaces that virtual machines get when they are connected to the internal bridge of the switch. The minimal and maximal rate-limits are defined in bytes and applied to a queue, which operates as egress shaping. The QoS port policies make use of the 'tc' implementation that is included in the Linux kernel.
 
 \begin{figure}[H]
 \centering
@@ -366,9 +366,10 @@ With Open vSwitch QoS can be configured for ports or the so-called virtual netwo
 % % http://linux.die.net/man/8/tc % %
 % % http://www.istudies.net/journal/sites/default/files/Extended%20Linux%20HTB%20Queuing%20Discipline%20Implementations.pdf % %
 % %https://github.com/stanzgy/nova-network-qos/blob/master/nova-network-qos-intro.rst % %
+% %http://luxik.cdi.cz/~devik/qos/htb/manual/userg.htm % %
 Traffic control (tc) uses 'queueing discipline' (qdisc) for configuring the network interface. They are the fundamental schedulers used under Linux. When a packet is sent, it is enqueued to the qdisc for the interface and shortly after the kernel is trying to get as many packets as it can from the qdisc, so they can be forwarded to the network adaptor driver. By default the 'pfifo\_fast' qdisc is set in the kernel, which is a pure 'First In, First out' queue.
 
-In OVS a classful qdisc named Hierarchy Token Bucket (HTB) is used for QoS. HTB allows guaranteeing bandwidth to classes with the possibility to define upper limits to inter-class sharing. Classes can also be prioritized.
+When setting QoS in OVS a classful qdisc named Hierarchy Token Bucket (HTB) is used. HTB is meant as a more understandable, intuitive and faster replacement for the Class Based Queueing (CBQ) qdisc in Linux. It helps to control the use of the outbound bandwidth on a given link. 
 
 
 \subsubsection{GRE}
