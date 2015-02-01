@@ -57,12 +57,14 @@
 \BOOKMARK [2][-]{subsection.7.3.2}{Installation of Connectivity Manager Agent}{section.7.3}% 57
 \BOOKMARK [2][-]{subsection.7.3.3}{Topology definition}{section.7.3}% 58
 \BOOKMARK [2][-]{subsection.7.3.4}{Scenario 1: Without Instance Placement Engine \046 QoS enabled}{section.7.3}% 59
-\BOOKMARK [1][-]{section.7.4}{Conclusion}{chapter.7}% 60
-\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 61
-\BOOKMARK [1][-]{section.8.1}{Summary}{chapter.8}% 62
-\BOOKMARK [1][-]{section.8.2}{Problems encountered}{chapter.8}% 63
-\BOOKMARK [1][-]{section.8.3}{Future work}{chapter.8}% 64
-\BOOKMARK [0][-]{appendix.A}{List of source codes}{}% 65
-\BOOKMARK [0][-]{appendix.B}{Glossar}{}% 66
-\BOOKMARK [0][-]{appendix.B}{Literatur}{}% 67
-\BOOKMARK [0][-]{appendix*.43}{Sachverzeichnis}{}% 68
+\BOOKMARK [2][-]{subsection.7.3.5}{Scenario 2: With Instance Placement Engine enabled, but without QoS}{section.7.3}% 60
+\BOOKMARK [2][-]{subsection.7.3.6}{Scenario 3: Instance Placement Engine and QoS Manager enabled}{section.7.3}% 61
+\BOOKMARK [1][-]{section.7.4}{Conclusion}{chapter.7}% 62
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 63
+\BOOKMARK [1][-]{section.8.1}{Summary}{chapter.8}% 64
+\BOOKMARK [1][-]{section.8.2}{Problems encountered}{chapter.8}% 65
+\BOOKMARK [1][-]{section.8.3}{Future work}{chapter.8}% 66
+\BOOKMARK [0][-]{appendix.A}{List of source codes}{}% 67
+\BOOKMARK [0][-]{appendix.B}{Glossar}{}% 68
+\BOOKMARK [0][-]{appendix.B}{Literatur}{}% 69
+\BOOKMARK [0][-]{appendix*.49}{Sachverzeichnis}{}% 70

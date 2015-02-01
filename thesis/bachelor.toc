@@ -57,32 +57,34 @@
 \contentsline {section}{\numberline {5.3}Design of Connectivity Manager}{39}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Algorithm for Instance Placement}{40}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}QoS Manager}{41}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Design of Connectivity Manager Agent}{43}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}API}{44}{subsection.5.4.1}
-\contentsline {chapter}{\numberline {6}Implementation}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Environment}{45}{section.6.1}
-\contentsline {subsubsection}{\numberline {6.1.0.1}Project structure}{45}{subsubsection.6.1.0.1}
-\contentsline {subsubsection}{\numberline {6.1.0.2}Local OpenStack test environment}{46}{subsubsection.6.1.0.2}
-\contentsline {section}{\numberline {6.2}Connectivity Manager components and operations}{47}{section.6.2}
-\contentsline {subsubsection}{\numberline {6.2.0.3}Selection of best-matching Hypervisor}{47}{subsubsection.6.2.0.3}
-\contentsline {subsubsection}{\numberline {6.2.0.4}Enabling QoS for VM}{50}{subsubsection.6.2.0.4}
-\contentsline {section}{\numberline {6.3}Connectivity Manager Agent components and operations}{52}{section.6.3}
-\contentsline {section}{\numberline {6.4}Conclusion}{54}{section.6.4}
-\contentsline {chapter}{\numberline {7}Evaluation}{55}{chapter.7}
-\contentsline {section}{\numberline {7.1}Feature analysis}{55}{section.7.1}
-\contentsline {section}{\numberline {7.2}Connectivity Manager integration with NUBOMEDIA project}{55}{section.7.2}
-\contentsline {section}{\numberline {7.3}Network performance analysis}{55}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Test-bed configuration}{55}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Installation of Connectivity Manager Agent}{56}{subsection.7.3.2}
-\contentsline {subsection}{\numberline {7.3.3}Topology definition}{57}{subsection.7.3.3}
-\contentsline {subsection}{\numberline {7.3.4}Scenario 1: Without Instance Placement Engine \& QoS enabled}{58}{subsection.7.3.4}
-\contentsline {section}{\numberline {7.4}Conclusion}{58}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion}{59}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{59}{section.8.1}
-\contentsline {section}{\numberline {8.2}Problems encountered}{59}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future work}{59}{section.8.3}
-\contentsline {chapter}{\numberline {A}List of source codes}{60}{appendix.A}
+\contentsline {section}{\numberline {5.4}Design of Connectivity Manager Agent}{42}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}API}{43}{subsection.5.4.1}
+\contentsline {chapter}{\numberline {6}Implementation}{44}{chapter.6}
+\contentsline {section}{\numberline {6.1}Environment}{44}{section.6.1}
+\contentsline {subsubsection}{\numberline {6.1.0.1}Project structure}{44}{subsubsection.6.1.0.1}
+\contentsline {subsubsection}{\numberline {6.1.0.2}Local OpenStack test environment}{45}{subsubsection.6.1.0.2}
+\contentsline {section}{\numberline {6.2}Connectivity Manager components and operations}{46}{section.6.2}
+\contentsline {subsubsection}{\numberline {6.2.0.3}Selection of best-matching Hypervisor}{46}{subsubsection.6.2.0.3}
+\contentsline {subsubsection}{\numberline {6.2.0.4}Enabling QoS for VM}{49}{subsubsection.6.2.0.4}
+\contentsline {section}{\numberline {6.3}Connectivity Manager Agent components and operations}{51}{section.6.3}
+\contentsline {section}{\numberline {6.4}Conclusion}{53}{section.6.4}
+\contentsline {chapter}{\numberline {7}Evaluation}{54}{chapter.7}
+\contentsline {section}{\numberline {7.1}Feature analysis}{54}{section.7.1}
+\contentsline {section}{\numberline {7.2}Connectivity Manager integration with NUBOMEDIA project}{54}{section.7.2}
+\contentsline {section}{\numberline {7.3}Network performance analysis}{54}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Test-bed configuration}{54}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Installation of Connectivity Manager Agent}{55}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Topology definition}{56}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.4}Scenario 1: Without Instance Placement Engine \& QoS enabled}{57}{subsection.7.3.4}
+\contentsline {subsection}{\numberline {7.3.5}Scenario 2: With Instance Placement Engine enabled, but without QoS}{58}{subsection.7.3.5}
+\contentsline {subsection}{\numberline {7.3.6}Scenario 3: Instance Placement Engine and QoS Manager enabled}{59}{subsection.7.3.6}
+\contentsline {section}{\numberline {7.4}Conclusion}{60}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion}{61}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{61}{section.8.1}
+\contentsline {section}{\numberline {8.2}Problems encountered}{61}{section.8.2}
+\contentsline {section}{\numberline {8.3}Future work}{61}{section.8.3}
+\contentsline {chapter}{\numberline {A}List of source codes}{62}{appendix.A}
 \newpage 
-\contentsline {chapter}{\numberline {B}Glossar}{61}{appendix.B}
-\contentsline {chapter}{Literatur}{62}{appendix.B}
-\contentsline {chapter}{Sachverzeichnis}{63}{appendix*.43}
+\contentsline {chapter}{\numberline {B}Glossar}{63}{appendix.B}
+\contentsline {chapter}{Literatur}{64}{appendix.B}
+\contentsline {chapter}{Sachverzeichnis}{65}{appendix*.49}

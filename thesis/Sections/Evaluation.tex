@@ -15,7 +15,7 @@ Nubomedia is an elastic Platform as a Service (PaaS) cloud for interactive socia
 
 \section{Network performance analysis}
 
-The following section contains information about the used configuration and then different scenarios that were used to evaluate the effectiveness of the Connectivity Manager. All scenarios used the same topology and were run on a tenant without any other deployed servers or stacks.
+The following section contains information about the used configuration and then different scenarios that were used to evaluate the effectiveness of the Connectivity Manager. All scenarios used the same topology and were run on a tenant without any other deployed servers or stacks. The bandwidth tests were performed using the iperf tool.
 
 \subsection{Test-bed configuration}
 
@@ -129,6 +129,77 @@ data/json_file/services/MediaService.json
 
 \subsection{Scenario 1: Without Instance Placement Engine \& QoS enabled}
 
+In this first scenario the deployment without any influence of the Connectivity Manager is shown. Here Nova randomly decides about the placement of the servers. In this case 4 servers were placed on the control node and one server on the compute node.
 
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.7\textwidth]{images/evaluation/testbed_scenario1}
+
+\caption{Scenario 1: Placement of servers without Connectivity Manager}
+\end{figure}
+
+For testing the bandwidth the MediaServer-2 was used as a TCP server using iperf. All other servers connected to it in client mode sending and retrieving TCP packets in a timeframe of 10 seconds. The following graph shows the bandwidth usage of the servers.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.5\textwidth]{images/evaluation/testbed_scenario1_bw}
+
+\caption{Scenario 1: Bandwidth comparison}
+\end{figure}
+
+As visible the network performance of the server on the separate node performs much worse, which is also due to the fact that there is only a Gigabit-Ethernet connection between the nodes.
+
+\subsection{Scenario 2: With Instance Placement Engine enabled, but without QoS}
+
+In this next scenario, the Instance Placement Engine was enabled and therefore the availability zone in the topology was successfully set to a single host.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.7\textwidth]{images/evaluation/testbed_scenario2}
+
+\caption{Scenario 2: Placement of servers with Connectivity Manager}
+\end{figure}
+
+The following graph shows that the available bandwidth is now evenly distributed for all servers. However the traffic of the MediaServers should be prioritized, which is why QoS is needed to further improve the connectivity according to the requirements.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.5\textwidth]{images/evaluation/testbed_scenario2_bw}
+
+\caption{Scenario 2: Bandwidth comparison}
+\end{figure}
+
+
+\subsection{Scenario 3: Instance Placement Engine and QoS Manager enabled}
+
+The servers are again placed on a single host and the Quality of Service configuration that was previously set in the configuration is applied. All media servers have a guaranteed bandwidth rate of 100 MBit/s and a maximum rate of 10 GBit/s, while all servers of other instance types have a rate between 100 MBit/s and 1 GBit/s.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.7\textwidth]{images/evaluation/testbed_scenario3}
+
+\caption{Scenario 3: Placement of servers using the Connectivity Manager with QoS enabled}
+\end{figure}
+
+For this last scenario two servers were set as iperf-servers and three servers as iperf-clients. The \textit{'Controller-1'} server acted as the server for a connection with the \textit{'MediaServer-2'} while the \textit{'MediaServer-3'} received packets from \textit{'MediaServer-1'} and \textit{'Broker-1'}.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.5\textwidth]{images/evaluation/testbed_scenario2_bw}
+
+\caption{Scenario 3: Bandwidth comparison}
+\end{figure}
+
+The first two bars show that the egress port on the Open vSwitch that the \textit{'MediaServer-3'} is connected to is limited to a combined bandwidth of 10 GBit/s. This is why the two connections share the available bandwidth and are nearly equal. It has to be remarked that the network performance is the average of a 10-second bandwidth test.
+
+In the other QoS class the \textit{'MediaServer-2'} which is connecting to \textit{'Controller-1'} uses almost the full bandwidth of the available 1 GBit/s.
 
 \section{Conclusion}
+
+The three test scenarios show an improvement of the network performance, which is given through placing the servers on a single host. Additionally with enabling Quality of Service, the network bandwidth is shaped according to the requirements. It has been shown that the connection of MediaServers is prioritized to the connection of servers of other service instance types. The Service-Level-Agreement of the Gold and Wholesale classes are fulfilled.
