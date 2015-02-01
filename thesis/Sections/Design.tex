@@ -62,7 +62,7 @@ The Factory Agent reads a configuration file in which the class name of the serv
 \caption{Class diagram: Metaclass (Interface) and implementation (Service) instantiated by Factory Agent}
 \end{figure}
 
-The Connectivity Manager interface and service only contain the methods that are later called by the Elastic Media Manager. However additional helper classes are needed in order to provide the appropriate configuration and the communication with the Connectivity Manager Agent, as shown in the next figure.
+The Connectivity Manager interface and service only contain the methods that receive calls from the Elastic Media Manager. However additional helper classes are needed in order to provide the appropriate configuration and the communication with the Connectivity Manager Agent, as shown in the next figure.
 
 \begin{figure}[H]
 \centering
@@ -72,7 +72,7 @@ The Connectivity Manager interface and service only contain the methods that are
 \caption{Class diagram: Connectivity Manager service and its helper classes}
 \end{figure}
 
-The topology that is created by the EMM and contains the required resources for the stack are visible in the next diagram.
+The topology that is created by the EMM contains the following required resources for the stack:
 
 \begin{figure}[H]
 \centering
@@ -132,7 +132,7 @@ The CM Agent is separated into the WSGI Application wherein the routes for the R
 
 \includegraphics[width=0.8\textwidth]{images/design/cm_agent_design_class_diagram.png}
 
-\caption{Design of Connectivity Manager Agent}
+\caption{Abstract design of the Connectivity Manager Agent}
 \end{figure}
 
 For connecting to the OVSDB on each host the OVS Client is needed. It contains methods for listing all of its ports, interfaces, qos\'s and queues as well as for applying actions to a port, creating queues and creating new qos\'s.
@@ -145,6 +145,8 @@ Each server can have multiple network ports, which are managed by Neutron. Its C
 
 Finally the OVS Client makes use of various calls to the OVS Control tool (ovs-vsctl) for reading various tables of the OVSDB and making changes for enabling QoS on a per-port basis.
 
+During the design process the following package structure was chosen:
+
 \begin{figure}[H]
 \centering
 
@@ -152,6 +154,7 @@ Finally the OVS Client makes use of various calls to the OVS Control tool (ovs-v
 
 \caption{Class diagram: Connectivity Manager Agent - All packages}
 \end{figure}
+
 
 
 
@@ -165,3 +168,5 @@ In the following table the ReST API that the Connectivity Manager Agent exposes 
 \hline POST & /qoses & JSON: \{'Hostname': \{'Server ID': \{'QoS rates'\}\}\} & Set QoS rates for Servers. \\ 
 \hline 
 \end{tabularx}
+
+

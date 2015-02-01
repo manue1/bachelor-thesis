@@ -3,12 +3,16 @@
 
 \section{Summary}
 
+With the use of SDN and OpenFlow a framework for creating programmable networks already exist. However the integration and use of its full extent within OpenStack is not given today. The bandwidth supplied to different services can not be influenced and topologies that are deployed using the Orchestration tool Heat can not be placed on specific hosts. With this work the first step for those main objectives is made. With the help of the Open vSwitch configuration tool it is possible to get information about the current state of the switched network and enable QoS using Queues. The needed configuration and information retrieval can now be accessed through a ReST API. The Elastic Media Manager is able to access this information and make decisions about where the topology has the best-performing network connectivity. The Service-Level-Agreements can be easily changed and extended. The evaluation shows step-by-step the improvements in bandwidth rates with the use of the Connectivity Manager.
+
 \section{Problems encountered}
 
-Devstack problems
-OVS JSON invalid?
+One big problem during the development process was getting a stable testbed running with the correct configuration. Devstack was a big help in this process, because not many manual corrections need to be made, other than adjusting the configuration file. However some of the features that are in the 'stable' version of OpenStack Juno still need further bug-fixing and can't be used in a production environment. During the test of the state-of-the-art solution a lot of time was spent on testing different versions, which was unsuccessful. Due to this fact, comparisons to other solutions for enabling Quality of Service can't be made. 
+% % OVS JSON invalid? % %
 
 \section{Future work}
+
+For future development the algorithm for selecting the best-performing host could take more dynamic factors into account. One possibility is to check the network-speed of all the host's network interfaces. It would be beneficial to implement QoS as a Neutron extension and make use of the already existing Neutron API. 
 
 Integrate with Neutron API as Extension / Plugin
 QoS Flow matching

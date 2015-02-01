@@ -28,7 +28,7 @@
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Class diagram: Connectivity Manager service and its helper classes\relax }}{40}{figure.caption.27}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Deployment: Topology object from EMM\relax }}{40}{figure.caption.28}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Instance Placement activities\relax }}{41}{figure.caption.29}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Design of Connectivity Manager Agent\relax }}{42}{figure.caption.30}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Abstract design of the Connectivity Manager Agent\relax }}{42}{figure.caption.30}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Class diagram: Connectivity Manager Agent - All packages\relax }}{43}{figure.caption.31}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Implementation focus\relax }}{44}{figure.caption.32}

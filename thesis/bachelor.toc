@@ -83,8 +83,8 @@
 \contentsline {section}{\numberline {8.1}Summary}{61}{section.8.1}
 \contentsline {section}{\numberline {8.2}Problems encountered}{61}{section.8.2}
 \contentsline {section}{\numberline {8.3}Future work}{61}{section.8.3}
-\contentsline {chapter}{\numberline {A}List of source codes}{62}{appendix.A}
+\contentsline {chapter}{\numberline {A}List of source codes}{63}{appendix.A}
 \newpage 
-\contentsline {chapter}{\numberline {B}Glossar}{63}{appendix.B}
-\contentsline {chapter}{Literatur}{64}{appendix.B}
-\contentsline {chapter}{Sachverzeichnis}{65}{appendix*.49}
+\contentsline {chapter}{\numberline {B}List of acronyms}{64}{appendix.B}
+\contentsline {chapter}{Literatur}{66}{appendix.B}
+\contentsline {chapter}{Sachverzeichnis}{67}{appendix*.49}
