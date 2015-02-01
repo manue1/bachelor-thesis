@@ -77,7 +77,7 @@ The topology that is created by the EMM and contains the required resources for 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.9\textwidth]{images/design/cm_topology_object}
+\includegraphics[width=0.8\textwidth]{images/design/cm_topology_object}
 
 \caption{Deployment: Topology object from EMM}
 \end{figure}
@@ -100,70 +100,50 @@ Considering the requirement to have optimal connectivity between individual inst
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.7\textwidth]{images/design/cm_get_host_utilization}
+\includegraphics[width=0.5\textwidth]{images/design/cm_instance_placement_engine.png}
 
-\caption{Check resource utilization of hosts}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\includegraphics[width=0.7\textwidth]{images/design/cm_get_topology_requirements}
-
-\caption{Get total amount of required resources for topology}
+\caption{Instance Placement activities}
 \end{figure}
 
 
-\textbf{Step 1: Check if Topology is within the limitations of the Quota and currently available resources on the overall hosts.}
+\subsection{QoS Manager}
 
-\begin{figure}[H]
-\centering
+The QoS is deployed on the Units port. This design was chosen, because it needs to be differentiated between different services. The bandwidth rates are required to be changeable and therefore can't be hard-coded. By default the following rates and classes will be set:
 
-\includegraphics[width=0.7\textwidth]{images/design/cm_feasibility_check}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline \textbf{Name} & Minimum rate & Maximum rate \\ 
+\hline Wholesale & 100 MBit/s & 1 GBit/s \\ 
+\hline Gold & 100 MBit/s & 10 GBit/s \\ 
+\hline 
+\end{tabular} 
+\end{center}
 
-\caption{Check if deployment is feasible within infrastructure resources and tenant quota}
-\end{figure}
-
-
-\textbf{Step 2: Check whether the Topology can be deployed on a single host.}
-
-\begin{figure}[H]
-\centering
-
-\includegraphics[width=0.7\textwidth]{images/design/cm_single_host_check}
-
-\caption{Check if topology can be deployed on a single host}
-\end{figure}
-
-
-\textbf{Step 3: Set selected host as availability zone for each Unit.}
-
-\begin{figure}[H]
-\centering
-
-\includegraphics[width=0.7\textwidth]{images/design/cm_set_az_topology}
-
-\caption{Set the availability zone for each Unit}
-\end{figure}
-
-
-%\textbf{Step 4: Check on which host the biggest proportion of the Topology can be deployed.} %
-
-
-\textbf{Setting QoS for all Units}
-
-\begin{figure}[H]
-\centering
-
-\includegraphics[width=0.5\textwidth]{images/design/cm_set_qos.png}
-
-\caption{Method for setting QoS for all Units}
-\end{figure}
-
+All Units that are part of the 'Media Server' service instance will be associated with the Gold class and all units of other types in the topology will be part of the Wholesale class.
 
 
 \newpage
 \section{Design of Connectivity Manager Agent}
+
+The CM Agent is separated into the WSGI Application wherein the routes for the ReST API and the corresponding methods that will be called are defined. The Agent class calls the different Clients to get the resources status and make changes to their configuration.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.8\textwidth]{images/design/cm_agent_design_class_diagram.png}
+
+\caption{Design of Connectivity Manager Agent}
+\end{figure}
+
+For connecting to the OVSDB on each host the OVS Client is needed. It contains methods for listing all of its ports, interfaces, qos\'s and queues as well as for applying actions to a port, creating queues and creating new qos\'s.
+
+The OpenStack Identity API is what the Keystone Client is connecting to in order to get the authentication endpoint and token for Neutron.
+
+The Nova Client binds to the OpenStack Nova API and is required for getting the status of all Compute Nodes and the servers running on it.
+
+Each server can have multiple network ports, which are managed by Neutron. Its Client can retrieve a list of all ports for the servers within one tenant.
+
+Finally the OVS Client makes use of various calls to the OVS Control tool (ovs-vsctl) for reading various tables of the OVSDB and making changes for enabling QoS on a per-port basis.
 
 \begin{figure}[H]
 \centering
@@ -174,40 +154,14 @@ Considering the requirement to have optimal connectivity between individual inst
 \end{figure}
 
 
-\begin{figure}[H]
-\centering
 
-\includegraphics[width=0.7\textwidth]{images/design/activity_host_list}
+\subsection{API}
 
-\caption{Activity diagram: Get list of hosts}
-\end{figure}
+In the following table the ReST API that the Connectivity Manager Agent exposes to the Connectivity Manager is described:
 
-\begin{figure}[H]
-\centering
-
-\includegraphics[width=0.7\textwidth]{images/design/activity_set_qos}
-
-\caption{Activity diagram: Set QoS rates for all servers}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\includegraphics[width=0.7\textwidth]{images/design/activity_get_ovs_port_server}
-
-\caption{Activity diagram: Get OVS Port ID for server}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-
-\includegraphics[width=0.7\textwidth]{images/design/activity_get_qos_id_for_ovs_port}
-
-\caption{Activity diagram: Get QoS ID for OVS Port}
-\end{figure}
-
-
-
-
-
-\section{Conclusion}
+\begin{tabularx}{\textwidth}{ |X|X|X|X| }
+\hline HTTP method & Path & Method body & Description \\ 
+\hline GET & /hosts & - & List all available hosts and their resources \\ 
+\hline POST & /qoses & JSON: \{'Hostname': \{'Server ID': \{'QoS rates'\}\}\} & Set QoS rates for Servers. \\ 
+\hline 
+\end{tabularx}

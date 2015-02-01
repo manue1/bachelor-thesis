@@ -13,41 +13,122 @@ multimedia application. The main focus of the CM is related to management and co
 
 Nubomedia is an elastic Platform as a Service (PaaS) cloud for interactive social multimedia. Its architecture is based on media pipelines: chains of elements providing media capabilities such as encryption, transcoding, augmented reality or video content analysis. These chains allow building arbitrarily complex media processing for applications. As a unique feature, from the point of view of the pipelines, the NUBOMEDIA cloud infrastructure behaves as a single virtual super-computer encompassing all the available resources of the underlying physical network.
 
+\section{Network performance analysis}
 
-% % from EMM % %
+The following section contains information about the used configuration and then different scenarios that were used to evaluate the effectiveness of the Connectivity Manager. All scenarios used the same topology and were run on a tenant without any other deployed servers or stacks.
+
+\subsection{Test-bed configuration}
+
+The testbed consists of two nodes with the following hardware characteristics:
+
+\begin{tabularx}{\textwidth}{ |X|X|X|X| }
+\hline Name & \textbf{Controller node} & \textbf{Compute node} \\ 
+\hline Hostname & datacenter-4 & dc4-comp \\ 
+\hline OS & Ubuntu 14.04.1 LTS & Ubuntu 14.04.1 LTS \\ 
+\hline RAM & 12 GB & 8 GB \\ 
+\hline CPU & 8-core Intel Core i7-4765T CPU @ 2.00GHz & 4-core Intel(R) Core(TM) i3-2120T CPU @ 2.60GHz \\ 
+\hline Ethernet card & Intel Corporation Gigabit Ethernet Connection I217-LM & Intel Corporation 82579LM Gigabit Network Connection \\ 
+\hline 
+\end{tabularx}
+
+The two nodes are connected to a Gigabit-Ethernet switch. The installation of OpenStack was performed using the devstack script as outlined in section ... (Implementation / Devstack) .
+
+\subsection{Installation of Connectivity Manager Agent}
+
+A setup script exists in order to make it easier to get the CM Agent running. It builds installs all the necessary Python packages in a virtual environment, in order to have all packages isolated from the already existing Python set-up. This ensures that all packages are in the required version and don't interfere with the ones that are needed OpenStack or other applications. 
+
+First of all the git repository needs to be cloned from the remote git server. For the installation the cm-agent.sh script needs to be executed with the 'install' option.
+\begin{lstlisting}
+stack@datacenter-4:~/nubomedia$ ./cm-agent.sh 
+Usage: cm-agent.sh option
+options:
+  install   - install the server
+  update    - updates the server
+  start     - start the server
+  uninstall - uninstall the server
+  clean     - remove build files
+\end{lstlisting}
+The installation process includes setting up the virtual environment, installing all required Python packages and copying the configuration file to the /etc/nubomedia folder.
+
+The configuration file needs to be customized, so it contains the IP address of the controller node and the correct OpenStack credentials:
+\begin{lstlisting}
+stack@datacenter-4:~$ cat /etc/nubomedia/cm-agent.properties 
+os_username=admin
+os_password=pass
+os_auth_url=http://192.168.41.45:5000/v2.0
+os_tenant=demo
+\end{lstlisting}
+
+Lastly it can be run in a screen session using the following command: \\
+\textit{\$ venv/bin/python cm-agent/wsgi/application.py}
+
+\subsection{Topology definition}
+
+The topology that is used for the evaluation contains the following services instances:
+\begin{lstlisting}
+data/json_file/topologies/topology_local.json:
+{
+    "name":"local_nm_template_minified",
+    "service_instances": [
+        {
+            "name":"Controller",
+            "service_type":"Controller"
+        },
+        {
+            "name":"Broker",
+            "service_type":"Broker"
+        },
+        {
+            "name":"MediaServer",
+            "service_type":"MediaServer"
+        }
+    ]
+}
+\end{lstlisting}
+
+It can be deployed using a test application which performs a HTTP POST to the EMM API at the \textit{/topologies} path.
+
+The service types are further defined in another JSON file, which includes their configuration, networks and other parameters that are needed for provisioning. As one example the Media Server service is given below:
+
+\begin{lstlisting}
+data/json_file/services/MediaService.json 
+{
+    "service_type": "MediaServer",
+    "version":"1",
+    "image": "trusty-iperf",
+    "flavor": "m1.mini",
+    "key":"nubomedia",
+    "configuration": {
+    },
+    "size": {
+        "min": 1,
+        "def": 3,
+        "max": 5
+    },
+    "networks": [
+        {
+            "name":"Network-1",
+            "private_net":"8048fd67-70a6-447d-a779-8a86f9eeb35d",
+            "private_subnet": "0df3f54c-d1af-4b82-8376-18baa11d0e98",
+            "public_net": "62024eab-23c2-4a81-a996-87af4d252282",
+            "security_groups": [
+                "SecurityGroup-MediaServer"
+            ]
+        }
+    ],
+    "requirements": [
+        {
+            "name":"$BROKER_IP",
+            "parameter":"private_ip",
+            "source":"Broker",
+            "obj_name": "Network-1"
+        }
+    ]
+}
+\end{lstlisting}
+
+\subsection{Scenario 1: Without Instance Placement Engine \& QoS enabled}
 
 
-Deployment
-The deployment phase starts when an administrator requests the instantiation of
-NUBOMEDIA. Inside the appropriate request, the administrator specifies what are the
-capabilities required for this instance of the platform. Based on the information
-received, the EMM needs to instantiate virtual resources on the Virtualized
-Infrastructure. For this step there are several ways of doing it:
--Request directly OpenStack virtual networks and compute resources
--Request to Heat the required resources creating a template
-For simplifying and making homogenous the whole process, we selected the second
-option. The EMM has to create a Heat template based on the required resources which
-are requested by the admin. Once the template is created, it is sent to Heat using its API.
-At the end of the deployment process, Heat sends back all the information related with
-the instantiated resources which the EMM can use for moving to the next phases.
 
-
-Runtime
-Once all the NUBOMEDIA components are deployed and started, it is needed to
-actively check which specific levels of SLAs are met. The EMM provides a runtime
-system which actively controls the situation of a group of NUBOMEDIA components,
-and based on some policies, which the administrator inserted, decides whether to scale
-in or out them.
-When the administrator requests the instantiation of a NUBOMEDIA platform, it puts
-also specific policies to specific elements. A policy is just a set of alarms and actions.
-There are two different ways of realizing such system via triggering mechanisms:
-- Actively: the EMM actively checks whether the conditions of the alarm are met.
-For doing it, it typically requests to the monitoring system last values of the
-metrics involved, and performs some basic operations for evaluating the status.
-- Passively: the EMM pushes the alarm into the monitoring system. When the
-conditions are met, the monitoring system triggers the alarm to the EMM.
-For NUBOMEDIA Release 3, it was decided to use the first approach. Once the EMM
-realizes that an alarm is in ACTIVE state, it has to trigger the execution of the action
-contained in the Policy. Typically this policy can involve the instantiation/removal of
-the NUBOMEDIA elements.
 \section{Conclusion}

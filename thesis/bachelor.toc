@@ -1,83 +1,88 @@
 \select@language {english}
-\contentsline {chapter}{List of figures}{6}{chapter*.3}
-\contentsline {chapter}{List of tables}{7}{chapter*.4}
-\contentsline {chapter}{List of algorithms}{8}{chapter*.5}
-\contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}
-\contentsline {section}{\numberline {1.1}Motivation}{9}{section.1.1}
-\contentsline {section}{\numberline {1.2}Network Architecture}{9}{section.1.2}
-\contentsline {section}{\numberline {1.3}Objective}{10}{section.1.3}
-\contentsline {section}{\numberline {1.4}Scope}{10}{section.1.4}
-\contentsline {section}{\numberline {1.5}Overview}{10}{section.1.5}
-\contentsline {chapter}{\numberline {2}Fundamentals and related work}{12}{chapter.2}
-\contentsline {section}{\numberline {2.1}Software-Defined Networking}{12}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Motivation}{12}{subsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.1.1}Classical switches \& routers}{13}{subsubsection.2.1.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Software-Defined Networking concept}{14}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}SDN architecture}{14}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}OpenFlow}{15}{subsection.2.1.4}
-\contentsline {subsubsection}{\numberline {2.1.4.1}OpenFlow Controller}{15}{subsubsection.2.1.4.1}
-\contentsline {subsubsection}{\numberline {2.1.4.2}OpenFlow Switch}{16}{subsubsection.2.1.4.2}
-\contentsline {subsubsection}{\numberline {2.1.4.3}OpenFlow Ports}{17}{subsubsection.2.1.4.3}
-\contentsline {subsubsection}{\numberline {2.1.4.4}OpenFlow Tables}{17}{subsubsection.2.1.4.4}
-\contentsline {subsection}{\numberline {2.1.5}Open vSwitch}{20}{subsection.2.1.5}
-\contentsline {subsubsection}{\numberline {2.1.5.1}Concept \& Functionality}{20}{subsubsection.2.1.5.1}
-\contentsline {subsubsection}{\numberline {2.1.5.2}OVSDB}{21}{subsubsection.2.1.5.2}
-\contentsline {subsubsection}{\numberline {2.1.5.3}OpenVSwitch Management}{22}{subsubsection.2.1.5.3}
-\contentsline {subsubsection}{\numberline {2.1.5.4}QoS}{22}{subsubsection.2.1.5.4}
-\contentsline {subsubsection}{\numberline {2.1.5.5}GRE}{23}{subsubsection.2.1.5.5}
-\contentsline {section}{\numberline {2.2}Cloud computing infrastructures}{23}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}OpenStack}{23}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}OpenStack Compute (Nova)}{24}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}OpenStack Orchestration (Heat)}{25}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}OpenStack Neutron}{25}{subsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.4.1}Networking concepts}{26}{subsubsection.2.2.4.1}
-\contentsline {subsubsection}{\numberline {2.2.4.2}Modular Layer 2}{26}{subsubsection.2.2.4.2}
-\contentsline {subsubsection}{\numberline {2.2.4.3}Network distinction}{28}{subsubsection.2.2.4.3}
-\contentsline {subsubsection}{\numberline {2.2.4.4}Neutron workflow}{28}{subsubsection.2.2.4.4}
-\contentsline {section}{\numberline {2.3}Conclusion}{29}{section.2.3}
-\contentsline {chapter}{\numberline {3}Requirements}{30}{chapter.3}
-\contentsline {section}{\numberline {3.1}Functional requirements}{30}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}SLA Enforcement}{30}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Optimal Virtual Machine Placement}{30}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Integration with Elastic Media Manager}{30}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Non-functional requirements}{31}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Scalability}{31}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Modularity}{31}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Interoperability}{31}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}State of the art}{32}{chapter.4}
-\contentsline {section}{\numberline {4.1}Overview}{32}{section.4.1}
-\contentsline {section}{\numberline {4.2}OpenDaylight SDN controller}{32}{section.4.2}
-\contentsline {section}{\numberline {4.3}Ryu SDN controller}{33}{section.4.3}
-\contentsline {section}{\numberline {4.4}OpenStack Neutron - QoS Extension}{34}{section.4.4}
-\contentsline {section}{\numberline {4.5}Problem statement}{35}{section.4.5}
-\contentsline {section}{\numberline {4.6}Conclusion}{35}{section.4.6}
-\contentsline {chapter}{\numberline {5}Design}{36}{chapter.5}
-\contentsline {section}{\numberline {5.1}Architecture overview}{36}{section.5.1}
-\contentsline {section}{\numberline {5.2}Connection between Manager \& Agent}{37}{section.5.2}
-\contentsline {section}{\numberline {5.3}Design of Connectivity Manager}{38}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Algorithm for Instance Placement}{39}{subsection.5.3.1}
-\contentsline {section}{\numberline {5.4}Design of Connectivity Manager Agent}{44}{section.5.4}
-\contentsline {section}{\numberline {5.5}Conclusion}{47}{section.5.5}
-\contentsline {chapter}{\numberline {6}Implementation}{48}{chapter.6}
-\contentsline {section}{\numberline {6.1}Environment}{48}{section.6.1}
-\contentsline {subsubsection}{\numberline {6.1.0.1}Software development approach}{48}{subsubsection.6.1.0.1}
-\contentsline {subsubsection}{\numberline {6.1.0.2}Project structure}{48}{subsubsection.6.1.0.2}
-\contentsline {subsubsection}{\numberline {6.1.0.3}Devstack}{48}{subsubsection.6.1.0.3}
-\contentsline {section}{\numberline {6.2}Connectivity Manager components and operations}{48}{section.6.2}
-\contentsline {subsubsection}{\numberline {6.2.0.4}Selection of best-matching Hypervisor}{48}{subsubsection.6.2.0.4}
-\contentsline {subsubsection}{\numberline {6.2.0.5}Enabling QoS for VM}{48}{subsubsection.6.2.0.5}
-\contentsline {section}{\numberline {6.3}OpenStack Neutron configuration}{48}{section.6.3}
-\contentsline {section}{\numberline {6.4}Conclusion}{48}{section.6.4}
-\contentsline {chapter}{\numberline {7}Evaluation}{50}{chapter.7}
-\contentsline {section}{\numberline {7.1}Feature analysis}{50}{section.7.1}
-\contentsline {section}{\numberline {7.2}Connectivity Manager integration with NUBOMEDIA project}{50}{section.7.2}
-\contentsline {section}{\numberline {7.3}Conclusion}{51}{section.7.3}
-\contentsline {chapter}{\numberline {8}Conclusion}{52}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{52}{section.8.1}
-\contentsline {section}{\numberline {8.2}Problems encountered}{52}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future work}{52}{section.8.3}
-\contentsline {chapter}{\numberline {A}List of source codes}{53}{appendix.A}
+\contentsline {chapter}{List of figures}{7}{chapter*.3}
+\contentsline {chapter}{List of tables}{8}{chapter*.4}
+\contentsline {chapter}{List of algorithms}{9}{chapter*.5}
+\contentsline {chapter}{\numberline {1}Introduction}{10}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{10}{section.1.1}
+\contentsline {section}{\numberline {1.2}Network Architecture}{10}{section.1.2}
+\contentsline {section}{\numberline {1.3}Objective}{11}{section.1.3}
+\contentsline {section}{\numberline {1.4}Scope}{11}{section.1.4}
+\contentsline {section}{\numberline {1.5}Overview}{11}{section.1.5}
+\contentsline {chapter}{\numberline {2}Fundamentals and related work}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Software-Defined Networking}{13}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Motivation}{13}{subsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.1}Classical switches \& routers}{14}{subsubsection.2.1.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Software-Defined Networking concept}{15}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}SDN architecture}{15}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}OpenFlow}{16}{subsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.4.1}OpenFlow Controller}{16}{subsubsection.2.1.4.1}
+\contentsline {subsubsection}{\numberline {2.1.4.2}OpenFlow Switch}{17}{subsubsection.2.1.4.2}
+\contentsline {subsubsection}{\numberline {2.1.4.3}OpenFlow Ports}{18}{subsubsection.2.1.4.3}
+\contentsline {subsubsection}{\numberline {2.1.4.4}OpenFlow Tables}{18}{subsubsection.2.1.4.4}
+\contentsline {subsection}{\numberline {2.1.5}Open vSwitch}{21}{subsection.2.1.5}
+\contentsline {subsubsection}{\numberline {2.1.5.1}Concept \& Functionality}{21}{subsubsection.2.1.5.1}
+\contentsline {subsubsection}{\numberline {2.1.5.2}OVSDB}{22}{subsubsection.2.1.5.2}
+\contentsline {subsubsection}{\numberline {2.1.5.3}Open vSwitch Management}{23}{subsubsection.2.1.5.3}
+\contentsline {subsubsection}{\numberline {2.1.5.4}QoS}{23}{subsubsection.2.1.5.4}
+\contentsline {subsubsection}{\numberline {2.1.5.5}GRE}{24}{subsubsection.2.1.5.5}
+\contentsline {section}{\numberline {2.2}Cloud computing infrastructures}{24}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}OpenStack}{24}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}OpenStack Compute (Nova)}{25}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}OpenStack Orchestration (Heat)}{26}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}OpenStack Neutron}{26}{subsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.4.1}Networking concepts}{27}{subsubsection.2.2.4.1}
+\contentsline {subsubsection}{\numberline {2.2.4.2}Modular Layer 2}{27}{subsubsection.2.2.4.2}
+\contentsline {subsubsection}{\numberline {2.2.4.3}Network distinction}{29}{subsubsection.2.2.4.3}
+\contentsline {subsubsection}{\numberline {2.2.4.4}Neutron workflow}{29}{subsubsection.2.2.4.4}
+\contentsline {section}{\numberline {2.3}Conclusion}{30}{section.2.3}
+\contentsline {chapter}{\numberline {3}Requirements}{31}{chapter.3}
+\contentsline {section}{\numberline {3.1}Functional requirements}{31}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}SLA Enforcement}{31}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Optimal Virtual Machine Placement}{31}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Integration with Elastic Media Manager}{31}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Non-functional requirements}{32}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Scalability}{32}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Modularity}{32}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Interoperability}{32}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}State of the art}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Overview}{33}{section.4.1}
+\contentsline {section}{\numberline {4.2}OpenDaylight SDN controller}{33}{section.4.2}
+\contentsline {section}{\numberline {4.3}Ryu SDN controller}{34}{section.4.3}
+\contentsline {section}{\numberline {4.4}OpenStack Neutron - QoS Extension}{35}{section.4.4}
+\contentsline {section}{\numberline {4.5}Problem statement}{36}{section.4.5}
+\contentsline {section}{\numberline {4.6}Conclusion}{36}{section.4.6}
+\contentsline {chapter}{\numberline {5}Design}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Architecture overview}{37}{section.5.1}
+\contentsline {section}{\numberline {5.2}Connection between Manager \& Agent}{38}{section.5.2}
+\contentsline {section}{\numberline {5.3}Design of Connectivity Manager}{39}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Algorithm for Instance Placement}{40}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}QoS Manager}{41}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Design of Connectivity Manager Agent}{43}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}API}{44}{subsection.5.4.1}
+\contentsline {chapter}{\numberline {6}Implementation}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}Environment}{45}{section.6.1}
+\contentsline {subsubsection}{\numberline {6.1.0.1}Project structure}{45}{subsubsection.6.1.0.1}
+\contentsline {subsubsection}{\numberline {6.1.0.2}Local OpenStack test environment}{46}{subsubsection.6.1.0.2}
+\contentsline {section}{\numberline {6.2}Connectivity Manager components and operations}{47}{section.6.2}
+\contentsline {subsubsection}{\numberline {6.2.0.3}Selection of best-matching Hypervisor}{47}{subsubsection.6.2.0.3}
+\contentsline {subsubsection}{\numberline {6.2.0.4}Enabling QoS for VM}{50}{subsubsection.6.2.0.4}
+\contentsline {section}{\numberline {6.3}Connectivity Manager Agent components and operations}{52}{section.6.3}
+\contentsline {section}{\numberline {6.4}Conclusion}{54}{section.6.4}
+\contentsline {chapter}{\numberline {7}Evaluation}{55}{chapter.7}
+\contentsline {section}{\numberline {7.1}Feature analysis}{55}{section.7.1}
+\contentsline {section}{\numberline {7.2}Connectivity Manager integration with NUBOMEDIA project}{55}{section.7.2}
+\contentsline {section}{\numberline {7.3}Network performance analysis}{55}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Test-bed configuration}{55}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Installation of Connectivity Manager Agent}{56}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Topology definition}{57}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.4}Scenario 1: Without Instance Placement Engine \& QoS enabled}{58}{subsection.7.3.4}
+\contentsline {section}{\numberline {7.4}Conclusion}{58}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion}{59}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{59}{section.8.1}
+\contentsline {section}{\numberline {8.2}Problems encountered}{59}{section.8.2}
+\contentsline {section}{\numberline {8.3}Future work}{59}{section.8.3}
+\contentsline {chapter}{\numberline {A}List of source codes}{60}{appendix.A}
 \newpage 
-\contentsline {chapter}{\numberline {B}Glossar}{54}{appendix.B}
-\contentsline {chapter}{Literatur}{55}{appendix.B}
-\contentsline {chapter}{Sachverzeichnis}{56}{appendix*.40}
+\contentsline {chapter}{\numberline {B}Glossar}{61}{appendix.B}
+\contentsline {chapter}{Literatur}{62}{appendix.B}
+\contentsline {chapter}{Sachverzeichnis}{63}{appendix*.43}

@@ -41,22 +41,28 @@
 \BOOKMARK [1][-]{section.5.2}{Connection between Manager \046 Agent}{chapter.5}% 41
 \BOOKMARK [1][-]{section.5.3}{Design of Connectivity Manager}{chapter.5}% 42
 \BOOKMARK [2][-]{subsection.5.3.1}{Algorithm for Instance Placement}{section.5.3}% 43
-\BOOKMARK [1][-]{section.5.4}{Design of Connectivity Manager Agent}{chapter.5}% 44
-\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 45
-\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 46
-\BOOKMARK [1][-]{section.6.1}{Environment}{chapter.6}% 47
-\BOOKMARK [1][-]{section.6.2}{Connectivity Manager components and operations}{chapter.6}% 48
-\BOOKMARK [1][-]{section.6.3}{OpenStack Neutron configuration}{chapter.6}% 49
-\BOOKMARK [1][-]{section.6.4}{Conclusion}{chapter.6}% 50
-\BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 51
-\BOOKMARK [1][-]{section.7.1}{Feature analysis}{chapter.7}% 52
-\BOOKMARK [1][-]{section.7.2}{Connectivity Manager integration with NUBOMEDIA project}{chapter.7}% 53
-\BOOKMARK [1][-]{section.7.3}{Conclusion}{chapter.7}% 54
-\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 55
-\BOOKMARK [1][-]{section.8.1}{Summary}{chapter.8}% 56
-\BOOKMARK [1][-]{section.8.2}{Problems encountered}{chapter.8}% 57
-\BOOKMARK [1][-]{section.8.3}{Future work}{chapter.8}% 58
-\BOOKMARK [0][-]{appendix.A}{List of source codes}{}% 59
-\BOOKMARK [0][-]{appendix.B}{Glossar}{}% 60
-\BOOKMARK [0][-]{appendix.B}{Literatur}{}% 61
-\BOOKMARK [0][-]{appendix*.40}{Sachverzeichnis}{}% 62
+\BOOKMARK [2][-]{subsection.5.3.2}{QoS Manager}{section.5.3}% 44
+\BOOKMARK [1][-]{section.5.4}{Design of Connectivity Manager Agent}{chapter.5}% 45
+\BOOKMARK [2][-]{subsection.5.4.1}{API}{section.5.4}% 46
+\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 47
+\BOOKMARK [1][-]{section.6.1}{Environment}{chapter.6}% 48
+\BOOKMARK [1][-]{section.6.2}{Connectivity Manager components and operations}{chapter.6}% 49
+\BOOKMARK [1][-]{section.6.3}{Connectivity Manager Agent components and operations}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.4}{Conclusion}{chapter.6}% 51
+\BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 52
+\BOOKMARK [1][-]{section.7.1}{Feature analysis}{chapter.7}% 53
+\BOOKMARK [1][-]{section.7.2}{Connectivity Manager integration with NUBOMEDIA project}{chapter.7}% 54
+\BOOKMARK [1][-]{section.7.3}{Network performance analysis}{chapter.7}% 55
+\BOOKMARK [2][-]{subsection.7.3.1}{Test-bed configuration}{section.7.3}% 56
+\BOOKMARK [2][-]{subsection.7.3.2}{Installation of Connectivity Manager Agent}{section.7.3}% 57
+\BOOKMARK [2][-]{subsection.7.3.3}{Topology definition}{section.7.3}% 58
+\BOOKMARK [2][-]{subsection.7.3.4}{Scenario 1: Without Instance Placement Engine \046 QoS enabled}{section.7.3}% 59
+\BOOKMARK [1][-]{section.7.4}{Conclusion}{chapter.7}% 60
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 61
+\BOOKMARK [1][-]{section.8.1}{Summary}{chapter.8}% 62
+\BOOKMARK [1][-]{section.8.2}{Problems encountered}{chapter.8}% 63
+\BOOKMARK [1][-]{section.8.3}{Future work}{chapter.8}% 64
+\BOOKMARK [0][-]{appendix.A}{List of source codes}{}% 65
+\BOOKMARK [0][-]{appendix.B}{Glossar}{}% 66
+\BOOKMARK [0][-]{appendix.B}{Literatur}{}% 67
+\BOOKMARK [0][-]{appendix*.43}{Sachverzeichnis}{}% 68
