@@ -22,7 +22,7 @@
 \BOOKMARK [1][-]{section.2.3}{Conclusion}{chapter.2}% 22
 \BOOKMARK [0][-]{chapter.3}{Requirements}{}% 23
 \BOOKMARK [1][-]{section.3.1}{Functional Requirements}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.1.1}{SLA Enforcement}{section.3.1}% 25
+\BOOKMARK [2][-]{subsection.3.1.1}{Service-Level Agreement Enforcement}{section.3.1}% 25
 \BOOKMARK [2][-]{subsection.3.1.2}{Optimal Virtual Machine Placement}{section.3.1}% 26
 \BOOKMARK [2][-]{subsection.3.1.3}{Integration with Elastic Media Manager}{section.3.1}% 27
 \BOOKMARK [1][-]{section.3.2}{Non-functional Requirements}{chapter.3}% 28
