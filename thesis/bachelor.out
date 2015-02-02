@@ -38,7 +38,7 @@
 \BOOKMARK [1][-]{section.4.6}{Conclusion}{chapter.4}% 38
 \BOOKMARK [0][-]{chapter.5}{Design}{}% 39
 \BOOKMARK [1][-]{section.5.1}{Architecture Overview}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.2}{Interface between Manager \046 Agent}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.2}{Interface between CM Manager \046 Agent}{chapter.5}% 41
 \BOOKMARK [1][-]{section.5.3}{Design of Connectivity Manager}{chapter.5}% 42
 \BOOKMARK [2][-]{subsection.5.3.1}{Algorithm for Instance Placement}{section.5.3}% 43
 \BOOKMARK [2][-]{subsection.5.3.2}{QoS Manager}{section.5.3}% 44

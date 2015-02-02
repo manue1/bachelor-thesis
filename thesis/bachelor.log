@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.5)  2 FEB 2015 22:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.5)  2 FEB 2015 23:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1139,35 +1139,35 @@ t>
 File: images/design/cm_instance_placement_engine.png Graphic file (type png)
  <use images/design/cm_instance_placement_engine.png>
 Package pdftex.def Info: images/design/cm_instance_placement_engine.png used on
- input line 103.
+ input line 102.
 (pdftex.def)             Requested size: 110.25443pt x 215.82869pt.
  [43 <./images/design/cm_instance_placement_engine.png>]
-<images/design/cm_agent_design_class_diagram.png, id=762, 485.815pt x 345.29pt>
+<images/design/cm_agent_design_class_diagram.png, id=763, 485.815pt x 345.29pt>
 File: images/design/cm_agent_design_class_diagram.png Graphic file (type png)
 <use images/design/cm_agent_design_class_diagram.png>
 Package pdftex.def Info: images/design/cm_agent_design_class_diagram.png used o
-n input line 133.
+n input line 137.
 (pdftex.def)             Requested size: 352.8155pt x 250.75822pt.
 
-<images/design/cm_agent_class_diagram.png, id=763, 1156.32pt x 1047.915pt>
+<images/design/cm_agent_class_diagram.png, id=764, 1156.32pt x 1047.915pt>
 File: images/design/cm_agent_class_diagram.png Graphic file (type png)
 
 <use images/design/cm_agent_class_diagram.png>
 Package pdftex.def Info: images/design/cm_agent_class_diagram.png used on input
- line 153.
+ line 157.
 (pdftex.def)             Requested size: 352.8155pt x 319.73352pt.
  [44 <./images/design/cm_agent_design_class_diagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 []|\OT1/cmr/m/n/10.95 List all avail-able
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 \OT1/cmr/m/n/10.95 hosts and their
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 168--168
+Underfull \hbox (badness 2142) in paragraph at lines 175--175
 []|\OT1/cmr/m/n/10.95 Set QoS rates for
  []
 
@@ -1178,7 +1178,7 @@ Underfull \hbox (badness 2142) in paragraph at lines 168--168
 (./Sections/Implementation.tex
 Chapter 6.
 
-<images/implementation/cm_implementation_focus_overview.png, id=774, 1516.66624
+<images/implementation/cm_implementation_focus_overview.png, id=776, 1516.66624
 pt x 460.72125pt>
 File: images/implementation/cm_implementation_focus_overview.png Graphic file (
 type png)
@@ -1196,7 +1196,7 @@ Overfull \hbox (25.45714pt too wide) in paragraph at lines 69--70
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<images/design/cm_get_host_utilization.png, id=820, 443.6575pt x 365.365pt>
+<images/design/cm_get_host_utilization.png, id=822, 443.6575pt x 365.365pt>
 File: images/design/cm_get_host_utilization.png Graphic file (type png)
 
 <use images/design/cm_get_host_utilization.png>
@@ -1204,7 +1204,7 @@ Package pdftex.def Info: images/design/cm_get_host_utilization.png used on inpu
 t line 93.
 (pdftex.def)             Requested size: 264.61331pt x 217.91614pt.
 
-<images/design/cm_get_topology_requirements.png, id=821, 608.2725pt x 460.72125
+<images/design/cm_get_topology_requirements.png, id=823, 608.2725pt x 460.72125
 pt>
 File: images/design/cm_get_topology_requirements.png Graphic file (type png)
  <use images/design/cm_get_topology_requirements.png>
@@ -1212,7 +1212,7 @@ Package pdftex.def Info: images/design/cm_get_topology_requirements.png used on
  input line 103.
 (pdftex.def)             Requested size: 264.61331pt x 200.42618pt.
  [48 <./images/design/cm_get_host_utilization.png>]
-<images/design/cm_feasibility_check.png, id=834, 675.52374pt x 733.74126pt>
+<images/design/cm_feasibility_check.png, id=836, 675.52374pt x 733.74126pt>
 File: images/design/cm_feasibility_check.png Graphic file (type png)
 
 <use images/design/cm_feasibility_check.png>
@@ -1220,7 +1220,7 @@ Package pdftex.def Info: images/design/cm_feasibility_check.png used on input l
 ine 113.
 (pdftex.def)             Requested size: 308.71104pt x 335.31947pt.
 
-<images/design/cm_single_host_check.png, id=835, 640.3925pt x 754.82pt>
+<images/design/cm_single_host_check.png, id=837, 640.3925pt x 754.82pt>
 File: images/design/cm_single_host_check.png Graphic file (type png)
 
 <use images/design/cm_single_host_check.png>
@@ -1229,7 +1229,7 @@ ine 124.
 (pdftex.def)             Requested size: 308.71104pt x 363.87589pt.
  [49 <./images/design/cm_get_topology_requirements.png> <./images/design/cm_fea
 sibility_check.png>]
-<images/design/cm_set_az_topology.png, id=843, 550.055pt x 473.77pt>
+<images/design/cm_set_az_topology.png, id=845, 550.055pt x 473.77pt>
 File: images/design/cm_set_az_topology.png Graphic file (type png)
 
 <use images/design/cm_set_az_topology.png>
@@ -1237,14 +1237,14 @@ Package pdftex.def Info: images/design/cm_set_az_topology.png used on input lin
 e 135.
 (pdftex.def)             Requested size: 308.71104pt x 265.90218pt.
  [50 <./images/design/cm_single_host_check.png>] <images/design/cm_set_qos.png,
- id=850, 735.74875pt x 865.2325pt>
+ id=852, 735.74875pt x 865.2325pt>
 File: images/design/cm_set_qos.png Graphic file (type png)
 
 <use images/design/cm_set_qos.png>
 Package pdftex.def Info: images/design/cm_set_qos.png used on input line 147.
 (pdftex.def)             Requested size: 220.50885pt x 259.30771pt.
 
-<images/design/activity_host_list.png, id=851, 530.98375pt x 1148.29pt>
+<images/design/activity_host_list.png, id=853, 530.98375pt x 1148.29pt>
 File: images/design/activity_host_list.png Graphic file (type png)
 
 <use images/design/activity_host_list.png>
@@ -1257,7 +1257,7 @@ Overfull \vbox (87.65077pt too high) has occurred while \output is active []
 
 
 [53 <./images/design/activity_host_list.png>]
-<images/design/activity_set_qos.png, id=868, 646.415pt x 522.95375pt>
+<images/design/activity_set_qos.png, id=870, 646.415pt x 522.95375pt>
 File: images/design/activity_set_qos.png Graphic file (type png)
 
 <use images/design/activity_set_qos.png>
@@ -1265,7 +1265,7 @@ Package pdftex.def Info: images/design/activity_set_qos.png used on input line
 166.
 (pdftex.def)             Requested size: 308.71104pt x 249.74619pt.
 
-<images/design/activity_get_ovs_port_server.png, id=869, 444.66125pt x 364.3612
+<images/design/activity_get_ovs_port_server.png, id=871, 444.66125pt x 364.3612
 5pt>
 File: images/design/activity_get_ovs_port_server.png Graphic file (type png)
  <use images/design/activity_get_ovs_port_server.png>
@@ -1273,7 +1273,7 @@ Package pdftex.def Info: images/design/activity_get_ovs_port_server.png used on
  input line 174.
 (pdftex.def)             Requested size: 308.71104pt x 252.96068pt.
 
-<images/design/activity_get_qos_id_for_ovs_port.png, id=870, 575.14874pt x 793.
+<images/design/activity_get_qos_id_for_ovs_port.png, id=872, 575.14874pt x 793.
 96625pt>
 File: images/design/activity_get_qos_id_for_ovs_port.png Graphic file (type png
 )
@@ -1312,7 +1312,7 @@ Overfull \hbox (12.317pt too wide) in paragraph at lines 111--112
 [][][][][][][][][][][][][][][][][] 
  []
 
-[58] <images/evaluation/testbed_scenario1.png, id=953, 704.6325pt x 425.59pt>
+[58] <images/evaluation/testbed_scenario1.png, id=955, 704.6325pt x 425.59pt>
 File: images/evaluation/testbed_scenario1.png Graphic file (type png)
 
 <use images/evaluation/testbed_scenario1.png>
@@ -1320,7 +1320,7 @@ Package pdftex.def Info: images/evaluation/testbed_scenario1.png used on input
 line 136.
 (pdftex.def)             Requested size: 308.71104pt x 186.45491pt.
 
-<images/evaluation/testbed_scenario1_bw.png, id=954, 602.25pt x 372.39125pt>
+<images/evaluation/testbed_scenario1_bw.png, id=956, 602.25pt x 372.39125pt>
 File: images/evaluation/testbed_scenario1_bw.png Graphic file (type png)
 
 <use images/evaluation/testbed_scenario1_bw.png>
@@ -1328,7 +1328,7 @@ Package pdftex.def Info: images/evaluation/testbed_scenario1_bw.png used on inp
 ut line 146.
 (pdftex.def)             Requested size: 220.50885pt x 136.35068pt.
  [59 <./images/evaluation/testbed_scenario1.png>]
-<images/evaluation/testbed_scenario2.png, id=975, 574.145pt x 425.59pt>
+<images/evaluation/testbed_scenario2.png, id=977, 574.145pt x 425.59pt>
 File: images/evaluation/testbed_scenario2.png Graphic file (type png)
 
 <use images/evaluation/testbed_scenario2.png>
@@ -1336,7 +1336,7 @@ Package pdftex.def Info: images/evaluation/testbed_scenario2.png used on input
 line 160.
 (pdftex.def)             Requested size: 308.71104pt x 228.84106pt.
 
-<images/evaluation/testbed_scenario2_bw.png, id=976, 602.25pt x 372.39125pt>
+<images/evaluation/testbed_scenario2_bw.png, id=978, 602.25pt x 372.39125pt>
 File: images/evaluation/testbed_scenario2_bw.png Graphic file (type png)
 
 <use images/evaluation/testbed_scenario2_bw.png>
@@ -1345,7 +1345,7 @@ ut line 170.
 (pdftex.def)             Requested size: 220.50885pt x 136.35068pt.
  [60 <./images/evaluation/testbed_scenario1_bw.png> <./images/evaluation/testbe
 d_scenario2.png>]
-<images/evaluation/testbed_scenario3.png, id=983, 574.145pt x 425.59pt>
+<images/evaluation/testbed_scenario3.png, id=985, 574.145pt x 425.59pt>
 File: images/evaluation/testbed_scenario3.png Graphic file (type png)
 
 <use images/evaluation/testbed_scenario3.png>
@@ -1468,7 +1468,7 @@ Appendix A.
 
 
 
-]) [71] <images/general/leer.jpg, id=1199, 120.45pt x 120.45pt>
+]) [71] <images/general/leer.jpg, id=1203, 120.45pt x 120.45pt>
 File: images/general/leer.jpg Graphic file (type jpg)
 
 <use images/general/leer.jpg>
@@ -1499,32 +1499,38 @@ Package natbib Warning: Citation(s) may have changed.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 273.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 273.
 Package rerunfilecheck Info: File `bachelor.out' has not changed.
-(rerunfilecheck)             Checksum: DC75ADAA81385715CA914BDD6CD71CEE;4701.
+(rerunfilecheck)             Checksum: A0108C02A30519E70D3C0FACC0370C6F;4704.
  ) 
 Here is how much of TeX's memory you used:
- 16354 strings out of 495028
- 246457 string characters out of 6181497
+ 16358 strings out of 495028
+ 246523 string characters out of 6181497
  416960 words of memory out of 5000000
  18624 multiletter control sequences out of 15000+600000
  14706 words of font info for 53 fonts, out of 8000000 for 9000
  30 hyphenation exceptions out of 8191
  46i,12n,77p,1847b,1758s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
-0.pfb>
-Output written on bachelor.pdf (72 pages, 2514219 bytes).
+pdfTeX warning (dest): name{figure.caption.38} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.35} has been referenced but does not
+ exist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
+pfb>
+Output written on bachelor.pdf (72 pages, 2514642 bytes).
 PDF statistics:
- 1348 PDF objects out of 1440 (max. 8388607)
- 1177 compressed objects within 12 object streams
- 475 named destinations out of 1000 (max. 500000)
+ 1352 PDF objects out of 1440 (max. 8388607)
+ 1181 compressed objects within 12 object streams
+ 479 named destinations out of 1000 (max. 500000)
  765 words of extra memory for PDF output out of 10000 (max. 10000000)
 
