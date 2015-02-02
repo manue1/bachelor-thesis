@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.5)  2 FEB 2015 18:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.5)  2 FEB 2015 22:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1008,7 +1008,7 @@ File: images/fundamentals/neutron_ml2.png Graphic file (type png)
 
 <use images/fundamentals/neutron_ml2.png>
 Package pdftex.def Info: images/fundamentals/neutron_ml2.png used on input line
- 526.
+ 520.
 (pdftex.def)             Requested size: 220.50885pt x 145.76256pt.
  [30 <./images/fundamentals/neutron_ml2.png>]) [31]
 \openout2 = `Sections/Requirements.aux'.
@@ -1443,8 +1443,15 @@ Underfull \hbox (badness 1533) in paragraph at lines 35--36
 with OVS\, De-cem-
  []
 
-) [68pdfTeX warning (ext4): destination with the same identifier (name{cite.odl
--ovsdb}) has been already used, duplicate ignored
+) [68pdfTeX warning (ext4): destination with the same identifier (name{cite.ope
+nstack-ops}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.228 \include{Sections/Bibliography}
+                                     pdfTeX warning (ext4): destination with th
+e same identifier (name{cite.odl-ovsdb}) has been already used, duplicate ignor
+ed
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1458,7 +1465,7 @@ Appendix A.
 
 
 
-]) [70] <images/general/leer.jpg, id=1191, 120.45pt x 120.45pt>
+]) [70] <images/general/leer.jpg, id=1193, 120.45pt x 120.45pt>
 File: images/general/leer.jpg Graphic file (type jpg)
 
 <use images/general/leer.jpg>
@@ -1488,15 +1495,8 @@ Package natbib Warning: Citation(s) may have changed.
 ) (./Sections/Appendix_Glossar.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 273.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 273.
-
-
-Package rerunfilecheck Warning: File `bachelor.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `bachelor.out':
-(rerunfilecheck)             Before: 3BB92FBF794BC35FB2A8EA7EA0DFB027;4681
-(rerunfilecheck)             After:  DC75ADAA81385715CA914BDD6CD71CEE;4701.
+Package rerunfilecheck Info: File `bachelor.out' has not changed.
+(rerunfilecheck)             Checksum: DC75ADAA81385715CA914BDD6CD71CEE;4701.
  ) 
 Here is how much of TeX's memory you used:
  16352 strings out of 495028
@@ -1518,10 +1518,10 @@ ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type
 nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
 0.pfb>
-Output written on bachelor.pdf (71 pages, 2513044 bytes).
+Output written on bachelor.pdf (71 pages, 2513458 bytes).
 PDF statistics:
- 1339 PDF objects out of 1440 (max. 8388607)
- 1169 compressed objects within 12 object streams
+ 1341 PDF objects out of 1440 (max. 8388607)
+ 1171 compressed objects within 12 object streams
  473 named destinations out of 1000 (max. 500000)
  765 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,15 +10,15 @@ One of the key objectives of the Connectivity Manager is to grant different Serv
 
 \subsection{Optimal Virtual Machine Placement}
 
-The placement of Virtual Machines makes a tremendous difference in terms of connectivity and resource performance. VMs that run on the same Compute Node have a better connectivity then ones that need to communicate over wire. The fact that the networking is virtualized besides the virtualized computing environment means that a more utilized Compute Node will also have less resources available for switching and routing. A part of the motivation for this requirement can be found in the Evaluation section.
+The placement of Virtual Machines makes a tremendous difference in terms of their network and overall resource performance. It needs to be evaluated which placement makes for the best-available network bandwidth between VMs within the internal network. The current utilization of hosts need to be taken into account as well. A stack should only be deployed if the resources are available at the time of deployment without overcommitting any hardware resources.
 
 \subsection{Integration with Elastic Media Manager}
 
-The Connectivity Manager needs to integrate with the Elastic Media Manager (EMM) which is used for deploying a topology of resources within a cloud infrastructure. Furthermore it provisions the instances and manages them during their runtime for services like upscaling the amount of instances after utilization alarms are triggered. The CM communicates with the EMM in order to enable the two previously-mentioned requirements for the overall platform.
+The Connectivity Manager needs to integrated with the Elastic Media Manager (EMM) which is used for deploying a topology of resources within a cloud infrastructure. Furthermore it provisions the instances and manages them during their runtime through services such as upscaling the amount of instances after certain utilization alarms are triggered. The CM communicates with the EMM in order to enable the two previously-mentioned requirements for the overall platform.
 
 \section{Non-functional Requirements}
 
-Non-functional requirements generally specify criteria to do with the operation of a system and not with it's behavior. Thus the Connectivity Manager should also fit the following characteristics.
+Non-functional requirements generally specify criteria to do with the operation of a system and not with its behavior. Thus the Connectivity Manager should also fit the following characteristics.
 
 \subsection{Scalability}
 
@@ -26,8 +26,8 @@ Today's data-centers can grow in a fast-pace, especially in connection with auto
 
 \subsection{Modularity}
 
-Building modular software not only simplifies further development for a third-party, but also makes it easier to exchange certain parts of the software for improvements or maintenance. The separation into two different components with a defined API makes it more flexible.
+Building modular software not only simplifies further development for a third-party, but also makes it easier to exchange certain parts of the software for improvements or maintenance at a later date. The separation into two different components with a defined API makes it more flexible.
 
 \subsection{Interoperability}
 
-In the case of the use of Open vSwitch, interoperability is given because it is made available for various architectures. The integration into the Linux Kernel and the use of standardized protocols such as OpenFlow are a significant factor.
+In the case of the use of Open vSwitch, interoperability is given because of the availability for various architectures. The integration into the Linux Kernel and the use of standardized protocols such as OpenFlow are a significant factor.
