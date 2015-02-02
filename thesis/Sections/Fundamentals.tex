@@ -1,8 +1,7 @@
 \chapter{Fundamentals and related work}
 
 \section{Software-Defined Networking}
-
-The origin of Software-Defined Networking (SDN) began already in 1995, however the first use cases were only developed in 2001 and the promotion of SDN only began with the foundation of the non-profit industry consortium Open Networking Foundation (ONF) in 2011. % % https://en.wikipedia.org/wiki/Software-defined_networking % %
+The origin of Software-Defined Networking (SDN) began already in 1995, however the first use cases were only developed in 2001 and the promotion of SDN only began with the foundation of the non-profit industry consortium Open Networking Foundation (ONF) in 2011. \cite{roadtosdn}
 The ONF is dedicated to push and adapt open standards like the OpenFlow into the industry.
 In this following section a brief overview of the SDN architecture and concepts, including the OpenFlow protocol is given.
 
@@ -10,9 +9,9 @@ In this following section a brief overview of the SDN architecture and concepts,
 
 Today's internet is part of the modern society, be it for private users, enterprises or vital infrastructure services. Networks are required to evolve in order to address the challenges that are entailed with new applications, services and a growing number of end-users.
 
-With a more detailed view on the challenges of current networks one comes to see the following limitations:
+With a more detailed view on the challenges of current networks one comes to see the following limitations: \cite{onfnewnorm}
 
-% % ONF White Paper (pdf): SDN - The new norm for networks % % 
+
 \begin{itemize}
 \item \textbf{Inability to scale}: With the expansion of data centers, networks must grow too. Configuring and managing these additional network devices comes at a high administrative effort. With the virtualization of data centers network traffic patterns becomes more and more dynamic and unpredictable. With multi-tenancy a further complication is introduced, because different end-users and services need different network performance and might require traffic steering. Such scaling and network management cannot be done with a manual configuration of the underlying infrastructure.
 \item \textbf{Complexity}: In the past decades new networking protocols have been adapted by the industry. To add or move any device, multiple existing switches, routes, firewalls must be touched in order to manage protocol-based mechanisms on a device-level. With the virtualization of servers the amount of interfaces that need network connectivity and the distribution of applications over a number of virtual machines (VMs) are another demand that the current fairly static networks cannot dynamically adapt to.
@@ -24,7 +23,8 @@ Traditionally decisions about traffic flowing through the network are made direc
 
 \subsubsection{Classical switches \& routers}
 
-Packet forwarding (data plane) and routing decisions (control plane) in classical switching and routing are both within one device. In figure .. the main components that are depicted have the following functions:
+Packet forwarding (data plane) and routing decisions (control plane) in classical switching and routing are both within one device. In figure .. % % FIX % %
+ the main components that are depicted have the following functions:
 \begin{enumerate}
 \item The \textbf{forwarding path} typically handles data path operations for each packet. It generally consists of Application-Specific Integrated Circuits (ASIC), network-processors or general-purpose processors that forwards frames and packets at wire speed (line-rate). Their lookup functions can be further increased with memory resources like Content Addressable Memory (CAM) or Ternary Content Addressable Memory (TCAM) to contain the forwarding information.
 \item The elements in the \textbf{control plane} are based on general-purpose processors that provide services like routing and signaling protocols, including ARP, MAC Learning and forwarding tables.
@@ -46,14 +46,13 @@ The main differences between the classical architecture and SDN will be further 
 
 \subsection{Software-Defined Networking concept}
 
-%% https://www.opennetworking.org/sdn-resources/sdn-definition % %
-
-SDN represents a new dynamic, manageable, cost-effective and adaptable architecture that is built to serve the dynamic infrastructures that are needed as a backbone for today's data centers. Opposed to the traditional approach, network control and forwarding functions are decoupled and thus can be programmed and divided into different applications and network services.
+SDN represents a new dynamic, manageable, cost-effective and adaptable architecture \cite{onfdefinition} that is built to serve the dynamic infrastructures that are needed as a backbone for today's data centers. Opposed to the traditional approach, network control and forwarding functions are decoupled and thus can be programmed and divided into different applications and network services.
 The work of the Open Networking Foundation laid out the OpenFlow protocol as the base for modern SDN solutions.
 
 \subsection{SDN architecture}
 
-SDN separates the architecture into three distinct layers that communicate with each other through different APIs. In figure .. this separation is shown.
+SDN separates the architecture into three distinct layers that communicate with each other through different APIs. In figure .. % % FIX % %
+ this separation is shown.
 
 \begin{itemize}
 \item \textbf{Infrastructure Layer:} here all physical and virtual devices (e.g. switches and routers) that are capable of the OpenFlow Protocol provide forwarding mechanisms on different Network Layers.
@@ -73,9 +72,8 @@ SDN separates the architecture into three distinct layers that communicate with 
 
 \subsection{OpenFlow}
 
-% % https://www.opennetworking.org/sdn-resources/openflow % %
 
-With OpenFlow the Open Networking Foundation defined the first standard communications interface between the SDN architecture's control and forwarding layers. It enables manipulation and direct access to the forwarding plane of physical as well as virtual (hypervisor-based) network devices such as switches and routers.
+With OpenFlow the Open Networking Foundation defined the first standard communications interface between the SDN architecture's control and forwarding layers. It enables manipulation and direct access to the forwarding plane of physical as well as virtual (hypervisor-based) network devices such as switches and routers. \cite{onfnewnorm}
 
 \begin{figure}[H]
 \centering
@@ -87,11 +85,10 @@ With OpenFlow the Open Networking Foundation defined the first standard communic
 
 OpenFlow first of all stands for the communications protocol that is used by SDN controllers to fetch information and configure switches. Additionally it is a switch specification that defines its minimum capabilities in order to support OpenFlow.
 
-% % Vendor OF version usage: http://www.tomsitpro.com/articles/pica8-openflow-1.4-sdn-switches,1-1927.html % %
 
 Most of the OpenFlow-enabled switches and controllers currently still only support the OpenFlow version 1.0 (released in December 2009). The newest version at this date is 1.4, however this explanation of OpenFlow will be focussed on version 1.3 since that is the most recent specification which is supported by OpenVSwitch.
-% %http://sdnhub.org/tutorials/openflow-1-3/ % %
-The main features added since version 1.0 are among others support for VLANs, IPv6, tunnelling and per-flow traffic meters.
+
+The main features added since version 1.0 are among others support for VLANs, IPv6, tunnelling and per-flow traffic meters. \cite{ofversion13}
 
 Generally the switches are backwards-compatible down to version 1.0. In the following description the focus lies on the required features of all OpenFlow capable devices, however it has to be mentioned that there is also a set of optional features.
 
@@ -100,15 +97,14 @@ Generally the switches are backwards-compatible down to version 1.0. In the foll
 The OpenFlow controller is separated from the switch and has two interfaces. The northbound interface is an API to the application layer for implementing applications that control the network. The southbound interface connects with the underlying switches using the OpenFlow protocol.
 
 \subsubsection{OpenFlow Switch}
-% %PDF: OpenFlow spec 1.3 % %
 
-There are two varieties of OpenFlow-compliant switches:
+There are two varieties of OpenFlow-compliant switches: \cite{ofspecification}
 \begin{itemize}
 \item \textbf{OpenFlow-only:} in these switches all packets are processed by the OpenFlow pipeline and they have no legacy features.
 \item \textbf{OpenFloy-hybrid:} support OpenFlow and normal Ethernet switching (including traditional L2 Ethernet switching, VLAN isolation, L3 routing, ACL and QoS). Most of the commercial switches that are available on the market today are this type.
 \end{itemize}
 
-An OpenFlow switch includes one ore multiple flow tables and a group table, which have the function of carrying out packet lookups and forwarding. Another component is the OpenFlow channel to the external controller.
+An OpenFlow switch includes one ore multiple flow tables and a group table, which have the function of carrying out packet lookups and forwarding. Another component is the OpenFlow channel to the external controller \cite{ofspecification}.
 
 \begin{figure}[H]
 \centering
@@ -125,7 +121,7 @@ The instructions can either include actions  or modify pipeline processing. Pack
 Packets can also be directed to a group, which contains a set of actions for flooding and more complex forwarding semantics (e.g. multipath, fast reroute and link aggregation).
 
 \subsubsection{OpenFlow Ports}
-OpenFlow ports are the network interfaces used for passing packets between OpenFlow processing and the rest of the network.
+OpenFlow ports are the network interfaces used for passing packets between OpenFlow processing and the rest of the network \cite{ofspecification}.
 There are various types of ports that are supported by OpenFlow. This section will give a short overview about this port abstraction.
 Incoming OpenFlow packets enter the switch on an ingress port, are then processed by the OpenFlow pipeline and forwarded to an output port. (See OF Tables figure for processing).
 
@@ -140,7 +136,7 @@ There are three types of OpenFlow ports that must be supported by an OpenFlow sw
 
 \textbf{\underline{Pipeline Processing}}
 
-The OpenFlow pipeline defines specifies how packets correspond with each of the flow tables. 
+The OpenFlow pipeline defines specifies how packets correspond with each of the flow tables \cite{ofspecification}. 
 
 \begin{figure}[H]
 \centering
@@ -153,7 +149,7 @@ As illustrated in the figure, each packet is matched against the flow entries st
 
 \textbf{\underline{Flow Table}}
 
-A flow table contains flow entries which consist of the following fields:
+A flow table contains flow entries which consist of the following fields \cite{ofspecification}: 
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|}
@@ -182,7 +178,7 @@ Each flow table entry is uniquely identifiable by its match fields and priority.
 \caption{Packet flow through an OpenFlow switch}
 \end{figure}
 
-On a packet's arrival at the Flow Table, the packet match fields are extracted and used for the table lookup. They include different packet header fields. Additionally matches can be made against the ingress port and metadata fields.
+On a packet's arrival at the Flow Table, the packet match fields are extracted and used for the table lookup \cite{ofspecification}. They include different packet header fields. Additionally matches can be made against the ingress port and metadata fields.
 If the values in the packet match fields equate  only the flow entry with the highest priority is selected. The associated counters are updated and the instruction set applied.
 
 When the instruction set associated with a matching flow entry does not specify a next table, the pipeline processing stops. Only then the packet is processed with it's action set and in most cases forwarded. as shown in Figure 2.6.
@@ -245,7 +241,7 @@ A meter band is identified by its rate and consists of the following fields:
 
 \underline{\textbf{Instructions}}
 
-Instructions are executed when a packet matches the flow entry. Their result is either a change to the packet, action set and/or pipeline processing. There are different instruction types and some of them are required for an OpenFlow-enabled switch whereas others are optional:
+Instructions are executed when a packet matches the flow entry \cite{ofspecification}. Their result is either a change to the packet, action set and/or pipeline processing. There are different instruction types and some of them are required for an OpenFlow-enabled switch whereas others are optional:
 
 \begin{itemize}
 \item \textbf{Meter \textit{meter\_id}:} direct packet to the specified meter. The packet may be discarded as the result of the metering.
@@ -261,12 +257,12 @@ A maximum of one instruction of each type is associated with a flow entry and th
 
 \underline{\textbf{Action Set}}
 
-An action set is associated with each packet, which is empty by default. The action set can be modified using a \textit{Write-Action} or a \textit{Clear-Action} instruction. If there is no \textit{Goto-Table} instruction within the instruction set of a flow entry the pipeline processing is halted and the actions in the action set of the packet are executed.
+An action set is associated with each packet, which is empty by default \cite{ofspecification}. The action set can be modified using a \textit{Write-Action} or a \textit{Clear-Action} instruction. If there is no \textit{Goto-Table} instruction within the instruction set of a flow entry the pipeline processing is halted and the actions in the action set of the packet are executed.
 
 
 \underline{\textbf{Actions}}
 
-The following action types are available on OpenFlow-enabled switches:
+The following action types are available on OpenFlow-enabled switches \cite{ofspecification}:
 \begin{itemize}
 \item \textbf{Output:} A packet is forwarded to a specified OpenFlow port.
 \item \textbf{Set-Queue:} Sets the queue id for a packet. This id helps determining which queue attached to this port is used for scheduling and forwarding the packet when the packet is forwarded to a port using the output action. This forwarding behaviour allows to enable basic QoS support.
@@ -277,14 +273,13 @@ The following action types are available on OpenFlow-enabled switches:
 \end{itemize} 
 
 \subsection{Open vSwitch}
-% %http://git.openvswitch.org/cgi-bin/gitweb.cgi?p=openvswitch;a=blob_plain;f=FAQ;hb=HEAD % %
+
 
 \subsubsection{Concept \& Functionality}
 
-Open vSwitch (OVS) is open source software switch that is used in virtualized server environments. It is able to forward traffic traffic between Virtual Machines (VMs) and the physical network, as well as between different VMs on the same physical host. It can be controlled using OpenFlow and the OVSDB management protocol. It can run on any Linux-based virtualization platform i.e. KVM, VirtualBox, XEN, ESXi and is part of the mainline kernel as of Linux 3.3 but can run on kernel 2.6.32 and newer.
+Open vSwitch (OVS) is an open source software switch that is used in virtualized server environments. It is able to forward traffic traffic between Virtual Machines (VMs) and the physical network, as well as between different VMs on the same physical host. It can be controlled using OpenFlow and the OVSDB management protocol. It can run on any Linux-based virtualization platform i.e. KVM, VirtualBox, XEN, ESXi and is part of the mainline kernel as of Linux 3.3 but can run on kernel 2.6.32 and newer \cite{ovs-faq}.
 
-% %https://github.com/openvswitch/ovs/blob/master/README.md % %
-OVS supports the following features:
+OVS supports the following features \cite{ovs-readme}:
 \begin{itemize}
 \item 802.1Q VLAN model
 \item Link Aggregation Control Protocol (LACP)
@@ -295,8 +290,8 @@ OVS supports the following features:
 \item High-performance forwarding using a Linux kernel module
 \end{itemize}
 
-The internals of OVS are as follows:
-% %https://events.linuxfoundation.org/sites/events/files/slides/OVS-LinuxCon%202013.pdf % %
+The internals of OVS are as follows \cite{prognetworkingovs}:
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{images/fundamentals/openvswitch_architecture.png}
@@ -306,18 +301,15 @@ The internals of OVS are as follows:
 ovs-vswitchd, a daemon that implements the switch, along with a companion Linux kernel module for flow-based switching.
 ovsdb-server, a lightweight database server that ovs-vswitchd queries to obtain its configuration.
 
-The daemon which implements the switch is \textit{ovs-vswitchd} and it is shipped with an additional Linux kernel module for flow-based switching that it communicates with using the netlink protocol. The configuration for the switch is queried from a lightweight database server named \textit{ovsdb-server}.
+The daemon which implements the switch is \textit{ovs-vswitchd} and is shipped with an additional Linux kernel module for flow-based switching that it communicates with using the netlink protocol \cite{ovsdeepdive}. The configuration for the switch is queried from a lightweight database server named \textit{ovsdb-server}.
 Generally the decision about how a packet is processed is made in userspace, yet all following packets hit the cached entry in the kernel.
 
 It is also possible to run it completely in userspace, but it decreases the performance drastically.
 
-% %OpenStack - OVS Deep Dive % %
-
 
 \subsubsection{OVSDB}
-% %Open vSwtich Manual - DB config PDF % %
 
-Each Open vSwitch daemon has a database (OVSDB) that holds it's configuration. The database is divided into multiple different tables with different purposes, with the ones related to this project outlined below:
+Each Open vSwitch daemon has a database (OVSDB) that holds it's configuration \cite{ovsdbmanual}. The database is divided into multiple different tables with different purposes, with the ones related to this project outlined below:
 \begin{itemize}
 \item \textbf{Open\_vSwitch}: Open vSwitch configuration
 \item \textbf{Port}: Port configuration
@@ -368,9 +360,9 @@ With Open vSwitch QoS can be configured for ports or the so-called virtual netwo
 % % http://www.istudies.net/journal/sites/default/files/Extended%20Linux%20HTB%20Queuing%20Discipline%20Implementations.pdf % %
 % %https://github.com/stanzgy/nova-network-qos/blob/master/nova-network-qos-intro.rst % %
 % %http://luxik.cdi.cz/~devik/qos/htb/manual/userg.htm % %
-Traffic control (tc) uses 'queueing discipline' (qdisc) for configuring the network interface. They are the fundamental schedulers used under Linux. When a packet is sent, it is enqueued to the qdisc for the interface and shortly after the kernel is trying to get as many packets as it can from the qdisc, so they can be forwarded to the network adaptor driver. By default the 'pfifo\_fast' qdisc is set in the kernel, which is a pure 'First In, First out' queue.
+Traffic control (tc) uses 'queuing discipline' (qdisc) for configuring the network interface \cite{tc-manual}. They are the fundamental schedulers used under Linux. When a packet is sent, it is enqueued to the qdisc for the interface and shortly after the kernel is trying to get as many packets as it can from the qdisc, so they can be forwarded to the network adaptor driver. By default the 'pfifo\_fast' qdisc is set in the kernel, which is a pure 'First In, First out' queue.
 
-When setting QoS in OVS a classful qdisc named Hierarchy Token Bucket (HTB) is used. HTB is meant as a more understandable, intuitive and faster replacement for the Class Based Queueing (CBQ) qdisc in Linux. It helps to control the use of the outbound bandwidth on a given link. 
+When setting QoS in OVS a classful qdisc named Hierarchy Token Bucket (HTB) is used. HTB is meant as a more understandable, intuitive and faster replacement for the Class Based Queuing (CBQ) qdisc in Linux \cite{htb-guide}. It helps to control the use of the outbound bandwidth on a given link. 
 
 
 \subsubsection{GRE}

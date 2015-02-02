@@ -104,7 +104,7 @@
 %
 % Literaturverzeichnis mit BibTeX
 %
-\bibliographystyle{ka-style} % Uni-KA-Style  
+\bibliographystyle{ka-style}
 \setlength{\bibsep}{3mm}                  % Abstände im Litverzeichnis
 %
 % Anmerkung: das Dokument enthält _zwei_ Literaturverzeichnisse
@@ -226,11 +226,16 @@ Nach-na-me Kurz-be-zeich-nung deutsch-spra-chige deutsch-sprachig Screen-shot Sc
 \include{Sections/Evaluation}
 \include{Sections/Conclusion}
 
-
-
-
 \protect \addtocontents{toc}{\protect\newpage}  % Seitenumbruch im Inhaltsverzeichnis
 \cleardoublepage
+
+
+% Erstes Literaturverzeichnis, ohne BibTeX
+
+\interlinepenalty=10000 % Literatureinträge: Absätze zusammenhalten
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}   
+\include{Sections/Bibliography}
 
 
 \begin{appendix}
@@ -240,12 +245,6 @@ Nach-na-me Kurz-be-zeich-nung deutsch-spra-chige deutsch-sprachig Screen-shot Sc
 
 
 
-% Erstes Literaturverzeichnis, ohne BibTeX
-
-\interlinepenalty=10000 % Literatureinträge: Absätze zusammenhalten
-\cleardoublepage
-\addcontentsline{toc}{chapter}{Bibliography}   
-\include{Sections/Bibliography}
 
 
 

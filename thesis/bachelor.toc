@@ -83,6 +83,6 @@
 \contentsline {section}{\numberline {8.1}Summary}{61}{section.8.1}
 \contentsline {section}{\numberline {8.2}Problems encountered}{61}{section.8.2}
 \contentsline {section}{\numberline {8.3}Future work}{61}{section.8.3}
-\contentsline {chapter}{\numberline {A}List of acronyms}{63}{appendix.A}
 \newpage 
-\contentsline {chapter}{Bibliography}{65}{appendix.A}
+\contentsline {chapter}{Bibliography}{63}{section.8.3}
+\contentsline {chapter}{\numberline {A}List of acronyms}{64}{appendix.A}
