@@ -78,11 +78,11 @@
 \contentsline {subsection}{\numberline {7.3.4}Scenario 1: Without Instance Placement Engine \& QoS enabled}{57}{subsection.7.3.4}
 \contentsline {subsection}{\numberline {7.3.5}Scenario 2: With Instance Placement Engine enabled, but without QoS}{58}{subsection.7.3.5}
 \contentsline {subsection}{\numberline {7.3.6}Scenario 3: Instance Placement Engine and QoS Manager enabled}{59}{subsection.7.3.6}
-\contentsline {section}{\numberline {7.4}Conclusion}{60}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion}{61}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{61}{section.8.1}
-\contentsline {section}{\numberline {8.2}Problems encountered}{61}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future work}{61}{section.8.3}
+\contentsline {section}{\numberline {7.4}Conclusion}{62}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion}{64}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{64}{section.8.1}
+\contentsline {section}{\numberline {8.2}Problems encountered}{64}{section.8.2}
+\contentsline {section}{\numberline {8.3}Future work}{64}{section.8.3}
 \newpage 
-\contentsline {chapter}{Bibliography}{63}{section.8.3}
-\contentsline {chapter}{\numberline {A}List of acronyms}{64}{appendix.A}
+\contentsline {chapter}{Bibliography}{66}{section.8.3}
+\contentsline {chapter}{\numberline {A}List of acronyms}{68}{appendix.A}

@@ -82,7 +82,7 @@ The topology that is created by the EMM contains the following required resource
 \caption{Deployment: Topology object from EMM}
 \end{figure}
 
-This object is handed over to the CM during the deployment phase. The topology can contain multiple Service Instances, which defines general parameters such as which networks the underlying instances need to be connected to, the flavor wherein the resources (e.g. amount of RAM \& CPU) are specified, the image that contains the operating system and additional software packages and the key that is needed to establish a console connection via SSH.
+This object is handed over to the CM during the deployment phase. The topology can contain multiple Service Instances, which defines general parameters such as which networks the underlying instances need to be connected to, the flavor wherein the resources (e.g. amount of RAM \& CPU) are specified \cite{openstack-admin}, the image that contains the operating system and additional software packages and the key that is needed to establish a console connection via SSH.
 
 Each Service Instance can contain multiple Units (instances). Among others it contains parameters like IP addresses, the availability zone that it gets deployed on and the external ID which is unique across the whole infrastructure.
 
@@ -93,7 +93,7 @@ Each Service Instance can contain multiple Units (instances). Among others it co
 The following section describes the algorithm that is used for setting the availability zone for the instances, and thus placing them in the most advantageous way based on the project requirements.
 
 
-Each tenant has a set of quotas which limit the resource usage within the OpenStack infrastructure. Limitations can be made based on the following resource types (excerpt): Amount of instances, vCPU's, RAM, Floating IP addresses and fixed IP addresses.
+Each tenant has a set of quotas which limit the resource usage within the OpenStack infrastructure. Limitations can be made based on the following resource types (excerpt): Amount of instances, vCPU's, RAM, Floating IP addresses and fixed IP addresses \cite{openstack-admin}.
 
 Considering the requirement to have optimal connectivity between individual instances, it is preferable to position them on the same compute node, given that its resources allow this.
 

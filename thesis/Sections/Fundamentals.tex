@@ -366,8 +366,8 @@ When setting QoS in OVS a classful qdisc named Hierarchy Token Bucket (HTB) is u
 
 
 \subsubsection{GRE}
-% % http://www.juniper.net/documentation/en_US/junos14.1/topics/concept/gre-tunnel-services.html % %
-Generic Routing Encapsulation (GRE) is used in OpenStack to tunnel the traffic between multiple nodes. It provides a private and secure path by encapsulating data packets.
+
+Generic Routing Encapsulation (GRE) is used in OpenStack to tunnel the traffic between multiple nodes \cite{gre-juniper}. It provides a private and secure path by encapsulating data packets.
 
 
 \section{Cloud computing infrastructures}
@@ -376,20 +376,19 @@ Generic Routing Encapsulation (GRE) is used in OpenStack to tunnel the traffic b
 
 \subsection{OpenStack}
 
-% %OpenStack Operations Guide book % %
 The OpenStack project was founded by Rackpace Cloud and NASA, however currently more than 200 companies are contributing.
-With OpenStack one is able to design, deploy and maintain a private or public cloud. It is a flexible, scalable and open-source approach that combines multiple technologies into one Infrastructure-as-a-Service (IaaS). All of the interrelated services include an API that offers administrators different ways of controlling the cloud, be it through a web interface, a command-line client or a software development kit. All of the core components that come with OpenStack are implemented in Python.
+With OpenStack one is able to design, deploy and maintain a private or public cloud. It is a flexible, scalable and open-source approach that combines multiple technologies into one Infrastructure-as-a-Service (IaaS) \cite{openstack-ops}. All of the interrelated services include an API that offers administrators different ways of controlling the cloud, be it through a web interface, a command-line client or a software development kit. All of the core components that come with OpenStack are implemented in Python.
 
 
 \textbf{Conceptual architecture}
-% %Juno Installation Guide PDF % %
+
 
 The following graph shows the interaction between different OpenStack services that are involved in launching a virtual machine.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{images/fundamentals/openstack_conceptual_arch.png}
-\caption{Interaction among OpenStack services}
+\caption{Interaction among OpenStack services}\cite{openstack-installjuno}
 \end{figure}
 
 
@@ -403,10 +402,9 @@ Nova is used to host and manage cloud computing systems. It supports different h
 \caption{OpenStack Compute service}
 \end{figure}
 
-% %https://kimizhang.wordpress.com/2013/08/26/openstack-zoning-regionavailability-zonehost-aggregate/ % %
 \textbf{Compute Node segregation}
 
-An OpenStack cloud can be logically and physically grouped on different levels:
+An OpenStack cloud can be logically and physically grouped on different levels \cite{openstack-ops}:
 \begin{itemize}
 \item \textbf{Region:} A Region has its own full OpenStack deployment and can be physically at a different location. Regions share a set of Keystone and Horizon services to provide access control and the graphical management interface.
 \item \textbf{Availability Zone:} Inside of a Region, it is possible to logically group multiple compute nodes into Availability Zones. This zone can be specified when new servers or stacks (via Heat) are instantiated.
@@ -429,11 +427,11 @@ In the early versions of OpenStack, virtual networking was a sub-component of No
 
 
 \subsubsection{Networking concepts}
-% % http://docs.openstack.org/training-guides/content/operator-network-node.html % %
+
 
 Neutron is responsible for defining network connectivity and addressing within OpenStack. In the main network abstraction the following components are defined. A network as a virtual layer 2 segment, a subnet as a layer 3 IP address space used within a network, a port as an interface to a network or subnet, a router that performs address translation and routing between subnets, a DHCP server responsible for IP adress distribution, a security group for filtering rules acting as a cloud firewall and Floating IPs to give VMs external network access.
 
-Neutron exposes an extensible set of APIs for creating and managing those. Neutron consists of the following elements:
+Neutron exposes an extensible set of APIs for creating and managing those. Neutron consists of the following elements \cite{openstack-training}:
 \begin{itemize}
 \item \textbf{neutron-server:} Provides the logic for SDN and does not contain any SDN functionality in itself. It provides a generic API for the network operations, is modular and extended with the following agents.
 \item \textbf{L2 agent:} Plugin-specific agent that manages networking on a compute node. For more details, see ML2 section.
