@@ -1,4 +1,4 @@
-\chapter{Fundamentals and related work}
+\chapter{Fundamentals and Related Work}
 
 \section{Software-Defined Networking}
 The origin of Software-Defined Networking (SDN) began already in 1995, however the first use cases were only developed in 2001 and the promotion of SDN only began with the foundation of the non-profit industry consortium Open Networking Foundation (ONF) in 2011. \cite{roadtosdn}
@@ -21,7 +21,7 @@ With a more detailed view on the challenges of current networks one comes to see
 
 Traditionally decisions about traffic flowing through the network are made directly by each network device, because the control logic and forwarding hardware are tightly coupled.
 
-\subsubsection{Classical switches \& routers}
+\subsubsection{Classical Switches \& Routers}
 
 Packet forwarding (data plane) and routing decisions (control plane) in classical switching and routing are both within one device. In figure .. % % FIX % %
  the main components that are depicted have the following functions:
@@ -44,12 +44,12 @@ Routers forward packets on the Network layer (Layer 3) and routing-decisions are
 
 The main differences between the classical architecture and SDN will be further described in the coming sections.
 
-\subsection{Software-Defined Networking concept}
+\subsection{Software-Defined Networking Concept}
 
 SDN represents a new dynamic, manageable, cost-effective and adaptable architecture \cite{onfdefinition} that is built to serve the dynamic infrastructures that are needed as a backbone for today's data centers. Opposed to the traditional approach, network control and forwarding functions are decoupled and thus can be programmed and divided into different applications and network services.
 The work of the Open Networking Foundation laid out the OpenFlow protocol as the base for modern SDN solutions.
 
-\subsection{SDN architecture}
+\subsection{SDN Architecture}
 
 SDN separates the architecture into three distinct layers that communicate with each other through different APIs. In figure .. % % FIX % %
  this separation is shown.
@@ -382,7 +382,7 @@ When setting QoS in OVS a classful qdisc named Hierarchy Token Bucket (HTB) is u
 Generic Routing Encapsulation (GRE) is used in OpenStack to tunnel the traffic between multiple nodes \cite{gre-juniper}. It provides a private and secure path by encapsulating data packets.
 
 
-\section{Cloud computing infrastructures}
+\section{Cloud Computing Infrastructures}
 % Call it Infrastructure-as-a-Service? %
 
 
@@ -438,7 +438,7 @@ Heat provides a template-based orchestration service for creating and managing c
 In the early versions of OpenStack, virtual networking was a sub-component of Nova called Nova-network. This service had it's limitations, because it was closely coupled with networking abstractions and there were no APIs available. With Neutron the implementation is decoupled from the network abstraction and it provides a flexible management interface to administrators and users.
 
 
-\subsubsection{Networking concepts}
+\subsubsection{Networking Concepts}
 
 
 Neutron is responsible for defining network connectivity and addressing within OpenStack. In the main network abstraction the following components are defined. A network as a virtual layer 2 segment, a subnet as a layer 3 IP address space used within a network, a port as an interface to a network or subnet, a router that performs address translation and routing between subnets, a DHCP server responsible for IP adress distribution, a security group for filtering rules acting as a cloud firewall and Floating IPs to give VMs external network access.
@@ -481,12 +481,12 @@ Open vSwitch is the ML2 mechanism driver that is set as default when installing 
 \caption{GRE tunneling between Controller Node and Compute Node}
 \end{figure}
 
-\subsubsection{Network distinction}
+\subsubsection{Network Distinction}
 
 Neutron is connected to different networks. For internet routable connections the external network is used. The management network is created by the network operator and is mapped to pre-existing networks within the datacenter, which is used to connect the different hosts. The tenants within OpenStack have their own isolated self provisioned private networks. Those can optionally be connected to other tenant or external networks. The abstraction of those tenant networks is possible through network namespaces. This allows overlapping IP addresses within the datacenter.
 
 
-\subsubsection{Neutron workflow}
+\subsubsection{Neutron Workflow}
 
 The workflow for Neutron, from starting to booting VMs is as follows:
 \begin{enumerate}

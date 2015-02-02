@@ -9,7 +9,7 @@ The software developed in this thesis is completely realized using the Python pr
 PyCharm was selected as the integrated development environment (IDE) to simplify the programming and testing lifecycles. The code is under revision control using git and the repository that contains both the code for the CM and CM Agent consists of two main branches: master and develop. The develop branch holds the latest changes and upon successful testing those were merged back into master, which is always in a production-ready state.
 
 
-\subsubsection{Project structure}
+\subsubsection{Project Structure}
 
 The code is separated into two different projects in order to allow testing of the integration concurrently. The following graphic outlines the focus within the Elastic Media Manager (EMM), whilst the CM Agent is separated and has its own structure.
 
@@ -25,7 +25,7 @@ The structure for the CM is dictated by the already existing implementation of t
 
 The Connectivity Manager contains the ReST API, the Agent core, clients and other helper classes.
 
-\subsubsection{Local OpenStack test environment}
+\subsubsection{Local OpenStack Test Environment}
 
 In order to test the Connectivity Manager Agent and the use of its OpenStack API clients a testbed was installed. This test-bed was set up using Vagrant, as it allows to start virtual machines from the command-line and can easily be provisioned and managed. In order to test the software across multiple compute nodes a set up with 2 VM's was installed.
 
@@ -79,9 +79,9 @@ ENABLED_SERVICES=n-cpu,rabbit,neutron,q-agt,q-l3
 
 During the implementation and testing phase the Connectivity Manager Agent was installed on the controller node while the EMM was executed from the local machine.
 
-\section{Connectivity Manager components and operations}
+\section{Connectivity Manager Components and Operations}
 
-\subsubsection{Selection of best-matching Hypervisor}
+\subsubsection{Selection of Best-Performing Hypervisor}
 
 
 \textbf{Step 1: Retrieve current host utilization from CM Agent}
@@ -137,7 +137,7 @@ The amount of resources that are required in total to deploy the topology on the
 \caption{Set AZ per Unit}
 \end{figure}
 
-\subsubsection{Enabling QoS for VM}
+\subsubsection{Enabling QoS for servers}
 
 .. ToDO: Mention configuration file!!
 
@@ -150,7 +150,7 @@ The amount of resources that are required in total to deploy the topology on the
 \end{figure}
 
 
-\section{Connectivity Manager Agent components and operations}
+\section{Connectivity Manager Agent Components and Operations}
 
 \begin{figure}[H]
 \centering
