@@ -2,12 +2,12 @@
 
 \section{Overview}
 
-Three existing solutions for extending Neutron with additional SDN features have been tested. They were selected based on the requirements given in section 3.
+Three existing solutions for extending the services that Neutron provides with additional SDN features have been tested. They were selected based on the requirements given in the previous section.
 
 \section{OpenDaylight SDN Controller}
 
 
-OpenDaylight is fully implemented in Java. The Controller platform has multiple Northbound \& Southbound interfaces. OpenDaylight exposes a single common OpenStack Service Northbound API which exactly matches the Neutron API. The OpenDaylight OpenStack Neutron Plugin simply passes through and therefore pushes complexity to OpenDaylight and simplifies the OpenStack plugin. The ML2 mechanism driver in Neutron has to be set to the OpenDaylight ML2 plugin with the ODL agent running on the Compute Nodes. The OpenDaylight controller can be run on the Control Node or on a separate VM \cite{odl-intro}. The Open vSwitch database (OVSDB) Plugin component for OpenDaylight implements the OVSDB management protocol that allows the southbound configuration of vSwitches. The OpenDaylight controller uses the native OVSDB implementation to manipulate the Open vSwitch database. The component comprises a library and various plugin usages. The OVSDB protocol uses JSON/RPC calls to manipulate a physical or virtual switch that has OVSDB attached to it \cite{odl-ovsdb}.
+OpenDaylight is fully implemented in Java. OpenDaylight exposes a single common OpenStack Service Northbound API which exactly matches the Neutron API. The OpenDaylight OpenStack Neutron Plugin simply passes through and therefore pushes complexity to OpenDaylight and simplifies the OpenStack plugin. The ML2 mechanism driver in Neutron has to be set to the OpenDaylight ML2 plugin, with the ODL agent running on the Compute Nodes. The OpenDaylight controller can be run on the Control Node or on a separate VM \cite{odl-intro}. The Open vSwitch database (OVSDB) Plugin component for OpenDaylight implements the OVSDB management protocol that allows the configuration of Open vSwitches. The OpenDaylight controller uses the native OVSDB implementation to manipulate the OVSDB. The component comprises a library and various plugins. The OVSDB protocol uses JSON/RPC calls to manipulate a physical or virtual switch that has OVSDB attached to it \cite{odl-ovsdb}.
 
 \begin{figure}[H]
 \centering
@@ -15,12 +15,12 @@ OpenDaylight is fully implemented in Java. The Controller platform has multiple 
 \caption{Architecture of OpenDaylight Virtualization edition}
 \end{figure}
 
-The OVSDB component is accessible through a Northbound ReST API, which enables the operator to connect to the OpenFlow controller and modify various OVSDB tables. Through this API QoS rules can be deployed. Because it connects directly to the OpenVSwitch tables, all the QoS types that come with OpenVSwitch can be deployed (DSCP marking, setting priority, min-/max-rate for switch ports \& OpenFlow Queues). In the local testbed we were able to successfully deploy QoS rules on the ports of Virtual Machines. 
+The OVSDB component is accessible through a Northbound ReST API, which enables the operator to connect to the OpenFlow controller and modify various OVSDB tables. Through this API QoS rules can be deployed. Because it connects directly to the OpenVSwitch tables, all the QoS types that come with OpenVSwitch can be deployed (DSCP marking, setting priority, min-/max-rate for virtual network ports within OpenFlow Queues). In the local testbed it was possible to successfully deploy QoS rules on the ports of Virtual Machines. 
 
 
 \section{Ryu SDN Controller}
 
-Ryu is a component-based software defined networking framework which fully supports OpenFlow 1.0, 1.2, 1.3 and 1.4 switches and is fully written in Python \cite{ryu-start}. Ryu is a full featured OpenFlow controller that supports GRE and VLAN tunnelling. The OpenFlow controller that is embedded in the agent sets Flows on the switch by sending OpenFlow messages to the switch \cite{ryu-comparison}. It includes a set of apps which build the base of the SDN controller like L2 switch, ReST interface, topology viewer and tunnel modules. Ryu also includes an app that allows to set QoS rules through a ReST interface which uses a OVSDB interaction library to apply those. The QoS rules can be either applied to a specific Queue within a VLAN or a Switch port. It supports DSCP tagging and setting the min-rate and max-rate of an interface.
+Ryu is a component-based software defined networking framework which fully supports OpenFlow 1.0, 1.2, 1.3 and 1.4 switches and is fully written in Python \cite{ryu-start}. Ryu is a full featured OpenFlow controller that supports GRE and VLAN tunnelling. The OpenFlow controller that is embedded in the agent sets Flows on the switch by sending OpenFlow messages to the switch \cite{ryu-comparison}. It includes a set of apps which build the base of the SDN controller: L2 switch, ReST interface, topology viewer and tunnel modules. Ryu also includes an app that allows to set QoS rules through a ReST interface which uses a OVSDB interaction library to apply those. The QoS rules can be either applied to a specific Queue within a VLAN or a Switch port. It supports DSCP tagging and setting the min-rate and max-rate of an interface.
 
 \begin{figure}[H]
 \centering
@@ -29,12 +29,12 @@ Ryu is a component-based software defined networking framework which fully suppo
 \end{figure}
 
 
-As of OpenStack IceHouse Ryu has been renamed to OFagent and is included in the Neutron repository. In order to use it as the SDN framework for OpenStack Neutron, OFagent has to be set as both the ML2 mechanism driver (running on the Control / Network node) and the Neutron agent (running on the Compute node). 
+As of OpenStack IceHouse Ryu makes use of the OFagent and is included in the Neutron core git repository. In order to use it as the SDN framework within Neutron, the OFagent  has to be set as both the ML2 mechanism driver (running on the control / network node) and the Neutron agent (running on the compute node). 
 
 
 \section{OpenStack Neutron - QoS Extension}
 
-A Neutron extension has been partially implemented for OpenStack IceHouse which includes an API for setting and retrieving QoS on a per-tenant and per-port basis \cite{neutron-qos}.
+A Neutron extension has been partially implemented for OpenStack IceHouse which includes an API for setting QoS on a per-tenant and per-port basis in combination with the Open vSwitch agent \cite{neutron-qos}. This approach makes a lot of sense as it extends the already existing Neutron API and the framework that is given for custom Neutron Extensions.
 
 % -> further describe the structure of the implementation !! %
 
@@ -68,11 +68,19 @@ The implementation has not been finished and merged into Neutron, however the ba
 
 At the moment it is not clear if the OpenStack community will keep working on this, according to the whiteboard it was deferred to Juno, but it's not included in the current release and no active development is stated in the code / documentation platforms of the OpenStack community.
 
-The patch consists of an extension to the Neutron API which allows setting QoS rules through the Neutron Python client, the actual Neutron extension with the QoS, QoS Driver in the OpenVSwitch agent and an addition to the Neutron Database that includes QoS.
+The patch consists of an extension to the Neutron API which allows setting QoS rules through the Neutron Python client, the actual Neutron extension with the QoS, QoS Driver in the Open vSwitch agent and an addition to the Neutron Database that includes QoS.
+
+For the scope of this work, extending Neutron with QoS is not within the projects time-frame.
 
 \section{Conclusion}
 
-The listed problems further strengthen the motivation for the implementation of the Connectivity Manager. A feature comparison and analysis is given.
+The listed problems further strengthen the motivation for the implementation of the Connectivity Manager. Additionally the second major requirement for the Optimal Virtual Machine Placement are not given in any of the outlines solutions. The following table lists a comparison and analysis of their features:
+
+
+
+
+\begin{table}[H]
+\centering
 
 \begin{tabularx}{\textwidth}{ |X|X|X|X| }
 \hline Tool/Solution & QoS support & OF Controller & OpenStack (Juno) integration \\ 
@@ -81,3 +89,6 @@ The listed problems further strengthen the motivation for the implementation of 
 \hline Neutron QoS extension & not fully implemented & No & No (IceHouse patch not ported to Juno) \\ 
 \hline 
 \end{tabularx}
+
+\caption{State-of-the-art: Feature comparison}
+\end{table}

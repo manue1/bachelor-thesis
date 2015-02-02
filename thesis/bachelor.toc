@@ -50,39 +50,39 @@
 \contentsline {section}{\numberline {4.3}Ryu SDN Controller}{35}{section.4.3}
 \contentsline {section}{\numberline {4.4}OpenStack Neutron - QoS Extension}{36}{section.4.4}
 \contentsline {section}{\numberline {4.5}Problem Statement}{37}{section.4.5}
-\contentsline {section}{\numberline {4.6}Conclusion}{37}{section.4.6}
-\contentsline {chapter}{\numberline {5}Design}{38}{chapter.5}
-\contentsline {section}{\numberline {5.1}Architecture Overview}{38}{section.5.1}
-\contentsline {section}{\numberline {5.2}Interface between Manager \& Agent}{39}{section.5.2}
-\contentsline {section}{\numberline {5.3}Design of Connectivity Manager}{40}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Algorithm for Instance Placement}{41}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}QoS Manager}{42}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Design of Connectivity Manager Agent}{43}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}API}{44}{subsection.5.4.1}
-\contentsline {chapter}{\numberline {6}Implementation}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Environment}{45}{section.6.1}
-\contentsline {subsubsection}{\numberline {6.1.0.1}Project Structure}{45}{subsubsection.6.1.0.1}
-\contentsline {subsubsection}{\numberline {6.1.0.2}Local OpenStack Test Environment}{46}{subsubsection.6.1.0.2}
-\contentsline {section}{\numberline {6.2}Connectivity Manager Components and Operations}{47}{section.6.2}
-\contentsline {subsubsection}{\numberline {6.2.0.3}Selection of Best-Performing Hypervisor}{47}{subsubsection.6.2.0.3}
-\contentsline {subsubsection}{\numberline {6.2.0.4}Enabling QoS for servers}{50}{subsubsection.6.2.0.4}
-\contentsline {section}{\numberline {6.3}Connectivity Manager Agent Components and Operations}{52}{section.6.3}
-\contentsline {section}{\numberline {6.4}Conclusion}{54}{section.6.4}
-\contentsline {chapter}{\numberline {7}Evaluation}{55}{chapter.7}
-\contentsline {section}{\numberline {7.1}Feature Analysis}{55}{section.7.1}
-\contentsline {section}{\numberline {7.2}Connectivity Manager Integration with NUBOMEDIA project}{55}{section.7.2}
-\contentsline {section}{\numberline {7.3}Network Performance Analysis}{55}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Test-bed Configuration}{55}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Installation of Connectivity Manager Agent}{56}{subsection.7.3.2}
-\contentsline {subsection}{\numberline {7.3.3}Topology Definition}{57}{subsection.7.3.3}
-\contentsline {subsection}{\numberline {7.3.4}Scenario 1: Without Instance Placement Engine \& QoS enabled}{58}{subsection.7.3.4}
-\contentsline {subsection}{\numberline {7.3.5}Scenario 2: With Instance Placement Engine enabled, but without QoS}{59}{subsection.7.3.5}
-\contentsline {subsection}{\numberline {7.3.6}Scenario 3: Instance Placement Engine and QoS Manager enabled}{60}{subsection.7.3.6}
-\contentsline {section}{\numberline {7.4}Conclusion}{63}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion}{65}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{65}{section.8.1}
-\contentsline {section}{\numberline {8.2}Problems Encountered}{65}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future Work}{65}{section.8.3}
+\contentsline {section}{\numberline {4.6}Conclusion}{38}{section.4.6}
+\contentsline {chapter}{\numberline {5}Design}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Architecture Overview}{39}{section.5.1}
+\contentsline {section}{\numberline {5.2}Interface between Manager \& Agent}{40}{section.5.2}
+\contentsline {section}{\numberline {5.3}Design of Connectivity Manager}{41}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Algorithm for Instance Placement}{42}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}QoS Manager}{43}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Design of Connectivity Manager Agent}{44}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}API}{45}{subsection.5.4.1}
+\contentsline {chapter}{\numberline {6}Implementation}{46}{chapter.6}
+\contentsline {section}{\numberline {6.1}Environment}{46}{section.6.1}
+\contentsline {subsubsection}{\numberline {6.1.0.1}Project Structure}{46}{subsubsection.6.1.0.1}
+\contentsline {subsubsection}{\numberline {6.1.0.2}Local OpenStack Test Environment}{47}{subsubsection.6.1.0.2}
+\contentsline {section}{\numberline {6.2}Connectivity Manager Components and Operations}{48}{section.6.2}
+\contentsline {subsubsection}{\numberline {6.2.0.3}Selection of Best-Performing Hypervisor}{48}{subsubsection.6.2.0.3}
+\contentsline {subsubsection}{\numberline {6.2.0.4}Enabling QoS for servers}{51}{subsubsection.6.2.0.4}
+\contentsline {section}{\numberline {6.3}Connectivity Manager Agent Components and Operations}{53}{section.6.3}
+\contentsline {section}{\numberline {6.4}Conclusion}{55}{section.6.4}
+\contentsline {chapter}{\numberline {7}Evaluation}{56}{chapter.7}
+\contentsline {section}{\numberline {7.1}Feature Analysis}{56}{section.7.1}
+\contentsline {section}{\numberline {7.2}Connectivity Manager Integration with NUBOMEDIA project}{56}{section.7.2}
+\contentsline {section}{\numberline {7.3}Network Performance Analysis}{56}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Test-bed Configuration}{56}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Installation of Connectivity Manager Agent}{57}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Topology Definition}{58}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.4}Scenario 1: Without Instance Placement Engine \& QoS enabled}{59}{subsection.7.3.4}
+\contentsline {subsection}{\numberline {7.3.5}Scenario 2: With Instance Placement Engine enabled, but without QoS}{60}{subsection.7.3.5}
+\contentsline {subsection}{\numberline {7.3.6}Scenario 3: Instance Placement Engine and QoS Manager enabled}{61}{subsection.7.3.6}
+\contentsline {section}{\numberline {7.4}Conclusion}{64}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion}{66}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{66}{section.8.1}
+\contentsline {section}{\numberline {8.2}Problems Encountered}{66}{section.8.2}
+\contentsline {section}{\numberline {8.3}Future Work}{66}{section.8.3}
 \newpage 
-\contentsline {chapter}{Bibliography}{67}{section.8.3}
-\contentsline {chapter}{\numberline {A}List of acronyms}{69}{appendix.A}
+\contentsline {chapter}{Bibliography}{68}{section.8.3}
+\contentsline {chapter}{\numberline {A}List of acronyms}{70}{appendix.A}
