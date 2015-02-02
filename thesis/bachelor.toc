@@ -63,26 +63,26 @@
 \contentsline {section}{\numberline {6.1}Environment}{46}{section.6.1}
 \contentsline {subsubsection}{\numberline {6.1.0.1}Project Structure}{46}{subsubsection.6.1.0.1}
 \contentsline {subsubsection}{\numberline {6.1.0.2}Local OpenStack Test Environment}{47}{subsubsection.6.1.0.2}
-\contentsline {section}{\numberline {6.2}Connectivity Manager Components and Operations}{48}{section.6.2}
+\contentsline {section}{\numberline {6.2}Connectivity Manager - Components and Operations}{48}{section.6.2}
 \contentsline {subsubsection}{\numberline {6.2.0.3}Selection of Best-Performing Hypervisor}{48}{subsubsection.6.2.0.3}
-\contentsline {subsubsection}{\numberline {6.2.0.4}Enabling QoS for servers}{51}{subsubsection.6.2.0.4}
-\contentsline {section}{\numberline {6.3}Connectivity Manager Agent Components and Operations}{53}{section.6.3}
-\contentsline {section}{\numberline {6.4}Conclusion}{55}{section.6.4}
-\contentsline {chapter}{\numberline {7}Evaluation}{56}{chapter.7}
-\contentsline {section}{\numberline {7.1}Feature Analysis}{56}{section.7.1}
-\contentsline {section}{\numberline {7.2}Connectivity Manager Integration with NUBOMEDIA project}{56}{section.7.2}
-\contentsline {section}{\numberline {7.3}Network Performance Analysis}{56}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Test-bed Configuration}{56}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Installation of Connectivity Manager Agent}{57}{subsection.7.3.2}
-\contentsline {subsection}{\numberline {7.3.3}Topology Definition}{58}{subsection.7.3.3}
-\contentsline {subsection}{\numberline {7.3.4}Scenario 1: Without Instance Placement Engine \& QoS enabled}{59}{subsection.7.3.4}
-\contentsline {subsection}{\numberline {7.3.5}Scenario 2: With Instance Placement Engine enabled, but without QoS}{60}{subsection.7.3.5}
-\contentsline {subsection}{\numberline {7.3.6}Scenario 3: Instance Placement Engine and QoS Manager enabled}{61}{subsection.7.3.6}
-\contentsline {section}{\numberline {7.4}Conclusion}{64}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion}{66}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{66}{section.8.1}
-\contentsline {section}{\numberline {8.2}Problems Encountered}{66}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future Work}{66}{section.8.3}
+\contentsline {subsubsection}{\numberline {6.2.0.4}Enabling QoS for servers}{52}{subsubsection.6.2.0.4}
+\contentsline {section}{\numberline {6.3}Connectivity Manager Agent - Components and Operations}{55}{section.6.3}
+\contentsline {section}{\numberline {6.4}Conclusion}{57}{section.6.4}
+\contentsline {chapter}{\numberline {7}Evaluation}{58}{chapter.7}
+\contentsline {section}{\numberline {7.1}Feature Analysis}{58}{section.7.1}
+\contentsline {section}{\numberline {7.2}Connectivity Manager Integration with NUBOMEDIA project}{58}{section.7.2}
+\contentsline {section}{\numberline {7.3}Network Performance Analysis}{58}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Test-bed Configuration}{58}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Installation of Connectivity Manager Agent}{59}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Topology Definition}{60}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.4}Scenario 1: Without Instance Placement Engine \& QoS enabled}{61}{subsection.7.3.4}
+\contentsline {subsection}{\numberline {7.3.5}Scenario 2: With Instance Placement Engine enabled, but without QoS}{62}{subsection.7.3.5}
+\contentsline {subsection}{\numberline {7.3.6}Scenario 3: Instance Placement Engine and QoS Manager enabled}{63}{subsection.7.3.6}
+\contentsline {section}{\numberline {7.4}Conclusion}{66}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion}{68}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{68}{section.8.1}
+\contentsline {section}{\numberline {8.2}Problems Encountered}{68}{section.8.2}
+\contentsline {section}{\numberline {8.3}Future Work}{68}{section.8.3}
 \newpage 
-\contentsline {chapter}{Bibliography}{68}{section.8.3}
-\contentsline {chapter}{\numberline {A}List of acronyms}{70}{appendix.A}
+\contentsline {chapter}{Bibliography}{70}{section.8.3}
+\contentsline {chapter}{\numberline {A}List of acronyms}{72}{appendix.A}

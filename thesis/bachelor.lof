@@ -34,20 +34,20 @@
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Implementation focus\relax }}{46}{figure.caption.39}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Check resource utilization of hosts\relax }}{48}{figure.caption.40}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Get total amount of required resources for topology\relax }}{49}{figure.caption.41}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Deployment feasibility check\relax }}{49}{figure.caption.42}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Single host deployment check\relax }}{50}{figure.caption.43}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Set AZ per Unit\relax }}{51}{figure.caption.44}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Method for setting QoS for all Units\relax }}{51}{figure.caption.45}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Activity diagram: Get list of hosts\relax }}{53}{figure.caption.46}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Activity diagram: Set QoS rates for all servers\relax }}{54}{figure.caption.47}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Activity diagram: Get OVS Port ID for server\relax }}{54}{figure.caption.48}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Activity diagram: Get QoS ID for OVS Port\relax }}{55}{figure.caption.49}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Deployment feasibility check\relax }}{50}{figure.caption.42}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Single host deployment check\relax }}{51}{figure.caption.43}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Set AZ per Unit\relax }}{52}{figure.caption.44}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Method for setting QoS for all Units\relax }}{53}{figure.caption.45}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Activity diagram: Get list of hosts\relax }}{55}{figure.caption.46}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Activity diagram: Set QoS rates for all servers\relax }}{56}{figure.caption.47}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Activity diagram: Get OVS Port ID for server\relax }}{56}{figure.caption.48}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Activity diagram: Get QoS ID for OVS Port\relax }}{57}{figure.caption.49}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Scenario 1: Placement of servers without Connectivity Manager\relax }}{59}{figure.caption.50}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Scenario 1: Bandwidth comparison\relax }}{60}{figure.caption.51}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Scenario 2: Placement of servers with Connectivity Manager\relax }}{60}{figure.caption.52}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Scenario 2: Bandwidth comparison\relax }}{61}{figure.caption.53}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Scenario 3: Placement of servers using the Connectivity Manager with QoS enabled\relax }}{61}{figure.caption.54}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Scenario 3: Bandwidth comparison\relax }}{64}{figure.caption.55}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Scenario 1: Placement of servers without Connectivity Manager\relax }}{61}{figure.caption.50}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Scenario 1: Bandwidth comparison\relax }}{62}{figure.caption.51}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Scenario 2: Placement of servers with Connectivity Manager\relax }}{62}{figure.caption.52}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Scenario 2: Bandwidth comparison\relax }}{63}{figure.caption.53}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Scenario 3: Placement of servers using the Connectivity Manager with QoS enabled\relax }}{63}{figure.caption.54}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Scenario 3: Bandwidth comparison\relax }}{66}{figure.caption.55}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
