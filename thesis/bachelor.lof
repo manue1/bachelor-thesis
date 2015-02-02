@@ -6,48 +6,48 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces OpenFlow Network Architecture\relax }}{16}{figure.caption.8}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces OpenFlow Switch components\relax }}{17}{figure.caption.9}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces OpenFlow pipeline processing\relax }}{18}{figure.caption.10}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Packet flow through an OpenFlow switch\relax }}{19}{figure.caption.11}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces OpenFlow QoS as a meter\relax }}{20}{figure.caption.12}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Architecture of Open vSwitch: divided into kernelspace and userspace\relax }}{22}{figure.caption.13}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Visualization of the interaction of the ovs-vsctl tool\relax }}{23}{figure.caption.14}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces QoS Queues attached to a Port in OVS\relax }}{24}{figure.caption.15}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Interaction among OpenStack services\relax }}{25}{figure.caption.16}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces OpenStack Compute service\relax }}{26}{figure.caption.17}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Neutron modular framework, including ML2 drivers\relax }}{28}{figure.caption.18}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces GRE tunneling between Controller Node and Compute Node\relax }}{28}{figure.caption.19}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Packet flow through an OpenFlow switch\relax }}{19}{figure.caption.12}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces OpenFlow QoS as a meter\relax }}{20}{figure.caption.15}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Architecture of Open vSwitch: divided into kernelspace and userspace\relax }}{22}{figure.caption.16}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Visualization of the interaction of the ovs-vsctl tool\relax }}{23}{figure.caption.17}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces QoS Queues attached to a Port in OVS\relax }}{24}{figure.caption.18}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Interaction among OpenStack services\relax }}{25}{figure.caption.19}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces OpenStack Compute service\relax }}{26}{figure.caption.20}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Neutron modular framework, including ML2 drivers\relax }}{28}{figure.caption.21}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces GRE tunneling between Controller Node and Compute Node\relax }}{28}{figure.caption.22}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of OpenDaylight Virtualization edition\relax }}{34}{figure.caption.20}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Ryu architecture\relax }}{35}{figure.caption.21}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Neutron QoS Extension architecture\relax }}{35}{figure.caption.22}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of OpenDaylight Virtualization edition\relax }}{34}{figure.caption.23}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ryu architecture\relax }}{35}{figure.caption.24}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Neutron QoS Extension architecture\relax }}{35}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces High-level architecture of the Connectivity Manager\relax }}{37}{figure.caption.23}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Minimized architecture of the Connectivity Manager and its integrations\relax }}{38}{figure.caption.24}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Workflow: Deployment of stack \& Assignment of QoS policies\relax }}{38}{figure.caption.25}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Class diagram: Metaclass (Interface) and implementation (Service) instantiated by Factory Agent\relax }}{39}{figure.caption.26}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Class diagram: Connectivity Manager service and its helper classes\relax }}{40}{figure.caption.27}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Deployment: Topology object from EMM\relax }}{40}{figure.caption.28}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Instance Placement activities\relax }}{41}{figure.caption.29}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Abstract design of the Connectivity Manager Agent\relax }}{42}{figure.caption.30}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Class diagram: Connectivity Manager Agent - All packages\relax }}{43}{figure.caption.31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces High-level architecture of the Connectivity Manager\relax }}{37}{figure.caption.26}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Minimized architecture of the Connectivity Manager and its integrations\relax }}{38}{figure.caption.27}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Workflow: Deployment of stack \& Assignment of QoS policies\relax }}{38}{figure.caption.28}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Class diagram: Metaclass (Interface) and implementation (Service) instantiated by Factory Agent\relax }}{39}{figure.caption.29}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Class diagram: Connectivity Manager service and its helper classes\relax }}{40}{figure.caption.30}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Deployment: Topology object from EMM\relax }}{40}{figure.caption.31}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Instance Placement activities\relax }}{41}{figure.caption.32}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Abstract design of the Connectivity Manager Agent\relax }}{42}{figure.caption.33}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Class diagram: Connectivity Manager Agent - All packages\relax }}{43}{figure.caption.34}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Implementation focus\relax }}{44}{figure.caption.32}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Check resource utilization of hosts\relax }}{46}{figure.caption.33}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Get total amount of required resources for topology\relax }}{47}{figure.caption.34}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Deployment feasibility check\relax }}{47}{figure.caption.35}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Single host deployment check\relax }}{48}{figure.caption.36}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Set AZ per Unit\relax }}{49}{figure.caption.37}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Method for setting QoS for all Units\relax }}{49}{figure.caption.38}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Activity diagram: Get list of hosts\relax }}{51}{figure.caption.39}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Activity diagram: Set QoS rates for all servers\relax }}{52}{figure.caption.40}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Activity diagram: Get OVS Port ID for server\relax }}{52}{figure.caption.41}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Activity diagram: Get QoS ID for OVS Port\relax }}{53}{figure.caption.42}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Implementation focus\relax }}{44}{figure.caption.35}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Check resource utilization of hosts\relax }}{46}{figure.caption.36}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Get total amount of required resources for topology\relax }}{47}{figure.caption.37}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Deployment feasibility check\relax }}{47}{figure.caption.38}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Single host deployment check\relax }}{48}{figure.caption.39}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Set AZ per Unit\relax }}{49}{figure.caption.40}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Method for setting QoS for all Units\relax }}{49}{figure.caption.41}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Activity diagram: Get list of hosts\relax }}{51}{figure.caption.42}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Activity diagram: Set QoS rates for all servers\relax }}{52}{figure.caption.43}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Activity diagram: Get OVS Port ID for server\relax }}{52}{figure.caption.44}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Activity diagram: Get QoS ID for OVS Port\relax }}{53}{figure.caption.45}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Scenario 1: Placement of servers without Connectivity Manager\relax }}{57}{figure.caption.43}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Scenario 1: Bandwidth comparison\relax }}{58}{figure.caption.44}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Scenario 2: Placement of servers with Connectivity Manager\relax }}{58}{figure.caption.45}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Scenario 2: Bandwidth comparison\relax }}{59}{figure.caption.46}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Scenario 3: Placement of servers using the Connectivity Manager with QoS enabled\relax }}{59}{figure.caption.47}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Scenario 3: Bandwidth comparison\relax }}{62}{figure.caption.48}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Scenario 1: Placement of servers without Connectivity Manager\relax }}{57}{figure.caption.46}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Scenario 1: Bandwidth comparison\relax }}{58}{figure.caption.47}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Scenario 2: Placement of servers with Connectivity Manager\relax }}{58}{figure.caption.48}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Scenario 2: Bandwidth comparison\relax }}{59}{figure.caption.49}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Scenario 3: Placement of servers using the Connectivity Manager with QoS enabled\relax }}{59}{figure.caption.50}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Scenario 3: Bandwidth comparison\relax }}{62}{figure.caption.51}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

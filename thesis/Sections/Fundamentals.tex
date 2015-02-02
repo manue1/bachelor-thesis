@@ -151,12 +151,16 @@ As illustrated in the figure, each packet is matched against the flow entries st
 
 A flow table contains flow entries which consist of the following fields \cite{ofspecification}: 
 
-\begin{center}
+\begin{table}[H]
+\centering
+
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline Match Fields & Priority & Counters & Instructions & Timeouts & Cookie \\ 
 \hline 
 \end{tabular} 
-\end{center}
+
+\caption{Fields within a Flow table}
+\end{table}
 
 \begin{itemize}
 \item \textbf{match fields:} ingress port, packet headers and optionally metadata
@@ -201,12 +205,16 @@ Meters are on a per-flow level and allow OpenFlow to implement various QoS opera
 
 The main components of a meter entry in the meter table are:
 
-\begin{center}
+\begin{table}[H]
+\centering
+
 \begin{tabular}{|c|c|c|}
 \hline Meter Identifier & Meter Bands & Counters \\ 
 \hline 
 \end{tabular} 
-\end{center}
+
+\caption{Fields within a meter entry in the meter table}
+\end{table}
 
 \begin{itemize}
 \item \textbf{meter identifier:} a 32 bit unsigned integer uniquely identifying the meter
@@ -218,12 +226,16 @@ The rate of packets assigned to a meter are measured and controlled. Meters are 
 
 A meter band is identified by its rate and consists of the following fields:
 
-\begin{center}
+\begin{table}[H]
+\centering
+
 \begin{tabular}{|c|c|c|c|}
 \hline Band Type & Rate & Counters & Type specific arguments \\ 
 \hline 
 \end{tabular} 
-\end{center}
+
+\caption{Fields within a meter band}
+\end{table}
 
 \begin{itemize}
 \item \textbf{band type:} defines how the packets are processed
