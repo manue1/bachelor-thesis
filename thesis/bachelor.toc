@@ -24,7 +24,7 @@
 \contentsline {subsubsection}{\numberline {2.1.5.2}OVSDB}{22}{subsubsection.2.1.5.2}
 \contentsline {subsubsection}{\numberline {2.1.5.3}Open vSwitch Management}{23}{subsubsection.2.1.5.3}
 \contentsline {subsubsection}{\numberline {2.1.5.4}QoS}{24}{subsubsection.2.1.5.4}
-\contentsline {subsubsection}{\numberline {2.1.5.5}GRE}{26}{subsubsection.2.1.5.5}
+\contentsline {subsubsection}{\numberline {2.1.5.5}VXLAN}{26}{subsubsection.2.1.5.5}
 \contentsline {section}{\numberline {2.2}Cloud Computing Infrastructures}{26}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}OpenStack}{26}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}OpenStack Compute (Nova)}{27}{subsection.2.2.2}
@@ -32,8 +32,8 @@
 \contentsline {subsection}{\numberline {2.2.4}OpenStack Neutron}{29}{subsection.2.2.4}
 \contentsline {subsubsection}{\numberline {2.2.4.1}Networking Concepts}{29}{subsubsection.2.2.4.1}
 \contentsline {subsubsection}{\numberline {2.2.4.2}Modular Layer 2}{30}{subsubsection.2.2.4.2}
-\contentsline {subsubsection}{\numberline {2.2.4.3}Network Distinction}{30}{subsubsection.2.2.4.3}
-\contentsline {subsubsection}{\numberline {2.2.4.4}Neutron Workflow}{30}{subsubsection.2.2.4.4}
+\contentsline {subsubsection}{\numberline {2.2.4.3}Network Distinction}{31}{subsubsection.2.2.4.3}
+\contentsline {subsubsection}{\numberline {2.2.4.4}Neutron Workflow}{31}{subsubsection.2.2.4.4}
 \contentsline {section}{\numberline {2.3}Conclusion}{31}{section.2.3}
 \contentsline {chapter}{\numberline {3}Requirements}{32}{chapter.3}
 \contentsline {section}{\numberline {3.1}Functional Requirements}{32}{section.3.1}

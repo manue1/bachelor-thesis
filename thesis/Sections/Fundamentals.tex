@@ -425,9 +425,9 @@ When a group of packets enters \textit{tc} that are marked with the flag \#10 an
 By configuring \textit{tc} the quantum value is not directly managed. It is automatically calculated based on an intermediary parameter named \textit{r2q} with the following formula:  $ quantum = \frac{rate}{r2q} $ This value is set on the root qdisc and is used across all of its leaves. Its default value is set to 10.
 
 
-\subsubsection{GRE}
+\subsubsection{VXLAN}
 
-Generic Routing Encapsulation (GRE) tunnels are used with Open vSwitch \cite{gre-rdo} to encapsulate isolated layer 2 network traffic between compute nodes. This helps enabling tenant networks in Neutron without the need configure a switch to trunk a range of VLANs.
+Virtual Extensible LAN tunnels are used with Open vSwitch in this work to encapsulate isolated layer 2 network traffic between compute nodes. The benefits of VXLAN are that it can adress up to 16M tenant networks as opposed to the 4K in VLAN, it allows for better scaling and because the VXLAN support is only required at the endpoints of the tunnels it permits a vendor flexibility \cite{openstack-vxlan}. The tunnels can be used to perform a large scale isolation within a network.
 
 
 \section{Cloud Computing Infrastructures}
@@ -458,8 +458,7 @@ Nova is used to provision and manage large amounts of virtual machines . It supp
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{images/fundamentals/openstack_nova.png}
-% % RECREATE THIS GRAPHIC % %
-\caption{OpenStack Compute service}
+\caption{OpenStack Compute service} \cite{nova-arch}
 \end{figure}
 
 \textbf{Compute Node segregation}
@@ -517,11 +516,11 @@ The ML2 plugin is a framework that allows the simultaneous usage of multiple lay
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{images/fundamentals/neutron_ml2.png}
+\includegraphics[width=0.3\textwidth]{images/fundamentals/neutron_ml2.png}
 \caption{Neutron modular framework, including ML2 drivers}
 \end{figure}
 
-The plugin interfaces with the type driver and the mechanism driver. The type driver defines the network types that can be declared when a new network is created and currently includes: local, flat, vlan, gre and vxlan. The mechanism driver enables the mechanism for accessing these network types, i.e. Open vSwitch, Linux Bridge or other vendor-specific solutions. 
+The plugin integrates the type driver and the mechanism driver. The type driver defines the network types that can be declared when a new network is created and currently includes: local, flat, vlan, gre and vxlan. The mechanism driver enables the mechanism for accessing these network types, i.e. Open vSwitch, Linux Bridge or other vendor-specific solutions. 
 
 
 
@@ -529,9 +528,13 @@ The plugin interfaces with the type driver and the mechanism driver. The type dr
 
 Open vSwitch is the ML2 mechanism driver that is set as default when installing OpenStack with Neutron enabled using the devstack script. It is also the most commonly deployed agent.
 
-% % Add a graphic that contains a network setup with all bridges here!! % %
-% % Also describe which bridges are needed and how they interface with the IP namespaces 
-% % alternatively use neutron_gre_connection.png from http://docs.openstack.org/openstack-ops/content/network_troubleshooting.html % %
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{images/fundamentals/neutron_ovs_bridges.png}
+\caption{Neutron with OVS and VXLAN enabled}
+\end{figure}
+
+The above figure shows the connectivity of a VM, which has a 'qvo'-Port located in the internal bridge of the OVS. Each network within Neutron has its own network namespace and the external gateway uses the 'qrouter' namespace for routing. The connection between the compute nodes in this example uses VXLAN as the network type driver.
 
 
 \subsubsection{Network Distinction}
