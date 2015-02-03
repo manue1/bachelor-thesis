@@ -29,7 +29,7 @@ In order to test the Connectivity Manager Agent and the use of its OpenStack API
 
 For the installation of OpenStack the devstack script was used, which takes care of not only the deployment of the different components but also their configuration. The configuration parameters are set in the 'local.conf' file. For the OpenStack cluster controller the following configuration was used:
 
-\begin{lstlisting}
+\begin{lstlisting}[language=json]
 [[local|localrc]]
 ADMIN_PASSWORD=pass
 DATABASE_PASSWORD=pass
@@ -174,6 +174,13 @@ The dictionary that this method returns is then converted to the JSON format and
 
 The two major operations that the Connectivity Manager needs to perform in order to provide the required services to this project is retrieving the resource status of the data center and setting QoS for the servers ports.
 
+For using the OVS Client it needs to access the OVSDB that is located on each host. In order to allow that the following command needs to be executed on them once:
+\begin{lstlisting}
+$ sudo ovs-vsctl set-manager ptcp:6640
+\end{lstlisting}
+
+This enables remote administration through a passive TCP connection using the local IP address and port 6640. 
+
 \subsection{Get list of all hosts and their utilization state}
 
 The following figure displays the way in which the CM Agent creates a dictionary containing the list of all hosts within the selected tenant. It contains information such as the amount of already running virtual machines, the amount of allocated RAM in MB and the number of vCPUs in use. For each of the virtual machines it shows their ID, name and further resource information that is later needed for setting QoS. In case the VM already has a QoS assurance attached to its port, the corresponding minimal and maximal rates are shown.
@@ -222,15 +229,14 @@ In order to set the bandwidth rates for the servers this method first retrieves 
 
 \subsection{API}
 
-The API was implemented using Bottle. It is a fast, simple and lightweight WSGI micro web-framework. Therein three routes were defined:
-\begin{lstlisting}
+The API was implemented using Bottle. It is a fast, simple and lightweight WSGI micro web-framework \cite{bottle-docs}. Therein three routes were defined:
+\begin{lstlisting}[language=json]
 # Welcome Screen
 self._app.route('/', method="GET", callback=self._welcome)
 # Host method
 self._app.route('/hosts', method="GET", callback=self._hosts_list)
 # QoS method
-self._app.route('/qoses', method=["POST", "OPTIONS"],
- callback=self._qoses_set)
+self._app.route('/qoses', method=["POST", "OPTIONS"], callback=self._qoses_set)
 \end{lstlisting}
 
 The first route contains a welcome message and can be used to check if the WSGI app is currently running.
@@ -263,7 +269,7 @@ These functional tests contain the following methods for the main components of 
 \end{itemize}
 
 The tests for the Connectivity Manager are part of the testing packages of the Elastic Media Manager, because that is the only way they're called. The \textit{test\_deploy.py} was used for checking if the integration works successfully.  It uses a predefined topology from a local file. The following minimized configuration was used during the tests:
-\begin{lstlisting}
+\begin{lstlisting}[language=json]
 {
     "name":"local_nm_template_minified",
     "service_instances": [

@@ -1,7 +1,5 @@
 \chapter{Evaluation}
 
-\section{Feature Analysis}
-
 
 \section{Connectivity Manager Integration with NUBOMEDIA project}
 
@@ -10,7 +8,7 @@
 The Connectivity Manager (CM) is part of the NUBOMEDIA platform and is placed between the virtual network resource management of the cloud infrastructure and the
 multimedia application. The main focus of the CM is related to management and control of network functions of the virtual network infrastructure provided by OpenStack.
 
-Nubomedia is an elastic Platform-as-a-Service (PaaS) cloud for interactive social multimedia \cite{nubomedia}. Its architecture is based on media pipelines: chains of elements providing media capabilities such as encryption, transcoding, augmented reality or video content analysis. These chains allow building arbitrarily complex media processing for applications. As a unique feature, from the point of view of the pipelines, the NUBOMEDIA cloud infrastructure behaves as a single virtual super-computer encompassing all the available resources of the underlying physical network.
+Nubomedia is an elastic Platform-as-a-Service (PaaS) cloud for interactive multimedia services \cite{nubomedia}. Its architecture is based on media pipelines: chains of elements providing media capabilities such as encryption, transcoding, augmented reality or video content analysis. These chains allow building arbitrarily complex media processing for applications. As a unique feature, from the point of view of the pipelines, the NUBOMEDIA cloud infrastructure behaves as a single virtual super-computer encompassing all the available resources of the underlying physical network. A big part of currently developed applications within the platform make use of WebRTC, which can use TCP or UDP traffic. This is why both protocols need to be evaluated.
 
 \section{Network Performance Analysis}
 
@@ -20,25 +18,36 @@ The following section contains information about the used configuration and then
 
 The testbed consists of two nodes with the following hardware characteristics:
 
-\begin{tabularx}{\textwidth}{ |X|X|X|X| }
-\hline Name & \textbf{Controller node} & \textbf{Compute node} \\ 
+
+
+\begin{table}[H]
+\centering
+
+\begin{tabularx}{\textwidth}{ |X|X|X| }
+\hline Name & \textbf{Control node} & \textbf{Compute node} \\ 
 \hline Hostname & datacenter-4 & dc4-comp \\ 
-\hline OS & Ubuntu 14.04.1 LTS & Ubuntu 14.04.1 LTS \\ 
 \hline RAM & 12 GB & 8 GB \\ 
-\hline CPU & 8-core Intel Core i7-4765T CPU @ 2.00GHz & 4-core Intel(R) Core(TM) i3-2120T CPU @ 2.60GHz \\ 
+\hline CPU & 8-core Intel Core i7-4765T CPU @ 2.00GHz & 4-core Intel Core i3-2120T CPU @ 2.60GHz \\ 
+\hline OS & Ubuntu 14.04.1 LTS & Ubuntu 14.04.1 LTS \\ 
+\hline Kernel version & GNU/Linux 3.13.0-32-generic & GNU/Linux 3.13.0-32-generic \\
 \hline Ethernet card & Intel Corporation Gigabit Ethernet Connection I217-LM & Intel Corporation 82579LM Gigabit Network Connection \\ 
 \hline 
 \end{tabularx}
 
-The two nodes are connected to a Gigabit-Ethernet switch. The installation of OpenStack was performed using the devstack script as outlined in section ... (Implementation / Devstack) .
+\caption{Hardware resources of testbed used for evaluation}
+\end{table}
+
+
+The two nodes are connected to a Gigabit-Ethernet switch. The installation of OpenStack was performed using the devstack script as outlined in the Devstack section in the Implementation chapter.
 
 \subsection{Installation of Connectivity Manager Agent}
 
 A setup script exists in order to make it easier to get the CM Agent running. It builds installs all the necessary Python packages in a virtual environment, in order to have all packages isolated from the already existing Python set-up. This ensures that all packages are in the required version and don't interfere with the ones that are needed OpenStack or other applications. 
 
 First of all the git repository needs to be cloned from the remote git server. For the installation the cm-agent.sh script needs to be executed with the 'install' option.
+
+\textit{\$ ./cm-agent.sh}
 \begin{lstlisting}
-stack@datacenter-4:~/nubomedia$ ./cm-agent.sh 
 Usage: cm-agent.sh option
 options:
   install   - install the server
@@ -49,9 +58,10 @@ options:
 \end{lstlisting}
 The installation process includes setting up the virtual environment, installing all required Python packages and copying the configuration file to the /etc/nubomedia folder.
 
-The configuration file needs to be customized, so it contains the IP address of the controller node and the correct OpenStack credentials:
+The configuration file needs to be customized, so it contains the IP address of the control node and the correct OpenStack credentials:
+
+\textit{\$ cat /etc/nubomedia/cm-agent.properties:}
 \begin{lstlisting}
-stack@datacenter-4:~$ cat /etc/nubomedia/cm-agent.properties 
 os_username=admin
 os_password=pass
 os_auth_url=http://192.168.41.45:5000/v2.0
@@ -64,8 +74,9 @@ Lastly it can be run in a screen session using the following command: \\
 \subsection{Topology Definition}
 
 The topology that is used for the evaluation contains the following services instances:
-\begin{lstlisting}
-data/json_file/topologies/topology_local.json:
+
+\textit{data/json\_file/topologies/topology\_local.json:}
+\begin{lstlisting}[language=json,firstnumber=1]
 {
     "name":"local_nm_template_minified",
     "service_instances": [
@@ -89,8 +100,8 @@ It can be deployed using a test application which performs a HTTP POST to the EM
 
 The service types are further defined in another JSON file, which includes their configuration, networks and other parameters that are needed for provisioning. As one example the Media Server service is given below:
 
-\begin{lstlisting}
-data/json_file/services/MediaService.json 
+\textit{data/json\_file/services/MediaService.json:}
+\begin{lstlisting}[language=json,firstnumber=1]
 {
     "service_type": "MediaServer",
     "version":"1",
@@ -188,7 +199,7 @@ The servers are again placed on a single host and the Quality of Service configu
 For this last scenario two servers were set as iperf-servers and three servers as iperf-clients. The \textit{'Controller-1'} server acted as the server for a connection with the \textit{'MediaServer-2'} while the \textit{'MediaServer-3'} received packets from \textit{'MediaServer-1'} and \textit{'Broker-1'}.
 
 The topology with it's configured QoS Queues is also visible by performing a HTTP GET to the Connectivity Manager Agent at the /hosts path:
-\begin{lstlisting}
+\begin{lstlisting}[language=json,firstnumber=1]
 {  
    "dc4-comp":{  
       "cpu_total":4,
