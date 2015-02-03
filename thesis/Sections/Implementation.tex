@@ -237,9 +237,47 @@ The first route contains a welcome message and can be used to check if the WSGI 
 The /hosts route calls the list\_hosts() method in the Agent when a HTTP GET is received.
 When the /qoses route is called with the QoS parameters in its HTTP body it calls the set\_qos() method in the Agent class.
 
+The server uses the localhost IP address and is served and listens on port 8091. It is important that this IP address is whitelisted in case a firewall exists. In the case of using a Vagrant box the port needed to be forwarded to the local machine.
+
 \section{Tests}
 
+For testing the components of the Connectivity Manager Agent the code was synchronized to a local testbed with two virtual machines, one of which acted as the control node and the other just as a compute node. 
 
+\begin{figure}[H]
+\centering
 
+\includegraphics[width=0.2\textwidth]{images/implementation/cma_tests.png}
 
-\section{Conclusion}
+\caption{Connectivity Manager Agent: Test package}
+\end{figure}
+
+These functional tests contain the following methods for the main components of the application:
+\begin{itemize}
+\item Agent: instantiates the Agent class and tests listing the information about all hosts
+\item Keystone: tests retrieving the token and endpoint
+\item Neutron: lists all ports and shows the Neutron Port ID for a selected IP address
+\item Nova: retrieves all hosts and their servers
+\item OVS: tests the main functionalities that are used within this work: listing all interfaces, ports, queues, qos's and creating a new queue and qos that are then attached to a OVS port
+\item QoS: takes the parameters set in the \textit{test\_qos\_config.json} file as an input and posts it to the API in order to try and set QoS on the defined server ports
+\item ReST: tests retrieving the list of all hosts through the API
+\end{itemize}
+
+The tests for the Connectivity Manager are part of the testing packages of the Elastic Media Manager, because that is the only way they're called. The \textit{test\_deploy.py} was used for checking if the integration works successfully.  It uses a predefined topology from a local file. The following minimized configuration was used during the tests:
+\begin{lstlisting}
+{
+    "name":"local_nm_template_minified",
+    "service_instances": [
+        {
+            "name":"Controller",
+            "service_type":"Controller"
+        },
+        {
+            "name":"Broker",
+            "service_type":"Broker"
+        }
+    ]
+}
+\end{lstlisting}
+
+To find out more about the parameters that each of the service\_types corresponds to, please check the \textit{Topology Definition} % % LINK TO SECTION % %
+in the Evaluation section.

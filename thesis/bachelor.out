@@ -52,21 +52,20 @@
 \BOOKMARK [2][-]{subsection.6.3.2}{Set QoS rates for all servers}{section.6.3}% 52
 \BOOKMARK [2][-]{subsection.6.3.3}{API}{section.6.3}% 53
 \BOOKMARK [1][-]{section.6.4}{Tests}{chapter.6}% 54
-\BOOKMARK [1][-]{section.6.5}{Conclusion}{chapter.6}% 55
-\BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 56
-\BOOKMARK [1][-]{section.7.1}{Feature Analysis}{chapter.7}% 57
-\BOOKMARK [1][-]{section.7.2}{Connectivity Manager Integration with NUBOMEDIA project}{chapter.7}% 58
-\BOOKMARK [1][-]{section.7.3}{Network Performance Analysis}{chapter.7}% 59
-\BOOKMARK [2][-]{subsection.7.3.1}{Test-bed Configuration}{section.7.3}% 60
-\BOOKMARK [2][-]{subsection.7.3.2}{Installation of Connectivity Manager Agent}{section.7.3}% 61
-\BOOKMARK [2][-]{subsection.7.3.3}{Topology Definition}{section.7.3}% 62
-\BOOKMARK [2][-]{subsection.7.3.4}{Scenario 1: Without Instance Placement Engine \046 QoS enabled}{section.7.3}% 63
-\BOOKMARK [2][-]{subsection.7.3.5}{Scenario 2: With Instance Placement Engine enabled, but without QoS}{section.7.3}% 64
-\BOOKMARK [2][-]{subsection.7.3.6}{Scenario 3: Instance Placement Engine and QoS Manager enabled}{section.7.3}% 65
-\BOOKMARK [1][-]{section.7.4}{Conclusion}{chapter.7}% 66
-\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 67
-\BOOKMARK [1][-]{section.8.1}{Summary}{chapter.8}% 68
-\BOOKMARK [1][-]{section.8.2}{Problems Encountered}{chapter.8}% 69
-\BOOKMARK [1][-]{section.8.3}{Future Work}{chapter.8}% 70
-\BOOKMARK [0][-]{section.8.3}{Bibliography}{}% 71
-\BOOKMARK [0][-]{appendix.A}{List of acronyms}{}% 72
+\BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 55
+\BOOKMARK [1][-]{section.7.1}{Feature Analysis}{chapter.7}% 56
+\BOOKMARK [1][-]{section.7.2}{Connectivity Manager Integration with NUBOMEDIA project}{chapter.7}% 57
+\BOOKMARK [1][-]{section.7.3}{Network Performance Analysis}{chapter.7}% 58
+\BOOKMARK [2][-]{subsection.7.3.1}{Test-bed Configuration}{section.7.3}% 59
+\BOOKMARK [2][-]{subsection.7.3.2}{Installation of Connectivity Manager Agent}{section.7.3}% 60
+\BOOKMARK [2][-]{subsection.7.3.3}{Topology Definition}{section.7.3}% 61
+\BOOKMARK [2][-]{subsection.7.3.4}{Scenario 1: Without Instance Placement Engine \046 QoS enabled}{section.7.3}% 62
+\BOOKMARK [2][-]{subsection.7.3.5}{Scenario 2: With Instance Placement Engine enabled, but without QoS}{section.7.3}% 63
+\BOOKMARK [2][-]{subsection.7.3.6}{Scenario 3: Instance Placement Engine and QoS Manager enabled}{section.7.3}% 64
+\BOOKMARK [1][-]{section.7.4}{Conclusion}{chapter.7}% 65
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 66
+\BOOKMARK [1][-]{section.8.1}{Summary}{chapter.8}% 67
+\BOOKMARK [1][-]{section.8.2}{Problems Encountered}{chapter.8}% 68
+\BOOKMARK [1][-]{section.8.3}{Future Work}{chapter.8}% 69
+\BOOKMARK [0][-]{section.8.3}{Bibliography}{}% 70
+\BOOKMARK [0][-]{appendix.A}{List of acronyms}{}% 71

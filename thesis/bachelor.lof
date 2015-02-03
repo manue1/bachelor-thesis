@@ -42,12 +42,13 @@
 \contentsline {figure}{\numberline {6.9}{\ignorespaces Activity diagram: Get OVS Port ID for server\relax }}{55}{figure.caption.47}
 \contentsline {figure}{\numberline {6.10}{\ignorespaces Activity diagram: Get QoS ID for OVS Port\relax }}{56}{figure.caption.48}
 \contentsline {figure}{\numberline {6.11}{\ignorespaces Activity diagram: Set requested QoS rates for servers\relax }}{57}{figure.caption.49}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Connectivity Manager Agent: Test package\relax }}{58}{figure.caption.50}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Scenario 1: Placement of servers without Connectivity Manager\relax }}{61}{figure.caption.50}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Scenario 1: Bandwidth comparison\relax }}{62}{figure.caption.51}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Scenario 2: Placement of servers with Connectivity Manager\relax }}{62}{figure.caption.52}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Scenario 2: Bandwidth comparison\relax }}{63}{figure.caption.53}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Scenario 3: Placement of servers using the Connectivity Manager with QoS enabled\relax }}{63}{figure.caption.54}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Scenario 3: Bandwidth comparison\relax }}{66}{figure.caption.55}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Scenario 1: Placement of servers without Connectivity Manager\relax }}{62}{figure.caption.51}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Scenario 1: Bandwidth comparison\relax }}{63}{figure.caption.52}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Scenario 2: Placement of servers with Connectivity Manager\relax }}{63}{figure.caption.53}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Scenario 2: Bandwidth comparison\relax }}{64}{figure.caption.54}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Scenario 3: Placement of servers using the Connectivity Manager with QoS enabled\relax }}{64}{figure.caption.55}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Scenario 3: Bandwidth comparison\relax }}{67}{figure.caption.56}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

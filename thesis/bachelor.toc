@@ -71,22 +71,21 @@
 \contentsline {subsection}{\numberline {6.3.2}Set QoS rates for all servers}{56}{subsection.6.3.2}
 \contentsline {subsection}{\numberline {6.3.3}API}{57}{subsection.6.3.3}
 \contentsline {section}{\numberline {6.4}Tests}{57}{section.6.4}
-\contentsline {section}{\numberline {6.5}Conclusion}{57}{section.6.5}
-\contentsline {chapter}{\numberline {7}Evaluation}{58}{chapter.7}
-\contentsline {section}{\numberline {7.1}Feature Analysis}{58}{section.7.1}
-\contentsline {section}{\numberline {7.2}Connectivity Manager Integration with NUBOMEDIA project}{58}{section.7.2}
-\contentsline {section}{\numberline {7.3}Network Performance Analysis}{58}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Test-bed Configuration}{58}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Installation of Connectivity Manager Agent}{59}{subsection.7.3.2}
-\contentsline {subsection}{\numberline {7.3.3}Topology Definition}{60}{subsection.7.3.3}
-\contentsline {subsection}{\numberline {7.3.4}Scenario 1: Without Instance Placement Engine \& QoS enabled}{61}{subsection.7.3.4}
-\contentsline {subsection}{\numberline {7.3.5}Scenario 2: With Instance Placement Engine enabled, but without QoS}{62}{subsection.7.3.5}
-\contentsline {subsection}{\numberline {7.3.6}Scenario 3: Instance Placement Engine and QoS Manager enabled}{63}{subsection.7.3.6}
-\contentsline {section}{\numberline {7.4}Conclusion}{66}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion}{68}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{68}{section.8.1}
-\contentsline {section}{\numberline {8.2}Problems Encountered}{68}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future Work}{68}{section.8.3}
+\contentsline {chapter}{\numberline {7}Evaluation}{59}{chapter.7}
+\contentsline {section}{\numberline {7.1}Feature Analysis}{59}{section.7.1}
+\contentsline {section}{\numberline {7.2}Connectivity Manager Integration with NUBOMEDIA project}{59}{section.7.2}
+\contentsline {section}{\numberline {7.3}Network Performance Analysis}{59}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Test-bed Configuration}{59}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Installation of Connectivity Manager Agent}{60}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Topology Definition}{61}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.4}Scenario 1: Without Instance Placement Engine \& QoS enabled}{62}{subsection.7.3.4}
+\contentsline {subsection}{\numberline {7.3.5}Scenario 2: With Instance Placement Engine enabled, but without QoS}{63}{subsection.7.3.5}
+\contentsline {subsection}{\numberline {7.3.6}Scenario 3: Instance Placement Engine and QoS Manager enabled}{64}{subsection.7.3.6}
+\contentsline {section}{\numberline {7.4}Conclusion}{67}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion}{69}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{69}{section.8.1}
+\contentsline {section}{\numberline {8.2}Problems Encountered}{69}{section.8.2}
+\contentsline {section}{\numberline {8.3}Future Work}{69}{section.8.3}
 \newpage 
-\contentsline {chapter}{Bibliography}{70}{section.8.3}
-\contentsline {chapter}{\numberline {A}List of acronyms}{72}{appendix.A}
+\contentsline {chapter}{Bibliography}{71}{section.8.3}
+\contentsline {chapter}{\numberline {A}List of acronyms}{73}{appendix.A}
