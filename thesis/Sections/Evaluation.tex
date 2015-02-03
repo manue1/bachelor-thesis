@@ -42,7 +42,7 @@ The two nodes are connected to a Gigabit-Ethernet switch. The installation of Op
 
 A setup script exists in order to make it easier to get the CM Agent running. It builds and installs all the necessary Python packages in a virtual environment.This has the benefit that all packages are isolated from already existing Python installations and ensures that all packages are in the required version and don't interfere with the ones that are needed by OpenStack or other applications. 
 
-First of all the git repository needs to be cloned from the remote git server. For the installation the cm-agent.sh script needs to be executed with the 'install' option.
+The first step is to clone the git repository from the remote git server. For the installation the cm-agent.sh script needs to be executed with the 'install' option.
 
 \textit{\$ ./cm-agent.sh}
 \begin{lstlisting}
@@ -56,7 +56,7 @@ options:
 \end{lstlisting}
 The installation process includes setting up the virtual environment, installing all required Python packages and copying the configuration file to the /etc/nubomedia folder.
 
-The configuration file needs to be customized, so it contains the IP address of the control node and the correct OpenStack tenant credentials:
+The configuration file needs to be customized, so it contains the correct IP address of the control node and OpenStack tenant credentials:
 
 \textit{\$ cat /etc/nubomedia/cm-agent.properties:}
 \begin{lstlisting}
@@ -66,8 +66,10 @@ os_auth_url=http://192.168.41.45:5000/v2.0
 os_tenant=demo
 \end{lstlisting}
 
-Lastly it can be run in a screen session using the following command: \\
+Lastly the application can be started in a screen session using the following command: \\
 \textit{\$ venv/bin/python cm-agent/wsgi/application.py}
+
+The \textit{venv/bin/python} command means that the program uses the Python interpreter from the created virtual environment.
 
 \subsection{Topology Definition}
 
@@ -94,7 +96,7 @@ The topology that is used for the evaluation contains the following services ins
 }
 \end{lstlisting}
 
-It can be deployed using a test application which performs a HTTP POST to the EMM API at the \textit{/topologies} path.
+It can be deployed using a test script which performs a HTTP POST to the EMM API at the \textit{/topologies} path.
 
 The service types are further defined in another JSON file, which includes their configuration, networks and other parameters that are needed for provisioning. As one example the Media Server service is given below:
 
@@ -156,7 +158,7 @@ For testing the bandwidth the MediaServer-2 was used as a TCP server using iperf
 
 \includegraphics[width=0.5\textwidth]{images/evaluation/testbed_scenario1_bw}
 
-\caption{Scenario 1: TCP Bandwidth comparison}
+\caption{Scenario 1: TCP bandwidth comparison}
 \end{figure}
 
 As visible the network performance of the server on the separate node performs much worse, which is also due to the fact that there is only a Gigabit-Ethernet connection between the nodes.
@@ -202,7 +204,7 @@ The following graph shows that the available bandwidth using TCP packets is now 
 
 \includegraphics[width=0.5\textwidth]{images/evaluation/testbed_scenario2_bw}
 
-\caption{Scenario 2: Bandwidth comparison}
+\caption{Scenario 2: TCP bandwidth comparison}
 \end{figure}
 
 \textbf{UDP traffic}
@@ -357,14 +359,14 @@ The topology with it's configured QoS Queues is also visible by performing a HTT
 
 \textbf{TCP traffic}
 
-For this last scenario two servers were set as iperf-servers and three servers as iperf-clients. The \textit{'Controller-1'} server acted as the server for a connection with the \textit{'MediaServer-2'} while the \textit{'MediaServer-3'} received packets from \textit{'MediaServer-1'} and \textit{'Broker-1'}.
+For this last scenario two iperf-servers and three iperf-clients were configured. The \textit{'Controller-1'} server received packets from the \textit{'MediaServer-2'} and the \textit{'MediaServer-3'} from \textit{'MediaServer-1'} and \textit{'Broker-1'}.
 
 \begin{figure}[H]
 \centering
 
 \includegraphics[width=0.5\textwidth]{images/evaluation/testbed_scenario2_bw}
 
-\caption{Scenario 3: Bandwidth comparison}
+\caption{Scenario 3: TCP bandwidth comparison}
 \end{figure}
 
 The first two bars show that the egress port on the Open vSwitch that the \textit{'MediaServer-3'} is connected to is limited to a combined bandwidth of 10 GBit/s. This is why the two connections share the available bandwidth and are nearly equal. It has to be remarked that the network performance is the average of a 10-second bandwidth test.
