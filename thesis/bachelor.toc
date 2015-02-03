@@ -79,12 +79,12 @@
 \contentsline {subsection}{\numberline {7.2.3}Topology Definition}{63}{subsection.7.2.3}
 \contentsline {subsection}{\numberline {7.2.4}Scenario 1: Without Instance Placement Engine \& QoS enabled}{64}{subsection.7.2.4}
 \contentsline {subsection}{\numberline {7.2.5}Scenario 2: With Instance Placement Engine enabled, but without QoS}{65}{subsection.7.2.5}
-\contentsline {subsection}{\numberline {7.2.6}Scenario 3: Instance Placement Engine and QoS Manager enabled}{66}{subsection.7.2.6}
-\contentsline {section}{\numberline {7.3}Conclusion}{70}{section.7.3}
-\contentsline {chapter}{\numberline {8}Conclusion}{71}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{71}{section.8.1}
-\contentsline {section}{\numberline {8.2}Problems Encountered}{71}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future Work}{71}{section.8.3}
+\contentsline {subsection}{\numberline {7.2.6}Scenario 3: Instance Placement Engine and QoS Manager enabled}{67}{subsection.7.2.6}
+\contentsline {section}{\numberline {7.3}Conclusion}{71}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusion}{72}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{72}{section.8.1}
+\contentsline {section}{\numberline {8.2}Problems Encountered}{72}{section.8.2}
+\contentsline {section}{\numberline {8.3}Future Work}{72}{section.8.3}
 \newpage 
-\contentsline {chapter}{Bibliography}{73}{section.8.3}
-\contentsline {chapter}{\numberline {A}List of acronyms}{75}{appendix.A}
+\contentsline {chapter}{Bibliography}{74}{section.8.3}
+\contentsline {chapter}{\numberline {A}List of acronyms}{76}{appendix.A}

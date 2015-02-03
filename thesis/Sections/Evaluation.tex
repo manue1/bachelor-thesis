@@ -12,13 +12,11 @@ Nubomedia is an elastic Platform-as-a-Service (PaaS) cloud for interactive multi
 
 \section{Network Performance Analysis}
 
-The following section contains information about the used configuration and then different scenarios that were used to evaluate the effectiveness of the Connectivity Manager. All scenarios used the same topology and were run on a tenant without any other deployed servers or stacks. The bandwidth tests were performed using the iperf tool.
+The following section contains information about the used configuration followed by the different scenarios that were used to evaluate the effectiveness of the Connectivity Manager. All scenarios used the same topology and were deployed on a tenant without any other running servers or Heat stacks. The bandwidth tests were performed using the iperf tool.
 
 \subsection{Test-bed Configuration}
 
 The testbed consists of two nodes with the following hardware characteristics:
-
-
 
 \begin{table}[H]
 \centering
@@ -42,7 +40,7 @@ The two nodes are connected to a Gigabit-Ethernet switch. The installation of Op
 
 \subsection{Installation of Connectivity Manager Agent}
 
-A setup script exists in order to make it easier to get the CM Agent running. It builds installs all the necessary Python packages in a virtual environment, in order to have all packages isolated from the already existing Python set-up. This ensures that all packages are in the required version and don't interfere with the ones that are needed OpenStack or other applications. 
+A setup script exists in order to make it easier to get the CM Agent running. It builds and installs all the necessary Python packages in a virtual environment.This has the benefit that all packages are isolated from already existing Python installations and ensures that all packages are in the required version and don't interfere with the ones that are needed by OpenStack or other applications. 
 
 First of all the git repository needs to be cloned from the remote git server. For the installation the cm-agent.sh script needs to be executed with the 'install' option.
 
@@ -58,7 +56,7 @@ options:
 \end{lstlisting}
 The installation process includes setting up the virtual environment, installing all required Python packages and copying the configuration file to the /etc/nubomedia folder.
 
-The configuration file needs to be customized, so it contains the IP address of the control node and the correct OpenStack credentials:
+The configuration file needs to be customized, so it contains the IP address of the control node and the correct OpenStack tenant credentials:
 
 \textit{\$ cat /etc/nubomedia/cm-agent.properties:}
 \begin{lstlisting}
@@ -149,6 +147,8 @@ In this first scenario the deployment without any influence of the Connectivity 
 \caption{Scenario 1: Placement of servers without Connectivity Manager}
 \end{figure}
 
+\textbf{TCP traffic}
+
 For testing the bandwidth the MediaServer-2 was used as a TCP server using iperf. All other servers connected to it in client mode sending and retrieving TCP packets in a timeframe of 10 seconds. The following graph shows the bandwidth usage of the servers.
 
 \begin{figure}[H]
@@ -156,10 +156,30 @@ For testing the bandwidth the MediaServer-2 was used as a TCP server using iperf
 
 \includegraphics[width=0.5\textwidth]{images/evaluation/testbed_scenario1_bw}
 
-\caption{Scenario 1: Bandwidth comparison}
+\caption{Scenario 1: TCP Bandwidth comparison}
 \end{figure}
 
 As visible the network performance of the server on the separate node performs much worse, which is also due to the fact that there is only a Gigabit-Ethernet connection between the nodes.
+
+\textbf{UDP traffic}
+
+In order to test the bandwidth with UDP traffic, two servers where started as a UDP server and each of them received one client connection. The selected bandwidth limit that the packets were streamed at is 800 MBit/s.
+
+\begin{table}[H]
+\centering
+
+\begin{tabularx}{\textwidth}{ |X|X|X|X|X| }
+\hline Server name & Measured bandwidth & Ratio lost/total datagrams & Datagrams out of order & Jitter \\ 
+\hline MediaServer-1 & 780 MBit/s & 3.4\% & 18 & 0.011 ms\\ 
+\hline Controller-1 & 779 MBit/s & 2\% & 49689 & 0.078 ms \\ 
+\hline 
+\end{tabularx}
+
+\caption{Scenario 1: Network characteristics with generated UDP traffic}
+\end{table}
+
+The comparison of the network statistics shows that while the measured bandwidth is the same across all connections, even for the server that is located on the separate compute node, however the datagrams that are received by the server out of order is tremendously larger. Multiple tests showed also that the jitter is always of a bigger value, even though with only a minimal difference.
+
 
 \subsection{Scenario 2: With Instance Placement Engine enabled, but without QoS}
 
@@ -173,7 +193,9 @@ In this next scenario, the Instance Placement Engine was enabled and therefore t
 \caption{Scenario 2: Placement of servers with Connectivity Manager}
 \end{figure}
 
-The following graph shows that the available bandwidth is now evenly distributed for all servers. However the traffic of the MediaServers should be prioritized, which is why QoS is needed to further improve the connectivity according to the requirements.
+\textbf{TCP traffic}
+
+The following graph shows that the available bandwidth using TCP packets is now evenly distributed for all servers. However the traffic of the MediaServers should be prioritized, which is why QoS is needed to further improve the connectivity according to the requirements.
 
 \begin{figure}[H]
 \centering
@@ -183,6 +205,24 @@ The following graph shows that the available bandwidth is now evenly distributed
 \caption{Scenario 2: Bandwidth comparison}
 \end{figure}
 
+\textbf{UDP traffic}
+
+The traffic generation was configured in the same way as in Scenario 1, except that now all servers are deployed on the same compute node.
+
+\begin{table}[H]
+\centering
+
+\begin{tabularx}{\textwidth}{ |X|X|X|X|X| }
+\hline Server name & Measured bandwidth & Ratio lost/total datagrams & Datagrams out of order & Jitter \\ 
+\hline MediaServer-1 & 791 MBit/s & 2.3\% & 9 & 0.018 ms\\ 
+\hline Controller-1 & 789 MBit/s & 2.7\% & 13 & 0.013 ms \\ 
+\hline 
+\end{tabularx}
+
+\caption{Scenario 2: Network characteristics with generated UDP traffic}
+\end{table}
+
+With the servers all running on the same compute node, the datagrams that were received out of order could be minimized.
 
 \subsection{Scenario 3: Instance Placement Engine and QoS Manager enabled}
 
@@ -195,8 +235,6 @@ The servers are again placed on a single host and the Quality of Service configu
 
 \caption{Scenario 3: Placement of servers using the Connectivity Manager with QoS enabled}
 \end{figure}
-
-For this last scenario two servers were set as iperf-servers and three servers as iperf-clients. The \textit{'Controller-1'} server acted as the server for a connection with the \textit{'MediaServer-2'} while the \textit{'MediaServer-3'} received packets from \textit{'MediaServer-1'} and \textit{'Broker-1'}.
 
 The topology with it's configured QoS Queues is also visible by performing a HTTP GET to the Connectivity Manager Agent at the /hosts path:
 \begin{lstlisting}[language=json,firstnumber=1]
@@ -317,6 +355,10 @@ The topology with it's configured QoS Queues is also visible by performing a HTT
 }
 \end{lstlisting}
 
+\textbf{TCP traffic}
+
+For this last scenario two servers were set as iperf-servers and three servers as iperf-clients. The \textit{'Controller-1'} server acted as the server for a connection with the \textit{'MediaServer-2'} while the \textit{'MediaServer-3'} received packets from \textit{'MediaServer-1'} and \textit{'Broker-1'}.
+
 \begin{figure}[H]
 \centering
 
@@ -329,6 +371,29 @@ The first two bars show that the egress port on the Open vSwitch that the \texti
 
 In the other QoS class the \textit{'MediaServer-2'} which is connecting to \textit{'Controller-1'} uses almost the full bandwidth of the available 1 GBit/s.
 
+\textbf{UDP traffic}
+
+The setup of iperf for generating the traffic is equal to Scenario 2.
+
+\begin{table}[H]
+\centering
+
+\begin{tabularx}{\textwidth}{ |X|X|X|X|X| }
+\hline Server name & Measured bandwidth & Ratio lost/total datagrams & Datagrams out of order & Jitter \\ 
+\hline MediaServer-1 & 761 MBit/s & 5.9\% & 7 & 0.015 ms\\ 
+\hline Controller-1 & 782 MBit/s & 3.5\% & 41 & 0.102 ms \\ 
+\hline 
+\end{tabularx}
+
+\caption{Scenario 3: Network characteristics with generated UDP traffic}
+\end{table}
+
+The MediaServer-1 was connecting to the MediaServer-2 and the Controller-1 opened up a connection to Broker-1 in this case.
+
+With having Quality of Service enabled with different rates, the difference in network statistics for UDP traffic is not very big. The only difference that is visible is that the Gold traffic of the MediaServer-1 is prioritized to the one of the Controller-1 which is part of the Wholesale QoS class.
+
+
+
 \section{Conclusion}
 
-The three test scenarios show an improvement of the network performance, which is given through placing the servers on a single host. Additionally with enabling Quality of Service, the network bandwidth is shaped according to the requirements. It has been shown that the connection of MediaServers is prioritized to the connection of servers of other service instance types. The Service-Level-Agreement of the Gold and Wholesale classes are fulfilled.
+The three test scenarios show an improvement of the network performance, which is given through placing the servers on a single host. Additionally with enabling Quality of Service, the network bandwidth for TCP traffic is shaped according to the requirements. It has been shown that the connection between Media Servers is prioritized to other service instance types. The Service-Level-Agreement of the Gold and Wholesale classes are fulfilled.

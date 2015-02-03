@@ -380,17 +380,15 @@ The terminology that is used for defining HTB classes is as follows:
 \item \textbf{burst:} the size of the token bucket
 \item \textbf{rate:} the speed at which tokens are generated and put in the bucket (in the leaf)
 \item \textbf{quantum:} the amount of bytes to serve from a single leaf at once
-\item \textbf{ceil:} the definite upper class rate
+\item \textbf{ceil:} the definite upper class rate (this is the value that is set by the maximal rate defined in OVS QoS)
 \item \textbf{cburst:} the burst for ceil (gets computed)
 \end{itemize}
 
 This tree was created using the following commands:
-\begin{lstlisting}
+\begin{lstlisting}[language=json]
 $ tc qdisc add dev eth0 root handle 1: htb default 20
-$ tc class add dev eth0 parent 1:0 classid 1:10 htb rate 200kbit
- ceil 400kbit prio 1 mtu 1500
-$ tc class add dev eth0 parent 1:0 classid 1:20 htb rate 200kbit
- ceil 200kbit prio 2 mtu 1500
+$ tc class add dev eth0 parent 1:0 classid 1:10 htb rate 200kbit ceil 400kbit prio 1 mtu 1500
+$ tc class add dev eth0 parent 1:0 classid 1:20 htb rate 200kbit ceil 200kbit prio 2 mtu 1500
 \end{lstlisting}
 
 In figure 2.11 a root named 'qdisc handle 1' which applies filters to decide the direction of packets is depicted. It includes two leaves: 'qdisc handle 10' and set as default another leaf named 'qdisc handle 20'.
