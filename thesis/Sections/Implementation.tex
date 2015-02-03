@@ -172,29 +172,31 @@ The dictionary that this method returns is then converted to the JSON format and
 
 \section{Connectivity Manager Agent - Components and Operations}
 
+The two major operations that the Connectivity Manager needs to perform in order to provide the required services to this project is retrieving the resource status of the data center and setting QoS for the servers ports.
+
+\subsection{Get list of all hosts and their utilization state}
+
+The following figure displays the way in which the CM Agent creates a dictionary containing the list of all hosts within the selected tenant. It contains information such as the amount of already running virtual machines, the amount of allocated RAM in MB and the number of vCPUs in use. For each of the virtual machines it shows their ID, name and further resource information that is later needed for setting QoS. In case the VM already has a QoS assurance attached to its port, the corresponding minimal and maximal rates are shown.
+
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.7\textwidth]{images/design/activity_host_list}
+\includegraphics[width=0.65\textwidth]{images/design/activity_host_list}
 
 \caption{Activity diagram: Get list of hosts}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-
-\includegraphics[width=0.7\textwidth]{images/design/activity_set_qos}
-
-\caption{Activity diagram: Set QoS rates for all servers}
-\end{figure}
+In order to identify the rates that might have already been attached to a VMs port, a few steps need to be taken. With the servers IP address the Neutron Port ID can be retrieved. This Neutron Port ID has a Port ID within Open vSwitch that can be retrieved from the OVSDB. 
 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.7\textwidth]{images/design/activity_get_ovs_port_server}
+\includegraphics[width=0.5\textwidth]{images/design/activity_get_ovs_port_server}
 
 \caption{Activity diagram: Get OVS Port ID for server}
 \end{figure}
+
+Each Port contains a field for QoS, which holds its QoS ID. This ID can then be filtered from the Queue table and the associated rates are listed in there.
 
 \begin{figure}[H]
 \centering
@@ -204,9 +206,40 @@ The dictionary that this method returns is then converted to the JSON format and
 \caption{Activity diagram: Get QoS ID for OVS Port}
 \end{figure}
 
-% %http://bottlepy.org/docs/dev/index.html % %
+\subsection{Set QoS rates for all servers}
 
-\textbf{Tests}
+In order to set the bandwidth rates for the servers this method first retrieves the list of all hosts that was mentioned in the previous figure and description. When the \textit{Set QoS} method is called through a request to the API the method body from the HTTP POST is passed onto it. This dictionary contains all QoS rates that need to be set for each server. 
+
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.7\textwidth]{images/design/activity_set_qos}
+
+\caption{Activity diagram: Set requested QoS rates for servers}
+\end{figure}
+
+
+\subsection{API}
+
+The API was implemented using Bottle. It is a fast, simple and lightweight WSGI micro web-framework. Therein three routes were defined:
+\begin{lstlisting}
+# Welcome Screen
+self._app.route('/', method="GET", callback=self._welcome)
+# Host method
+self._app.route('/hosts', method="GET", callback=self._hosts_list)
+# QoS method
+self._app.route('/qoses', method=["POST", "OPTIONS"],
+ callback=self._qoses_set)
+\end{lstlisting}
+
+The first route contains a welcome message and can be used to check if the WSGI app is currently running.
+The /hosts route calls the list\_hosts() method in the Agent when a HTTP GET is received.
+When the /qoses route is called with the QoS parameters in its HTTP body it calls the set\_qos() method in the Agent class.
+
+\section{Tests}
+
+
 
 
 \section{Conclusion}
