@@ -12,11 +12,11 @@ Nubomedia is an elastic Platform-as-a-Service (PaaS) cloud for interactive multi
 
 \section{Network Performance Analysis}
 
-The following section contains information about the used configuration followed by the different scenarios that were used to evaluate the effectiveness of the Connectivity Manager. All scenarios used the same topology and were deployed on a tenant without any other running servers or Heat stacks. The bandwidth tests were performed using the iperf tool.
+The following section contains information about the configuration used, followed by the different scenarios that were used to evaluate the effectiveness of the Connectivity Manager. All scenarios used the same topology and were deployed on a tenant without any other running servers or Heat stacks. The bandwidth tests were performed using the iperf tool.
 
 \subsection{Test-bed Configuration}
 
-The testbed consists of two nodes with the following hardware characteristics:
+The test-bed consists of two nodes with the following hardware characteristics:
 
 \begin{table}[H]
 \centering
@@ -42,7 +42,7 @@ The two nodes are connected to a Gigabit-Ethernet switch. The installation of Op
 
 A setup script exists in order to make it easier to get the CM Agent running. It builds and installs all the necessary Python packages in a virtual environment.This has the benefit that all packages are isolated from already existing Python installations and ensures that all packages are in the required version and don't interfere with the ones that are needed by OpenStack or other applications. 
 
-The first step is to clone the git repository from the remote git server. For the installation the cm-agent.sh script needs to be executed with the 'install' option.
+The first step is to clone the Git repository from the remote Git server. For the installation the cm-agent.sh script needs to be executed with the 'install' option.
 
 \begin{lstlisting}[language=commands]
 $ ./cm-agent.sh
@@ -163,11 +163,11 @@ For testing the bandwidth the MediaServer-2 was used as a TCP server using iperf
 \caption{Scenario 1: TCP bandwidth comparison}
 \end{figure}
 
-As visible the network performance of the server on the separate node performs much worse, which is also due to the fact that there is only a Gigabit-Ethernet connection between the nodes.
+As is clearly visible, the network performance of the server on the separate node performs much worse, which is also due to the fact that there is only a Gigabit-Ethernet connection between the nodes.
 
 \textbf{UDP traffic}
 
-In order to test the bandwidth with UDP traffic, two servers where started as a UDP server and each of them received one client connection. The selected bandwidth limit that the packets were streamed at is 800 MBit/s.
+In order to test the bandwidth with UDP traffic, two servers were started as a UDP server and each of them received one client connection. The selected bandwidth limit that the packets were streamed at is 800 MBit/s.
 
 \begin{table}[H]
 \centering
@@ -182,7 +182,7 @@ In order to test the bandwidth with UDP traffic, two servers where started as a 
 \caption{Scenario 1: Network characteristics with generated UDP traffic}
 \end{table}
 
-The comparison of the network statistics shows that while the measured bandwidth is the same across all connections, even for the server that is located on the separate compute node, however the datagrams that are received by the server out of order is tremendously larger. Multiple tests showed also that the jitter is always of a bigger value, even though with only a minimal difference.
+The comparison of the network statistics shows that while the measured bandwidth is the same across all connections (even for the server that is located on the separate compute node), the datagrams that are received by the server out of order is tremendously larger. Multiple tests showed also that the jitter is always of a greater value, despite only having a minimal difference.
 
 
 \subsection{Scenario 2: With Instance Placement Engine enabled, but without QoS}
@@ -394,10 +394,10 @@ The setup of iperf for generating the traffic is equal to Scenario 2.
 
 The MediaServer-1 was connecting to the MediaServer-2 and the Controller-1 opened up a connection to Broker-1 in this case.
 
-With having Quality of Service enabled with different rates, the difference in network statistics for UDP traffic is not very big. The only difference that is visible is that the Gold traffic of the MediaServer-1 is prioritized to the one of the Controller-1 which is part of the Wholesale QoS class.
+With Quality of Service enabled at different rates, the difference in network statistics for UDP traffic is not that great. The only difference that is visible is that the Gold traffic of the MediaServer-1 is prioritized to the one of the Controller-1 which is part of the Wholesale QoS class.
 
 
 
 \section{Conclusion}
 
-The three test scenarios show an improvement of the network performance, which is given through placing the servers on a single host. Additionally with enabling Quality of Service, the network bandwidth for TCP traffic is shaped according to the requirements. It has been shown that the connection between Media Servers is prioritized to other service instance types. The Service-Level-Agreement of the Gold and Wholesale classes are fulfilled.
+The three test scenarios show an improvement of the network performance, which was achieved by placing the servers on a single host. Additionally, with Quality of Service enabled, the network bandwidth for TCP traffic is shaped according to the requirements. It has been shown that the connection between Media Servers is prioritized to other service instance types. The Service-Level-Agreement of the Gold and Wholesale classes are fulfilled.
