@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.2)  3 FEB 2015 16:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.2)  4 FEB 2015 10:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1382,12 +1382,12 @@ Underfull \hbox (badness 1052) in paragraph at lines 388--388
 
  (./Sections/Conclusion.tex
 Chapter 8.
-[73
+) [73
 
 
 
 
-]) [74]
+] [74]
 \openout2 = `Sections/Bibliography.aux'.
 
  (./Sections/Bibliography.tex
@@ -1528,7 +1528,7 @@ ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type
 nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
 0.pfb>
-Output written on bachelor.pdf (79 pages, 2357411 bytes).
+Output written on bachelor.pdf (79 pages, 2357731 bytes).
 PDF statistics:
  1450 PDF objects out of 1728 (max. 8388607)
  1267 compressed objects within 13 object streams
