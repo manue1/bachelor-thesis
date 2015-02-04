@@ -19,7 +19,7 @@ With a more detailed view on the challenges of current network infrastructures o
 \item \textbf{Vendor dependence}: Standards are needed to match the requirements of the markets with the capabilities of networks and enable data center operators to customize the network to specific environments.
 \end{itemize}
 
-Traditionally decisions about traffic-flows through the network are made directly by each network device, because the control logic and forwarding hardware are tightly coupled.
+Traditionally, decisions about traffic-flows through the network are made directly by each network device, because the control logic and forwarding hardware are tightly coupled.
 
 \subsubsection{Classical Switches \& Routers}
 
@@ -163,7 +163,7 @@ A flow table contains flow entries, each of which consist of the following field
 \item \textbf{counters:} is updated for matching packets
 \item \textbf{instructions:} to alter the action set or pipeline processing
 \item \textbf{timeouts:} set maximum amount of time or idle time before expiration of the flow
-\item \textbf{cookie:} is a opaque data value chosen by the controller
+\item \textbf{cookie:} is an opaque data value chosen by the controller
 \end{itemize}
 
 Each flow table entry is uniquely identifiable by its match fields and priority. 
@@ -186,7 +186,7 @@ However, if the lookup phase does not match any of the entries, a table-miss eve
 
 \underline{\textbf{Table-miss}}
 
-Each flow table must support a table-miss flow entry which specifies how to process packets that are unmatched by other flow entries. The instructions associated with this entry are very alike to any other flow entries, packets are either forwarded to other controllers, dropped or it is continued with the next flow table. In case the table-miss flow entry is non-existent unmatched packets are dropped by default. 
+Each flow table must support a table-miss flow entry which specifies how to process packets that are unmatched by other flow entries. The instructions associated with this entry are very alike to any other flow entries. Packets are either forwarded to other controllers, dropped, or it is continued with the next flow table. In case the table-miss flow entry is non-existent, unmatched packets are dropped by default. 
 
 
 \underline{\textbf{Group Tables}}
@@ -236,7 +236,7 @@ A meter band is identified by its rate and consists of the following fields:
 \item \textbf{band type:} defines how the packets are processed
 \item \textbf{rate:} selects the meter band for the meter and defines the lowest rate at which the band can apply
 \item \textbf{counters:} is updated when packets are processed by the meter
-\item \textbf{type specific arguments:} some band have optional arguments
+\item \textbf{type specific arguments:} some bands have optional arguments
 \end{itemize}
 
 \begin{figure}[H]
@@ -272,7 +272,7 @@ An action set is associated with each packet, which is empty by default \cite{of
 The following action types are available on OpenFlow-enabled switches \cite{ofspecification}:
 \begin{itemize}
 \item \textbf{Output:} A packet is forwarded to a specified OpenFlow port.
-\item \textbf{Set-Queue:} Sets the Queue ID for a packet. This ID helps determining which Queue is used for scheduling and forwarding the packet. This forwarding behaviour allows to enable basic QoS support on a port.
+\item \textbf{Set-Queue:} Sets the Queue ID for a packet. This ID helps determining which Queue is used for scheduling and forwarding the packet. This forwarding behavior allows to enable basic QoS support on a port.
 \item \textbf{Group:} Process the packet through the specified group.
 \item \textbf{Push-Tag/Pop-Tag:} The ability to push/pop tags such as VLAN.
 \item \textbf{Set-Field:} Modifies the values of header fields in a packet.
@@ -418,7 +418,7 @@ With the above listed commands the leaves were configured with the following par
 
 The difference between the rate and ceil value in leaf \#10 means it can borrow 200 KBit/s more than it's actual rate, while leaf \#20 cannot because its rate value equals the ceil value.
 
-The HTB leaves always match one of the following three status \cite{htb-qdiscs}:
+The HTB leaves always match one of the following three statuses \cite{htb-qdiscs}:
 \begin{itemize}
 \item \textbf{HTB\_CAN\_SEND:} the class can send using its own tokens
 \item \textbf{HTB\_CANT\_SEND:} the class can't send nor borrow and no packets are permitted to leave the class
@@ -442,7 +442,7 @@ Virtual Extensible LAN tunnels are used with Open vSwitch in this work to encaps
 \subsection{OpenStack}
 
 The OpenStack project was founded by Rackpace Cloud and NASA, however up to this day  more than 200 companies are contributing to it.
-With OpenStack it is possible to design, deploy and maintain a private or public cloud installation. It is a flexible, scalable and open-source approach that combines multiple technologies into one Infrastructure-as-a-Service (IaaS) \cite{openstack-ops}. All of the interrelated services include an API that offers administrators different ways of controlling the cloud, be it through a web-interface, a command-line client or a software development kit. All of the core components that are part of OpenStack are implemented in Python.
+With OpenStack it is possible to design, deploy and maintain a private or public cloud installation. It is a flexible, scalable and open-source approach that combines multiple technologies into one Infrastructure-as-a-Service (IaaS) \cite{openstack-ops}. All of the interrelated services include an API that offers administrators different ways of controlling the cloud, be it through a web-interface, a command-line client or a Software Development Kit. All of the core components that are part of OpenStack are implemented in Python.
 
 
 \textbf{Conceptual architecture}
@@ -549,7 +549,7 @@ Neutron is connected to different networks. For internet routable connections th
 
 \subsubsection{Neutron Workflow}
 
-From the time when Neutron is started as a process within the OpenStack controller node to booting a virtual machine it passes through the following steps:
+From the time when Neutron is started as a process within the OpenStack controller node to booting a virtual machine, it passes through the following steps:
 
 \begin{enumerate}
 \item Start Neutron-Server
@@ -586,4 +586,4 @@ Once the VM is started it has full network connectivity within the tenants netwo
 
 \section{Conclusion}
 
-In this chapter the technological fundamentals for this thesis were laid out. Starting with the motivation for the use of SDN and the difference to the traditional networking approach to describing the OpenFlow standard which forms the basis of the work of the Open Networking Foundation. The Open vSwitch makes full use of the OpenFlow standards and protocol and forms the basis for the network switching infrastructure used in this thesis. Furthermore it provides the service for enabling network traffic shaping which is described on a deep technical level. All necessary components that are used in connection to this work are introduced.
+This chapter laid out the technological fundamentals for this thesis. Starting with the motivation for the use of SDN and the difference to the traditional networking approach and going on to describe the OpenFlow standard which forms the basis for the work of the Open Networking Foundation. The Open vSwitch makes full use of the OpenFlow standard and protocol and forms the basis for the network switching infrastructure used in this thesis. Furthermore it provides the service for enabling network traffic shaping which is described on a deep technical level. All necessary components that are used in connection to this work are introduced.
