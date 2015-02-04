@@ -5,15 +5,15 @@
 
 \section{Motivation}
 
-The demands on networks have changed dramatically in the past two decades, with an ever-growing number of people and devices relying on interconnected applications and services. The underlying infrastructure has been left mostly unchanged and is reaching its limits. In order to resolve this, Software Defined Networking (SDN) is going to be extending and replacing parts of traditional networking infrastructures. SDN separates the network into control and forwarding planes and therefore allows a more efficient orchestration and automation of network services.
+The demands on networks have changed dramatically in the past two decades, with an ever-growing number of people and devices relying on interconnected applications and services. The underlying infrastructure has been left mostly unchanged and is reaching its limits. In order to resolve this, Software Defined Networking (SDN) will extend and replace parts of traditional networking infrastructures. SDN separates the network into control and forwarding planes and therefore allows a more efficient orchestration and automation of network services.
 
-The use of cloud-based services, with not only competitive pricing but also high-availability and fast network access,  is taking over traditional purely hardware-based data centers. The ease of administration and deployment of new servers as Virtual Machines (VMs) on the fly make it possible to effortlessly create a topology of multiple servers.
+The use of virtualized cloud-based services, with not only competitive pricing but also high-availability and fast network access,  is taking over traditional purely hardware-based data centers. The ease of administration and deployment of new servers as Virtual Machines (VMs) on the fly make it possible to effortlessly create a topology of multiple servers.
 
 Network services have different requirements, depending on the type of data packets and their characteristics. A classification and prioritization of network traffic can be achieved through Quality of Service (QoS). A new approach has to be made to enable and configure the use of QoS in virtualized cloud infrastructures like OpenStack through an API. The traffic flow should be controlled right from the deployment of Virtual Machines on.
 
 
 \section{Network Architecture}
-Today's traffic patterns, the rise of cloud computing and "big data" to only name a few examples, are exceeding the capacity of classic network architectures. With scalable computing and storage the common-place tree-structured networking infrastructure are not efficient and manageable enough. 
+Today's traffic patterns, the rise of cloud computing and "big data" to only name a few examples, are exceeding the capacity of classical network architectures. With scalable computing and storage the common-place tree-structured networking infrastructure are not efficient and manageable enough. 
 
 The increasing complexity of problems that have to be faced in networks and the need to control network traffic through software, are only a selection of the reasons why the Open Networking Foundation (ONF) developed an approach called Software-Defined Networking (SDN).
 
@@ -21,14 +21,14 @@ SDN is a leading-edge approach where the network control is separated from the f
 
 \section{Objective}
 
-The primary objective of this work is the development of a network orchestrator which is able to apply Quality of Service to the network interfaces of Virtual Machines. These Virtual Machines are deployed on compute nodes that run the OpenStack Nova-service and are interconnected with Open vSwitches. Another task of the Connectivity Manager is to select which OpenStack compute node new servers should run on. This decision takes different runtime parameters into account. The CM should be applicable in environments at scale in terms of amount of servers.
+The primary objective of this work is the development of a Connectivity Manager which acts as a network orchestrator and is able to apply Quality of Service to the network interfaces of Virtual Machines. These VMs are deployed on compute nodes that run the OpenStack Nova-service and are interconnected with Open vSwitches. Another task of the CM is to select which OpenStack compute node new servers should run on. All functions of this software should be applicable in environments at scale.
 
 \section{Scope}
-The scope of this work includes a Connectivity Manager which is interfaced with the already existing implementation of the Elastic Media Manager. The second application is a Connectivity Manager Agent that runs on the cloud controller within the OpenStack infrastructure in order to provide access to the hosts of OpenStack Nova. These two components have to be implemented and integrated with the existing SDN software that OpenStack makes use of. The entire virtual network switching will utilize Open vSwitch, which is a fully-compliant OpenFlow switch. As a reference for a cloud infrastructure, multimedia communications like the Nubomedia project will be used as an evaluation. The deployment of this cloud topolgy is tested on different performance characteristics such as maximal network bandwidth, jitter, CPU utilization and memory usage.
+The scope of this work includes a Connectivity Manager which is interfaced with the already existing implementation of the Elastic Media Manager. The second application is a Connectivity Manager Agent that runs on the cloud controller within the OpenStack infrastructure in order to provide access to the hosts of OpenStack Nova. These two components have to be implemented and integrated with the existing SDN software that OpenStack makes use of. The entire virtual network switching will utilize Open vSwitch, which is a fully-compliant OpenFlow switch. The deployment of a cloud topology is tested on different performance characteristics such as the maximal network bandwidth, jitter, CPU utilization and memory usage.
 
 In virtualized cloud infrastructure like OpenStack, the placement of Virtual Machines (VMs) on a particular compute node can be decided on by comparing different run-time parameters. The network connectivity between those VMs has to be prioritized and classified depending on the type of service that the server provides.
 
-Currently there are a number of solutions for managing network connectivity between virtual servers. A comparison and their current limitations follows in the next section. The selected approach is the extension of existing network control and management services with Quality of Service (QoS) capabilities and the ability to choose a host for the deployment of the topology. In support of the thesis the Connectivity Manager will be implemented and the differences in network performance will be shown in one use-case.
+Currently there are a number of solutions for managing network connectivity between virtual servers that partially fit the requirements of this work. A comparison and their current limitations follows in the next section. The selected approach is the extension of existing network control and management services with Quality of Service (QoS) capabilities and the ability to choose a host for the deployment of the topology. In support of the thesis the Connectivity Manager will be implemented and the evaluation of the network performance will be performed on basis of the services of the NUBOMEDIA project.
 
 \section{Overview}
 
@@ -44,8 +44,8 @@ Currently there are a number of solutions for managing network connectivity betw
 
 \textbf{Chapter 5} examines the implementation of the Connectivity Manager and Agent.
 
-\textbf{Chapter 6} evaluates the network performance tests on the basis of a particular use-case.
+\textbf{Chapter 6} evaluates the network performance tests on the basis of one use-case.
 
-\textbf{Chapter 7} summarizes the results of this work and gives an overview on possible future work.
+\textbf{Chapter 7} summarizes the results of this work and gives an outlines possible future work.
 
 

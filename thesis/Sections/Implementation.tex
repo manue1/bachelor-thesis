@@ -70,7 +70,7 @@ release/ubuntu-14.04-server-cloudimg-amd64-disk1.img"
 
 The configuration file for the second node, which solely runs Nova, the Open vSwitch agent and the Rabbit MQ is identical except for its enabled services and host IP address:
 
-\begin{lstlisting}
+\begin{lstlisting}[language=json]
 HOST_IP=192.168.120.16
 ENABLED_SERVICES=n-cpu,rabbit,neutron,q-agt,q-l3
 \end{lstlisting}
@@ -147,7 +147,7 @@ Lastly the chosen host needs to be set in the topology, so it can be returned to
 
 The rates for the QoS classes can be set in the configuration of the EMM.
 The default location is \textit{/etc/nubomedia/emm.properties} and it contains the following default rates:
-\begin{lstlisting}
+\begin{lstlisting}[language=commands]
 # CONNECTIVITY MANAGER PROPS & QOS RATES (IN BIT/S)
 cm_agent_ip=192.168.41.45
 # GOLD = 100MBIT/S - 10GBIT/S
@@ -175,7 +175,7 @@ The dictionary that this method returns is then converted to the JSON format and
 The two major operations that the Connectivity Manager needs to perform in order to provide the required services to this project is retrieving the resource status of the data center and setting QoS for the servers ports.
 
 For using the OVS Client it needs to access the OVSDB that is located on each host. In order to allow that the following command needs to be executed on them once:
-\begin{lstlisting}
+\begin{lstlisting}[language=commands]
 $ sudo ovs-vsctl set-manager ptcp:6640
 \end{lstlisting}
 

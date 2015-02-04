@@ -63,7 +63,7 @@ SDN separates the architecture into three distinct layers that communicate with 
 
 \includegraphics[width=0.5\textwidth]{images/fundamentals/sdn_logical_architecture.png}
 
-\caption{Software-Defined Network architecture}
+\caption{SDN architecture}
 \end{figure}
 
 \subsection{OpenFlow}
@@ -76,7 +76,7 @@ With OpenFlow the Open Networking Foundation defined the first standard communic
 
 \includegraphics[width=0.6\textwidth]{images/fundamentals/openflow_architecture.png}
 
-\caption{OpenFlow Network Architecture}
+\caption{OpenFlow network architecture}
 \end{figure}
 
 OpenFlow first of all stands for the communications protocol that is used by SDN controllers to fetch information and configure switches. Additionally it is a switch specification with full support of OpenFlow.
@@ -104,7 +104,7 @@ An OpenFlow switch includes one ore more flow tables and a group table, which ha
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\textwidth]{images/fundamentals/openflow_switch_components.png}
-\caption{OpenFlow Switch components}
+\caption{OpenFlow switch components}
 \end{figure}
 
 Through the connection using the OpenFlow protocol, the controller is able to add, update and delete flow entries in Flow tables.  This action can be performed either reactively or proactively. Sets of flow entries are stored in each flow table and each flow entry consists of \textit{match fields}, \textit{counters}, and a set of \textit{instructions} used for matching packets.
@@ -331,31 +331,38 @@ Multiple different configuration utilities exist for OVS, however only ovs-vsctl
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{images/fundamentals/openvswitch_vsctl.png}
-\caption{Visualization of the interaction of the ovs-vsctl tool}
+\caption{Visualization of the ovs-vsctl tool's components}
 \end{figure}
 
 The tool also configures ovs-vswitchd and can be seen as a high-level interface for the database.
 The commands below are available for the OVS configuration that is needed to get a basic network setup running:
-\begin{itemize}
-\item ovs-vsctl add-br \%bridge\%
-\item ovs-vsctl list-br
-\item ovs-vsctl add-port \%bridge\% \%port\%
-\item ovs-vsctl list-ports \%bridge\%
-\item ovs-vsctl get-manager \%bridge\%
-\item ovs-vsctl get-controller \%bridge\%
-\item ovs-vsctl list \%table\%
-\end{itemize}
+
+\begin{lstlisting}[language=commands]
+$ ovs-vsctl add-br %bridge%
+$ ovs-vsctl add-port %bridge% %port%
+$ ovs-vsctl list-ports %bridge%
+$ ovs-vsctl set Interface %port%
+\end{lstlisting}
+
+In order to add Flow entries to a bridge the \textit{ovs-ofctl} is needed. The default Flow entry contains the following parameters:
+
+\begin{lstlisting}[language=commands]
+$ ovs-ofctl add-flow br-int hard_timeout=0,idle_timeout=0,priority=1,actions=normal
+\end{lstlisting}
 
 
 \subsubsection{QoS}
 
-With Open vSwitch QoS can be configured for ports that virtual machines are connected to. The minimal and maximal rate-limits can be defined in bit / s and applied to a queue. With the use of this feature the network traffic from the switches internal bridge to a virtual network interface can be shaped (egress). The QoS port assurances in OVS make use of the 'tc' implementation which is included in the Linux kernel.
+With Open vSwitch Quality of Service can be configured for ports that virtual machines are connected to. The minimal and maximal rate-limits can be defined in bit / s and applied to a queue. With the use of this feature the network traffic from the switches internal bridge to a virtual network interface can be shaped (egress).
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{images/fundamentals/openvswitch_qos-queues.png}
 \caption{QoS Queues attached to a Port in OVS}
 \end{figure}
+
+The approach used in this work does not modify the OF Flow and their actions, which means that all Queues on a OVS are within the same Flow entry. The QoS port assurances in OVS make use of the 'tc' implementation which is included in the Linux kernel.
+
 
 
 % % http://linux.die.net/man/8/tc % %
@@ -367,7 +374,7 @@ Traffic control (tc) uses 'queuing discipline' (qdisc) for configuring the netwo
 
 When setting QoS in OVS a classful qdisc named Hierarchy Token Bucket (HTB) is used. HTB is meant as a more understandable, intuitive and faster replacement for the Class Based Queuing (CBQ) qdisc in Linux \cite{htb-guide}. It helps to control the use of the outbound bandwidth on a given link. 
 
-For further understanding the following graph shows a a HTB tree that contains on qdisc root and two classes (leaves) with different configurations:
+For further understanding the following graph shows a HTB tree that contains on qdisc root and two classes (leaves) with different configurations:
 
 \begin{figure}[H]
 \centering
@@ -385,7 +392,7 @@ The terminology that is used for defining HTB classes is as follows:
 \end{itemize}
 
 This tree was created using the following commands:
-\begin{lstlisting}[language=json]
+\begin{lstlisting}[language=commands]
 $ tc qdisc add dev eth0 root handle 1: htb default 20
 $ tc class add dev eth0 parent 1:0 classid 1:10 htb rate 200kbit ceil 400kbit prio 1 mtu 1500
 $ tc class add dev eth0 parent 1:0 classid 1:20 htb rate 200kbit ceil 200kbit prio 2 mtu 1500

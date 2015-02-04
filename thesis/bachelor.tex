@@ -60,12 +60,6 @@
                              % -> keine rechts rausragenden Zeilen mehr
 
 
-\renewcommand{\listofalgorithms}   % Text "Algoverzeichnis", statt "List of Algos"
-{
-\begingroup
-\listof{algorithm}{List of Algorithms}
-\endgroup
-}
 
 % Include numbering for subsubsections
 \setcounter{secnumdepth}{4}
@@ -86,6 +80,21 @@
     numberstyle=\scriptsize,
     stepnumber=1,
     numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
+\lstdefinelanguage{commands}{
+    basicstyle=\normalfont\ttfamily,
     showstringspaces=false,
     breaklines=true,
     frame=lines,
@@ -229,11 +238,6 @@ Nach-na-me Kurz-be-zeich-nung deutsch-spra-chige deutsch-sprachig Screen-shot Sc
 \cleardoublepage
 
 
-\listofalgorithms
-\protect \addcontentsline{toc}{chapter}{List of algorithms}
-\cleardoublepage
-
-
 
 \include{Sections/Introduction}
 \include{Sections/Fundamentals}
@@ -243,9 +247,6 @@ Nach-na-me Kurz-be-zeich-nung deutsch-spra-chige deutsch-sprachig Screen-shot Sc
 \include{Sections/Implementation}
 \include{Sections/Evaluation}
 \include{Sections/Conclusion}
-
-\protect \addtocontents{toc}{\protect\newpage}  % Seitenumbruch im Inhaltsverzeichnis
-\cleardoublepage
 
 
 % Erstes Literaturverzeichnis, ohne BibTeX

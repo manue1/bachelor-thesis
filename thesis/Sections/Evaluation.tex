@@ -44,8 +44,8 @@ A setup script exists in order to make it easier to get the CM Agent running. It
 
 The first step is to clone the git repository from the remote git server. For the installation the cm-agent.sh script needs to be executed with the 'install' option.
 
-\textit{\$ ./cm-agent.sh}
-\begin{lstlisting}
+\begin{lstlisting}[language=commands]
+$ ./cm-agent.sh
 Usage: cm-agent.sh option
 options:
   install   - install the server
@@ -58,8 +58,8 @@ The installation process includes setting up the virtual environment, installing
 
 The configuration file needs to be customized, so it contains the correct IP address of the control node and OpenStack tenant credentials:
 
-\textit{\$ cat /etc/nubomedia/cm-agent.properties:}
-\begin{lstlisting}
+\begin{lstlisting}[language=commands]
+$ cat /etc/nubomedia/cm-agent.properties
 os_username=admin
 os_password=pass
 os_auth_url=http://192.168.41.45:5000/v2.0
@@ -67,9 +67,11 @@ os_tenant=demo
 \end{lstlisting}
 
 Lastly the application can be started in a screen session using the following command: \\
-\textit{\$ venv/bin/python cm-agent/wsgi/application.py}
+\begin{lstlisting}[language=commands]
+$ venv/bin/python cm-agent/wsgi/application.py
+\end{lstlisting}
 
-The \textit{venv/bin/python} command means that the program uses the Python interpreter from the created virtual environment.
+The \textit{venv/bin/python} command means that the program uses the Python interpreter that is located in the virtual environment.
 
 \subsection{Topology Definition}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.2)  4 FEB 2015 10:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.2)  4 FEB 2015 12:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -700,20 +700,20 @@ Package natbib Warning: Citation `openstack-ops' multiply defined.
 ) (./Sections/Appendix_Glossar.aux))
 \openout1 = `bachelor.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 191.
-LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 200.
+LaTeX Font Info:    ... okay on input line 200.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 200.
+LaTeX Font Info:    ... okay on input line 200.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 200.
+LaTeX Font Info:    ... okay on input line 200.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 200.
+LaTeX Font Info:    ... okay on input line 200.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 200.
+LaTeX Font Info:    ... okay on input line 200.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 200.
+LaTeX Font Info:    ... okay on input line 200.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 200.
+LaTeX Font Info:    ... okay on input line 200.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -753,7 +753,7 @@ Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box65
-Package hyperref Info: Link coloring ON on input line 191.
+Package hyperref Info: Link coloring ON on input line 200.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -763,9 +763,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count178
 )
-LaTeX Info: Redefining \ref on input line 191.
-LaTeX Info: Redefining \pageref on input line 191.
-LaTeX Info: Redefining \nameref on input line 191.
+LaTeX Info: Redefining \ref on input line 200.
+LaTeX Info: Redefining \pageref on input line 200.
+LaTeX Info: Redefining \nameref on input line 200.
 
 (./bachelor.out) (./bachelor.out)
 \@outlinefile=\write4
@@ -784,7 +784,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<images/general/unilogo.png, id=284, 259.97125pt x 69.25874pt>
+<images/general/unilogo.png, id=280, 259.97125pt x 69.25874pt>
 File: images/general/unilogo.png Graphic file (type png)
 
 <use images/general/unilogo.png>
@@ -816,30 +816,23 @@ l.76 \newpage
               [1]) (./bachelor.toc [3
 
 
-] [4])
+])
 \tf@toc=\write5
 \openout5 = `bachelor.toc'.
 
- [5] (./bachelor.lof [6
+ [4] (./bachelor.lof [5
 
 
 ])
 \tf@lof=\write6
 \openout6 = `bachelor.lof'.
 
- [7]
+ [6]
 (./bachelor.lot)
 \tf@lot=\write7
 \openout7 = `bachelor.lot'.
 
- [8
-
-
-] (./bachelor.loa)
-\tf@loa=\write8
-\openout8 = `bachelor.loa'.
-
- [9
+ [7
 
 
 ]
@@ -847,11 +840,11 @@ l.76 \newpage
 
  (./Sections/Introduction.tex
 Chapter 1.
-[10
+[8
 
 
 
-] [11]) [12]
+] [9]) [10]
 \openout2 = `Sections/Fundamentals.aux'.
 
  (./Sections/Fundamentals.tex
@@ -862,36 +855,36 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
- [13
+ [11
 
 
 
 ]
-<images/fundamentals/switch_components.png, id=536, 399.4925pt x 234.8775pt>
+<images/fundamentals/switch_components.png, id=522, 399.4925pt x 234.8775pt>
 File: images/fundamentals/switch_components.png Graphic file (type png)
 
 <use images/fundamentals/switch_components.png>
 Package pdftex.def Info: images/fundamentals/switch_components.png used on inpu
 t line 35.
 (pdftex.def)             Requested size: 220.50885pt x 129.64534pt.
- [14 <./images/fundamentals/switch_components.png>]
-<images/fundamentals/sdn_logical_architecture.png, id=547, 1251.67625pt x 823.0
+ [12 <./images/fundamentals/switch_components.png>]
+<images/fundamentals/sdn_logical_architecture.png, id=533, 1251.67625pt x 823.0
 75pt>
 File: images/fundamentals/sdn_logical_architecture.png Graphic file (type png)
  <use images/fundamentals/sdn_logical_architecture.png>
 Package pdftex.def Info: images/fundamentals/sdn_logical_architecture.png used 
 on input line 64.
 (pdftex.def)             Requested size: 220.50885pt x 144.99477pt.
- [15 <./images/fundamentals/sdn_logical_architecture.png>]
-<images/fundamentals/openflow_architecture.png, id=554, 616.3025pt x 478.78876p
+ [13 <./images/fundamentals/sdn_logical_architecture.png>]
+<images/fundamentals/openflow_architecture.png, id=541, 616.3025pt x 478.78876p
 t>
 File: images/fundamentals/openflow_architecture.png Graphic file (type png)
  <use images/fundamentals/openflow_architecture.png>
 Package pdftex.def Info: images/fundamentals/openflow_architecture.png used on 
 input line 77.
 (pdftex.def)             Requested size: 264.61331pt x 205.5756pt.
- [16 <./images/fundamentals/openflow_architecture.png>]
-<images/fundamentals/openflow_switch_components.png, id=565, 166.6225pt x 250.9
+ [14 <./images/fundamentals/openflow_architecture.png>]
+<images/fundamentals/openflow_switch_components.png, id=552, 166.6225pt x 250.9
 375pt>
 File: images/fundamentals/openflow_switch_components.png Graphic file (type png
 )
@@ -899,8 +892,8 @@ File: images/fundamentals/openflow_switch_components.png Graphic file (type png
 Package pdftex.def Info: images/fundamentals/openflow_switch_components.png use
 d on input line 106.
 (pdftex.def)             Requested size: 132.30666pt x 199.26843pt.
- [17 <./images/fundamentals/openflow_switch_components.png>]
-<images/fundamentals/openflow_pipeline_processing.png, id=575, 585.18625pt x 15
+ [15 <./images/fundamentals/openflow_switch_components.png>]
+<images/fundamentals/openflow_pipeline_processing.png, id=562, 585.18625pt x 15
 9.59625pt>
 File: images/fundamentals/openflow_pipeline_processing.png Graphic file (type p
 ng)
@@ -908,133 +901,133 @@ ng)
 Package pdftex.def Info: images/fundamentals/openflow_pipeline_processing.png u
 sed on input line 138.
 (pdftex.def)             Requested size: 352.8155pt x 96.22604pt.
- [18 <./images/fundamentals/openflow_pipeline_processing.png>]
-<images/fundamentals/openflow_packet_matching.png, id=583, 703.62875pt x 536.00
+ [16 <./images/fundamentals/openflow_pipeline_processing.png>]
+<images/fundamentals/openflow_packet_matching.png, id=570, 703.62875pt x 536.00
 25pt>
 File: images/fundamentals/openflow_packet_matching.png Graphic file (type png)
  <use images/fundamentals/openflow_packet_matching.png>
 Package pdftex.def Info: images/fundamentals/openflow_packet_matching.png used 
 on input line 176.
 (pdftex.def)             Requested size: 264.61331pt x 201.57295pt.
- [19 <./images/fundamentals/openflow_packet_matching.png>]
-<images/fundamentals/openflow_qos.png, id=590, 363.3575pt x 97.36375pt>
+ [17 <./images/fundamentals/openflow_packet_matching.png>]
+<images/fundamentals/openflow_qos.png, id=576, 363.3575pt x 97.36375pt>
 File: images/fundamentals/openflow_qos.png Graphic file (type png)
 
 <use images/fundamentals/openflow_qos.png>
 Package pdftex.def Info: images/fundamentals/openflow_qos.png used on input lin
 e 244.
 (pdftex.def)             Requested size: 264.61331pt x 70.90704pt.
- [20 <./images/fundamentals/openflow_qos.png>] [21]
-<images/fundamentals/openvswitch_architecture.png, id=609, 601.24625pt x 350.30
+ [18 <./images/fundamentals/openflow_qos.png>] [19]
+<images/fundamentals/openvswitch_architecture.png, id=596, 601.24625pt x 350.30
 875pt>
 File: images/fundamentals/openvswitch_architecture.png Graphic file (type png)
  <use images/fundamentals/openvswitch_architecture.png>
 Package pdftex.def Info: images/fundamentals/openvswitch_architecture.png used 
 on input line 303.
 (pdftex.def)             Requested size: 264.61331pt x 154.17908pt.
- [22 <./images/fundamentals/openvswitch_architecture.png>]
-<images/fundamentals/openvswitch_vsctl.png, id=621, 517.935pt x 382.42876pt>
+ [20 <./images/fundamentals/openvswitch_architecture.png>]
+<images/fundamentals/openvswitch_vsctl.png, id=608, 517.935pt x 382.42876pt>
 File: images/fundamentals/openvswitch_vsctl.png Graphic file (type png)
 
 <use images/fundamentals/openvswitch_vsctl.png>
 Package pdftex.def Info: images/fundamentals/openvswitch_vsctl.png used on inpu
 t line 333.
 (pdftex.def)             Requested size: 264.61331pt x 195.39203pt.
- [23 <./images/fundamentals/openvswitch_vsctl.png>]
-<images/fundamentals/openvswitch_qos-queues.png, id=627, 502.87875pt x 516.9312
+ [21 <./images/fundamentals/openvswitch_vsctl.png>]
+<images/fundamentals/openvswitch_qos-queues.png, id=622, 502.87875pt x 516.9312
 4pt>
 File: images/fundamentals/openvswitch_qos-queues.png Graphic file (type png)
  <use images/fundamentals/openvswitch_qos-queues.png>
 Package pdftex.def Info: images/fundamentals/openvswitch_qos-queues.png used on
- input line 356.
+ input line 360.
 (pdftex.def)             Requested size: 220.50885pt x 226.66956pt.
 
-<images/fundamentals/htb_qdisc.png, id=630, 893.3375pt x 499.8675pt>
+<images/fundamentals/htb_qdisc.png, id=625, 893.3375pt x 499.8675pt>
 File: images/fundamentals/htb_qdisc.png Graphic file (type png)
 
 <use images/fundamentals/htb_qdisc.png>
 Package pdftex.def Info: images/fundamentals/htb_qdisc.png used on input line 3
-74.
+81.
 (pdftex.def)             Requested size: 308.71104pt x 172.73668pt.
- [24 <./images/fundamentals/openvswitch_qos-queues.png>] [25 <./images/fundamen
-tals/htb_qdisc.png>] [26]
-<images/fundamentals/openstack_conceptual_arch.png, id=665, 1017.8025pt x 927.4
+ [22 <./images/fundamentals/openvswitch_qos-queues.png>] [23 <./images/fundamen
+tals/htb_qdisc.png>] [24]
+<images/fundamentals/openstack_conceptual_arch.png, id=658, 1017.8025pt x 927.4
 65pt>
 File: images/fundamentals/openstack_conceptual_arch.png Graphic file (type png)
 
  <use images/fundamentals/openstack_conceptual_arch.png>
 Package pdftex.def Info: images/fundamentals/openstack_conceptual_arch.png used
- on input line 447.
+ on input line 454.
 (pdftex.def)             Requested size: 352.8155pt x 321.50418pt.
 
-<images/fundamentals/openstack_nova.png, id=667, 741.77126pt x 547.04375pt>
+<images/fundamentals/openstack_nova.png, id=660, 741.77126pt x 547.04375pt>
 File: images/fundamentals/openstack_nova.png Graphic file (type png)
 
 <use images/fundamentals/openstack_nova.png>
 Package pdftex.def Info: images/fundamentals/openstack_nova.png used on input l
-ine 458.
+ine 465.
 (pdftex.def)             Requested size: 220.50885pt x 162.62024pt.
- [27 <./images/fundamentals/openstack_conceptual_arch.png>] [28 <./images/funda
+ [25 <./images/fundamentals/openstack_conceptual_arch.png>] [26 <./images/funda
 mentals/openstack_nova.png>]
-[29] <images/fundamentals/neutron_ml2.png, id=688, 713.66624pt x 471.7625pt>
+[27] <images/fundamentals/neutron_ml2.png, id=682, 713.66624pt x 471.7625pt>
 File: images/fundamentals/neutron_ml2.png Graphic file (type png)
 
 <use images/fundamentals/neutron_ml2.png>
 Package pdftex.def Info: images/fundamentals/neutron_ml2.png used on input line
- 517.
+ 524.
 (pdftex.def)             Requested size: 132.30666pt x 87.45465pt.
 
-<images/fundamentals/neutron_ovs_bridges.png, id=689, 675.52374pt x 425.59pt>
+<images/fundamentals/neutron_ovs_bridges.png, id=683, 675.52374pt x 425.59pt>
 File: images/fundamentals/neutron_ovs_bridges.png Graphic file (type png)
 
 <use images/fundamentals/neutron_ovs_bridges.png>
 Package pdftex.def Info: images/fundamentals/neutron_ovs_bridges.png used on in
-put line 531.
+put line 538.
 (pdftex.def)             Requested size: 308.71104pt x 194.49445pt.
- [30 <./images/fundamentals/neutron_ml2.png> <./images/fundamentals/neutron_ovs
-_bridges.png>]) [31]
+ [28 <./images/fundamentals/neutron_ml2.png> <./images/fundamentals/neutron_ovs
+_bridges.png>]) [29]
 \openout2 = `Sections/Requirements.aux'.
 
 
 (./Sections/Requirements.tex
 Chapter 3.
-[32
+[30
 
 
 
-]) [33]
+]) [31]
 \openout2 = `Sections/S-O-T-A.aux'.
 
  (./Sections/S-O-T-A.tex
 Chapter 4.
-<images/sota/odl_architecture.png, id=721, 1400.23125pt x 733.74126pt>
+<images/sota/odl_architecture.png, id=715, 1400.23125pt x 733.74126pt>
 File: images/sota/odl_architecture.png Graphic file (type png)
 
 <use images/sota/odl_architecture.png>
 Package pdftex.def Info: images/sota/odl_architecture.png used on input line 14
 .
 (pdftex.def)             Requested size: 396.91324pt x 207.98764pt.
- [34
+ [32
 
 
 
 ]
-<images/sota/ryu_architecture.png, id=730, 826.08624pt x 536.0025pt>
+<images/sota/ryu_architecture.png, id=724, 826.08624pt x 536.0025pt>
 File: images/sota/ryu_architecture.png Graphic file (type png)
 
 <use images/sota/ryu_architecture.png>
 Package pdftex.def Info: images/sota/ryu_architecture.png used on input line 27
 .
 (pdftex.def)             Requested size: 308.71104pt x 200.30525pt.
- [35 <./images/sota/odl_architecture.png>] <images/sota/neutron_qos_extension.p
-ng, id=738, 375.4025pt x 610.28pt>
+ [33 <./images/sota/odl_architecture.png>] <images/sota/neutron_qos_extension.p
+ng, id=732, 375.4025pt x 610.28pt>
 File: images/sota/neutron_qos_extension.png Graphic file (type png)
 
 <use images/sota/neutron_qos_extension.png>
 Package pdftex.def Info: images/sota/neutron_qos_extension.png used on input li
 ne 43.
 (pdftex.def)             Requested size: 132.30666pt x 215.09113pt.
- [36 <./images/sota/ryu_architecture.png>] [37 <./images/sota/neutron_qos_exten
+ [34 <./images/sota/ryu_architecture.png>] [35 <./images/sota/neutron_qos_exten
 sion.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 91--91
 []|\OT1/cmr/m/n/10.95 OpenStack (Juno)
@@ -1055,12 +1048,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--91
 []|\OT1/cmr/m/n/10.95 not fully im-ple-
  []
 
-) [38]
+) [36]
 \openout2 = `Sections/Design.aux'.
 
  (./Sections/Design.tex
 Chapter 5.
-<images/design/functional_architecture.png, id=755, 572.1375pt x 349.305pt>
+<images/design/functional_architecture.png, id=748, 572.1375pt x 349.305pt>
 File: images/design/functional_architecture.png Graphic file (type png)
 
 <use images/design/functional_architecture.png>
@@ -1068,28 +1061,28 @@ Package pdftex.def Info: images/design/functional_architecture.png used on inpu
 t line 14.
 (pdftex.def)             Requested size: 220.50885pt x 134.62407pt.
 
-<images/design/modular_architecture_cm_cma.png, id=756, 787.94376pt x 763.85374
+<images/design/modular_architecture_cm_cma.png, id=749, 787.94376pt x 763.85374
 pt>
 File: images/design/modular_architecture_cm_cma.png Graphic file (type png)
  <use images/design/modular_architecture_cm_cma.png>
 Package pdftex.def Info: images/design/modular_architecture_cm_cma.png used on 
 input line 30.
-(pdftex.def)             Requested size: 264.61331pt x 256.51323pt.
- [39
+(pdftex.def)             Requested size: 220.50885pt x 213.76103pt.
+ [37
 
 
 
  <./images/design/functional_architecture.png>]
-<images/design/sequence_diagram.png, id=762, 2218.2875pt x 873.2625pt>
+<images/design/sequence_diagram.png, id=756, 2218.2875pt x 873.2625pt>
 File: images/design/sequence_diagram.png Graphic file (type png)
 
 <use images/design/sequence_diagram.png>
 Package pdftex.def Info: images/design/sequence_diagram.png used on input line 
 42.
-(pdftex.def)             Requested size: 396.91324pt x 156.24771pt.
- [40 <./images/design/modular_architecture_cm_cma.png> <./images/design/sequenc
+(pdftex.def)             Requested size: 441.01772pt x 173.61006pt.
+ [38 <./images/design/modular_architecture_cm_cma.png> <./images/design/sequenc
 e_diagram.png (PNG copy)>]
-<images/design/cm-emm_interface_classes.png, id=768, 232.87pt x 365.365pt>
+<images/design/cm-emm_interface_classes.png, id=762, 232.87pt x 365.365pt>
 File: images/design/cm-emm_interface_classes.png Graphic file (type png)
 
 <use images/design/cm-emm_interface_classes.png>
@@ -1097,46 +1090,47 @@ Package pdftex.def Info: images/design/cm-emm_interface_classes.png used on inp
 ut line 60.
 (pdftex.def)             Requested size: 88.2022pt x 138.38298pt.
 
-<images/design/cm_class_diagram.png, id=769, 784.9325pt x 515.9275pt>
+<images/design/cm_class_diagram.png, id=763, 714.67pt x 515.9275pt>
 File: images/design/cm_class_diagram.png Graphic file (type png)
 
 <use images/design/cm_class_diagram.png>
 Package pdftex.def Info: images/design/cm_class_diagram.png used on input line 
 70.
-(pdftex.def)             Requested size: 264.61331pt x 173.92514pt.
- [41 <./images/design/cm-emm_interface_classes.png>]
-<images/design/cm_topology_object.png, id=775, 754.82pt x 204.765pt>
+(pdftex.def)             Requested size: 264.61331pt x 191.02402pt.
+ [39 <./images/design/cm-emm_interface_classes.png>]
+<images/design/cm_topology_object.png, id=769, 754.82pt x 204.765pt>
 File: images/design/cm_topology_object.png Graphic file (type png)
 
 <use images/design/cm_topology_object.png>
 Package pdftex.def Info: images/design/cm_topology_object.png used on input lin
 e 80.
 (pdftex.def)             Requested size: 352.8155pt x 95.70839pt.
- [42 <./images/design/cm_class_diagram.png> <./images/design/cm_topology_object
+ [40 <./images/design/cm_class_diagram.png> <./images/design/cm_topology_object
 .png>]
-<images/design/cm_instance_placement_engine.png, id=785, 212.795pt x 416.55624p
+<images/design/cm_instance_placement_engine.png, id=779, 212.795pt x 416.55624p
 t>
 File: images/design/cm_instance_placement_engine.png Graphic file (type png)
  <use images/design/cm_instance_placement_engine.png>
 Package pdftex.def Info: images/design/cm_instance_placement_engine.png used on
  input line 102.
 (pdftex.def)             Requested size: 88.2022pt x 172.66422pt.
- [43 <./images/design/cm_instance_placement_engine.png>]
-<images/design/cm_agent_design_class_diagram.png, id=792, 485.815pt x 345.29pt>
+ [41 <./images/design/cm_instance_placement_engine.png>]
+<images/design/cm_agent_design_class_diagram.png, id=785, 485.815pt x 280.04625
+pt>
 File: images/design/cm_agent_design_class_diagram.png Graphic file (type png)
-<use images/design/cm_agent_design_class_diagram.png>
+ <use images/design/cm_agent_design_class_diagram.png>
 Package pdftex.def Info: images/design/cm_agent_design_class_diagram.png used o
 n input line 137.
-(pdftex.def)             Requested size: 352.8155pt x 250.75822pt.
+(pdftex.def)             Requested size: 352.8155pt x 203.37657pt.
 
-<images/design/cm_agent_class_diagram.png, id=793, 1156.32pt x 1047.915pt>
+<images/design/cm_agent_class_diagram.png, id=786, 1106.1325pt x 964.60374pt>
 File: images/design/cm_agent_class_diagram.png Graphic file (type png)
 
 <use images/design/cm_agent_class_diagram.png>
 Package pdftex.def Info: images/design/cm_agent_class_diagram.png used on input
  line 157.
-(pdftex.def)             Requested size: 352.8155pt x 319.73352pt.
- [44 <./images/design/cm_agent_design_class_diagram.png>]
+(pdftex.def)             Requested size: 352.8155pt x 307.66391pt.
+ [42 <./images/design/cm_agent_design_class_diagram.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 175--175
 []|\OT1/cmr/m/n/10.95 List all avail-able
  []
@@ -1151,14 +1145,14 @@ Underfull \hbox (badness 2142) in paragraph at lines 175--175
 []|\OT1/cmr/m/n/10.95 Set QoS rates for
  []
 
-) [45 <./images/design/cm_agent_class_diagram.png>]
+) [43 <./images/design/cm_agent_class_diagram.png>]
 \openout2 = `Sections/Implementation.aux'.
 
 
 (./Sections/Implementation.tex
 Chapter 6.
 
-<images/implementation/cm_implementation_focus_overview.png, id=804, 1516.66624
+<images/implementation/cm_implementation_focus_overview.png, id=798, 1516.66624
 pt x 460.72125pt>
 File: images/implementation/cm_implementation_focus_overview.png Graphic file (
 type png)
@@ -1167,12 +1161,12 @@ type png)
 Package pdftex.def Info: images/implementation/cm_implementation_focus_overview
 .png used on input line 17.
 (pdftex.def)             Requested size: 396.91324pt x 120.56503pt.
- [46
+ [44
 
 
 
- <./images/implementation/cm_implementation_focus_overview.png>] [47]
-<images/design/cm_get_host_utilization.png, id=848, 443.6575pt x 365.365pt>
+ <./images/implementation/cm_implementation_focus_overview.png>] [45]
+<images/design/cm_get_host_utilization.png, id=842, 443.6575pt x 365.365pt>
 File: images/design/cm_get_host_utilization.png Graphic file (type png)
 
 <use images/design/cm_get_host_utilization.png>
@@ -1180,55 +1174,55 @@ Package pdftex.def Info: images/design/cm_get_host_utilization.png used on inpu
 t line 91.
 (pdftex.def)             Requested size: 220.50885pt x 181.59491pt.
 
-<images/design/cm_get_topology_requirements.png, id=849, 608.2725pt x 460.72125
+<images/design/cm_get_topology_requirements.png, id=843, 608.2725pt x 460.72125
 pt>
 File: images/design/cm_get_topology_requirements.png Graphic file (type png)
  <use images/design/cm_get_topology_requirements.png>
 Package pdftex.def Info: images/design/cm_get_topology_requirements.png used on
  input line 101.
 (pdftex.def)             Requested size: 264.61331pt x 200.42618pt.
- [48 <./images/design/cm_get_host_utilization.png>]
-<images/design/cm_feasibility_check.png, id=865, 675.52374pt x 733.74126pt>
+ [46 <./images/design/cm_get_host_utilization.png>]
+<images/design/cm_feasibility_check.png, id=859, 675.52374pt x 733.74126pt>
 File: images/design/cm_feasibility_check.png Graphic file (type png)
 
 <use images/design/cm_feasibility_check.png>
 Package pdftex.def Info: images/design/cm_feasibility_check.png used on input l
 ine 113.
 (pdftex.def)             Requested size: 308.71104pt x 335.31947pt.
- [49 <./images/design/cm_get_topology_requirements.png>]
-<images/design/cm_single_host_check.png, id=872, 640.3925pt x 754.82pt>
+ [47 <./images/design/cm_get_topology_requirements.png>]
+<images/design/cm_single_host_check.png, id=865, 640.3925pt x 754.82pt>
 File: images/design/cm_single_host_check.png Graphic file (type png)
 
 <use images/design/cm_single_host_check.png>
 Package pdftex.def Info: images/design/cm_single_host_check.png used on input l
 ine 128.
 (pdftex.def)             Requested size: 308.71104pt x 363.87589pt.
- [50 <./images/design/cm_feasibility_check.png>]
-<images/design/cm_set_az_topology.png, id=878, 550.055pt x 473.77pt>
+ [48 <./images/design/cm_feasibility_check.png>]
+<images/design/cm_set_az_topology.png, id=871, 550.055pt x 473.77pt>
 File: images/design/cm_set_az_topology.png Graphic file (type png)
 
 <use images/design/cm_set_az_topology.png>
 Package pdftex.def Info: images/design/cm_set_az_topology.png used on input lin
 e 141.
 (pdftex.def)             Requested size: 308.71104pt x 265.90218pt.
- [51 <./images/design/cm_single_host_check.png>] <images/design/cm_set_qos.png,
- id=884, 735.74875pt x 865.2325pt>
+ [49 <./images/design/cm_single_host_check.png>] <images/design/cm_set_qos.png,
+ id=878, 735.74875pt x 865.2325pt>
 File: images/design/cm_set_qos.png Graphic file (type png)
 
 <use images/design/cm_set_qos.png>
 Package pdftex.def Info: images/design/cm_set_qos.png used on input line 166.
 (pdftex.def)             Requested size: 264.61331pt x 311.19301pt.
- [52 <./images/design/cm_set_az_topology.png>] [53 <./images/design/cm_set_qos.
+ [50 <./images/design/cm_set_az_topology.png>] [51 <./images/design/cm_set_qos.
 png>]
-<images/design/activity_host_list.png, id=907, 530.98375pt x 1148.29pt>
+<images/design/activity_host_list.png, id=901, 530.98375pt x 1148.29pt>
 File: images/design/activity_host_list.png Graphic file (type png)
 
 <use images/design/activity_host_list.png>
 Package pdftex.def Info: images/design/activity_host_list.png used on input lin
 e 191.
 (pdftex.def)             Requested size: 286.65881pt x 619.92719pt.
- [54] [55 <./images/design/activity_host_list.png>]
-<images/design/activity_get_ovs_port_server.png, id=918, 444.66125pt x 364.3612
+ [52] [53 <./images/design/activity_host_list.png>]
+<images/design/activity_get_ovs_port_server.png, id=911, 444.66125pt x 364.3612
 5pt>
 File: images/design/activity_get_ovs_port_server.png Graphic file (type png)
  <use images/design/activity_get_ovs_port_server.png>
@@ -1236,7 +1230,7 @@ Package pdftex.def Info: images/design/activity_get_ovs_port_server.png used on
  input line 201.
 (pdftex.def)             Requested size: 220.50885pt x 180.68462pt.
 
-<images/design/activity_get_qos_id_for_ovs_port.png, id=919, 575.14874pt x 793.
+<images/design/activity_get_qos_id_for_ovs_port.png, id=912, 575.14874pt x 793.
 96625pt>
 File: images/design/activity_get_qos_id_for_ovs_port.png Graphic file (type png
 )
@@ -1244,17 +1238,17 @@ File: images/design/activity_get_qos_id_for_ovs_port.png Graphic file (type png
 Package pdftex.def Info: images/design/activity_get_qos_id_for_ovs_port.png use
 d on input line 211.
 (pdftex.def)             Requested size: 308.71104pt x 426.16702pt.
- [56 <./images/design/activity_get_ovs_port_server.png>]
-<images/design/activity_set_qos.png, id=925, 646.415pt x 522.95375pt>
+ [54 <./images/design/activity_get_ovs_port_server.png>]
+<images/design/activity_set_qos.png, id=918, 646.415pt x 522.95375pt>
 File: images/design/activity_set_qos.png Graphic file (type png)
 
 <use images/design/activity_set_qos.png>
 Package pdftex.def Info: images/design/activity_set_qos.png used on input line 
 224.
 (pdftex.def)             Requested size: 308.71104pt x 249.74619pt.
- [57 <./images/design/activity_get_qos_id_for_ovs_port.png>] [58 <./images/desi
+ [55 <./images/design/activity_get_qos_id_for_ovs_port.png>] [56 <./images/desi
 gn/activity_set_qos.png>]
-<images/implementation/cma_tests.png, id=945, 195.73125pt x 190.7125pt>
+<images/implementation/cma_tests.png, id=939, 195.73125pt x 190.7125pt>
 File: images/implementation/cma_tests.png Graphic file (type png)
 
 <use images/implementation/cma_tests.png>
@@ -1270,7 +1264,7 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbraceleft' on input line 273.
 
-[59 <./images/implementation/cma_tests.png>]) [60]
+[57 <./images/implementation/cma_tests.png>]) [58]
 \openout2 = `Sections/Evaluation.aux'.
 
  (./Sections/Evaluation.tex
@@ -1295,99 +1289,103 @@ Underfull \hbox (badness 3623) in paragraph at lines 33--33
 \OT1/cmr/m/n/10.95 Gi-ga-bit Net-work Con-nec-
  []
 
-[61
+[59
 
 
 
-] [62] [63]
-<images/evaluation/testbed_scenario1.png, id=1026, 704.6325pt x 425.59pt>
+] [60]
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+[61] <images/evaluation/testbed_scenario1.png, id=1023, 704.6325pt x 425.59pt>
 File: images/evaluation/testbed_scenario1.png Graphic file (type png)
 
 <use images/evaluation/testbed_scenario1.png>
 Package pdftex.def Info: images/evaluation/testbed_scenario1.png used on input 
-line 147.
+line 149.
 (pdftex.def)             Requested size: 308.71104pt x 186.45491pt.
- [64]
-<images/evaluation/testbed_scenario1_bw.png, id=1055, 602.25pt x 372.39125pt>
+ [62]
+<images/evaluation/testbed_scenario1_bw.png, id=1052, 602.25pt x 372.39125pt>
 File: images/evaluation/testbed_scenario1_bw.png Graphic file (type png)
 
 <use images/evaluation/testbed_scenario1_bw.png>
 Package pdftex.def Info: images/evaluation/testbed_scenario1_bw.png used on inp
-ut line 159.
+ut line 161.
 (pdftex.def)             Requested size: 220.50885pt x 136.35068pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--178
+Underfull \hbox (badness 10000) in paragraph at lines 180--180
 []|\OT1/cmr/m/n/10.95 Measured
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 178--178
+Underfull \hbox (badness 1052) in paragraph at lines 180--180
 []|\OT1/cmr/m/n/10.95 Datagrams out
  []
 
-[65 <./images/evaluation/testbed_scenario1.png> <./images/evaluation/testbed_sc
+[63 <./images/evaluation/testbed_scenario1.png> <./images/evaluation/testbed_sc
 enario1_bw.png>]
-<images/evaluation/testbed_scenario2.png, id=1062, 574.145pt x 425.59pt>
+<images/evaluation/testbed_scenario2.png, id=1059, 574.145pt x 425.59pt>
 File: images/evaluation/testbed_scenario2.png Graphic file (type png)
 
 <use images/evaluation/testbed_scenario2.png>
 Package pdftex.def Info: images/evaluation/testbed_scenario2.png used on input 
-line 193.
+line 195.
 (pdftex.def)             Requested size: 308.71104pt x 228.84106pt.
 
-<images/evaluation/testbed_scenario2_bw.png, id=1063, 602.25pt x 372.39125pt>
+<images/evaluation/testbed_scenario2_bw.png, id=1060, 602.25pt x 372.39125pt>
 File: images/evaluation/testbed_scenario2_bw.png Graphic file (type png)
 
 <use images/evaluation/testbed_scenario2_bw.png>
 Package pdftex.def Info: images/evaluation/testbed_scenario2_bw.png used on inp
-ut line 205.
+ut line 207.
 (pdftex.def)             Requested size: 220.50885pt x 136.35068pt.
- [66 <./images/evaluation/testbed_scenario2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 222--222
+ [64 <./images/evaluation/testbed_scenario2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 224--224
 []|\OT1/cmr/m/n/10.95 Measured
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 222--222
+Underfull \hbox (badness 1052) in paragraph at lines 224--224
 []|\OT1/cmr/m/n/10.95 Datagrams out
  []
 
-<images/evaluation/testbed_scenario3.png, id=1069, 574.145pt x 425.59pt>
+<images/evaluation/testbed_scenario3.png, id=1066, 574.145pt x 425.59pt>
 File: images/evaluation/testbed_scenario3.png Graphic file (type png)
 
 <use images/evaluation/testbed_scenario3.png>
 Package pdftex.def Info: images/evaluation/testbed_scenario3.png used on input 
-line 236.
+line 238.
 (pdftex.def)             Requested size: 308.71104pt x 228.84106pt.
- [67 <./images/evaluation/testbed_scenario2_bw.png>] [68 <./images/evaluation/t
-estbed_scenario3.png>] [69]
-[70]
+ [65 <./images/evaluation/testbed_scenario2_bw.png>] [66 <./images/evaluation/t
+estbed_scenario3.png>] [67]
+[68]
 File: images/evaluation/testbed_scenario2_bw.png Graphic file (type png)
  <use images/evaluation/testbed_scenario2_bw.png>
 Package pdftex.def Info: images/evaluation/testbed_scenario2_bw.png used on inp
-ut line 367.
+ut line 369.
 (pdftex.def)             Requested size: 220.50885pt x 136.35068pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--388
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
 []|\OT1/cmr/m/n/10.95 Measured
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 388--388
+Underfull \hbox (badness 1052) in paragraph at lines 390--390
 []|\OT1/cmr/m/n/10.95 Datagrams out
  []
 
-) [71] [72]
+) [69] [70]
 \openout2 = `Sections/Conclusion.aux'.
 
  (./Sections/Conclusion.tex
 Chapter 8.
-) [73
+[71
 
 
 
 
-] [74]
+]) [72]
 \openout2 = `Sections/Bibliography.aux'.
 
  (./Sections/Bibliography.tex
@@ -1414,8 +1412,7 @@ Underfull \hbox (badness 2521) in paragraph at lines 18--19
  / events . linuxfoundation . org / sites / events /
  []
 
-[75
-
+[73
 
 
 
@@ -1456,39 +1453,39 @@ Underfull \hbox (badness 1533) in paragraph at lines 34--35
 with OVS\, De-cem-
  []
 
-) [76pdfTeX warning (ext4): destination with the same identifier (name{cite.ope
+) [74pdfTeX warning (ext4): destination with the same identifier (name{cite.ope
 nstack-ops}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.256 \include{Sections/Bibliography}
+l.257 \include{Sections/Bibliography}
                                      ]
 \openout2 = `Sections/Appendix_Glossar.aux'.
 
  (./Sections/Appendix_Glossar.tex
 Appendix A.
-[77
+[75
 
 
 
-]) [78] <images/general/leer.jpg, id=1291, 120.45pt x 120.45pt>
+]) [76] <images/general/leer.jpg, id=1288, 120.45pt x 120.45pt>
 File: images/general/leer.jpg Graphic file (type jpg)
 
 <use images/general/leer.jpg>
-Package pdftex.def Info: images/general/leer.jpg used on input line 296.
+Package pdftex.def Info: images/general/leer.jpg used on input line 297.
 (pdftex.def)             Requested size: 396.91324pt x 396.95319pt.
-\tf@thm=\write9
-\openout9 = `bachelor.thm'.
+\tf@thm=\write8
+\openout8 = `bachelor.thm'.
 
 
 
 Package natbib Warning: There were multiply defined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 301.
-[79
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
+[77
 
  <./images/general/leer.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 301.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
  (./bachelor.aux (./Sections/Titelblatt.aux)
 (./Sections/Introduction.aux) (./Sections/Fundamentals.aux)
 (./Sections/Requirements.aux) (./Sections/S-O-T-A.aux) (./Sections/Design.aux)
@@ -1499,21 +1496,21 @@ Package natbib Warning: Citation(s) may have changed.
 (natbib)                Rerun to get citations correct.
 
 ) (./Sections/Appendix_Glossar.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 301.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 301.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
 Package rerunfilecheck Info: File `bachelor.out' has not changed.
-(rerunfilecheck)             Checksum: 7C6E4123E7518D7C7410374A746DB2BB;4883.
+(rerunfilecheck)             Checksum: 60D0761C36314AEC8DD514FDBD9290DE;4828.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 16320 strings out of 495028
- 245633 string characters out of 6181497
- 469516 words of memory out of 5000000
+ 16324 strings out of 495028
+ 245757 string characters out of 6181497
+ 469764 words of memory out of 5000000
  18550 multiletter control sequences out of 15000+600000
- 14706 words of font info for 53 fonts, out of 8000000 for 9000
+ 14353 words of font info for 52 fonts, out of 8000000 for 9000
  30 hyphenation exceptions out of 8191
  46i,12n,77p,1847b,1908s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
@@ -1524,14 +1521,13 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
-0.pfb>
-Output written on bachelor.pdf (79 pages, 2357731 bytes).
+/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmtt10.pfb>
+Output written on bachelor.pdf (77 pages, 2329790 bytes).
 PDF statistics:
- 1450 PDF objects out of 1728 (max. 8388607)
- 1267 compressed objects within 13 object streams
- 520 named destinations out of 1000 (max. 500000)
- 791 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1444 PDF objects out of 1728 (max. 8388607)
+ 1264 compressed objects within 13 object streams
+ 528 named destinations out of 1000 (max. 500000)
+ 783 words of extra memory for PDF output out of 10000 (max. 10000000)
 
