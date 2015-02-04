@@ -68,7 +68,7 @@
 \contentsline {section}{\numberline {6.3}Connectivity Manager Agent - Components and Operations}{51}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Get list of all hosts and their utilization state}{52}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Set QoS rates for all servers}{55}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}API}{56}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.3}API}{57}{subsection.6.3.3}
 \contentsline {section}{\numberline {6.4}Tests}{57}{section.6.4}
 \contentsline {chapter}{\numberline {7}Evaluation}{59}{chapter.7}
 \contentsline {section}{\numberline {7.1}Connectivity Manager Integration with NUBOMEDIA project}{59}{section.7.1}

@@ -190,7 +190,7 @@ The following figure displays the way in which the CM Agent creates a dictionary
 
 \includegraphics[width=0.65\textwidth]{images/implementation/cma_host_list}
 
-\caption{Activity diagram: Get list of hosts}
+\caption{Get list of hosts}
 \end{figure}
 
 In order to identify the rates that might have already been attached to a VMs port, a few steps need to be taken. With the servers IP address the Neutron Port ID can be retrieved. This Neutron Port ID has a Port ID within Open vSwitch that can be retrieved from the OVSDB. 
@@ -200,7 +200,7 @@ In order to identify the rates that might have already been attached to a VMs po
 
 \includegraphics[width=0.5\textwidth]{images/implementation/cma_get_ovs_port_server}
 
-\caption{Activity diagram: Get OVS Port ID for server}
+\caption{Get OVS Port ID for server}
 \end{figure}
 
 Each Port contains a field for QoS, which holds its QoS ID. This ID can then be filtered from the Queue table and the associated rates are listed in there.
@@ -210,7 +210,7 @@ Each Port contains a field for QoS, which holds its QoS ID. This ID can then be 
 
 \includegraphics[width=0.7\textwidth]{images/implementation/cma_get_qos_id_for_ovs_port}
 
-\caption{Activity diagram: Get QoS ID for OVS Port}
+\caption{Get QoS ID for OVS Port}
 \end{figure}
 
 \subsection{Set QoS rates for all servers}
@@ -223,9 +223,18 @@ In order to set the bandwidth rates for the servers this method first retrieves 
 
 \includegraphics[width=0.5\textwidth]{images/implementation/cma_set_qos}
 
-\caption{Activity diagram: Set requested QoS rates for servers}
+\caption{Set requested QoS rates for all servers}
 \end{figure}
 
+The method that is called from within the above figure for setting QoS for a single server performs the following activities:
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.4\textwidth]{images/implementation/cma_set_qos_single_server}
+
+\caption{Set QoS rates for a single server}
+\end{figure}
 
 \subsection{API}
 
