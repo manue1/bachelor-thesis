@@ -6,23 +6,23 @@ This section identifies the functional requirements of the Connectivity Manager,
 
 \subsection{Service-Level Agreement Enforcement}
 
-One of the key objectives of the Connectivity Manager is to grant different Service-Level Agreements (SLA) to the links between Virtual Machines. The agreement is set as Quality of Service assurances with the minimal and maximum bandwidth rate set. Network performance problems can provide a negative experience for the end-user, as well as productivity and economic loss. This is why some services need to have an ensured premium traffic.
+One of the key objectives of the Connectivity Manager is to grant different Service-Level Agreements (SLA) to the links between Virtual Machines. The agreement is set as Quality of Service assurances with the minimal and maximum bandwidth rate set. Network performance problems can provide a negative experience for the end-user, as well as productivity and economic loss. This is why some services require an assured bandwidth rate.
 
 \subsection{Optimal Virtual Machine Placement}
 
-The placement of Virtual Machines makes a tremendous difference in terms of their network and overall resource performance. It needs to be evaluated which placement makes for the best-available network bandwidth between VMs within the internal network. The current utilization of hosts need to be taken into account as well. A stack should only be deployed if the resources are available at the time of deployment without overcommitting any hardware resources.
+The placement of Virtual Machines makes a tremendous difference in terms of their network and overall resource performance. It is important to evaluate which placement makes for the best-available network bandwidth between VMs within the internal network. The current utilization of hosts need to be taken into account as well. A stack should only be deployed if the resources are available at the time of deployment without overcommitting any hardware resources.
 
 \subsection{Integration with Elastic Media Manager}
 
-The Connectivity Manager needs to integrated with the Elastic Media Manager (EMM) which is used for deploying a topology of resources within a cloud infrastructure. Furthermore it provisions the instances and manages them during their runtime through services such as upscaling the amount of instances after certain utilization alarms are triggered. The CM communicates with the EMM in order to enable the two previously-mentioned requirements for the overall platform.
+The Connectivity Manager needs to integrate with the Elastic Media Manager (EMM) which is used for deploying a topology of resources within a cloud infrastructure. Furthermore it provisions the instances and manages them during their runtime through services such as upscaling the amount of instances after certain utilization alarms are triggered. The CM communicates with the EMM in order to enable the two previously-mentioned requirements for the overall platform.
 
 \section{Non-functional Requirements}
 
-Non-functional requirements generally specify criteria to do with the operation of a system and not with its behavior. Thus the Connectivity Manager should also fit the following characteristics.
+Non-functional requirements generally specify criteria in relation to the operation of a system and not in relation to its behavior. Thus the Connectivity Manager should also fit the following characteristics.
 
 \subsection{Scalability}
 
-Today's data-centers can grow in a fast-pace, especially in connection with automated up-scaling of compute resources at a certain level of utilization. This is why the underlying virtualized network software needs to be scalable too.
+Today's data-centers can grow at a fast-pace, especially in connection with automated up-scaling of compute resources at a certain level of utilization. This is why the underlying virtualized network software needs to be scalable too.
 
 \subsection{Modularity}
 

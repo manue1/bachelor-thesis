@@ -66,15 +66,15 @@ The test of Ryu was unsuccessful due to a number of errors while stacking the te
 
 The implementation has not been finished and merged into Neutron, however the basic deployment of QoS seem to have been tested successfully. 
 
-At the moment it is not clear if the OpenStack community will keep working on this, according to the whiteboard it was deferred to Juno, but it's not included in the current release and no active development is stated in the code / documentation platforms of the OpenStack community.
+At the moment it is not clear if the OpenStack community will keep working on this. According to the code review comments, it was deferred to Juno, but it is not included in the current release and no active development is stated in the code / documentation platforms of the OpenStack community.
 
 The patch consists of an extension to the Neutron API which allows setting QoS rules through the Neutron Python client, the actual Neutron extension with the QoS, QoS Driver in the Open vSwitch agent and an addition to the Neutron Database that includes QoS.
 
-For the scope of this work, extending Neutron with QoS is not within the projects time-frame.
+For the scope of this work, extending Neutron with QoS is not within the time frame of the project.
 
 \section{Conclusion}
 
-The listed problems further strengthen the motivation for the implementation of the Connectivity Manager. Additionally the second major requirement for the Optimal Virtual Machine Placement are not given in any of the outlines solutions. The following table lists a comparison and analysis of their features:
+The listed problems further strengthen the motivation for the implementation of the Connectivity Manager. Additionally, the second major requirement for the Optimal Virtual Machine Placement are not given in any of the outlined solutions. The following table lists a comparison and analysis of their features:
 
 
 
