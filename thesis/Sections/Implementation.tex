@@ -208,7 +208,7 @@ Each Port contains a field for QoS, which holds its QoS ID. This ID can then be 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.7\textwidth]{images/design/activity_get_qos_id_for_ovs_port}
+\includegraphics[width=0.7\textwidth]{images/implementation/cma_get_qos_id_for_ovs_port}
 
 \caption{Activity diagram: Get QoS ID for OVS Port}
 \end{figure}
@@ -221,7 +221,7 @@ In order to set the bandwidth rates for the servers this method first retrieves 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.7\textwidth]{images/implementation/cma_set_qos}
+\includegraphics[width=0.5\textwidth]{images/implementation/cma_set_qos}
 
 \caption{Activity diagram: Set requested QoS rates for servers}
 \end{figure}
@@ -252,12 +252,12 @@ For testing the components of the Connectivity Manager Agent the code was synchr
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.2\textwidth]{images/implementation/cma_tests.png}
+\includegraphics[width=0.17\textwidth]{images/implementation/cma_tests.png}
 
 \caption{Connectivity Manager Agent: Test package}
 \end{figure}
 
-These functional tests contain the following methods for the main components of the application:
+These functional tests contain the following methods of the main components:
 \begin{itemize}
 \item Agent: instantiates the Agent class and tests listing the information about all hosts
 \item Keystone: tests retrieving the token and endpoint
