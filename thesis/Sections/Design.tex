@@ -32,7 +32,7 @@ The Connectivity Manager and Agent are two separate applications that communicat
 \caption{Minimized architecture of the Connectivity Manager and its integrations}
 \end{figure}
 
-This design was chosen first of all because the Connectivity Manager is integrated within the EMM, which is required to be placed outside of the data center. Second of all the Connectivity Manager Agent needs access to the OVSDB on the compute nodes and consequently needs to be within the internal management network of the OpenStack infrastructure.
+This design was chosen firstly because the Connectivity Manager is integrated within the EMM, which is required to be placed outside of the data center. Secondly, the Connectivity Manager Agent needs access to the OVSDB on the compute nodes and consequently needs to be within the internal management network of the OpenStack infrastructure.
 
 The sequence diagram below displays the work-flow that the CM passes during the run-time.
 
@@ -44,7 +44,7 @@ The sequence diagram below displays the work-flow that the CM passes during the 
 \caption{Deployment of a topology \& assignment of QoS policies}
 \end{figure}
 
-As visible in the above figure, the Connectivity Manager receives the Topology object that contains a description of the configuration and specifications of the whole stack. For the placement decision the CM to needs to get the information about the current state of the infrastructure. This exchange with the CM Agent occurs through the HTTP API. Upon reception of that data, the placement algorithm sets the availability zone for each instance within the topology. The topology is then converted into a Heat template by the Template Manager. Once the template got deployed by the Heat Client the runtime agent starts. The purpose of the runtime agent is to continuously check the state of the stack. Once the stack has reached the 'DEPLOYED' state, the runtime agent requests the CM to set the QoS policies according to previously configured values. This configuration is subsequently transmitted to the CM Agent whose task is to then enable the policies on the according ports of the instances within the Open vSwitches.
+As visible in the above figure, the Connectivity Manager receives the Topology object that contains a description of the configuration and specifications of the whole stack. For the placement decision the CM to needs to get the information about the current state of the infrastructure. This exchange with the CM Agent occurs through the HTTP API. Upon reception of that data, the placement algorithm sets the availability zone for each instance within the topology. The topology is then converted into a Heat template by the Template Manager. Once the template  was deployed by the Heat Client, the runtime agent starts. The purpose of the runtime agent is to continuously check the state of the stack. Once the stack has reached the 'DEPLOYED' state, the runtime agent requests the CM to set the QoS policies according to previously configured values. This configuration is subsequently transmitted to the CM Agent whose task is to then enable the policies on the associated ports of the instances within the Open vSwitches.
 
 
 \section{Design of Connectivity Manager}
@@ -52,7 +52,7 @@ As visible in the above figure, the Connectivity Manager receives the Topology o
 The design of the Connectivity Manager is based on the framework that already exists in the Elastic Media Manager.
 
 It consists of a highly dynamic factory, abstract interfaces and the actual implementation as a service.
-The Factory Agent reads a configuration file in which the class name of the service for the according interface is defined. It then instantiates a instance from that given class. This means it is easy to replace the actual implementation while the interface to the other components can remain unchanged.
+The Factory Agent reads a configuration file in which the class name of the service for the associated interface is defined. It then instantiates a instance from that given class. This means it is easy to replace the actual implementation while the interface to the other components can remain unchanged.
 
 \begin{figure}[H]
 \centering
@@ -62,7 +62,7 @@ The Factory Agent reads a configuration file in which the class name of the serv
 \caption{Metaclass (Interface) and implementation (Service) instantiated by Factory Agent}
 \end{figure}
 
-The Connectivity Manager interface and service only contain the methods that receive calls from the Elastic Media Manager. However additional helper classes are needed in order to provide the appropriate configuration and the communication with the Connectivity Manager Agent, as shown in the next figure.
+The Connectivity Manager interface and service only contain the methods that receive calls from the Elastic Media Manager. However, additional helper classes are needed in order to provide the appropriate configuration and the communication with the Connectivity Manager Agent, as shown in the next figure.
 
 \begin{figure}[H]
 \centering
