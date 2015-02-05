@@ -203,7 +203,7 @@ In order to identify the rates that might have already been attached to a VM's p
 \caption{Get OVS Port ID for server}
 \end{figure}
 
-Each Port contains a field for QoS, which holds its QoS ID. This ID can then be filtered from the Queue table and the associated rates are listed in there.
+Each Port contains a field for QoS, which holds its QoS ID. This ID can then be filtered from the Queue table.
 
 \begin{figure}[H]
 \centering
@@ -212,6 +212,17 @@ Each Port contains a field for QoS, which holds its QoS ID. This ID can then be 
 
 \caption{Get QoS ID for OVS Port}
 \end{figure}
+
+The QoS ID has a Queue attached to it, wherein the set minimum and maximum bandwidth rates are specified.
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=0.7\textwidth]{images/implementation/cma_get_queue_rates_for_qos}
+
+\caption{Get Queue rates for a QoS ID}
+\end{figure}
+
 
 \subsection{Set QoS rates for all servers}
 
