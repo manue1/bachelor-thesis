@@ -14,6 +14,7 @@ Nubomedia is an elastic Platform-as-a-Service (PaaS) cloud for interactive multi
 
 The following section contains information about the configuration used, followed by the different scenarios that were used to evaluate the effectiveness of the Connectivity Manager. All scenarios used the same topology and were deployed on a tenant without any other running servers or Heat stacks. The bandwidth tests were performed using the iperf tool.
 
+\newpage
 \subsection{Test-bed Configuration}
 
 The test-bed consists of two nodes with the following hardware characteristics:
@@ -101,6 +102,7 @@ The topology that is used for the evaluation contains the following services ins
 It can be deployed using a test script which performs a HTTP POST to the EMM API at the \textit{/topologies} path.
 
 The service types are further defined in another JSON file, which includes their configuration, networks and other parameters that are needed for provisioning. As one example the Media Server service is given below:
+\newpage
 
 \textit{data/json\_file/services/MediaService.json:}
 \begin{lstlisting}[language=json,firstnumber=1]
@@ -139,6 +141,7 @@ The service types are further defined in another JSON file, which includes their
 }
 \end{lstlisting}
 
+\newpage
 \subsection{Scenario 1: Without Instance Placement Engine \& QoS enabled}
 
 In this first scenario the deployment without any influence of the Connectivity Manager is shown. Here Nova randomly decides about the placement of the servers. In this case 4 servers were placed on the control node and one server on the compute node.
@@ -165,6 +168,7 @@ For testing the bandwidth the MediaServer-2 was used as a TCP server using iperf
 
 As is clearly visible, the network performance of the server on the separate node performs much worse, which is also due to the fact that there is only a Gigabit-Ethernet connection between the nodes.
 
+\newpage
 \textbf{UDP traffic}
 
 In order to test the bandwidth with UDP traffic, two servers were started as a UDP server and each of them received one client connection. The selected bandwidth limit that the packets were streamed at is 800 MBit/s.
@@ -196,7 +200,7 @@ In this next scenario, the Instance Placement Engine was enabled and therefore t
 
 \caption{Scenario 2: Placement of servers with Connectivity Manager}
 \end{figure}
-
+\newpage
 \textbf{TCP traffic}
 
 The following graph shows that the available bandwidth using TCP packets is now evenly distributed for all servers. However the traffic of the MediaServers should be prioritized, which is why QoS is needed to further improve the connectivity according to the requirements.
@@ -227,7 +231,7 @@ The traffic generation was configured in the same way as in Scenario 1, except t
 \end{table}
 
 With the servers all running on the same compute node, the datagrams that were received out of order could be minimized.
-
+\newpage
 \subsection{Scenario 3: Instance Placement Engine and QoS Manager enabled}
 
 The servers are again placed on a single host and the Quality of Service configuration that was previously set in the configuration is applied. All media servers have a guaranteed bandwidth rate of 100 MBit/s and a maximum rate of 10 GBit/s, while all servers of other instance types have a rate between 100 MBit/s and 1 GBit/s.
@@ -240,15 +244,13 @@ The servers are again placed on a single host and the Quality of Service configu
 \caption{Scenario 3: Placement of servers using the Connectivity Manager with QoS enabled}
 \end{figure}
 
-The topology with it's configured QoS Queues is also visible by performing a HTTP GET to the Connectivity Manager Agent at the /hosts path:
+The topology with it's configured QoS Queues is also visible by performing a HTTP GET to the Connectivity Manager Agent at the /hosts path (excerpt):
 \begin{lstlisting}[language=json,firstnumber=1]
 {  
    "dc4-comp":{  
       "cpu_total":4,
       "ip":"192.168.41.44",
-      "servers":{  
-
-      },
+      "servers":{ },
       "instances":0,
       "ram_total":7788,
       "ram_used":0,
@@ -277,41 +279,7 @@ The topology with it's configured QoS Queues is also visible by performing a HTT
             "name":"MediaServer-1",
             "neutron_port":"b5318e60-6534-4f80-ab05-8d4747f1022a"
          },
-         "6b2f58f6-4cc7-4438-b6bf-2af54f13f0ec":{  
-            "ip":"10.0.0.13",
-            "ovs_port_id":"qvo58137c93-bc",
-            "qos":{  
-               "queues":{  
-                  "0":{  
-                     "rates":{  
-                        "max-rate":"10000000000",
-                        "min-rate":"100000000"
-                     },
-                     "uuid":"86ed41aa-b48d-47fa-805a-6eab61d23948"
-                  }
-               },
-               "uuid":"9b3794a1-7046-4f9d-afb6-0e13a4bbd2d5"
-            },
-            "name":"MediaServer-3",
-            "neutron_port":"58137c93-bc56-4ddd-8330-8af161bc3e3d"
-         },
-         "45aecdb2-75ee-4876-af69-4793a7d4c242":{  
-            "ip":"10.0.0.17",
-            "ovs_port_id":"qvo80023252-ee",
-            "qos":{  
-               "queues":{  
-                  "0":{  
-                     "rates":{  
-                        "max-rate":"10000000000",
-                        "min-rate":"100000000"
-                     },
-                     "uuid":"e8e6fdf1-62c3-42ca-a354-6437bf7eb9f2"
-                  }
-               },
-               "uuid":"241d9954-2048-4b00-bdfc-14c9c5191151"
-            },
-            "name":"MediaServer-2",
-            "neutron_port":"80023252-ee83-4205-9503-7e86a16d7286"
+         { "..."
          },
          "dedd78db-2be4-4655-b08a-8cac40087823":{  
             "ip":"10.0.0.16",
@@ -330,24 +298,6 @@ The topology with it's configured QoS Queues is also visible by performing a HTT
             },
             "name":"Broker-1",
             "neutron_port":"762f8d9d-7d7f-45fb-836b-eaa3ebaad71b"
-         },
-         "1eb23d4c-fb5a-42eb-9943-2fb2585b8c04":{  
-            "ip":"10.0.0.14",
-            "ovs_port_id":"qvo32e74709-e8",
-            "qos":{  
-               "queues":{  
-                  "0":{  
-                     "rates":{  
-                        "max-rate":"1000000000",
-                        "min-rate":"100000000"
-                     },
-                     "uuid":"81d2a604-bc78-41fd-a3ac-71c550251286"
-                  }
-               },
-               "uuid":"db182f5b-afba-4163-9ca5-51501aed1959"
-            },
-            "name":"Controller-1",
-            "neutron_port":"32e74709-e812-4f14-bbd9-2e9926fa1377"
          }
       },
       "instances":5,

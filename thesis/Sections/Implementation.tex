@@ -7,14 +7,14 @@ The software developed in this thesis is completely realized using the Python pr
 
 PyCharm was selected as the Integrated Development Environment (IDE) to simplify the programming and testing lifecycles. The code is under revision control using Git and the repository that contains both the code for the CM and CM Agent consists of two main branches: master and develop. The develop branch holds the latest changes and upon successful testing those were merged back into master, which is always in a production-ready state.
 
-\subsubsection{Project Structure}
+\subsection{Project Structure}
 
 The code is separated into two different projects in order to allow testing of the integration concurrently. The following graphic outlines the focus within the Elastic Media Manager (EMM), whilst the CM Agent is separated and has its own structure.
 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.9\textwidth]{images/implementation/cm_implementation_focus_overview}
+\includegraphics[width=\textwidth]{images/implementation/cm_implementation_focus_overview}
 
 \caption{Implementation focus}
 \end{figure}
@@ -23,7 +23,7 @@ The structure for the CM is dictated by the already existing implementation of t
 
 The Connectivity Manager contains the ReST API, the Agent core, clients and other helper classes.
 
-\subsubsection{Local OpenStack Test Environment}
+\subsection{Local OpenStack Test Environment}
 
 In order to test the Connectivity Manager Agent and the use of its OpenStack API clients a test-bed was installed. This test-bed was set up using Vagrant, as it allows starting of the virtual machines from the command-line and can easily be provisioned and managed. In order to test the software across multiple compute nodes a setup with 2 VM's was installed.
 
@@ -77,9 +77,10 @@ ENABLED_SERVICES=n-cpu,rabbit,neutron,q-agt,q-l3
 
 During the implementation and testing phase the Connectivity Manager Agent was installed on the controller node while the EMM was executed from the local machine.
 
+\newpage
 \section{Connectivity Manager - Components and Operations}
 
-\subsubsection{Selection of Best-Performing Hypervisor}
+\subsection{Selection of Best-Performing Hypervisor}
 
 
 \textbf{Step 1: Retrieve current host utilization from CM Agent}
@@ -88,7 +89,7 @@ In order to decide on the placement, the Connectivity Manager firstly needs to r
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.4\textwidth]{images/implementation/cm_get_host_utilization}
+\includegraphics[width=0.6\textwidth]{images/implementation/cm_get_host_utilization}
 
 \caption{Check resource utilization of hosts}
 \end{figure}
@@ -98,11 +99,11 @@ The amount of resources that are required in total to deploy the topology on the
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.5\textwidth]{images/implementation/cm_get_topology_requirements}
+\includegraphics[width=0.7\textwidth]{images/implementation/cm_get_topology_requirements}
 
 \caption{Get total amount of required resources for topology}
 \end{figure}
-
+\newpage
 \textbf{Step 2: Check if Topology is within the limitations of the Quota and currently available resources on the tenants hosts.}
 
 In the second step it is checked if the topology is feasible for deployment. This decision is made by first comparing the values from Step 1 to the available Quota values (amount of VMs, RAM, and vCPUs required for the sum of all servers) and secondly finding out if the required resources are less or equal to the currently not utilized resources in the tenants infrastructure.
@@ -110,14 +111,14 @@ In the second step it is checked if the topology is feasible for deployment. Thi
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.6\textwidth]{images/implementation/cm_feasibility_check}
+\includegraphics[width=0.8\textwidth]{images/implementation/cm_feasibility_check}
 
 \caption{Deployment feasibility check}
 \end{figure}
 
 These comparisons need to be made, in order to conform to the requirement of not over-committing any resources.
 
-
+\newpage
 \textbf{Step 3: Check whether the Topology can be deployed on a single host.}
 
 The next step checks if the total amount of topology resources from Step 1 can be deployed on a single host. If there are multiple hosts that have enough capacity available, the first one within the list is returned by this method.
@@ -125,11 +126,11 @@ The next step checks if the total amount of topology resources from Step 1 can b
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.7\textwidth]{images/implementation/cm_single_host_check}
+\includegraphics[width=0.9\textwidth]{images/implementation/cm_single_host_check}
 
 \caption{Single host deployment check}
 \end{figure}
-
+\newpage
 
 \textbf{Step 4: Set selected host as availability zone for each Unit.}
 
@@ -138,12 +139,12 @@ Lastly the chosen host needs to be set in the topology, so it can be returned to
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.5\textwidth]{images/implementation/cm_set_az_topology}
+\includegraphics[width=0.6\textwidth]{images/implementation/cm_set_az_topology}
 
 \caption{Set AZ per Unit}
 \end{figure}
 
-\subsubsection{Enabling QoS for servers}
+\subsection{Enabling QoS for servers}
 
 The rates for the QoS classes can be set in the configuration of the EMM.
 The default location is \textit{/etc/nubomedia/emm.properties} and it contains the following default rates:
@@ -163,13 +164,13 @@ For setting QoS for all Units within a Service Instance, the following workflow 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.6\textwidth]{images/implementation/cm_set_qos.png}
+\includegraphics[width=0.8\textwidth]{images/implementation/cm_set_qos.png}
 
 \caption{Method for setting QoS for all Units}
 \end{figure}
 
 The dictionary that this method returns is then converted to the JSON format and sent to the Connectivity Manager Agent by performing a HTTP POST to the \textit{/qoses} path of the IP address that is set for the \textit{cm\_agent\_ip} property in the configuration file.
-
+\newpage
 \section{Connectivity Manager Agent - Components and Operations}
 
 The two major operations that the Connectivity Manager needs to perform in order to provide the required services to this project is retrieving the resource status of the data center and setting QoS for the servers ports.
@@ -188,7 +189,7 @@ The following figure displays the way in which the CM Agent creates a dictionary
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.65\textwidth]{images/implementation/cma_host_list}
+\includegraphics[width=0.8\textwidth]{images/implementation/cma_host_list}
 
 \caption{Get list of hosts}
 \end{figure}
@@ -198,7 +199,7 @@ In order to identify the rates that might have already been attached to a VM's p
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.5\textwidth]{images/implementation/cma_get_ovs_port_server}
+\includegraphics[width=0.37\textwidth]{images/implementation/cma_get_ovs_port_server}
 
 \caption{Get OVS Port ID for server}
 \end{figure}
@@ -208,7 +209,7 @@ Each Port contains a field for QoS, which holds its QoS ID. This ID can then be 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.7\textwidth]{images/implementation/cma_get_qos_id_for_ovs_port}
+\includegraphics[width=0.6\textwidth]{images/implementation/cma_get_qos_id_for_ovs_port}
 
 \caption{Get QoS ID for OVS Port}
 \end{figure}
@@ -218,7 +219,7 @@ The QoS ID has a Queue attached to it, wherein the set minimum and maximum bandw
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.7\textwidth]{images/implementation/cma_get_queue_rates_for_qos}
+\includegraphics[width=0.67\textwidth]{images/implementation/cma_get_queue_rates_for_qos}
 
 \caption{Get Queue rates for a QoS ID}
 \end{figure}
@@ -232,9 +233,9 @@ In order to set the bandwidth rates for the servers this method first retrieves 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.5\textwidth]{images/implementation/cma_set_qos}
+\includegraphics[width=0.6\textwidth]{images/implementation/cma_set_qos}
 
-\caption{Set requested QoS rates for all servers}
+\caption{Agent: Set QoS rates for all servers}
 \end{figure}
 
 The method that is called from within the above figure for setting QoS for a single server performs the following activities:
@@ -242,9 +243,9 @@ The method that is called from within the above figure for setting QoS for a sin
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.4\textwidth]{images/implementation/cma_set_qos_single_server}
+\includegraphics[width=0.5\textwidth]{images/implementation/cma_set_qos_single_server}
 
-\caption{Set QoS rates for a single server}
+\caption{Server: Set QoS rates for a single server}
 \end{figure}
 
 \subsection{API}
@@ -268,14 +269,6 @@ The server uses the localhost IP address and is served and listens on port 8091.
 \section{Tests}
 
 For testing the components of the Connectivity Manager Agent the code was synchronized to a local testbed with two virtual machines, one of which acted as the control node and the other just as a compute node. 
-
-\begin{figure}[H]
-\centering
-
-\includegraphics[width=0.17\textwidth]{images/implementation/cma_tests.png}
-
-\caption{Connectivity Manager Agent: Test package}
-\end{figure}
 
 These functional tests contain the following methods of the main components:
 \begin{itemize}

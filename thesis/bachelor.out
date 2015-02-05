@@ -42,28 +42,31 @@
 \BOOKMARK [2][-]{subsection.5.3.1}{Algorithm for Instance Placement}{section.5.3}% 42
 \BOOKMARK [2][-]{subsection.5.3.2}{QoS Manager}{section.5.3}% 43
 \BOOKMARK [1][-]{section.5.4}{Design of Connectivity Manager Agent}{chapter.5}% 44
-\BOOKMARK [2][-]{subsection.5.4.1}{API}{section.5.4}% 45
-\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 46
-\BOOKMARK [1][-]{section.6.1}{Environment}{chapter.6}% 47
-\BOOKMARK [1][-]{section.6.2}{Connectivity Manager - Components and Operations}{chapter.6}% 48
-\BOOKMARK [1][-]{section.6.3}{Connectivity Manager Agent - Components and Operations}{chapter.6}% 49
-\BOOKMARK [2][-]{subsection.6.3.1}{Get list of all hosts and their utilization state}{section.6.3}% 50
-\BOOKMARK [2][-]{subsection.6.3.2}{Set QoS rates for all servers}{section.6.3}% 51
-\BOOKMARK [2][-]{subsection.6.3.3}{API}{section.6.3}% 52
-\BOOKMARK [1][-]{section.6.4}{Tests}{chapter.6}% 53
-\BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 54
-\BOOKMARK [1][-]{section.7.1}{Connectivity Manager Integration with NUBOMEDIA project}{chapter.7}% 55
-\BOOKMARK [1][-]{section.7.2}{Network Performance Analysis}{chapter.7}% 56
-\BOOKMARK [2][-]{subsection.7.2.1}{Test-bed Configuration}{section.7.2}% 57
-\BOOKMARK [2][-]{subsection.7.2.2}{Installation of Connectivity Manager Agent}{section.7.2}% 58
-\BOOKMARK [2][-]{subsection.7.2.3}{Topology Definition}{section.7.2}% 59
-\BOOKMARK [2][-]{subsection.7.2.4}{Scenario 1: Without Instance Placement Engine \046 QoS enabled}{section.7.2}% 60
-\BOOKMARK [2][-]{subsection.7.2.5}{Scenario 2: With Instance Placement Engine enabled, but without QoS}{section.7.2}% 61
-\BOOKMARK [2][-]{subsection.7.2.6}{Scenario 3: Instance Placement Engine and QoS Manager enabled}{section.7.2}% 62
-\BOOKMARK [1][-]{section.7.3}{Conclusion}{chapter.7}% 63
-\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 64
-\BOOKMARK [1][-]{section.8.1}{Summary}{chapter.8}% 65
-\BOOKMARK [1][-]{section.8.2}{Problems Encountered}{chapter.8}% 66
-\BOOKMARK [1][-]{section.8.3}{Future Work}{chapter.8}% 67
-\BOOKMARK [0][-]{section.8.3}{Bibliography}{}% 68
-\BOOKMARK [0][-]{appendix.A}{List of acronyms}{}% 69
+\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 45
+\BOOKMARK [1][-]{section.6.1}{Environment}{chapter.6}% 46
+\BOOKMARK [2][-]{subsection.6.1.1}{Project Structure}{section.6.1}% 47
+\BOOKMARK [2][-]{subsection.6.1.2}{Local OpenStack Test Environment}{section.6.1}% 48
+\BOOKMARK [1][-]{section.6.2}{Connectivity Manager - Components and Operations}{chapter.6}% 49
+\BOOKMARK [2][-]{subsection.6.2.1}{Selection of Best-Performing Hypervisor}{section.6.2}% 50
+\BOOKMARK [2][-]{subsection.6.2.2}{Enabling QoS for servers}{section.6.2}% 51
+\BOOKMARK [1][-]{section.6.3}{Connectivity Manager Agent - Components and Operations}{chapter.6}% 52
+\BOOKMARK [2][-]{subsection.6.3.1}{Get list of all hosts and their utilization state}{section.6.3}% 53
+\BOOKMARK [2][-]{subsection.6.3.2}{Set QoS rates for all servers}{section.6.3}% 54
+\BOOKMARK [2][-]{subsection.6.3.3}{API}{section.6.3}% 55
+\BOOKMARK [1][-]{section.6.4}{Tests}{chapter.6}% 56
+\BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 57
+\BOOKMARK [1][-]{section.7.1}{Connectivity Manager Integration with NUBOMEDIA project}{chapter.7}% 58
+\BOOKMARK [1][-]{section.7.2}{Network Performance Analysis}{chapter.7}% 59
+\BOOKMARK [2][-]{subsection.7.2.1}{Test-bed Configuration}{section.7.2}% 60
+\BOOKMARK [2][-]{subsection.7.2.2}{Installation of Connectivity Manager Agent}{section.7.2}% 61
+\BOOKMARK [2][-]{subsection.7.2.3}{Topology Definition}{section.7.2}% 62
+\BOOKMARK [2][-]{subsection.7.2.4}{Scenario 1: Without Instance Placement Engine \046 QoS enabled}{section.7.2}% 63
+\BOOKMARK [2][-]{subsection.7.2.5}{Scenario 2: With Instance Placement Engine enabled, but without QoS}{section.7.2}% 64
+\BOOKMARK [2][-]{subsection.7.2.6}{Scenario 3: Instance Placement Engine and QoS Manager enabled}{section.7.2}% 65
+\BOOKMARK [1][-]{section.7.3}{Conclusion}{chapter.7}% 66
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 67
+\BOOKMARK [1][-]{section.8.1}{Summary}{chapter.8}% 68
+\BOOKMARK [1][-]{section.8.2}{Problems Encountered}{chapter.8}% 69
+\BOOKMARK [1][-]{section.8.3}{Future Work}{chapter.8}% 70
+\BOOKMARK [0][-]{section.8.3}{Bibliography}{}% 71
+\BOOKMARK [0][-]{appendix.A}{List of acronyms}{}% 72

@@ -20,7 +20,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of OpenDaylight Virtualization edition\relax }}{33}{figure.caption.24}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Ryu architecture\relax }}{34}{figure.caption.25}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Neutron QoS Extension architecture\relax }}{35}{figure.caption.26}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Neutron QoS Extension architecture\relax }}{34}{figure.caption.26}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces High-level architecture of the Connectivity Manager\relax }}{37}{figure.caption.28}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Minimized architecture of the Connectivity Manager and its integrations\relax }}{38}{figure.caption.29}
@@ -33,25 +33,24 @@
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Class diagram: Connectivity Manager Agent - All packages\relax }}{43}{figure.caption.37}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Implementation focus\relax }}{44}{figure.caption.39}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Check resource utilization of hosts\relax }}{46}{figure.caption.40}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Get total amount of required resources for topology\relax }}{47}{figure.caption.41}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Deployment feasibility check\relax }}{48}{figure.caption.42}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Single host deployment check\relax }}{49}{figure.caption.43}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Set AZ per Unit\relax }}{50}{figure.caption.44}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Method for setting QoS for all Units\relax }}{51}{figure.caption.45}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Get list of hosts\relax }}{53}{figure.caption.46}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Get OVS Port ID for server\relax }}{54}{figure.caption.47}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Check resource utilization of hosts\relax }}{47}{figure.caption.40}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Get total amount of required resources for topology\relax }}{48}{figure.caption.41}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Deployment feasibility check\relax }}{49}{figure.caption.42}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Single host deployment check\relax }}{50}{figure.caption.43}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Set AZ per Unit\relax }}{51}{figure.caption.44}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Method for setting QoS for all Units\relax }}{52}{figure.caption.45}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Get list of hosts\relax }}{54}{figure.caption.46}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Get OVS Port ID for server\relax }}{55}{figure.caption.47}
 \contentsline {figure}{\numberline {6.10}{\ignorespaces Get QoS ID for OVS Port\relax }}{55}{figure.caption.48}
 \contentsline {figure}{\numberline {6.11}{\ignorespaces Get Queue rates for a QoS ID\relax }}{56}{figure.caption.49}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Set requested QoS rates for all servers\relax }}{57}{figure.caption.50}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Set QoS rates for a single server\relax }}{58}{figure.caption.51}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Connectivity Manager Agent: Test package\relax }}{59}{figure.caption.52}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Agent: Set QoS rates for all servers\relax }}{57}{figure.caption.50}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Server: Set QoS rates for a single server\relax }}{58}{figure.caption.51}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Scenario 1: Placement of servers without Connectivity Manager\relax }}{64}{figure.caption.54}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Scenario 1: TCP bandwidth comparison\relax }}{64}{figure.caption.55}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Scenario 2: Placement of servers with Connectivity Manager\relax }}{65}{figure.caption.57}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Scenario 2: TCP bandwidth comparison\relax }}{66}{figure.caption.58}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Scenario 3: Placement of servers using the Connectivity Manager with QoS enabled\relax }}{67}{figure.caption.60}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Scenario 3: TCP bandwidth comparison\relax }}{70}{figure.caption.61}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Scenario 1: Placement of servers without Connectivity Manager\relax }}{64}{figure.caption.53}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Scenario 1: TCP bandwidth comparison\relax }}{64}{figure.caption.54}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Scenario 2: Placement of servers with Connectivity Manager\relax }}{65}{figure.caption.56}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Scenario 2: TCP bandwidth comparison\relax }}{66}{figure.caption.57}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Scenario 3: Placement of servers using the Connectivity Manager with QoS enabled\relax }}{67}{figure.caption.59}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Scenario 3: TCP bandwidth comparison\relax }}{69}{figure.caption.60}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

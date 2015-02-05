@@ -38,7 +38,7 @@ Packet forwarding (data plane) and routing decisions (control plane) in classica
 \end{figure}
 
 A switch consists of multiple ports for incoming and outgoing data. Internal forwarding tables classify the packets and forward them to one specific or multiple ports. It does so by collecting MAC addresses and storing their corresponding port in tables. Layer 2 switches also support the segregation into virtual LANs (VLAN), which enables the network operator to logically isolate networks that share a single switch.
-
+\newpage
 Routers forward packets on the Network layer (Layer 3) and routing-decisions are made based on IP addresses. They contain a routing table wherein paths to neighbouring networks are stored, so that packets can be forwarded to their destination IP address. Other features that can be configured with routers are Quality of Service (QoS), Network Address Translation (NAT) and packet filtering.
 
 The main differences between the classical architecture and SDN will be further described in the next section.
@@ -61,9 +61,9 @@ SDN separates the architecture into three distinct layers that communicate with 
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.5\textwidth]{images/fundamentals/sdn_logical_architecture.png}
+\includegraphics[width=0.45\textwidth]{images/fundamentals/sdn_logical_architecture.png}
 
-\caption{SDN architecture}
+\caption{SDN architecture} \cite{onfdefinition}
 \end{figure}
 
 \subsection{OpenFlow}
@@ -93,18 +93,18 @@ The OpenFlow controller is segregated from the switch and has two interfaces. Th
 
 \subsubsection{OpenFlow Switch}
 
-There are two varieties of OpenFlow-compliant switches: \cite{ofspecification}
+There are two varieties \cite{ofspecification} of OpenFlow-compliant switches: 
 \begin{itemize}
 \item \textbf{OpenFlow-only:} in these switches all packets are processed by the OpenFlow pipeline and have no legacy features.
 \item \textbf{OpenFloy-hybrid:} support OpenFlow and normal Ethernet switching (including traditional L2 Ethernet switching, VLAN isolation, L3 routing, ACL and QoS). Most of the commercial switches that are available on the market today are of this type.
 \end{itemize}
 
-An OpenFlow switch includes one ore more flow tables and a group table, which have the function of carrying out packet lookups and forwarding. Another component is the OpenFlow channel that is connected to the external controller \cite{ofspecification}.
+An OpenFlow switch includes one ore more flow tables and a group table, which have the function of carrying out packet lookups and forwarding. Another component is the OpenFlow channel that is connected to the external controller.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\textwidth]{images/fundamentals/openflow_switch_components.png}
-\caption{OpenFlow switch components}
+\includegraphics[width=0.25\textwidth]{images/fundamentals/openflow_switch_components.png}
+\caption{OpenFlow switch components}  \cite{ofspecification}
 \end{figure}
 
 Through the connection using the OpenFlow protocol, the controller is able to add, update and delete flow entries in Flow tables.  This action can be performed either reactively or proactively. Sets of flow entries are stored in each flow table and each flow entry consists of \textit{match fields}, \textit{counters}, and a set of \textit{instructions} used for matching packets.
@@ -136,7 +136,7 @@ The OpenFlow pipeline specifies how packets correspond with each of the flow tab
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{images/fundamentals/openflow_pipeline_processing.png}
-\caption{OpenFlow pipeline processing}
+\caption{OpenFlow pipeline processing} \cite{ofspecification}
 \end{figure}
 
 As illustrated in the figure, each packet is matched against the flow entries starting at the first flow table, called flow table 0. The outcome of the match then decides if other of the sequentially numbered tables may be used. In the following sections the components of the Flow table, the matching procedures and different instructions will be described.
@@ -173,8 +173,8 @@ Each flow table entry is uniquely identifiable by its match fields and priority.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{images/fundamentals/openflow_packet_matching.png}
-\caption{Packet flow through an OpenFlow switch}
+\includegraphics[width=0.5\textwidth]{images/fundamentals/openflow_packet_matching.png}
+\caption{Packet flow through an OpenFlow switch} \cite{ofspecification}
 \end{figure}
 
 Upon a packet's arrival at the Flow Table, the packet match fields are extracted and used for the table lookup \cite{ofspecification}. They include different packet header fields. Additionally the ingress port can be matched with metadata fields.
@@ -192,7 +192,7 @@ Each flow table must support a table-miss flow entry which specifies how to proc
 \underline{\textbf{Group Tables}}
 
 A group table consists of group entries and it provides a way to direct the same set of actions as part of action buckets to multiple flows. A flow entry is pointed to a group and enables additional methods of forwarding (e.g. broadcast or multicast).
-
+\newpage
 
 \underline{\textbf{Meter Tables}}
 
@@ -296,12 +296,12 @@ OVS supports the following features \cite{ovs-readme}:
 \item High-performance forwarding using a Linux kernel module
 \end{itemize}
 
-The internals of OVS are as follows \cite{prognetworkingovs}:
+The internals of OVS are as follows:
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{images/fundamentals/openvswitch_architecture.png}
-\caption{Architecture of Open vSwitch: kernelspace / userspace separation}
+\caption{Architecture of Open vSwitch: kernelspace / userspace separation}  \cite{prognetworkingovs}
 \end{figure}
 
 The daemon which implements the switch is \textit{ovs-vswitchd} and is shipped with an additional Linux kernel module for flow-based switching that it communicates with using the netlink protocol \cite{ovsdeepdive}. The configuration for the switch is queried from a lightweight database server named \textit{ovsdb-server}.
