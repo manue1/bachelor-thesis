@@ -10,7 +10,7 @@ In this following section a brief overview of the SDN architecture and concepts,
 
 Today's internet is part of the modern society for private users, enterprises and vital infrastructure services. Networks are required to evolve in order to address the challenges that are entailed with new applications, services and a growing number of end-users.
 
-With a more detailed view on the challenges of current network infrastructures one comes to see the following limitations: \cite{onfnewnorm}
+With a more detailed view on the challenges of current network infrastructures one comes to see the following limitations \cite{onfnewnorm}:
 
 \begin{itemize}
 \item \textbf{Inability to scale}: With the expansion of data centers, networks grow too. Configuring and managing these additional network devices comes at a high administrative effort. With the virtualization of data-centers network traffic patterns become more and more dynamic and unpredictable. With multi-tenancy an additional complication is introduced, because different end-users and services need require distinct network characteristics. Network management and scaling of the architecture cannot be achieved with a manual configuration of the underlying infrastructure.
@@ -23,7 +23,7 @@ Traditionally, decisions about traffic-flows through the network are made direct
 
 \subsubsection{Classical Switches \& Routers}
 
-Packet forwarding (data plane) and routing decisions (control plane) in classical switching and routing are both within one device. The main components depicted in Figure 2.1 have the following functions:
+Packet forwarding (data plane) and routing decisions (control plane) in classical switching and routing are both within one device. The main components depicted in Figure~\ref{fig:switch} have the following functions:
 \begin{enumerate}
 \item The \textbf{forwarding path} typically handles data path operations for each packet. It generally consists of Application-Specific Integrated Circuits (ASIC), network-processors or general-purpose processors that forwards frames and packets at wire speed (line-rate). Their lookup functions can be further increased with memory resources like Content Addressable Memory (CAM) or Ternary Content Addressable Memory (TCAM) to contain the forwarding information.
 \item The elements in the \textbf{control plane} are based on general-purpose processors that provide services like routing and signaling protocols, including ARP, MAC Learning and forwarding tables.
@@ -34,7 +34,7 @@ Packet forwarding (data plane) and routing decisions (control plane) in classica
 
 \includegraphics[width=0.5\textwidth]{images/fundamentals/switch_components}
 
-\caption{"Classical" switch components}
+\caption{"Classical" switch components}\label{fig:switch}
 \end{figure}
 
 A switch consists of multiple ports for incoming and outgoing data. Internal forwarding tables classify the packets and forward them to one specific or multiple ports. It does so by collecting MAC addresses and storing their corresponding port in tables. Layer 2 switches also support the segregation into virtual LANs (VLAN), which enables the network operator to logically isolate networks that share a single switch.
@@ -50,7 +50,7 @@ The work of the Open Networking Foundation laid out the OpenFlow standard as the
 
 \subsection{SDN Architecture}
 
-SDN separates the architecture into three distinct layers that communicate with each other through different APIs. This separation is shown in Figure 2.2.
+SDN separates the architecture into three distinct layers that communicate with each other through different APIs. This separation is shown in Figure~\ref{fig:sdn-arch}.
 
 \begin{itemize}
 \item \textbf{Infrastructure Layer:} here all physical and virtual devices (e.g. switches and routers) that are capable of the OpenFlow Protocol provide forwarding mechanisms on different Network Layers.
@@ -63,7 +63,7 @@ SDN separates the architecture into three distinct layers that communicate with 
 
 \includegraphics[width=0.45\textwidth]{images/fundamentals/sdn_logical_architecture.png}
 
-\caption{SDN architecture} \cite{onfdefinition}
+\caption{SDN architecture} \cite{onfdefinition}\label{fig:sdn-arch}
 \end{figure}
 
 \subsection{OpenFlow}
@@ -118,7 +118,8 @@ Packets can also be directed to a group, which contains a set of actions for flo
 \subsubsection{OpenFlow Ports}
 OpenFlow ports are the network interfaces used for passing packets between OpenFlow processing and the rest of the network \cite{ofspecification}.
 There are various types of ports that are supported by OpenFlow. This section will give a short overview about this port abstraction.
-Incoming OpenFlow packets enter the switch on an ingress port, are then processed by the OpenFlow pipeline and forwarded to an output port. (See OF Tables figure for processing).
+Incoming OpenFlow packets enter the switch on an ingress port, are then processed by the OpenFlow pipeline and forwarded to an output port (See Figure~\ref{fig:of-pipeline}).
+
 
 There are three types of OpenFlow ports that must be supported by an OpenFlow switch:
 \begin{itemize}
@@ -135,13 +136,13 @@ The OpenFlow pipeline specifies how packets correspond with each of the flow tab
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{images/fundamentals/openflow_pipeline_processing.png}
-\caption{OpenFlow pipeline processing} \cite{ofspecification}
+\includegraphics[width=0.9\textwidth]{images/fundamentals/openflow_pipeline_processing.png}
+\caption{OpenFlow pipeline processing} \cite{ofspecification}\label{fig:of-pipeline}
 \end{figure}
 
-As illustrated in the figure, each packet is matched against the flow entries starting at the first flow table, called flow table 0. The outcome of the match then decides if other of the sequentially numbered tables may be used. In the following sections the components of the Flow table, the matching procedures and different instructions will be described.
+As illustrated in Figure~\ref{fig:of-pipeline}, each packet is matched against the flow entries starting at the first flow table, called flow table 0. The outcome of the match then decides if other of the sequentially numbered tables may be used. In the following sections the components of the Flow table, the matching procedures and different instructions will be described.
 
-
+\newpage
 \textbf{\underline{Flow Table}}
 
 A flow table contains flow entries, each of which consist of the following fields \cite{ofspecification}: 
@@ -174,70 +175,25 @@ Each flow table entry is uniquely identifiable by its match fields and priority.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{images/fundamentals/openflow_packet_matching.png}
-\caption{Packet flow through an OpenFlow switch} \cite{ofspecification}
+\caption{Packet flow through an OpenFlow switch} \cite{ofspecification}\label{fig:of-packetflow}
 \end{figure}
 
 Upon a packet's arrival at the Flow Table, the packet match fields are extracted and used for the table lookup \cite{ofspecification}. They include different packet header fields. Additionally the ingress port can be matched with metadata fields.
 If the values in the packet match fields are equal, then only the flow entry with the highest priority is selected. Furthermore the associated counters are updated and the instruction set is applied.
 
-When the instruction set associated with a matching flow entry does not specify a next table, the pipeline processing stops. Only then the packet is processed with it's action set and in most cases forwarded as shown on the right-hand side of Figure 2.6.
+When the instruction set associated with a matching flow entry does not specify a next table, the pipeline processing stops. Only then the packet is processed with it's action set and in most cases forwarded as shown on the right-hand side of Figure~\ref{fig:of-packetflow}.
 However, if the lookup phase does not match any of the entries, a table-miss event occurs.
 
-
+\newpage
 \underline{\textbf{Table-miss}}
 
 Each flow table must support a table-miss flow entry which specifies how to process packets that are unmatched by other flow entries. The instructions associated with this entry are very alike to any other flow entries. Packets are either forwarded to other controllers, dropped, or it is continued with the next flow table. In case the table-miss flow entry is non-existent, unmatched packets are dropped by default. 
-
-
-\underline{\textbf{Group Tables}}
-
-A group table consists of group entries and it provides a way to direct the same set of actions as part of action buckets to multiple flows. A flow entry is pointed to a group and enables additional methods of forwarding (e.g. broadcast or multicast).
-\newpage
 
 \underline{\textbf{Meter Tables}}
 
 Meters are on a per-flow level and allow OpenFlow to implement various QoS operations, such as rate-limiting, but it can also be combined with per-port queues to implement more complex QoS like DiffServ.
 
-The main components of a meter entry in the meter table are:
-
-\begin{table}[H]
-\centering
-
-\begin{tabular}{|c|c|c|}
-\hline Meter Identifier & Meter Bands & Counters \\ 
-\hline 
-\end{tabular} 
-
-\caption{Fields within a meter entry in the meter table}
-\end{table}
-
-\begin{itemize}
-\item \textbf{meter identifier:} a 32 bit unsigned integer uniquely identifying the meter
-\item \textbf{meter bands:} each meter band specifies the rate of the band and the action that is triggered by exceeding the limit
-\item \textbf{counters:} is updated when packets are processed by the meter
-\end{itemize}
-
 The rate of packets assigned to a meter are measured and controlled. Meters are directly attached to flow entries, as opposed to queues that are attached to ports. A meter is able to have one or more meter bands, each of which specifies the rate and the way packets should be handled. If the current measured meter rate reached the rate-limit, the band applies an action. 
-
-A meter band is identified by its rate and consists of the following fields:
-
-\begin{table}[H]
-\centering
-
-\begin{tabular}{|c|c|c|c|}
-\hline Band Type & Rate & Counters & Type specific arguments \\ 
-\hline 
-\end{tabular} 
-
-\caption{Fields within a meter band}
-\end{table}
-
-\begin{itemize}
-\item \textbf{band type:} defines how the packets are processed
-\item \textbf{rate:} selects the meter band for the meter and defines the lowest rate at which the band can apply
-\item \textbf{counters:} is updated when packets are processed by the meter
-\item \textbf{type specific arguments:} some bands have optional arguments
-\end{itemize}
 
 \begin{figure}[H]
 \centering
@@ -296,6 +252,7 @@ OVS supports the following features \cite{ovs-readme}:
 \item High-performance forwarding using a Linux kernel module
 \end{itemize}
 
+\newpage
 The internals of OVS are as follows:
 
 \begin{figure}[H]
@@ -323,7 +280,7 @@ Each Open vSwitch daemon has a database (OVSDB) that holds it's configuration \c
 \item \textbf{Manager}: OVSDB management connection
 \end{itemize}
 
-
+\newpage
 \subsubsection{Open vSwitch Management}
 
 Multiple different configuration utilities exist for OVS, however only ovs-vsctl is explained in this section. It is used for querying and updating the configuration of the switch through interaction with the ovsdb-server.
@@ -350,7 +307,7 @@ In order to add Flow entries to a bridge the \textit{ovs-ofctl} is needed. The d
 $ ovs-ofctl add-flow br-int hard_timeout=0,idle_timeout=0,priority=1,actions=normal
 \end{lstlisting}
 
-
+\newpage
 \subsubsection{QoS}
 
 With Open vSwitch Quality of Service can be configured for ports that virtual machines are connected to. The minimal and maximal rate-limits can be defined in bit / s and applied to a queue. With the use of this feature the network traffic from the switches internal bridge to a virtual network interface can be shaped (egress).
@@ -364,22 +321,18 @@ With Open vSwitch Quality of Service can be configured for ports that virtual ma
 The approach used in this work does not modify the OF Flow and their actions, which means that all Queues on a OVS are within the same Flow entry. The QoS port assurances in OVS make use of the 'tc' implementation which is included in the Linux kernel.
 
 
-
-% % http://linux.die.net/man/8/tc % %
-% % http://linux.die.net/man/8/tc-htb % %
-% % http://www.istudies.net/journal/sites/default/files/Extended%20Linux%20HTB%20Queuing%20Discipline%20Implementations.pdf % %
-% %https://github.com/stanzgy/nova-network-qos/blob/master/nova-network-qos-intro.rst % %
-% %http://luxik.cdi.cz/~devik/qos/htb/manual/userg.htm % %
 Traffic control (tc) uses 'queuing discipline' (qdisc) for configuring the network interface \cite{tc-manual}. They are the fundamental schedulers used under Linux. When a packet is sent, it is enqueued to the qdisc for the interface and shortly after the kernel is trying to get as many packets as it can from the qdisc, so they can be forwarded to the network adaptor driver. By default the 'pfifo\_fast' qdisc is set in the kernel, which is a pure 'First In, First out' queue.
 
 When setting QoS in OVS a classful qdisc named Hierarchy Token Bucket (HTB) is used. HTB is meant as a more understandable, intuitive and faster replacement for the Class Based Queuing (CBQ) qdisc in Linux \cite{htb-guide}. It helps to control the use of the outbound bandwidth on a given link. 
 
-For further understanding the following graph shows a HTB tree that contains on qdisc root and two classes (leaves) with different configurations:
+
+For further understanding Figure~\ref{fig:htb} shows a HTB tree that contains on qdisc root and two classes (leaves) with different configurations:
 
 \begin{figure}[H]
+
 \centering
 \includegraphics[width=0.7\textwidth]{images/fundamentals/htb_qdisc.png}
-\caption{HTB: qdisc classes linked together as a tree} \cite{htb-qdiscs} 
+\caption{HTB: qdisc classes linked together as a tree} \cite{htb-qdiscs} \label{fig:htb}
 \end{figure}
 
 The terminology that is used for defining HTB classes is as follows:
@@ -398,7 +351,7 @@ $ tc class add dev eth0 parent 1:0 classid 1:10 htb rate 200kbit ceil 400kbit pr
 $ tc class add dev eth0 parent 1:0 classid 1:20 htb rate 200kbit ceil 200kbit prio 2 mtu 1500
 \end{lstlisting}
 
-In figure 2.11 a root named 'qdisc handle 1' which applies filters to decide the direction of packets is depicted. It includes two leaves: 'qdisc handle 10' and set as default another leaf named 'qdisc handle 20'.
+In Figure~\ref{fig:htb} a root named 'qdisc handle 1' which applies filters to decide the direction of packets is depicted. It includes two leaves: 'qdisc handle 10' and set as default another leaf named 'qdisc handle 20'.
 
 With the above listed commands the leaves were configured with the following parameters:
 
@@ -434,9 +387,8 @@ By configuring \textit{tc} the quantum value is not directly managed. It is auto
 
 Virtual Extensible LAN tunnels are used with Open vSwitch in this work to encapsulate isolated layer 2 network traffic between compute nodes. The benefits of VXLAN are that it can adress up to 16M tenant networks as opposed to the 4K in VLAN, it allows for better scaling and because the VXLAN support is only required at the endpoints of the tunnels it permits a vendor flexibility \cite{openstack-vxlan}. The tunnels can be used to perform a large scale isolation within a network.
 
-
+\newpage
 \section{Cloud Computing Infrastructures}
-% Call it Infrastructure-as-a-Service? %
 
 
 \subsection{OpenStack}
@@ -462,7 +414,7 @@ Nova is used to provision and manage large amounts of virtual machines . It supp
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{images/fundamentals/openstack_nova.png}
+\includegraphics[width=0.6\textwidth]{images/fundamentals/openstack_nova.png}
 \caption{OpenStack Compute service} \cite{nova-arch}
 \end{figure}
 
@@ -477,6 +429,7 @@ An OpenStack cloud can be logically and physically grouped on different levels \
 
 For zoning compute nodes availability zones will be used in the Connectivity Manager in order to achieve the best networking performance between individual servers.
 
+\newpage
 \textbf{Default VM Placement}
 
 Nova makes use of the nova-scheduler service in order to regulate on which host a new VM is launched. The nova-scheduler interacts with other components through the queue and central database repo. All of the compute nodes periodically send an update about their status,  available resources and hardware capabilities to the nova-scheduler. It collects this data to make a decision about the placement based on a filter scheduler which takes the following criteria into account:
@@ -501,9 +454,11 @@ In the early versions of OpenStack, virtual networking was exclusively a sub-com
 \subsubsection{Networking Concepts}
 
 Neutron is responsible for defining network connectivity and addressing within OpenStack. In the main network abstraction the following components are defined:
-A network as a virtual layer 2 segment, a subnet as a layer 3 IP address space used within a network, a port as an interface to a network or subnet, a router that performs address translation and routing between subnets, a DHCP server responsible for IP adress distribution, a security group for filtering rules acting as a cloud firewall and Floating IP addresses to give VMs external network access.
+A network as a virtual layer 2 segment, a subnet as a layer 3 IP address space used within a network, a port as an interface to a network or subnet, a router that performs address translation and routing between subnets, a DHCP server responsible for IP address distribution, a security group for filtering rules acting as a cloud firewall and Floating IP addresses to give VMs external network access.
 
+\newpage
 Neutron exposes an extensible set of APIs for creating and administering its components. Neutron consists of the following elements \cite{openstack-training}:
+
 \begin{itemize}
 \item \textbf{neutron-server:} Provides the logic for SDN, however it does not contain any of its functionality in itself. It provides a generic API for the network operations, is modular and extended with the following agents.
 \item \textbf{L2 agent:} Plugin-specific agent that manages networking on a compute node. For more details, see Modular Layer 2 section.
@@ -521,14 +476,14 @@ The ML2 plugin is a framework that allows the simultaneous usage of multiple lay
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\textwidth]{images/fundamentals/neutron_ml2.png}
+\includegraphics[width=0.4\textwidth]{images/fundamentals/neutron_ml2.png}
 \caption{Neutron modular framework, including ML2 drivers}
 \end{figure}
 
 The plugin integrates the type driver and the mechanism driver. The type driver defines the network types that can be declared when a new network is created and currently includes: local, flat, vlan, gre and vxlan. The mechanism driver enables the mechanism for accessing these network types, i.e. Open vSwitch, Linux Bridge or other vendor-specific solutions. 
 
 
-
+\newpage
 \textbf{ML2: Open vSwitch}
 
 Open vSwitch is the ML2 mechanism driver that is set as default when installing OpenStack with Neutron enabled using the devstack script. It is also the most commonly deployed agent.
@@ -536,10 +491,10 @@ Open vSwitch is the ML2 mechanism driver that is set as default when installing 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{images/fundamentals/neutron_ovs_bridges.png}
-\caption{Neutron with OVS and VXLAN enabled}
+\caption{Neutron with OVS and VXLAN enabled}\label{fig:neutron-ovs}
 \end{figure}
 
-The above figure shows the connectivity of a VM, which has a 'qvo'-Port located in the internal bridge of the OVS. Each network within Neutron has its own network namespace and the external gateway uses the 'qrouter' namespace for routing. The connection between the compute nodes in this example uses VXLAN as the network type driver.
+Figure~\ref{fig:neutron-ovs} shows the connectivity of a VM, which has a 'qvo'-Port located in the internal bridge of the OVS. Each network within Neutron has its own network namespace and the external gateway uses the 'qrouter' namespace for routing. The connection between the compute nodes in this example uses VXLAN as the network type driver.
 
 
 \subsubsection{Network Distinction}
@@ -563,25 +518,6 @@ From the time when Neutron is started as a process within the OpenStack controll
 \end{enumerate}
 
 Once the VM is started it has full network connectivity within the tenants network and if a floating IP address was attached to it, then it can also be reached from the internet.
-
-%\textbf{Neutron - Nova interaction}
-%
-%\begin{enumerate}
-%\item Request: Create VM connected to network X (API)
-%\item Create VM (RPC: Nova API to Nova conductor)
-%\item Nova schedules VM
-%\item Create VM (RPC: Nova conductor to Nova compute)
-%\item Create Port (API: Nova compute to Neutron service)
-%\item Create tap device
-%\item Notify L2 agent (RPC)
-%\item get\_device\_details (RPC: L2 agent to Neutron service)
-%\item Configure local VLAN, OVS flows
-%\item Send port\_up notification (RPC: L2 agent to Neutron service)
-%\item Send port\_up notification (API: Neutron service to Nova)
-%\item port\_up (RPC: Nova service to Nova compute)
-%\item Nova compute boots VM
-%
-%\end{enumerate}
 
 
 \section{Conclusion}

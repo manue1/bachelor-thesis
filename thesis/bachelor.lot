@@ -1,21 +1,19 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Fields within a Flow table\relax }}{16}{table.caption.10}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Fields within a meter entry in the meter table\relax }}{18}{table.caption.12}
-\contentsline {table}{\numberline {2.3}{\ignorespaces Fields within a meter band\relax }}{18}{table.caption.13}
-\contentsline {table}{\numberline {2.4}{\ignorespaces Qdisc leaf configuration\relax }}{23}{table.caption.19}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Fields within a Flow table\relax }}{17}{table.caption.11}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Qdisc leaf configuration\relax }}{23}{table.caption.18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces State-of-the-art: Feature comparison\relax }}{36}{table.caption.27}
+\contentsline {table}{\numberline {4.1}{\ignorespaces State-of-the-art: Feature comparison\relax }}{37}{table.caption.26}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces QoS classes and their default rates\relax }}{41}{table.caption.35}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Connectivity Manager Agent - API description\relax }}{43}{table.caption.38}
+\contentsline {table}{\numberline {5.1}{\ignorespaces QoS classes and their default rates\relax }}{42}{table.caption.34}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Connectivity Manager Agent - API description\relax }}{44}{table.caption.37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Hardware resources of testbed used for evaluation\relax }}{61}{table.caption.52}
-\contentsline {table}{\numberline {7.2}{\ignorespaces Scenario 1: Network characteristics with generated UDP traffic\relax }}{65}{table.caption.55}
-\contentsline {table}{\numberline {7.3}{\ignorespaces Scenario 2: Network characteristics with generated UDP traffic\relax }}{66}{table.caption.58}
-\contentsline {table}{\numberline {7.4}{\ignorespaces Scenario 3: Network characteristics with generated UDP traffic\relax }}{69}{table.caption.61}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Hardware resources of testbed used for evaluation\relax }}{62}{table.caption.51}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Scenario 1: Network characteristics with generated UDP traffic\relax }}{66}{table.caption.54}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Scenario 2: Network characteristics with generated UDP traffic\relax }}{67}{table.caption.57}
+\contentsline {table}{\numberline {7.4}{\ignorespaces Scenario 3: Network characteristics with generated UDP traffic\relax }}{70}{table.caption.60}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

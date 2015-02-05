@@ -184,14 +184,14 @@ This enables remote administration through a passive TCP connection using the lo
 
 \subsection{Get list of all hosts and their utilization state}
 
-The following figure displays the way in which the CM Agent creates a dictionary containing the list of all hosts within the selected tenant. It contains information such as the amount of already running virtual machines, the amount of allocated RAM in MB and the number of vCPUs in use. For each of the virtual machines it shows their ID, name, and further resource information that is later needed for setting QoS. In case the VM already has a QoS assurance attached to its port, the corresponding minimal and maximal rates are shown.
+Figure~\ref{fig:cma-host-list} displays the way in which the CM Agent creates a dictionary containing the list of all hosts within the selected tenant. It contains information such as the amount of already running virtual machines, the amount of allocated RAM in MB and the number of vCPUs in use. For each of the virtual machines it shows their ID, name, and further resource information that is later needed for setting QoS. In case the VM already has a QoS assurance attached to its port, the corresponding minimal and maximal rates are shown.
 
 \begin{figure}[H]
 \centering
 
 \includegraphics[width=0.8\textwidth]{images/implementation/cma_host_list}
 
-\caption{Get list of hosts}
+\caption{Get list of hosts} \label{fig:cma-host-list}
 \end{figure}
 
 In order to identify the rates that might have already been attached to a VM's port, a few steps need to be taken. With the server's IP address the Neutron Port ID can be retrieved. This Neutron Port ID has a Port ID within Open vSwitch that can be retrieved from the OVSDB. 
@@ -227,7 +227,7 @@ The QoS ID has a Queue attached to it, wherein the set minimum and maximum bandw
 
 \subsection{Set QoS rates for all servers}
 
-In order to set the bandwidth rates for the servers this method first retrieves the list of all hosts that was mentioned in the previous figure and description. When the \textit{Set QoS} method is called through a request to the API the method body from the HTTP POST is passed onto it. This dictionary contains all QoS rates that need to be set for each server. 
+In order to set the bandwidth rates for the servers this method first retrieves the list of all hosts that was mentioned in Figure~\ref{fig:cma-host-list}. When the \textit{Set QoS} method is called through a request to the API the method body from the HTTP POST is passed onto it. This dictionary contains all QoS rates that need to be set for each server. 
 
 
 \begin{figure}[H]
@@ -235,10 +235,10 @@ In order to set the bandwidth rates for the servers this method first retrieves 
 
 \includegraphics[width=0.6\textwidth]{images/implementation/cma_set_qos}
 
-\caption{Agent: Set QoS rates for all servers}
+\caption{Agent: Set QoS rates for all servers}\label{fig:cma-set-qos-all}
 \end{figure}
 
-The method that is called from within the above figure for setting QoS for a single server performs the following activities:
+The method that is called from within Figure~\ref{fig:cma-set-qos-all} for setting QoS for a single server performs the following activities:
 
 \begin{figure}[H]
 \centering
@@ -298,5 +298,4 @@ The tests for the Connectivity Manager are part of the testing packages of the E
 }
 \end{lstlisting}
 
-To find out more about the parameters that each of the service\_types corresponds to, please check the \textit{Topology Definition} % % LINK TO SECTION % %
-in the Evaluation section.
+To find out more about the parameters that each of the service\_types corresponds to, please check Section~\ref{sec:eval-topology}.

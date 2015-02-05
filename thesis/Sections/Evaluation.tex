@@ -3,12 +3,11 @@
 
 \section{Connectivity Manager Integration with NUBOMEDIA project}
 
-% % CM deliverable % %
 
 The Connectivity Manager (CM) is part of the NUBOMEDIA platform and is placed between the virtual network resource management of the cloud infrastructure and the
 multimedia application. The main focus of the CM is related to management and control of network functions of the virtual network infrastructure provided by OpenStack.
 
-Nubomedia is an elastic Platform-as-a-Service (PaaS) cloud for interactive multimedia services \cite{nubomedia}. Its architecture is based on media pipelines: chains of elements providing media capabilities such as encryption, transcoding, augmented reality or video content analysis. These chains allow building arbitrarily complex media processing for applications. As a unique feature, from the point of view of the pipelines, the NUBOMEDIA cloud infrastructure behaves as a single virtual super-computer encompassing all the available resources of the underlying physical network. A big part of currently developed applications within the platform make use of WebRTC, which can use TCP or UDP traffic. This is why both protocols need to be evaluated.
+NUBOMEDIA is an elastic Platform-as-a-Service (PaaS) cloud for interactive multimedia services \cite{nubomedia}. Its architecture is based on media pipelines: chains of elements providing media capabilities such as encryption, transcoding, augmented reality or video content analysis. These chains allow building arbitrarily complex media processing for applications. As a unique feature, from the point of view of the pipelines, the NUBOMEDIA cloud infrastructure behaves as a single virtual super-computer encompassing all the available resources of the underlying physical network. A big part of currently developed applications within the platform make use of WebRTC, which can use TCP or UDP traffic. This is why both protocols need to be evaluated.
 
 \section{Network Performance Analysis}
 
@@ -74,7 +73,7 @@ $ venv/bin/python cm-agent/wsgi/application.py
 
 The \textit{venv/bin/python} command means that the program uses the Python interpreter that is located in the virtual environment.
 
-\subsection{Topology Definition}
+\subsection{Topology Definition} \label{sec:eval-topology}
 
 The topology that is used for the evaluation contains the following services instances:
 
@@ -156,20 +155,20 @@ In this first scenario the deployment without any influence of the Connectivity 
 
 \textbf{TCP traffic}
 
-For testing the bandwidth the MediaServer-2 was used as a TCP server using iperf. All other servers connected to it in client mode sending and retrieving TCP packets in a timeframe of 10 seconds. The following graph shows the bandwidth usage of the servers.
+For testing the bandwidth the MediaServer-2 was used as a TCP server using iperf. All other servers connected to it in client mode sending and retrieving TCP packets in a timeframe of 10 seconds. Figure~\ref{fig:scenario1-tcp} shows the bandwidth usage of the servers.
 
 \begin{figure}[H]
 \centering
 
 \includegraphics[width=0.5\textwidth]{images/evaluation/testbed_scenario1_bw}
 
-\caption{Scenario 1: TCP bandwidth comparison}
+\caption{Scenario 1: TCP bandwidth comparison} \label{fig:scenario1-tcp}
 \end{figure}
 
 As is clearly visible, the network performance of the server on the separate node performs much worse, which is also due to the fact that there is only a Gigabit-Ethernet connection between the nodes.
 
 \newpage
-\textbf{UDP traffic}
+\textbf{UDP traffic} \label{sec:scenario1-udp}
 
 In order to test the bandwidth with UDP traffic, two servers were started as a UDP server and each of them received one client connection. The selected bandwidth limit that the packets were streamed at is 800 MBit/s.
 
@@ -203,19 +202,19 @@ In this next scenario, the Instance Placement Engine was enabled and therefore t
 \newpage
 \textbf{TCP traffic}
 
-The following graph shows that the available bandwidth using TCP packets is now evenly distributed for all servers. However the traffic of the MediaServers should be prioritized, which is why QoS is needed to further improve the connectivity according to the requirements.
+Figure~\ref{fig:scenario2-tcp} shows that the available bandwidth using TCP packets is now evenly distributed for all servers. However the traffic of the MediaServers should be prioritized, which is why QoS is needed to further improve the connectivity according to the requirements.
 
 \begin{figure}[H]
 \centering
 
 \includegraphics[width=0.5\textwidth]{images/evaluation/testbed_scenario2_bw}
 
-\caption{Scenario 2: TCP bandwidth comparison}
+\caption{Scenario 2: TCP bandwidth comparison}\label{fig:scenario2-tcp}
 \end{figure}
 
-\textbf{UDP traffic}
+\textbf{UDP traffic} \label{sec:scenario2-udp}
 
-The traffic generation was configured in the same way as in Scenario 1, except that now all servers are deployed on the same compute node.
+The traffic generation was configured in the same way as in Scenario 1 (see \ref{sec:scenario1-udp}), except that now all servers are deployed on the same compute node.
 
 \begin{table}[H]
 \centering
@@ -316,7 +315,7 @@ For this last scenario two iperf-servers and three iperf-clients were configured
 \begin{figure}[H]
 \centering
 
-\includegraphics[width=0.5\textwidth]{images/evaluation/testbed_scenario2_bw}
+\includegraphics[width=0.5\textwidth]{images/evaluation/testbed_scenario3_bw}
 
 \caption{Scenario 3: TCP bandwidth comparison}
 \end{figure}
@@ -327,7 +326,7 @@ In the other QoS class the \textit{'MediaServer-2'} which is connecting to \text
 
 \textbf{UDP traffic}
 
-The setup of iperf for generating the traffic is equal to Scenario 2.
+The setup of iperf for generating the traffic is equal to Scenario 2 (see \ref{sec:scenario2-udp}).
 
 \begin{table}[H]
 \centering
