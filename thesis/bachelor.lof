@@ -9,7 +9,7 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Packet flow through an OpenFlow switch\relax }}{17}{figure.caption.11}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces OpenFlow QoS as a meter\relax }}{18}{figure.caption.14}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Architecture of Open vSwitch: kernelspace / userspace separation\relax }}{20}{figure.caption.15}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Visualization of the ovs-vsctl tool's components\relax }}{21}{figure.caption.16}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Visualization of ovs-vsctl within a OVS\relax }}{21}{figure.caption.16}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces QoS Queues attached to a Port in OVS\relax }}{22}{figure.caption.17}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces HTB: qdisc classes linked together as a tree\relax }}{23}{figure.caption.18}
 \contentsline {figure}{\numberline {2.12}{\ignorespaces Interaction among OpenStack services\relax }}{25}{figure.caption.20}
